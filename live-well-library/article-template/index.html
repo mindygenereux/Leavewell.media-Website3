@@ -260,6 +260,7 @@ async function loadArticle() {
     }
     const item = data.items[0];
     const f = item.fields;
+    const title = f.title || f.Title || 'Untitled';
     const assets = {};
     if (data.includes && data.includes.Asset) {
       data.includes.Asset.forEach(a => { assets[a.sys.id] = a.fields; });
@@ -267,10 +268,10 @@ async function loadArticle() {
     let heroImgHtml = '';
     if (f.heroImage && f.heroImage.sys) {
       const af = assets[f.heroImage.sys.id];
-      if (af && af.file) heroImgHtml = `<div class="art-hero-img-wrap"><img src="https:${af.file.url}?w=1400&h=600&fit=fill" alt="${escHtml(f.title)}"></div>`;
+      if (af && af.file) heroImgHtml = `<div class="art-hero-img-wrap"><img src="https:${af.file.url}?w=1400&h=600&fit=fill" alt="${escHtml(title)}"></div>`;
     }
     const bodyHtml = f.body ? renderRichText(f.body) : '<p>Coming soon.</p>';
-    document.getElementById('page-title').textContent = `${f.title} | Live Well Library`;
+    document.getElementById('page-title').textContent = `${title} | Live Well Library`;
     if (f.excerpt) document.getElementById('page-desc').setAttribute('content', f.excerpt);
 
     document.getElementById('app').innerHTML = `
@@ -278,7 +279,7 @@ async function loadArticle() {
         <div class="art-hero-inner">
           <a href="/live-well-library/" class="art-back">Back to Library</a>
           ${f.category ? `<span class="art-cat-badge">${escHtml(f.category)}</span>` : ''}
-          <h1>${escHtml(f.title)}</h1>
+          <h1>${escHtml(title)}</h1>
           <div class="art-meta-row">
             <span class="art-author">By <strong>Mindy Genereux</strong></span>
             ${f.readtime || f.readTime ? `<span class="art-readtime">${escHtml(f.readtime || f.readTime)}</span>` : ''}
