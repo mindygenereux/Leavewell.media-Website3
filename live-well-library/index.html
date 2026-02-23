@@ -24,132 +24,73 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
 .mob a:hover{color:#7ecfc0;}
 .mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
 @media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
-
-/* HERO */
 .lb-hero{background:#1e3a38;padding:160px 24px 100px;position:relative;overflow:hidden;}
-.lb-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 85%,rgba(184,92,56,0.06)0%,transparent 60%);pointer-events:none;}
+.lb-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%);pointer-events:none;}
 .lb-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 @media(max-width:768px){.lb-hero-inner{grid-template-columns:1fr;gap:40px;}}
 .lb-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:20px;position:relative;z-index:1;}
 .lb-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6.5vw,6rem);font-weight:400;color:#fff;line-height:1.05;position:relative;z-index:1;}
 .lb-hero h1 em{color:#b4e5de;font-style:italic;}
 .lb-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.7rem);font-style:italic;color:#e8d5a3;margin-top:24px;line-height:1.7;position:relative;z-index:1;opacity:0.9;}
-.lb-hero-note{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.45);margin-top:32px;letter-spacing:0.05em;display:flex;align-items:center;gap:10px;position:relative;z-index:1;}
+.lb-hero-note{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.45);margin-top:32px;display:flex;align-items:center;gap:10px;position:relative;z-index:1;}
 .lb-hero-note::before{content:'';display:inline-block;width:28px;height:1px;background:#7ecfc0;opacity:0.5;}
 .lb-search-area{position:relative;z-index:1;}
 .lb-search-label{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:16px;opacity:0.8;}
-.lb-search-box{display:flex;gap:0;}
+.lb-search-box{display:flex;}
 .lb-search-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(126,207,192,0.3);border-right:none;padding:16px 22px;font-family:'DM Sans',sans-serif;font-size:1rem;color:#fff;outline:none;transition:all 0.3s;border-radius:2px 0 0 2px;}
 .lb-search-input::placeholder{color:rgba(255,255,255,0.35);}
 .lb-search-input:focus{background:rgba(255,255,255,0.12);border-color:#7ecfc0;}
 .lb-search-btn{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:16px 28px;border:none;cursor:pointer;transition:background 0.3s;border-radius:0 2px 2px 0;}
 .lb-search-btn:hover{background:#4aafa0;}
 .lb-search-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
-.lb-tag{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:7px 14px;border-radius:40px;cursor:pointer;transition:all 0.3s;}
+.lb-tag{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:7px 14px;border-radius:40px;cursor:pointer;transition:all 0.3s;background:none;}
 .lb-tag:hover,.lb-tag.active{color:#b4e5de;border-color:rgba(126,207,192,0.4);background:rgba(126,207,192,0.08);}
-
-/* INTRO STRIP */
-.lb-strip{background:#ffffff;padding:60px 24px;border-bottom:1px solid rgba(44,44,44,0.06);}
+.lb-strip{background:#fff;padding:60px 24px;border-bottom:1px solid rgba(44,44,44,0.06);}
 .lb-strip-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
 .lb-strip-text{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;color:#3a3a3a;max-width:640px;line-height:1.6;opacity:0.82;}
 .lb-strip-text strong{color:#b85c38;font-weight:400;}
 .lb-free-badge{background:#e8f7f5;border:1px solid rgba(126,207,192,0.3);padding:14px 24px;text-align:center;}
 .lb-free-badge span:first-child{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;color:#4aafa0;display:block;line-height:1;}
 .lb-free-badge span:last-child{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#3a3a3a;opacity:0.45;display:block;margin-top:4px;}
-
-/* CATEGORIES */
-.lb-cats{background:#faf8f5;padding:100px 24px;}
-.lb-cats-inner{max-width:1200px;margin:0 auto;}
-.lb-cats-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:16px;}
-.lb-cats h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:700px;margin:0 0 16px;}
-.lb-cats h2 em{font-style:italic;color:#b85c38;}
-.lb-cats-sub{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;font-weight:300;color:#3a3a3a;opacity:0.72;max-width:580px;margin:0 0 72px;line-height:1.65;}
-.lb-cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;}
-.lb-cat-card{background:#fff;border-top:4px solid #7ecfc0;padding:40px 36px;box-shadow:0 6px 30px rgba(44,44,44,0.07);transition:transform 0.3s,box-shadow 0.3s;position:relative;cursor:pointer;}
-.lb-cat-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(44,44,44,0.12);}
-.lb-cat-card:nth-child(2){border-top-color:#b85c38;}
-.lb-cat-card:nth-child(3){border-top-color:#c9a84c;}
-.lb-cat-card:nth-child(4){border-top-color:#6b4c6b;}
-.lb-cat-card:nth-child(5){border-top-color:#4aafa0;}
-.lb-cat-card:nth-child(6){border-top-color:#b85c38;}
-.lb-cat-icon{font-size:2.4rem;display:block;margin-bottom:20px;}
-.lb-cat-label{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:10px;}
-.lb-cat-card:nth-child(2) .lb-cat-label{color:#b85c38;}
-.lb-cat-card:nth-child(3) .lb-cat-label{color:#c9a84c;}
-.lb-cat-card:nth-child(4) .lb-cat-label{color:#6b4c6b;}
-.lb-cat-card:nth-child(5) .lb-cat-label{color:#4aafa0;}
-.lb-cat-card:nth-child(6) .lb-cat-label{color:#b85c38;}
-.lb-cat-card h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:#2c2c2c;margin-bottom:14px;line-height:1.2;}
-.lb-cat-card p{font-family:'DM Sans',sans-serif;font-size:0.95rem;line-height:1.85;color:#3a3a3a;opacity:0.72;margin-bottom:28px;}
-.lb-cat-count{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;color:#3a3a3a;opacity:0.35;text-transform:uppercase;}
-.lb-cat-arrow{position:absolute;bottom:28px;right:28px;color:#7ecfc0;font-size:1.3rem;opacity:0;transition:opacity 0.3s,transform 0.3s;}
-.lb-cat-card:hover .lb-cat-arrow{opacity:1;transform:translateX(4px);}
-
-/* FEATURED ARTICLES */
-.lb-featured{background:#ffffff;padding:100px 24px;}
-.lb-feat-inner{max-width:1200px;margin:0 auto;}
-.lb-featured h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:#2c2c2c;line-height:1.1;max-width:680px;margin:12px 0 60px;}
-.lb-featured h2 em{font-style:italic;color:#b85c38;}
-.lb-feat-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;}
-@media(max-width:768px){.lb-feat-grid{grid-template-columns:1fr;}}
-.lb-feat-hero{background:#1e3a38;padding:52px 44px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;}
-.lb-feat-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 20%,rgba(126,207,192,0.15)0%,transparent 60%);pointer-events:none;}
-.lb-feat-hero-label{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:14px;position:relative;z-index:1;}
-.lb-feat-hero h3{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:400;color:#fff;line-height:1.15;margin-bottom:16px;position:relative;z-index:1;}
-.lb-feat-hero p{font-family:'DM Sans',sans-serif;font-size:0.97rem;line-height:1.85;color:#fff;opacity:0.65;margin-bottom:28px;position:relative;z-index:1;}
-.lb-read-link{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;color:#7ecfc0;text-decoration:none;letter-spacing:0.06em;display:inline-flex;align-items:center;gap:8px;position:relative;z-index:1;transition:gap 0.3s;}
-.lb-read-link:hover{gap:14px;}
-.lb-feat-side{display:flex;flex-direction:column;gap:20px;}
-.lb-feat-mini{background:#faf8f5;border-left:3px solid #7ecfc0;padding:28px 24px;transition:background 0.3s,transform 0.3s;}
-.lb-feat-mini:hover{background:#fff;transform:translateX(4px);}
-.lb-feat-mini:nth-child(2){border-left-color:#b85c38;}
-.lb-feat-mini:nth-child(3){border-left-color:#c9a84c;}
-.lb-feat-mini-label{font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:8px;}
-.lb-feat-mini:nth-child(2) .lb-feat-mini-label{color:#b85c38;}
-.lb-feat-mini:nth-child(3) .lb-feat-mini-label{color:#c9a84c;}
-.lb-feat-mini h4{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;color:#2c2c2c;margin-bottom:8px;line-height:1.2;}
-.lb-feat-mini p{font-family:'DM Sans',sans-serif;font-size:0.88rem;line-height:1.75;color:#3a3a3a;opacity:0.68;}
-
-/* ALL ARTICLES */
-.lb-all{background:#faf8f5;padding:100px 24px;}
-.lb-all-inner{max-width:1200px;margin:0 auto;}
-.lb-all h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:400;color:#2c2c2c;line-height:1.1;max-width:600px;margin:12px 0 52px;}
-.lb-all h2 em{font-style:italic;color:#b85c38;}
+.lb-live{background:#faf8f5;padding:100px 24px;}
+.lb-live-inner{max-width:1200px;margin:0 auto;}
+.lb-live h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:12px 0 48px;}
+.lb-live h2 em{font-style:italic;color:#b85c38;}
 .lb-filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
 .lb-filter{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#3a3a3a;opacity:0.55;border:1px solid rgba(44,44,44,0.15);padding:8px 18px;border-radius:40px;cursor:pointer;transition:all 0.3s;background:none;}
 .lb-filter:hover,.lb-filter.active{color:#1e3a38;opacity:1;border-color:#7ecfc0;background:#e8f7f5;}
-.lb-articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.lb-article{background:#fff;padding:32px 28px;border-top:3px solid #7ecfc0;box-shadow:0 4px 18px rgba(44,44,44,0.05);transition:transform 0.3s,box-shadow 0.3s;position:relative;}
-.lb-article:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(44,44,44,0.1);}
+.lb-articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;}
+.lb-article{background:#fff;border-top:3px solid #7ecfc0;box-shadow:0 4px 18px rgba(44,44,44,0.05);transition:transform 0.3s,box-shadow 0.3s;position:relative;cursor:pointer;text-decoration:none;color:inherit;display:block;}
+.lb-article:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(44,44,44,0.11);}
 .lb-article:nth-child(3n+2){border-top-color:#b85c38;}
-.lb-article:nth-child(3n+3){border-top-color:#c9a84c;}
-.lb-art-cat{font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:10px;}
 .lb-article:nth-child(3n+2) .lb-art-cat{color:#b85c38;}
+.lb-article:nth-child(3n+3){border-top-color:#c9a84c;}
 .lb-article:nth-child(3n+3) .lb-art-cat{color:#c9a84c;}
+.lb-article-img{width:100%;height:200px;object-fit:cover;display:block;}
+.lb-article-img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#1e3a38 0%,#2c5a54 100%);display:flex;align-items:center;justify-content:center;}
+.lb-article-img-placeholder span{font-family:'Playfair Display',serif;font-size:2.5rem;color:rgba(126,207,192,0.4);font-style:italic;}
+.lb-article-body{padding:28px 24px 36px;}
+.lb-art-cat{font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:10px;}
 .lb-article h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:#2c2c2c;margin-bottom:10px;line-height:1.25;}
 .lb-article p{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.8;color:#3a3a3a;opacity:0.7;margin-bottom:20px;}
-.lb-art-meta{font-family:'DM Sans',sans-serif;font-size:0.72rem;color:#3a3a3a;opacity:0.38;letter-spacing:0.06em;}
+.lb-art-meta{font-family:'DM Sans',sans-serif;font-size:0.72rem;color:#3a3a3a;opacity:0.38;}
 .lb-art-arrow{position:absolute;bottom:22px;right:22px;color:#7ecfc0;opacity:0;transition:opacity 0.3s,transform 0.3s;}
 .lb-article:hover .lb-art-arrow{opacity:1;transform:translateX(4px);}
-.lb-coming{background:rgba(44,44,44,0.03);border:1px dashed rgba(44,44,44,0.15);padding:32px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-.lb-coming span:first-child{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#3a3a3a;opacity:0.3;margin-bottom:10px;display:block;}
-.lb-coming span:last-child{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#3a3a3a;opacity:0.35;line-height:1.5;}
-
-/* NEWSLETTER */
+.lb-loading{text-align:center;padding:80px 24px;grid-column:1/-1;}
+.lb-loading-spinner{width:40px;height:40px;border:3px solid rgba(126,207,192,0.2);border-top-color:#7ecfc0;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 20px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.lb-loading p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:#3a3a3a;opacity:0.55;}
+.lb-empty{text-align:center;padding:80px 24px;grid-column:1/-1;}
+.lb-empty h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:#2c2c2c;margin-bottom:12px;}
+.lb-empty p{font-family:'DM Sans',sans-serif;font-size:0.95rem;color:#3a3a3a;opacity:0.55;line-height:1.7;}
 .lb-email{background:#2c2c2c;padding:100px 24px;text-align:center;}
 .lb-email-inner{max-width:640px;margin:0 auto;}
 .lb-email h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:400;color:#fff;line-height:1.1;margin:12px 0 18px;}
 .lb-email h2 em{font-style:italic;color:#b4e5de;}
 .lb-email-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:#e8d5a3;opacity:0.78;margin-bottom:44px;line-height:1.65;}
-.lb-email-form{display:flex;gap:0;max-width:480px;margin:0 auto;}
-.lb-email-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(126,207,192,0.3);border-right:none;padding:15px 22px;font-family:'DM Sans',sans-serif;font-size:0.97rem;color:#fff;outline:none;transition:all 0.3s;border-radius:2px 0 0 2px;}
-.lb-email-input::placeholder{color:rgba(255,255,255,0.35);}
-.lb-email-input:focus{border-color:#7ecfc0;background:rgba(255,255,255,0.12);}
-.lb-email-btn{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:15px 28px;border:none;cursor:pointer;transition:background 0.3s;border-radius:0 2px 2px 0;}
-.lb-email-btn:hover{background:#4aafa0;}
-.lb-email-note{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.3;margin-top:16px;letter-spacing:0.06em;}
-
-/* CTA */
+.lb-email-form{display:flex;max-width:480px;margin:0 auto;}
+.lb-email-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(126,207,192,0.3);border-right:none;padding:15px 22px;font-family:'DM Sans',sans-serif;font-size:0.97rem;color:#fff;outline:none;border-radius:2px 0 0 2px;}
+.lb-email-btn{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:15px 28px;border:none;cursor:pointer;border-radius:0 2px 2px 0;}
 .lb-cta{background:#e8f7f5;padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
 .lb-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.2)0%,transparent 70%);pointer-events:none;}
 .lb-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:800px;margin:0 auto 20px;position:relative;z-index:1;}
@@ -160,8 +101,6 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
 .btn-dark:hover{background:#4aafa0;transform:translateY(-2px);}
 .btn-outline{background:transparent;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;padding:20px 48px;border:2px solid #1e3a38;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
 .btn-outline:hover{background:#1e3a38;color:#fff;}
-
-/* FOOTER */
 .footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
 .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
 .footer-links{display:flex;gap:28px;flex-wrap:wrap;}
@@ -202,16 +141,16 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
     <div class="lb-search-area">
       <span class="lb-search-label">Find What You Need</span>
       <div class="lb-search-box">
-        <input type="text" class="lb-search-input" id="lb-search" placeholder="Search topics, feelings, or questions…" aria-label="Search library">
+        <input type="text" class="lb-search-input" id="lb-search" placeholder="Search topics, feelings, or questions…">
         <button class="lb-search-btn" onclick="handleSearch()">Search</button>
       </div>
       <div class="lb-search-tags">
-        <span class="lb-tag active" onclick="filterTag(this,'all')">All Topics</span>
-        <span class="lb-tag" onclick="filterTag(this,'grief')">Grief</span>
-        <span class="lb-tag" onclick="filterTag(this,'legacy')">Legacy</span>
-        <span class="lb-tag" onclick="filterTag(this,'caregiver')">Caregiving</span>
-        <span class="lb-tag" onclick="filterTag(this,'conversations')">Conversations</span>
-        <span class="lb-tag" onclick="filterTag(this,'community')">Community</span>
+        <span class="lb-tag active" onclick="filterByTag(this,'')">All Topics</span>
+        <span class="lb-tag" onclick="filterByTag(this,'Grief')">Grief</span>
+        <span class="lb-tag" onclick="filterByTag(this,'Legacy')">Legacy</span>
+        <span class="lb-tag" onclick="filterByTag(this,'Caregiving')">Caregiving</span>
+        <span class="lb-tag" onclick="filterByTag(this,'Conversations')">Conversations</span>
+        <span class="lb-tag" onclick="filterByTag(this,'Community')">Community</span>
       </div>
     </div>
   </div>
@@ -224,118 +163,23 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
   </div>
 </div>
 
-<section class="lb-cats">
-  <div class="lb-cats-inner">
-    <span class="lb-cats-ey">Browse by Category</span>
-    <h2>Find exactly what<br>you need <em>right now.</em></h2>
-    <p class="lb-cats-sub">Six categories. One through-line: you deserve resources that meet you where you are.</p>
-    <div class="lb-cat-grid" id="cat-grid">
-      <div class="lb-cat-card fi" data-cat="grief">
-        <span class="lb-cat-icon">🌿</span>
-        <span class="lb-cat-label">Category One</span>
-        <h3>Living With Anticipated Change</h3>
-        <p>Articles and guides that address anticipatory grief when life shifts due to cancer or terminal illness. Supporting reflection, clarity, and intentional choices during this specific kind of loss.</p>
-        <span class="lb-cat-count">Articles · Reflection Prompts · Guides</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-      <div class="lb-cat-card fi" data-cat="caregiver">
-        <span class="lb-cat-icon">🤝</span>
-        <span class="lb-cat-label">Category Two</span>
-        <h3>Supporting Someone You Love</h3>
-        <p>Resources for partners, adult children, friends, and caregivers. Creative and practical tools to help you support well, stay connected, and not lose yourself in the process.</p>
-        <span class="lb-cat-count">Guides · Practical Tools · Caregiver Support</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-      <div class="lb-cat-card fi" data-cat="conversations">
-        <span class="lb-cat-icon">💬</span>
-        <span class="lb-cat-label">Category Three</span>
-        <h3>Conversations That Matter</h3>
-        <p>Language, prompts, and communication tools for talking about what matters now, later, and eventually. For the conversations that feel almost impossible to start.</p>
-        <span class="lb-cat-count">Conversation Starters · Language Guides</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-      <div class="lb-cat-card fi" data-cat="grief">
-        <span class="lb-cat-icon">🧭</span>
-        <span class="lb-cat-label">Category Four</span>
-        <h3>Making Sense of What You Are Feeling</h3>
-        <p>Short reads and reflections that help you name what is happening internally — without clinical jargon or toxic positivity. Real feelings welcome here.</p>
-        <span class="lb-cat-count">Short Reads · Reflection · Emotional Support</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-      <div class="lb-cat-card fi" data-cat="legacy">
-        <span class="lb-cat-icon">✦</span>
-        <span class="lb-cat-label">Category Five</span>
-        <h3>Legacy and Meaning</h3>
-        <p>Legacy is not just about what you leave behind. It is about how connections are shaped, how lives are reflected, and how the love that stays takes form.</p>
-        <span class="lb-cat-count">Legacy Planning · Story Prompts · Memory Tools</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-      <div class="lb-cat-card fi" data-cat="community">
-        <span class="lb-cat-icon">🌱</span>
-        <span class="lb-cat-label">Category Six</span>
-        <h3>Community</h3>
-        <p>A shared space to learn, reflect, and connect with others navigating anticipatory grief and terminal illness. Shared insights, collective wisdom, and honesty.</p>
-        <span class="lb-cat-count">Shared Stories · Perspectives · Connection</span>
-        <span class="lb-cat-arrow">→</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="lb-featured">
-  <div class="lb-feat-inner">
-    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:14px;">From the Library</span>
-    <h2 class="fi">Start here if you<br>don't know where <em>to begin.</em></h2>
-    <div class="lb-feat-grid fi">
-      <div class="lb-feat-hero">
-        <span class="lb-feat-hero-label">Essential Reading · Anticipatory Grief</span>
-        <h3>What Is Anticipatory Grief — and Why Doesn't Anyone Talk About It?</h3>
-        <p>Grief doesn't begin at the funeral. For millions of families navigating terminal illness, it begins the moment they hear the words "there's nothing more we can do." Here's why that matters, and what to do with it.</p>
-        <a href="/connect" class="lb-read-link">Read the Article <span>→</span></a>
-      </div>
-      <div class="lb-feat-side">
-        <div class="lb-feat-mini">
-          <span class="lb-feat-mini-label">Caregiving · Support</span>
-          <h4>How to Show Up When You Don't Know What to Say</h4>
-          <p>The most common mistake people make when supporting someone through terminal illness — and the gentle, practical alternative.</p>
-        </div>
-        <div class="lb-feat-mini">
-          <span class="lb-feat-mini-label">Legacy · Meaning</span>
-          <h4>The Stories Worth Capturing Before Time Runs Out</h4>
-          <p>It's not the big moments. It's the in-between ones — the recipes, the routines, the phrases only your family uses. A guide to knowing what to save.</p>
-        </div>
-        <div class="lb-feat-mini">
-          <span class="lb-feat-mini-label">Conversations · End of Life</span>
-          <h4>Starting the Conversation You've Been Avoiding</h4>
-          <p>A quiet, compassionate guide for opening up the end-of-life conversation with someone you love — without making them feel like you're giving up.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="lb-all">
-  <div class="lb-all-inner">
-    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:14px;">All Library Resources</span>
-    <h2 class="fi">Browse everything.<br>Take what <em>you need.</em></h2>
-    <div class="lb-filter-bar">
-      <button class="lb-filter active" onclick="filterArticles(this,'all')">All</button>
-      <button class="lb-filter" onclick="filterArticles(this,'grief')">Anticipatory Grief</button>
-      <button class="lb-filter" onclick="filterArticles(this,'caregiver')">Caregiving</button>
-      <button class="lb-filter" onclick="filterArticles(this,'legacy')">Legacy</button>
-      <button class="lb-filter" onclick="filterArticles(this,'conversations')">Conversations</button>
-      <button class="lb-filter" onclick="filterArticles(this,'community')">Community</button>
+<section class="lb-live">
+  <div class="lb-live-inner">
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:12px;">From the Library</span>
+    <h2 class="fi">Read. Reflect. <em>Begin.</em></h2>
+    <div class="lb-filter-bar fi">
+      <button class="lb-filter active" onclick="setFilter(this,'')">All</button>
+      <button class="lb-filter" onclick="setFilter(this,'Grief')">Anticipatory Grief</button>
+      <button class="lb-filter" onclick="setFilter(this,'Caregiving')">Caregiving</button>
+      <button class="lb-filter" onclick="setFilter(this,'Legacy')">Legacy</button>
+      <button class="lb-filter" onclick="setFilter(this,'Conversations')">Conversations</button>
+      <button class="lb-filter" onclick="setFilter(this,'Community')">Community</button>
     </div>
     <div class="lb-articles" id="articles-grid">
-      <div class="lb-article fi" data-cat="grief"><span class="lb-art-cat">Anticipatory Grief</span><h3>Understanding Anticipatory Grief: A Gentle Introduction</h3><p>What it is, why it's real, and why it so often goes unacknowledged by the people around you.</p><span class="lb-art-meta">Reflection · 6 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="legacy"><span class="lb-art-cat">Legacy</span><h3>What Does It Mean to Leave a Legacy?</h3><p>Legacy is not about monuments. It's about the shape your love takes in other people's lives.</p><span class="lb-art-meta">Legacy · 5 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="caregiver"><span class="lb-art-cat">Caregiving</span><h3>The Invisible Weight of Being the Strong One</h3><p>For the caregivers who hold everything together while falling apart inside. You are seen here.</p><span class="lb-art-meta">Caregiver Support · 7 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="conversations"><span class="lb-art-cat">Conversations</span><h3>10 Gentle Conversation Starters for the End of Life</h3><p>Words that open doors instead of closing them — for families navigating the conversations that feel impossible.</p><span class="lb-art-meta">Conversation Guide · 8 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="grief"><span class="lb-art-cat">Anticipatory Grief</span><h3>Grieving Someone Who Is Still Here</h3><p>The confusing, exhausting, beautiful reality of loving someone who is dying and still fully present in your life.</p><span class="lb-art-meta">Grief · 6 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="legacy"><span class="lb-art-cat">Legacy</span><h3>The Questions Worth Asking Before It's Too Late</h3><p>A curated list of the questions your future self will wish you had asked — and how to create the space to ask them.</p><span class="lb-art-meta">Story Prompts · 10 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="caregiver"><span class="lb-art-cat">Caregiving</span><h3>What No One Tells You About Hospice</h3><p>A compassionate, clear-eyed look at what hospice actually means — and how to use the support it offers.</p><span class="lb-art-meta">Hospice · 8 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-article fi" data-cat="community"><span class="lb-art-cat">Community</span><h3>Why Grief is Better When It's Shared</h3><p>The research, the stories, and the simple truth: grief was never meant to be carried alone.</p><span class="lb-art-meta">Community · 5 min read</span><span class="lb-art-arrow">→</span></div>
-      <div class="lb-coming fi"><span>More Coming Soon</span><span>New resources added regularly. All always free.</span></div>
+      <div class="lb-loading">
+        <div class="lb-loading-spinner"></div>
+        <p>Loading articles…</p>
+      </div>
     </div>
   </div>
 </section>
@@ -344,7 +188,7 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
   <div class="lb-email-inner">
     <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:14px;">Stay Connected</span>
     <h2 class="fi">New resources,<br>delivered <em>gently.</em></h2>
-    <p class="lb-email-sub fi">New articles, prompts, and guides added regularly. No noise — just what matters, when you might need it.</p>
+    <p class="lb-email-sub fi">New articles added regularly. No noise — just what matters, when you need it.</p>
     <form class="lb-email-form fi" action="https://formsubmit.co/Mindy@leavewell.media" method="POST">
       <input type="hidden" name="_subject" value="New Library Newsletter Signup">
       <input type="hidden" name="_captcha" value="false">
@@ -352,7 +196,6 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
       <input type="email" name="email" class="lb-email-input" placeholder="your@email.com" required>
       <button type="submit" class="lb-email-btn">Subscribe →</button>
     </form>
-    <p class="lb-email-note fi">No spam. No pressure. Unsubscribe anytime.</p>
   </div>
 </section>
 
@@ -374,53 +217,109 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
 </footer>
 
 <script>
-const nav=document.getElementById('mn');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-document.getElementById('nh').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
-document.getElementById('mc').addEventListener('click',()=>document.getElementById('mob').classList.remove('open'));
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+const SPACE = 'z8latd7hk1tb';
+const TOKEN = 'nZNJsKrlUpr8tfAS5_IBwPblJpwhcodFDA7Jd841Xu0';
+const API   = `https://cdn.contentful.com/spaces/${SPACE}/entries`;
 
-function filterTag(el, cat) {
+let allArticles = [];
+let activeCategory = '';
+let searchQuery = '';
+
+async function fetchArticles() {
+  try {
+    const res = await fetch(`${API}?content_type=libraryArticle&order=-sys.createdAt&include=1`, {
+      headers: { Authorization: `Bearer ${TOKEN}` }
+    });
+    const data = await res.json();
+    const assets = {};
+    if (data.includes && data.includes.Asset) {
+      data.includes.Asset.forEach(a => { assets[a.sys.id] = a.fields.file.url; });
+    }
+    allArticles = (data.items || []).map(item => {
+      const f = item.fields;
+      let imageUrl = null;
+      if (f.heroImage && f.heroImage.sys) imageUrl = assets[f.heroImage.sys.id] || null;
+      return {
+        title:    f.title    || 'Untitled',
+        slug:     f.slug     || item.sys.id,
+        category: f.category || '',
+        excerpt:  f.excerpt  || '',
+        readTime: f.readtime || f.readTime || '',
+        image:    imageUrl
+      };
+    });
+    renderArticles();
+  } catch (err) {
+    document.getElementById('articles-grid').innerHTML = `
+      <div class="lb-empty">
+        <h3>Articles coming soon.</h3>
+        <p>Check back shortly — new resources are added regularly.</p>
+      </div>`;
+  }
+}
+
+function renderArticles() {
+  const grid = document.getElementById('articles-grid');
+  let filtered = allArticles;
+  if (activeCategory) filtered = filtered.filter(a => a.category.toLowerCase() === activeCategory.toLowerCase());
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    filtered = filtered.filter(a =>
+      a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
+    );
+  }
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="lb-empty">
+      <h3>${allArticles.length === 0 ? 'Articles coming soon.' : 'No results found.'}</h3>
+      <p>${allArticles.length === 0 ? 'Mindy is writing — resources will appear here automatically when published.' : 'Try a different search or browse all categories.'}</p>
+    </div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(a => `
+    <a class="lb-article" href="/live-well-library/${a.slug}/">
+      ${a.image
+        ? `<img class="lb-article-img" src="https:${a.image}?w=640&h=400&fit=fill" alt="${a.title}" loading="lazy">`
+        : `<div class="lb-article-img-placeholder"><span>✦</span></div>`}
+      <div class="lb-article-body">
+        ${a.category ? `<span class="lb-art-cat">${a.category}</span>` : ''}
+        <h3>${a.title}</h3>
+        ${a.excerpt ? `<p>${a.excerpt}</p>` : ''}
+        ${a.readTime ? `<span class="lb-art-meta">${a.readTime}</span>` : ''}
+      </div>
+      <span class="lb-art-arrow">→</span>
+    </a>`).join('');
+}
+
+function setFilter(el, cat) {
+  activeCategory = cat;
+  document.querySelectorAll('.lb-filter').forEach(f => f.classList.remove('active'));
+  el.classList.add('active');
+  renderArticles();
+}
+function filterByTag(el, cat) {
+  activeCategory = cat;
   document.querySelectorAll('.lb-tag').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-  filterByCategory(cat, '#cat-grid', '.lb-cat-card', 'data-cat');
-}
-function filterArticles(el, cat) {
-  document.querySelectorAll('.lb-filter').forEach(f => f.classList.remove('active'));
-  el.classList.add('active');
-  const items = document.querySelectorAll('#articles-grid .lb-article');
-  items.forEach(item => {
-    if (cat === 'all' || item.dataset.cat === cat) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-}
-function filterByCategory(cat, gridId, selector, attr) {
-  const items = document.querySelectorAll(gridId + ' ' + selector);
-  items.forEach(item => {
-    if (cat === 'all' || item.dataset.cat === cat) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
-  });
+  renderArticles();
 }
 function handleSearch() {
-  const q = document.getElementById('lb-search').value.toLowerCase();
-  if (!q) return;
-  const items = document.querySelectorAll('#articles-grid .lb-article');
-  let found = 0;
-  items.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    if (text.includes(q)) { item.style.display = ''; found++; }
-    else item.style.display = 'none';
-  });
-  document.querySelectorAll('.lb-filter').forEach(f => f.classList.remove('active'));
+  searchQuery = document.getElementById('lb-search').value.trim();
+  activeCategory = '';
+  document.querySelectorAll('.lb-filter,.lb-tag').forEach(f => f.classList.remove('active'));
+  renderArticles();
 }
 document.getElementById('lb-search').addEventListener('keypress', e => { if (e.key === 'Enter') handleSearch(); });
+
+const nav = document.getElementById('mn');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+document.getElementById('nh').addEventListener('click', () => document.getElementById('mob').classList.add('open'));
+document.getElementById('mc').addEventListener('click', () => document.getElementById('mob').classList.remove('open'));
+const obs = new IntersectionObserver(e => {
+  e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); obs.unobserve(el.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+fetchArticles();
 </script>
 </body>
 </html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Loading… | Live Well Library</title>
+<meta name="description" id="page-desc" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
+nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
+.nl{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;text-decoration:none;}
+.nlinks{display:flex;align-items:center;gap:32px;}
+.nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
+.nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
+.ncta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
+.ncta:hover{background:#4aafa0;color:#fff;}
+.nham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.nham span{display:block;width:24px;height:2px;background:#fff;}
+.mob{display:none;position:fixed;inset:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mob.open{display:flex;}
+.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
+.mob a:hover{color:#7ecfc0;}
+.mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
+@media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
+
+.art-loading{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;background:#faf8f5;}
+.art-loading-spinner{width:44px;height:44px;border:3px solid rgba(126,207,192,0.2);border-top-color:#7ecfc0;border-radius:50%;animation:spin 0.8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.art-loading p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:#3a3a3a;opacity:0.55;}
+
+.art-hero{background:#1e3a38;padding:160px 24px 80px;position:relative;overflow:hidden;}
+.art-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.18)0%,transparent 60%);pointer-events:none;}
+.art-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1;}
+.art-back{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:36px;transition:color 0.3s;}
+.art-back:hover{color:#7ecfc0;}
+.art-cat-badge{display:inline-block;font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#1e3a38;background:#7ecfc0;padding:6px 16px;border-radius:2px;margin-bottom:24px;}
+.art-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,5rem);font-weight:400;color:#fff;line-height:1.08;margin-bottom:24px;}
+.art-hero h1 em{color:#b4e5de;font-style:italic;}
+.art-meta-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.art-author{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.55);}
+.art-author strong{color:rgba(255,255,255,0.85);font-weight:500;}
+.art-readtime{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.38);letter-spacing:0.08em;}
+
+.art-hero-img-wrap{background:#2c2c2c;max-height:520px;overflow:hidden;}
+.art-hero-img-wrap img{width:100%;max-height:520px;object-fit:cover;display:block;}
+
+.art-body-wrap{background:#fff;padding:80px 24px 100px;}
+.art-body-inner{max-width:740px;margin:0 auto;}
+
+.art-body{font-family:'DM Sans',sans-serif;font-size:1.08rem;line-height:1.95;color:#2c2c2c;font-weight:300;}
+.art-body h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#2c2c2c;margin:56px 0 20px;line-height:1.15;}
+.art-body h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:#2c2c2c;margin:44px 0 16px;line-height:1.2;}
+.art-body p{margin-bottom:28px;}
+.art-body p:last-child{margin-bottom:0;}
+.art-body strong{font-weight:500;color:#1e3a38;}
+.art-body em{font-style:italic;}
+.art-body a{color:#4aafa0;text-decoration:underline;}
+.art-body blockquote{border-left:4px solid #7ecfc0;padding:24px 32px;margin:48px 0;background:#f0faf8;}
+.art-body blockquote p{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;font-weight:300;color:#1e3a38;margin:0;line-height:1.55;}
+.art-body ul,.art-body ol{padding-left:28px;margin-bottom:28px;}
+.art-body li{margin-bottom:10px;line-height:1.75;}
+.art-body img{width:100%;border-radius:2px;margin:40px 0;display:block;}
+.art-body hr{border:none;border-top:1px solid rgba(44,44,44,0.1);margin:52px 0;}
+
+.art-pull{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2.4rem);font-style:italic;font-weight:300;color:#1e3a38;text-align:center;padding:60px 0;border-top:1px solid rgba(126,207,192,0.3);border-bottom:1px solid rgba(126,207,192,0.3);margin:60px 0;line-height:1.4;}
+
+/* ARTICLE END SECTION */
+.art-end{margin-top:72px;}
+
+.art-closing{border-top:1px solid rgba(126,207,192,0.4);padding-top:52px;margin-bottom:52px;text-align:center;}
+.art-closing-line{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2.2rem);font-style:italic;font-weight:300;color:#1e3a38;line-height:1.55;margin-bottom:12px;}
+.art-closing-line em{color:#b85c38;font-style:italic;}
+.art-closing-sub{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#7ecfc0;opacity:0.75;}
+
+.art-author-card{background:#1e3a38;padding:44px 48px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;margin-bottom:24px;}
+@media(max-width:600px){.art-author-card{grid-template-columns:1fr;gap:20px;padding:32px 24px;}}
+.art-author-avatar{width:80px;height:80px;border-radius:50%;background:rgba(126,207,192,0.12);border:2px solid rgba(126,207,192,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.art-author-avatar span{font-family:'Playfair Display',serif;font-size:2rem;color:#7ecfc0;font-style:italic;}
+.art-author-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:8px;opacity:0.7;}
+.art-author-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:#fff;margin-bottom:5px;}
+.art-author-title{font-family:'DM Sans',sans-serif;font-size:0.84rem;color:rgba(255,255,255,0.4);margin-bottom:14px;letter-spacing:0.02em;}
+.art-author-bio-text{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.8;color:rgba(255,255,255,0.62);}
+.art-author-year{font-family:'DM Sans',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.22);margin-top:14px;letter-spacing:0.1em;}
+
+.art-support{background:#e8f7f5;border-left:4px solid #7ecfc0;padding:32px 36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;margin-bottom:24px;}
+.art-support-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:8px;}
+.art-support-headline{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:#1e3a38;line-height:1.3;margin-bottom:5px;}
+.art-support-sub{font-family:'DM Sans',sans-serif;font-size:0.87rem;color:#3a3a3a;opacity:0.62;line-height:1.6;}
+.art-support-link{display:inline-block;background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 26px;text-decoration:none;border-radius:2px;transition:all 0.3s;white-space:nowrap;flex-shrink:0;}
+.art-support-link:hover{background:#4aafa0;}
+
+.art-bottom-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:28px;border-top:1px solid rgba(44,44,44,0.08);}
+.art-share{display:flex;align-items:center;gap:12px;}
+.art-share-label{font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#3a3a3a;opacity:0.38;}
+.art-share-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(44,44,44,0.14);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;background:none;font-size:0.85rem;color:#3a3a3a;opacity:0.5;text-decoration:none;}
+.art-share-btn:hover{border-color:#7ecfc0;color:#4aafa0;opacity:1;}
+.art-back-link{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;color:#4aafa0;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.04em;transition:gap 0.3s;}
+.art-back-link:hover{gap:14px;}
+
+.art-footer-cta{background:#1e3a38;padding:100px 24px;text-align:center;}
+.art-footer-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:400;color:#fff;line-height:1.1;max-width:680px;margin:12px auto 20px;}
+.art-footer-cta h2 em{font-style:italic;color:#b4e5de;}
+.art-footer-cta p{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:#e8d5a3;opacity:0.78;margin-bottom:44px;}
+.art-cta-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.btn-mint{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;padding:18px 40px;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
+.btn-mint:hover{background:#4aafa0;transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:18px 40px;border:1px solid rgba(255,255,255,0.3);text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
+.btn-ghost:hover{border-color:#7ecfc0;color:#7ecfc0;}
+.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
+.footer-links a:hover{opacity:0.75;}
+.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
+</style>
+</head>
+<body>
+
+<nav id="mn">
+  <a href="/" class="nl">Leave Well Media</a>
+  <div class="nlinks">
+    <a href="/story-studio">Story Studio</a>
+    <a href="/live-well-library" class="active">Library</a>
+    <a href="/legacy-shop">Shop</a>
+    <a href="/about">About</a>
+    <a href="/connect">Connect</a>
+  </div>
+  <a href="https://storystudio.media" class="ncta">Start Your Legacy</a>
+  <div class="nham" id="nh"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <button class="mclose" id="mc">✕</button>
+  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
+</div>
+
+<div id="app">
+  <div class="art-loading">
+    <div class="art-loading-spinner"></div>
+    <p>Loading article…</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="/" class="footer-logo">Leave Well Media</a>
+  <div class="footer-links">
+    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  </div>
+  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+</footer>
+
+<script>
+const SPACE = 'z8latd7hk1tb';
+const TOKEN = 'nZNJsKrlUpr8tfAS5_IBwPblJpwhcodFDA7Jd841Xu0';
+
+function getSlug() {
+  const parts = window.location.pathname.replace(/\/+$/, '').split('/');
+  return parts[parts.length - 1];
+}
+
+function renderRichText(node) {
+  if (!node || !node.content) return '';
+  return node.content.map(n => renderNode(n)).join('');
+}
+
+function renderNode(node) {
+  if (node.nodeType === 'text') {
+    let text = escHtml(node.value);
+    if (node.marks) {
+      node.marks.forEach(m => {
+        if (m.type === 'bold')      text = `<strong>${text}</strong>`;
+        if (m.type === 'italic')    text = `<em>${text}</em>`;
+        if (m.type === 'underline') text = `<u>${text}</u>`;
+      });
+    }
+    return text;
+  }
+  const inner = node.content ? node.content.map(renderNode).join('') : '';
+  switch (node.nodeType) {
+    case 'paragraph':            return `<p>${inner}</p>`;
+    case 'heading-1':            return `<h2>${inner}</h2>`;
+    case 'heading-2':            return `<h2>${inner}</h2>`;
+    case 'heading-3':            return `<h3>${inner}</h3>`;
+    case 'heading-4':            return `<h3>${inner}</h3>`;
+    case 'unordered-list':       return `<ul>${inner}</ul>`;
+    case 'ordered-list':         return `<ol>${inner}</ol>`;
+    case 'list-item':            return `<li>${inner}</li>`;
+    case 'blockquote':           return `<blockquote>${inner}</blockquote>`;
+    case 'hr':                   return `<hr>`;
+    case 'hyperlink':            return `<a href="${node.data.uri}">${inner}</a>`;
+    case 'embedded-asset-block': {
+      const url = node.data?.target?.fields?.file?.url;
+      const alt = node.data?.target?.fields?.title || '';
+      return url ? `<img src="https:${url}" alt="${escHtml(alt)}" loading="lazy">` : '';
+    }
+    default: return inner;
+  }
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function articleEndSection() {
+  const url = encodeURIComponent(window.location.href);
+  return `
+    <div class="art-end">
+      <div class="art-closing">
+        <p class="art-closing-line">Keep showing up. Keep loving them.<br><em>One moment at a time.</em></p>
+        <span class="art-closing-sub">Leave Well Media, 2026</span>
+      </div>
+      <div class="art-author-card">
+        <div class="art-author-avatar"><span>M</span></div>
+        <div>
+          <span class="art-author-eyebrow">Written by</span>
+          <div class="art-author-name">Mindy Genereux</div>
+          <div class="art-author-title">Certified Death Doula, Founder of Leave Well Media</div>
+          <p class="art-author-bio-text">Trained under Alua Arthur and Claire Bidwell Smith. Mindy writes at the intersection of grief, legacy, and love. Because no one should have to navigate loss alone.</p>
+          <div class="art-author-year">© 2026 Leave Well Media</div>
+        </div>
+      </div>
+      <div class="art-support">
+        <div>
+          <span class="art-support-eyebrow">Free Resources</span>
+          <div class="art-support-headline">Find support for families and caregivers.</div>
+          <p class="art-support-sub">Guides, reflections, and tools. Always free at leavewell.media.</p>
+        </div>
+        <a href="https://leavewell.media/live-well-library" class="art-support-link">Visit the Library</a>
+      </div>
+      <div class="art-bottom-row">
+        <div class="art-share">
+          <span class="art-share-label">Share</span>
+          <a class="art-share-btn" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=${url}" target="_blank" rel="noopener">f</a>
+          <a class="art-share-btn" title="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=${url}" target="_blank" rel="noopener">in</a>
+          <a class="art-share-btn" title="Copy link" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓';" style="cursor:pointer;">&#x2398;</a>
+        </div>
+        <a href="/live-well-library/" class="art-back-link">More Articles</a>
+      </div>
+    </div>`;
+}
+
+async function loadArticle() {
+  const slug = getSlug();
+  if (!slug || slug === 'live-well-library') { window.location.href = '/live-well-library/'; return; }
+  try {
+    const res = await fetch(
+      `https://cdn.contentful.com/spaces/${SPACE}/entries?content_type=libraryArticle&fields.slug=${encodeURIComponent(slug)}&include=2`,
+      { headers: { Authorization: `Bearer ${TOKEN}` } }
+    );
+    const data = await res.json();
+    if (!data.items || data.items.length === 0) {
+      document.getElementById('app').innerHTML = `
+        <div style="min-height:60vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:160px 24px 80px;">
+          <h1 style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;color:#2c2c2c;">Article not found.</h1>
+          <a href="/live-well-library/" style="color:#4aafa0;font-family:'DM Sans',sans-serif;">Back to Library</a>
+        </div>`;
+      return;
+    }
+    const item = data.items[0];
+    const f = item.fields;
+    const assets = {};
+    if (data.includes && data.includes.Asset) {
+      data.includes.Asset.forEach(a => { assets[a.sys.id] = a.fields; });
+    }
+    let heroImgHtml = '';
+    if (f.heroImage && f.heroImage.sys) {
+      const af = assets[f.heroImage.sys.id];
+      if (af && af.file) heroImgHtml = `<div class="art-hero-img-wrap"><img src="https:${af.file.url}?w=1400&h=600&fit=fill" alt="${escHtml(f.title)}"></div>`;
+    }
+    const bodyHtml = f.body ? renderRichText(f.body) : '<p>Coming soon.</p>';
+    document.getElementById('page-title').textContent = `${f.title} | Live Well Library`;
+    if (f.excerpt) document.getElementById('page-desc').setAttribute('content', f.excerpt);
+
+    document.getElementById('app').innerHTML = `
+      <header class="art-hero">
+        <div class="art-hero-inner">
+          <a href="/live-well-library/" class="art-back">Back to Library</a>
+          ${f.category ? `<span class="art-cat-badge">${escHtml(f.category)}</span>` : ''}
+          <h1>${escHtml(f.title)}</h1>
+          <div class="art-meta-row">
+            <span class="art-author">By <strong>Mindy Genereux</strong></span>
+            ${f.readtime || f.readTime ? `<span class="art-readtime">${escHtml(f.readtime || f.readTime)}</span>` : ''}
+          </div>
+        </div>
+      </header>
+      ${heroImgHtml}
+      <section class="art-body-wrap">
+        <div class="art-body-inner">
+          ${f.excerpt ? `<p class="art-pull">"${escHtml(f.excerpt)}"</p>` : ''}
+          <div class="art-body">${bodyHtml}</div>
+          ${articleEndSection()}
+        </div>
+      </section>
+      <section class="art-footer-cta">
+        <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:14px;">Continue the Journey</span>
+        <h2>Your story is worth <em>preserving.</em></h2>
+        <p>Story Studio gives you a private, beautiful space to capture everything that matters.</p>
+        <div class="art-cta-btns">
+          <a href="https://storystudio.media" class="btn-mint">Start Your Legacy</a>
+          <a href="/live-well-library/" class="btn-ghost">More Articles</a>
+        </div>
+      </section>`;
+  } catch (err) {
+    document.getElementById('app').innerHTML = `
+      <div style="min-height:60vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:160px 24px 80px;">
+        <h1 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;">Something went wrong.</h1>
+        <a href="/live-well-library/" style="color:#4aafa0;font-family:'DM Sans',sans-serif;">Back to Library</a>
+      </div>`;
+  }
+}
+
+const nav = document.getElementById('mn');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+document.getElementById('nh').addEventListener('click', () => document.getElementById('mob').classList.add('open'));
+document.getElementById('mc').addEventListener('click', () => document.getElementById('mob').classList.remove('open'));
+loadArticle();
+</script>
+</body>
+</html>
