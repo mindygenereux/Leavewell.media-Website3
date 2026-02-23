@@ -260,6 +260,7 @@ async function loadArticle() {
     }
     const item = data.items[0];
     const f = item.fields;
+    console.log('Contentful fields:', f);
     const title = f.title || f.Title || 'Untitled';
     const assets = {};
     if (data.includes && data.includes.Asset) {

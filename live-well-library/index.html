@@ -237,10 +237,11 @@ async function fetchArticles() {
     }
     allArticles = (data.items || []).map(item => {
       const f = item.fields;
+      console.log('Contentful fields:', f);
       let imageUrl = null;
       if (f.heroImage && f.heroImage.sys) imageUrl = assets[f.heroImage.sys.id] || null;
       return {
-        title:    f.title    || 'Untitled',
+        title:    f.title || f.Title || 'Untitled',
         slug:     f.slug     || item.sys.id,
         category: f.category || '',
         excerpt:  f.excerpt  || '',
