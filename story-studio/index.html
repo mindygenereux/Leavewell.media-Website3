@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story Studio – The Private Legacy App | Leave Well Media</title>
+<meta name="description" content="Story Studio is a private, emotionally safe legacy app for families navigating terminal illness, hospice, and anticipatory grief.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--warm-cream:#faf6f0;--deep-earth:#2c1f14;--terracotta:#b85c38;--dusty-rose:#d4907a;--sage:#7a9e7e;--gold:#c9a84c;--gold-light:#e8d5a3;--muted-plum:#6b4c6b;--warm-white:#fffdf9;--charcoal:#3a3028;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:var(--warm-cream);color:var(--deep-earth);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s ease;}
+nav.scrolled{background:rgba(44,31,20,0.95);backdrop-filter:blur(10px);padding:14px 40px;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--warm-white);text-decoration:none;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:#7ecfc0;}
+.nav-cta{background:var(--terracotta);color:white;font-size:0.82rem;font-weight:500;letter-spacing:0.08em;padding:10px 24px;text-decoration:none;transition:background 0.3s;}
+.nav-cta:hover{background:var(--dusty-rose);}
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.nav-ham span{display:block;width:24px;height:2px;background:#fff;}
+.mob{display:none;position:fixed;inset:0;background:rgba(44,31,20,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mob.open{display:flex;}
+.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
+.mob a:hover{color:#7ecfc0;}
+.mob-close{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-ham{display:flex;}nav{padding:16px 20px;}}
+.hero{min-height:100vh;background:var(--deep-earth);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,168,76,0.18)0%,transparent 60%),radial-gradient(ellipse 60% 60% at 80% 80%,rgba(184,92,56,0.12)0%,transparent 60%);pointer-events:none;}
+.hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease forwards 0.2s;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:400;color:var(--warm-white);line-height:1.1;max-width:900px;opacity:0;animation:fadeUp 0.9s ease forwards 0.4s;}
+.hero h1 em{color:var(--dusty-rose);font-style:italic;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-style:italic;color:var(--gold-light);max-width:620px;margin:28px auto 0;line-height:1.7;opacity:0;animation:fadeUp 1s ease forwards 0.6s;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:48px;opacity:0;animation:fadeUp 1s ease forwards 0.8s;}
+.btn-primary{background:var(--terracotta);color:white;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;padding:18px 40px;border:none;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(184,92,56,0.4);}
+.btn-ghost{background:transparent;color:var(--warm-white);font-family:'DM Sans',sans-serif;font-size:1rem;padding:18px 40px;border:1px solid rgba(255,255,255,0.25);border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.hero-trust{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;opacity:0.5;font-size:0.8rem;color:var(--warm-white);}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.5),transparent);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
+.hook{background:var(--warm-white);padding:100px 24px;text-align:center;position:relative;}
+.hook::before{content:'"';font-family:'Playfair Display',serif;font-size:20rem;color:var(--gold-light);position:absolute;top:-60px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;opacity:0.3;}
+.hook-q{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,2.8rem);font-style:italic;font-weight:300;color:var(--charcoal);max-width:780px;margin:0 auto;line-height:1.5;position:relative;z-index:1;}
+.hook-q strong{color:var(--terracotta);font-weight:400;}
+.hook-sub{font-size:1rem;color:var(--charcoal);opacity:0.7;margin-top:32px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.8;position:relative;z-index:1;}
+.pain{background:var(--deep-earth);padding:100px 24px;}
+.con{max-width:1100px;margin:0 auto;}
+.eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:16px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:400;line-height:1.15;color:var(--deep-earth);max-width:700px;}
+.sec-title em{font-style:italic;color:var(--terracotta);}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-top:60px;}
+.pain-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:40px 32px;transition:background 0.3s;}
+.pain-card:hover{background:rgba(255,255,255,0.07);}
+.pain-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-style:italic;color:var(--gold);opacity:0.3;line-height:1;margin-bottom:16px;}
+.pain-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:#fff;margin-bottom:12px;}
+.pain-card p{font-size:0.9rem;color:#fff;opacity:0.65;line-height:1.8;}
+.features{background:var(--warm-cream);padding:100px 24px;}
+.feat-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:80px;}
+@media(max-width:768px){.feat-intro{grid-template-columns:1fr;gap:40px;}}
+.feat-intro p{font-size:1.05rem;line-height:1.9;color:var(--charcoal);opacity:0.8;margin-top:24px;}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;}
+.feat-item{background:var(--warm-white);border-left:3px solid var(--terracotta);padding:32px 28px;transition:transform 0.3s,box-shadow 0.3s;}
+.feat-item:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(44,31,20,0.08);}
+.feat-item:nth-child(3n+2){border-left-color:var(--sage);}
+.feat-item:nth-child(3n+3){border-left-color:var(--gold);}
+.feat-icon{font-size:1.8rem;margin-bottom:16px;display:block;}
+.feat-item h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;margin-bottom:10px;color:var(--deep-earth);}
+.feat-item p{font-size:0.88rem;line-height:1.8;color:var(--charcoal);opacity:0.7;}
+.arch{background:#e8f7f5;padding:120px 24px;}
+.arch-inner{max-width:1200px;margin:0 auto;}
+.arch-intro{text-align:center;max-width:720px;margin:0 auto 72px;}
+.arch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;}
+.acard{background:#fff;text-align:center;padding:52px 28px 44px;position:relative;box-shadow:0 6px 30px rgba(44,44,44,0.07);transition:transform 0.3s,box-shadow 0.3s;}
+.acard:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(44,44,44,0.13);}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.acard.hero::before{background:linear-gradient(to right,#7ecfc0,#b4e5de);}
+.acard.guide::before{background:linear-gradient(to right,#b85c38,#d4907a);}
+.acard.builder::before{background:linear-gradient(to right,#c9a84c,#e8d5a3);}
+.acard.witness::before{background:linear-gradient(to right,#6b4c6b,#a07aa0);}
+.acard-sym{font-size:3rem;display:block;margin-bottom:20px;}
+.acard-role{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;display:block;margin-bottom:14px;}
+.acard.hero .acard-role{color:#4aafa0;}.acard.guide .acard-role{color:#b85c38;}.acard.builder .acard-role{color:#c9a84c;}.acard.witness .acard-role{color:#6b4c6b;}
+.acard h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:400;margin-bottom:14px;color:#2c2c2c;line-height:1.1;}
+.acard p{font-family:'DM Sans',sans-serif;font-size:1rem;line-height:1.85;color:#3a3a3a;opacity:0.75;}
+.acard.hero:hover{background:#f5fffe;}.acard.guide:hover{background:#fff9f7;}.acard.builder:hover{background:#fffdf5;}.acard.witness:hover{background:#faf7fa;}
+.proof{background:var(--deep-earth);padding:100px 24px;text-align:center;}
+.proof-h{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-style:italic;font-weight:300;color:var(--warm-white);max-width:700px;margin:0 auto 16px;line-height:1.4;}
+.proof-s{font-size:0.9rem;color:var(--gold-light);opacity:0.7;margin-bottom:64px;letter-spacing:0.1em;}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1000px;margin:0 auto;}
+.tcard{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:36px 28px;text-align:left;position:relative;}
+.tcard::before{content:'"';font-family:'Playfair Display',serif;font-size:5rem;color:var(--gold);opacity:0.3;position:absolute;top:8px;left:20px;line-height:1;}
+.tcard p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;font-weight:300;color:var(--warm-white);line-height:1.7;padding-top:24px;opacity:0.9;}
+.tcard-name{font-size:0.78rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);display:block;margin-top:20px;opacity:0.8;}
+.stats{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;margin-top:64px;padding-top:64px;border-top:1px solid rgba(255,255,255,0.08);}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-style:italic;font-weight:300;color:var(--gold);display:block;line-height:1;}
+.stat-l{font-size:0.78rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--warm-white);opacity:0.5;display:block;margin-top:8px;}
+.included{background:var(--warm-cream);padding:100px 24px;}
+.inc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:60px;}
+.inc-item{display:flex;align-items:flex-start;gap:14px;padding:24px 20px;background:var(--warm-white);border-top:2px solid var(--gold-light);}
+.chk{color:var(--sage);font-size:1.1rem;flex-shrink:0;margin-top:2px;}
+.inc-item span{font-size:0.92rem;line-height:1.6;color:var(--charcoal);}
+.inc-item span strong{display:block;color:var(--deep-earth);font-weight:500;margin-bottom:2px;}
+.pricing{background:var(--deep-earth);padding:100px 24px;text-align:center;}
+.pricing-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gold-light);opacity:0.8;margin:16px auto 64px;max-width:500px;}
+.p-cards{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;max-width:800px;margin:0 auto;}
+.p-card{flex:1;min-width:260px;max-width:340px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:48px 32px;text-align:center;position:relative;transition:all 0.3s;}
+.p-card:hover{background:rgba(255,255,255,0.08);transform:translateY(-4px);}
+.p-card.feat{background:var(--terracotta);border-color:var(--terracotta);}
+.p-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--deep-earth);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:6px 16px;white-space:nowrap;}
+.p-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:var(--warm-white);margin-bottom:8px;}
+.p-amt{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--warm-white);line-height:1;margin:20px 0 4px;}
+.p-per{font-size:0.8rem;color:var(--warm-white);opacity:0.7;margin-bottom:28px;}
+.p-card .btn-primary{width:100%;text-align:center;background:var(--warm-white);color:var(--deep-earth);margin-top:28px;display:block;}
+.p-card.feat .btn-primary{background:var(--deep-earth);color:var(--warm-white);}
+.p-note{margin-top:40px;font-size:0.85rem;color:var(--warm-white);opacity:0.5;}
+.faq-sec{background:var(--warm-cream);padding:100px 24px;}
+.faq-list{max-width:740px;margin:60px auto 0;}
+.faq-item{border-bottom:1px solid rgba(44,31,20,0.12);padding:28px 0;cursor:pointer;}
+.faq-q{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;color:var(--deep-earth);display:flex;justify-content:space-between;align-items:center;gap:20px;user-select:none;}
+.faq-tog{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--terracotta);flex-shrink:0;transition:transform 0.3s;}
+.faq-item.open .faq-tog{transform:rotate(45deg);}
+.faq-ans{font-size:0.92rem;line-height:1.9;color:var(--charcoal);opacity:0.75;max-height:0;overflow:hidden;transition:max-height 0.4s,padding 0.3s;}
+.faq-item.open .faq-ans{max-height:300px;padding-top:16px;}
+.fin-cta{background:var(--warm-cream);padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
+.fin-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(201,168,76,0.08)0%,transparent 70%);pointer-events:none;}
+.fin-h{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,5rem);font-weight:400;color:var(--deep-earth);line-height:1.1;max-width:800px;margin:0 auto 24px;}
+.fin-h em{font-style:italic;color:var(--terracotta);}
+.fin-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--charcoal);opacity:0.7;max-width:520px;margin:0 auto 48px;line-height:1.7;}
+.fin-btn{background:var(--deep-earth);color:var(--warm-white);font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;letter-spacing:0.08em;padding:22px 52px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
+.fin-btn:hover{background:var(--terracotta);transform:translateY(-2px);}
+.fin-sm{display:block;margin-top:20px;font-size:0.8rem;color:var(--charcoal);opacity:0.45;letter-spacing:0.08em;}
+.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
+.footer-links a:hover{opacity:0.75;}
+.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fi{opacity:0;transform:translateY(20px);transition:opacity 0.7s,transform 0.7s;}
+.fi.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="/" class="nav-logo">Leave Well Media</a>
+  <div class="nav-links">
+    <a href="/story-studio" class="active">Story Studio</a>
+    <a href="/live-well-library">Library</a>
+    <a href="/legacy-shop">Shop</a>
+    <a href="/about">About</a>
+    <a href="/connect">Connect</a>
+  </div>
+  <a href="https://storystudio.media" class="nav-cta">Start Your Legacy →</a>
+  <div class="nav-ham" id="nh"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <button class="mob-close" id="mc">✕</button>
+  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  <a href="https://storystudio.media" style="color:#c9a84c;">Start Your Legacy →</a>
+</div>
+<header class="hero">
+  <p class="hero-eyebrow">A Legacy App for the People You Love Most</p>
+  <h1>Your story<br>deserves to be<br><em>remembered.</em></h1>
+  <p class="hero-sub">The private, emotionally safe app that helps you capture a lifetime of memories — before the moments you can't take back are gone.</p>
+  <div class="hero-btns">
+    <a href="https://storystudio.media" class="btn-primary">Start Your Living Legacy</a>
+    <a href="#features" class="btn-ghost">See How It Works</a>
+  </div>
+  <div class="hero-trust"><div class="scroll-line"></div><span>Created by a Certified Death Doula &amp; End-of-Life Coach</span><div class="scroll-line"></div></div>
+</header>
+<section class="hook">
+  <p class="hook-q fi">You keep saying <strong>"we'll record those stories later."</strong><br>But what if later doesn't come the way you planned?</p>
+  <p class="hook-sub fi">Story Studio was born at a bedside. Built in grief, shaped by love, and designed so that no family has to lose the voice of the person they adore.</p>
+</section>
+<section class="pain fi">
+  <div class="con">
+    <span class="eyebrow" style="color:var(--gold-light);">The Reality No One Talks About</span>
+    <h2 class="sec-title" style="color:var(--warm-white);">Sound familiar?</h2>
+    <div class="pain-grid">
+      <div class="pain-card fi"><div class="pain-num">01</div><h3>Time is suddenly not on your side</h3><p>A terminal diagnosis reframes everything. You want to capture every story, but where do you even begin?</p></div>
+      <div class="pain-card fi"><div class="pain-num">02</div><h3>The blank page is paralyzing</h3><p>You sit down to record something meaningful and your mind goes blank. The words won't come. The emotion is too big.</p></div>
+      <div class="pain-card fi"><div class="pain-num">03</div><h3>DIY doesn't do it justice</h3><p>A phone recording on the counter. Scattered videos across three apps. Files no one can find in five years. Your loved one's story deserves better.</p></div>
+      <div class="pain-card fi"><div class="pain-num">04</div><h3>You're grieving while caregiving</h3><p>Anticipatory grief is real, exhausting, and rarely acknowledged. You need a tool that holds space for all of it.</p></div>
+    </div>
+  </div>
+</section>
+<section class="features" id="features">
+  <div class="con">
+    <div class="feat-intro">
+      <div class="fi">
+        <span class="eyebrow">What Story Studio Does</span>
+        <h2 class="sec-title">Everything you need to preserve a <em>lifetime</em> of love.</h2>
+        <p>Story Studio takes the work, overwhelm, and guesswork out of legacy creation. Every tool is designed to feel gentle, guided, and completely private. No tech skills required. No social media. No judgment.</p>
+      </div>
+      <div class="fi" style="background:linear-gradient(135deg,rgba(212,144,122,0.13)0%,rgba(122,158,126,0.13)100%);padding:48px;display:flex;flex-direction:column;gap:16px;justify-content:center;">
+        <div style="background:var(--warm-white);padding:20px 24px;border-left:3px solid var(--terracotta);"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--charcoal);line-height:1.7;">"I recorded my dad's laugh three months before he passed. Story Studio made it easy when nothing else felt easy."</span></div>
+        <div style="background:var(--warm-white);padding:20px 24px;border-left:3px solid var(--sage);"><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--charcoal);line-height:1.7;">"My mom scheduled birthday messages for my kids' future milestones. We still get them. It's everything."</span></div>
+      </div>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-item fi"><span class="feat-icon">🎙️</span><h3>AI-Guided Story Prompts</h3><p>50+ thoughtfully crafted prompts — plus an AI generator that creates personalized questions based on your life, culture, and memories. No blank page terror, ever.</p></div>
+      <div class="feat-item fi"><span class="feat-icon">📅</span><h3>Scheduled Future Messages</h3><p>Record messages for birthdays, graduations, wedding days. Schedule them now. They'll arrive exactly when they're needed.</p></div>
+      <div class="feat-item fi"><span class="feat-icon">🎞️</span><h3>Memory Capsules</h3><p>Bite-sized, beautifully organized memory entries — voice, video, photo, or written. Think Instagram Reels for your living legacy.</p></div>
+      <div class="feat-item fi"><span class="feat-icon">🔒</span><h3>100% Private by Design</h3><p>No social media. No ads. No strangers. Only the people you personally invite can see your Story Studio. Your memories are yours — forever.</p></div>
+      <div class="feat-item fi"><span class="feat-icon">🎬</span><h3>Final Project Video</h3><p>A Storyboard + Canva Integration transforms your memories into a polished tribute video — typically 5–6 minutes of pure legacy.</p></div>
+      <div class="feat-item fi"><span class="feat-icon">📓</span><h3>Private Journal &amp; Healing Space</h3><p>Process your grief privately. Write, reflect, and record your own journey — separate from what you share. This is your space.</p></div>
+    </div>
+  </div>
+</section>
+<section class="arch">
+  <div class="arch-inner">
+    <div class="arch-intro fi">
+      <span style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:18px;">The Archetype Framework</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);font-weight:400;color:#2c2c2c;line-height:1.1;">Everyone has a role.<br>Every role has a purpose.</h2>
+      <p style="font-family:'DM Sans',sans-serif;font-size:1.1rem;line-height:1.95;color:#3a3a3a;opacity:0.78;margin-top:22px;">Story Studio's unique invitation system keeps the HERO in total control — deciding who enters their story and how much they share. Emotional safety isn't an afterthought. It's the architecture.</p>
+    </div>
+    <div class="arch-grid">
+      <div class="acard hero fi"><span class="acard-sym">✦</span><span class="acard-role">The Center of the Story</span><h3>The HERO</h3><p>The person whose legacy is being honored. They lead, they invite, they decide how their story is told — right until the final project is complete.</p></div>
+      <div class="acard guide fi"><span class="acard-sym">🧭</span><span class="acard-role">Closest Companion</span><h3>The GUIDE</h3><p>The caregiver or closest support person. They help the HERO tell their story and can complete the legacy when the HERO needs them most.</p></div>
+      <div class="acard builder fi"><span class="acard-sym">🛠️</span><span class="acard-role">Trusted Inner Circle</span><h3>The BUILDERS</h3><p>Children, partners, chosen family — they contribute memories and help with the technical side at the HERO's personal invitation.</p></div>
+      <div class="acard witness fi"><span class="acard-sym">👁️</span><span class="acard-role">Extended Community</span><h3>The WITNESSES</h3><p>Friends and extended family who contribute at their own pace, honored and included while the HERO stays safely at the center.</p></div>
+    </div>
+  </div>
+</section>
+<section class="proof">
+  <div class="con">
+    <p class="proof-h fi">"I didn't know what I had until I played it back."</p>
+    <p class="proof-s fi">Stories from families who found Story Studio in time</p>
+    <div class="tgrid">
+      <div class="tcard fi"><p>My husband was diagnosed with ALS in March. By May we had recorded 47 memories, scheduled messages for every milestone our kids will ever hit, and created a final video that made our whole family cry — the good kind of cry.</p><span class="tcard-name">— Michelle T., Wife &amp; Mother</span></div>
+      <div class="tcard fi"><p>As a hospice social worker I recommend Story Studio to every family I work with. The guided prompts remove the overwhelm. I've watched it transform anticipatory grief into something sacred.</p><span class="tcard-name">— Dana R., Hospice Social Worker</span></div>
+      <div class="tcard fi"><p>Mom passed three months ago. Every Tuesday morning I still get a message she recorded. She's gone but she's still here, still cheering me on. I will forever be grateful for Story Studio.</p><span class="tcard-name">— James K., Son</span></div>
+    </div>
+    <div class="stats fi">
+      <div><span class="stat-n">50+</span><span class="stat-l">Guided Memory Prompts</span></div>
+      <div><span class="stat-n">∞</span><span class="stat-l">Future Messages Scheduled</span></div>
+      <div><span class="stat-n">100%</span><span class="stat-l">Private. No Ads. Ever.</span></div>
+      <div><span class="stat-n">1×</span><span class="stat-l">Lifetime Access Payment</span></div>
+    </div>
+  </div>
+</section>
+<section class="included fi" id="included">
+  <div class="con">
+    <span class="eyebrow">Everything Included</span>
+    <h2 class="sec-title">One payment. A lifetime of <em>meaning.</em></h2>
+    <div class="inc-grid">
+      <div class="inc-item"><span class="chk">✓</span><span><strong>50+ Voice, Photo &amp; Story Prompts</strong>Thoughtfully designed to jog your memory back to the moments that matter.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>AI-Generated Personalized Prompts</strong>Exclusive to Story Studio — tailored to your unique life and family.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Digital Legacy Timeline</strong>Organize every memory, story, and moment in a beautiful, chronological record.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Memory Capsules (Reel-Style)</strong>Fun, bite-sized entries with voice, video, photo, or written memories.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Final Project Tribute Video</strong>Storyboard + Canva Integration for a polished, shareable memorial video.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Scheduled Future Messages</strong>Birthdays, anniversaries, milestones — your voice, delivered when it matters most.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Private Journal &amp; Healing Space</strong>A personal space to process your grief journey alongside the legacy creation.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>Invitation-Only Archetype System</strong>Full control over who sees, contributes, and completes your story.</span></div>
+      <div class="inc-item"><span class="chk">✓</span><span><strong>No Ads. No Upsells. No Social Media.</strong>Your memories are private and protected. Always.</span></div>
+    </div>
+  </div>
+</section>
+<section class="pricing fi" id="pricing">
+  <div class="con">
+    <span class="eyebrow" style="color:var(--gold);display:block;text-align:center;margin-bottom:16px;">Pricing</span>
+    <h2 class="sec-title" style="color:var(--warm-white);text-align:center;max-width:100%;margin:0 auto;">Simple, honest pricing.<br><em>Because love shouldn't be complicated.</em></h2>
+    <p class="pricing-sub">No hidden fees. No recurring surprises. Just lifetime access to everything your family needs.</p>
+    <div class="p-cards">
+      <div class="p-card fi"><h3>Monthly</h3><div class="p-amt">$—</div><div class="p-per">per month · cancel anytime</div><p style="font-size:0.85rem;color:var(--warm-white);opacity:0.6;line-height:1.7;">Full access to every feature. Perfect if you're just starting to explore.</p><a href="https://storystudio.media" class="btn-primary">Get Started</a></div>
+      <div class="p-card feat fi"><div class="p-badge">Most Meaningful</div><h3>Lifetime Access</h3><div class="p-amt">$—</div><div class="p-per">one-time payment · forever</div><p style="font-size:0.85rem;color:var(--warm-white);opacity:0.85;line-height:1.7;">Everything. Forever. The best investment you'll ever make.</p><a href="https://storystudio.media" class="btn-primary">Get Lifetime Access</a></div>
+      <div class="p-card fi"><h3>Annual</h3><div class="p-amt">$—</div><div class="p-per">per year · best annual value</div><p style="font-size:0.85rem;color:var(--warm-white);opacity:0.6;line-height:1.7;">All features at a discounted annual rate. Great for caregivers in it for the long journey.</p><a href="https://storystudio.media" class="btn-primary">Choose Annual</a></div>
+    </div>
+    <p class="p-note">Visit <a href="https://storystudio.media" style="color:var(--gold-light);">storystudio.media</a> for current pricing · Licensing available for End-of-Life professionals</p>
+  </div>
+</section>
+<section class="faq-sec fi" id="faq">
+  <div class="con">
+    <span class="eyebrow">Questions Answered</span>
+    <h2 class="sec-title">You have questions.<br><em>We have you covered.</em></h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">Is Story Studio only for people who are actively dying?<span class="faq-tog">+</span></div><div class="faq-ans">Absolutely not. Story Studio is for anyone who wants to preserve a legacy — whether you're facing a terminal diagnosis, supporting someone in hospice, or simply want your stories captured for future generations.</div></div>
+      <div class="faq-item"><div class="faq-q">Is my story completely private?<span class="faq-tog">+</span></div><div class="faq-ans">Yes — 100%. Story Studio is completely disconnected from social media. Nothing is ever shared unless you explicitly choose to share it. Only the people you personally invite can access or contribute to it.</div></div>
+      <div class="faq-item"><div class="faq-q">What if I feel overwhelmed or don't know what to say?<span class="faq-tog">+</span></div><div class="faq-ans">That's exactly what Story Studio was built for. The AI-guided prompts will spark memories you didn't even know you wanted to share. You can start with a 5-minute voice note or a favorite photo. There's no pressure, no timeline, and no wrong way to tell your story.</div></div>
+      <div class="faq-item"><div class="faq-q">Can multiple family members contribute?<span class="faq-tog">+</span></div><div class="faq-ans">Yes! The Archetype Framework was designed exactly for this. The HERO invites Builders and Witnesses who can contribute memories, photos, and stories from their own perspective while the HERO stays in full control.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I need to download an app?<span class="faq-tog">+</span></div><div class="faq-ans">Story Studio works on any device — phone, tablet, or computer. No complicated downloads required. Visit storystudio.media to begin.</div></div>
+    </div>
+  </div>
+</section>
+<section class="fin-cta">
+  <div class="con">
+    <h2 class="fin-h fi">Some stories<br><em>only get one chance</em><br>to be told.</h2>
+    <p class="fin-sub fi">Don't let your family inherit silence. Start capturing the stories, the laughs, the recipes, the wisdom — today.</p>
+    <a href="https://storystudio.media" class="fin-btn fi">Start Your Living Legacy →</a>
+    <span class="fin-sm fi">storystudio.media · Private · Safe · Built with love</span>
+  </div>
+</section>
+<footer class="footer">
+  <a href="/" class="footer-logo">Leave Well Media</a>
+  <div class="footer-links">
+    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  </div>
+  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+</footer>
+<script>
+const nav=document.getElementById('main-nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+document.getElementById('nh').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
+document.getElementById('mc').addEventListener('click',()=>document.getElementById('mob').classList.remove('open'));
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!o)item.classList.add('open');});});
+</script>
+</body>
+</html>

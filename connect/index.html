@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect – Leave Well Media | Get in Touch with Mindy Genereux</title>
+<meta name="description" content="Reach out to Leave Well Media with questions about Story Studio, legacy resources, collaboration, or end-of-life support. Mindy reads every message personally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
+nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
+.nl{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;text-decoration:none;}
+.nlinks{display:flex;align-items:center;gap:32px;}
+.nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
+.nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
+.ncta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
+.ncta:hover{background:#4aafa0;color:#fff;}
+.nham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.nham span{display:block;width:24px;height:2px;background:#fff;}
+.mob{display:none;position:fixed;inset:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mob.open{display:flex;}
+.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
+.mob a:hover{color:#7ecfc0;}
+.mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
+@media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
+
+/* HERO */
+.cn-hero{background:#1e3a38;padding:160px 24px 100px;text-align:center;position:relative;overflow:hidden;}
+.cn-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 85%,rgba(201,168,76,0.07)0%,transparent 60%);pointer-events:none;}
+.cn-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;margin-bottom:28px;display:block;position:relative;z-index:1;}
+.cn-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,7vw,6.5rem);font-weight:400;color:#fff;line-height:1.05;max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.cn-hero h1 em{color:#b4e5de;font-style:italic;}
+.cn-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.7rem);font-style:italic;color:#e8d5a3;max-width:620px;margin:28px auto 0;line-height:1.7;position:relative;z-index:1;}
+
+/* MAIN LAYOUT */
+.cn-main{background:#faf8f5;padding:120px 24px;}
+.cn-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:90px;align-items:start;}
+@media(max-width:768px){.cn-inner{grid-template-columns:1fr;gap:52px;}}
+
+/* LEFT PANEL */
+.cn-info-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:16px;}
+.cn-info h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:0 0 28px;}
+.cn-info h2 em{font-style:italic;color:#b85c38;}
+.cn-info-lead{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;font-weight:300;color:#3a3a3a;line-height:1.65;margin-bottom:40px;opacity:0.82;}
+.cn-ways{display:flex;flex-direction:column;gap:16px;margin-bottom:48px;}
+.cn-way{background:#fff;border-left:3px solid #7ecfc0;padding:22px 24px;box-shadow:0 4px 18px rgba(44,44,44,0.05);transition:transform 0.3s,box-shadow 0.3s;}
+.cn-way:hover{transform:translateX(4px);}
+.cn-way:nth-child(2){border-left-color:#b85c38;}
+.cn-way:nth-child(3){border-left-color:#c9a84c;}
+.cn-way:nth-child(4){border-left-color:#6b4c6b;}
+.cn-way h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;color:#2c2c2c;margin-bottom:6px;}
+.cn-way p{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:#3a3a3a;opacity:0.7;}
+.cn-way a{color:#4aafa0;text-decoration:none;font-weight:500;}
+.cn-mindy{background:#2c2c2c;padding:32px 28px;margin-top:16px;}
+.cn-mindy-name{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#b4e5de;display:block;margin-bottom:12px;}
+.cn-mindy p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;font-weight:300;color:#fff;line-height:1.65;opacity:0.88;}
+
+/* FORM */
+.cn-form-wrap{background:#fff;padding:52px 44px;box-shadow:0 12px 48px rgba(44,44,44,0.09);}
+@media(max-width:480px){.cn-form-wrap{padding:36px 24px;}}
+.cn-form-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:#2c2c2c;margin-bottom:8px;line-height:1.1;}
+.cn-form-sub{font-family:'DM Sans',sans-serif;font-size:0.92rem;color:#3a3a3a;opacity:0.65;margin-bottom:36px;line-height:1.6;}
+.cn-form{display:flex;flex-direction:column;gap:20px;}
+.cn-field{display:flex;flex-direction:column;gap:7px;}
+.cn-field label{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#2c2c2c;opacity:0.65;}
+.cn-field input,.cn-field select,.cn-field textarea{width:100%;background:#faf8f5;border:1px solid rgba(44,44,44,0.15);border-radius:2px;padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:0.97rem;font-weight:300;color:#2c2c2c;transition:border-color 0.3s,box-shadow 0.3s;outline:none;resize:vertical;}
+.cn-field input:focus,.cn-field select:focus,.cn-field textarea:focus{border-color:#7ecfc0;box-shadow:0 0 0 3px rgba(126,207,192,0.12);}
+.cn-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234aafa0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;cursor:pointer;}
+.cn-field textarea{min-height:130px;}
+.cn-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:480px){.cn-row{grid-template-columns:1fr;}}
+.cn-submit{background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.08em;padding:18px 40px;border:none;border-radius:2px;cursor:pointer;transition:all 0.3s;width:100%;margin-top:8px;}
+.cn-submit:hover{background:#4aafa0;transform:translateY(-2px);}
+.cn-privacy{font-family:'DM Sans',sans-serif;font-size:0.76rem;color:#3a3a3a;opacity:0.42;text-align:center;margin-top:12px;line-height:1.5;}
+
+/* COMMUNITY SECTION */
+.cn-community{background:#1e3a38;padding:120px 24px;text-align:center;}
+.cn-com-inner{max-width:900px;margin:0 auto;}
+.cn-community h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#fff;line-height:1.05;margin:12px 0 24px;}
+.cn-community h2 em{font-style:italic;color:#b4e5de;}
+.cn-com-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;font-weight:300;color:#e8d5a3;max-width:680px;margin:0 auto 60px;line-height:1.7;opacity:0.88;}
+.cn-channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:72px;}
+.cn-ch{background:rgba(255,255,255,0.05);border:1px solid rgba(126,207,192,0.15);padding:36px 28px;text-align:left;transition:background 0.3s,border-color 0.3s;}
+.cn-ch:hover{background:rgba(126,207,192,0.08);border-color:rgba(126,207,192,0.35);}
+.cn-ch-icon{font-size:2.2rem;display:block;margin-bottom:16px;}
+.cn-ch h4{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:#fff;margin-bottom:10px;}
+.cn-ch p{font-family:'DM Sans',sans-serif;font-size:0.88rem;line-height:1.8;color:#fff;opacity:0.55;}
+.cn-ch a{color:#7ecfc0;text-decoration:none;font-weight:500;font-size:0.85rem;display:inline-block;margin-top:12px;}
+.cn-ch a:hover{text-decoration:underline;}
+.cn-pull-box{background:rgba(126,207,192,0.1);border:1px solid rgba(126,207,192,0.22);padding:48px 40px;max-width:680px;margin:0 auto;}
+.cn-pull-box p{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-style:italic;color:#fff;line-height:1.6;margin-bottom:28px;opacity:0.9;}
+.cn-pull-box a{display:inline-block;background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:15px 32px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
+.cn-pull-box a:hover{background:#4aafa0;color:#fff;transform:translateY(-2px);}
+
+/* FINAL CTA */
+.cn-cta{background:#e8f7f5;padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
+.cn-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.2)0%,transparent 70%);pointer-events:none;}
+.cn-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:800px;margin:0 auto 20px;position:relative;z-index:1;}
+.cn-cta h2 em{font-style:italic;color:#b85c38;}
+.cn-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#3a3a3a;opacity:0.72;max-width:520px;margin:0 auto 48px;line-height:1.8;position:relative;z-index:1;}
+.cn-cta-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
+.btn-dark{background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;padding:20px 48px;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
+.btn-dark:hover{background:#4aafa0;transform:translateY(-2px);}
+.btn-outline{background:transparent;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;padding:20px 48px;border:2px solid #1e3a38;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
+.btn-outline:hover{background:#1e3a38;color:#fff;}
+
+/* FOOTER */
+.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
+.footer-links a:hover{opacity:0.75;}
+.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
+.fi{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
+.fi.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<nav id="mn">
+  <a href="/" class="nl">Leave Well Media</a>
+  <div class="nlinks">
+    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a>
+    <a href="/connect" class="active">Connect</a>
+  </div>
+  <a href="https://storystudio.media" class="ncta">Start Your Legacy</a>
+  <div class="nham" id="nh"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <button class="mclose" id="mc">✕</button>
+  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
+</div>
+
+<header class="cn-hero">
+  <span class="cn-ey">Leave Well Media · Connect &amp; Collaborate</span>
+  <h1>Let's find you<br>the right <em>support.</em></h1>
+  <p class="cn-hero-sub">Whether you have a question, a story to share, or simply need a gentle place to start — this is that place.</p>
+</header>
+
+<section class="cn-main">
+  <div class="cn-inner">
+    <!-- LEFT INFO -->
+    <div class="cn-info fi">
+      <span class="cn-info-ey">Get in Touch</span>
+      <h2>Mindy reads every<br>message <em>personally.</em></h2>
+      <p class="cn-info-lead">There is no form letter. No ticketing system. Just one human being, genuinely wanting to help you navigate whatever you're carrying right now.</p>
+
+      <div class="cn-ways">
+        <div class="cn-way">
+          <h4>📧 General Questions &amp; Support</h4>
+          <p>Questions about our resources, products, or Story Studio? Reach out anytime at <a href="mailto:Mindy@leavewell.media">Mindy@leavewell.media</a></p>
+        </div>
+        <div class="cn-way">
+          <h4>🤝 Collaboration &amp; Partnerships</h4>
+          <p>Are you a hospice, palliative care organization, death doula, therapist, or caregiver network? Let's talk about how we can work together.</p>
+        </div>
+        <div class="cn-way">
+          <h4>🎙️ Speaking &amp; Media</h4>
+          <p>Mindy is available for podcasts, panels, end-of-life events, and caregiver conferences. Send a message through the form and let's connect.</p>
+        </div>
+        <div class="cn-way">
+          <h4>🌿 Just Need to Talk</h4>
+          <p>Sometimes you don't know exactly what you need. That's okay too. Send a message — even an imperfect one — and we'll figure it out together.</p>
+        </div>
+      </div>
+
+      <div class="cn-mindy">
+        <span class="cn-mindy-name">A note from Mindy</span>
+        <p>"I built this because I needed it and it didn't exist. If you're here, you're already doing something brave. I'm honored to be part of your journey."</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="cn-form-wrap fi">
+      <h3 class="cn-form-title">Send a Message</h3>
+      <p class="cn-form-sub">Mindy@leavewell.media · Typically responds within 48 hours</p>
+
+      <form class="cn-form" action="https://formsubmit.co/Mindy@leavewell.media" method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New message from leavewell.media">
+        <input type="hidden" name="_next" value="https://leavewell.media/connect?sent=true">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="cn-row">
+          <div class="cn-field">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Your first name" required>
+          </div>
+          <div class="cn-field">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Your last name">
+          </div>
+        </div>
+
+        <div class="cn-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="cn-field">
+          <label for="reason">How Can We Help?</label>
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Choose the best fit…</option>
+            <option value="story-studio">Story Studio Question or Support</option>
+            <option value="shop">Legacy Shop &amp; Downloads</option>
+            <option value="library">Live Well Library</option>
+            <option value="collaboration">Collaboration or Partnership</option>
+            <option value="speaking">Speaking or Media Request</option>
+            <option value="general">General Question or Just Reaching Out</option>
+          </select>
+        </div>
+
+        <div class="cn-field">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Share whatever feels right. There's no wrong way to start." required></textarea>
+        </div>
+
+        <button type="submit" class="cn-submit">Send Message →</button>
+        <p class="cn-privacy">Your message is private. We never share your information. Ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MESSAGE (shows after form submission) -->
+<div id="success-banner" style="display:none;background:#e8f7f5;border-top:4px solid #7ecfc0;padding:32px 24px;text-align:center;">
+  <p style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:#1e3a38;margin-bottom:8px;">Your message has been sent.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:#3a3a3a;opacity:0.75;">Mindy will be in touch within 48 hours. You are not alone in this.</p>
+</div>
+
+<section class="cn-community">
+  <div class="cn-com-inner">
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:16px;">Join the Community</span>
+    <h2 class="fi">You don't have to<br>carry this <em>alone.</em></h2>
+    <p class="cn-com-lead fi">Leave Well Media is building spaces where anticipatory grief is named, honesty is welcome, and connection is possible — even in the hardest moments.</p>
+
+    <div class="cn-channels">
+      <div class="cn-ch fi">
+        <span class="cn-ch-icon">📚</span>
+        <h4>The Live Well Library</h4>
+        <p>Free articles, guides, and resources for every part of the journey. No signup required. Always available.</p>
+        <a href="/live-well-library">Explore the Library →</a>
+      </div>
+      <div class="cn-ch fi">
+        <span class="cn-ch-icon">✦</span>
+        <h4>Story Studio</h4>
+        <p>A private, invitation-only space for capturing legacy, preserving stories, and leaving something beautiful behind.</p>
+        <a href="https://storystudio.media" target="_blank" rel="noopener">Visit Story Studio →</a>
+      </div>
+      <div class="cn-ch fi">
+        <span class="cn-ch-icon">🛍️</span>
+        <h4>Legacy Shop</h4>
+        <p>Guided journals, Canva templates, and creative tools to help you start wherever you are right now.</p>
+        <a href="/legacy-shop">Browse the Shop →</a>
+      </div>
+      <div class="cn-ch fi">
+        <span class="cn-ch-icon">📬</span>
+        <h4>Newsletter &amp; Updates</h4>
+        <p>New resources, gentle prompts, and updates from Leave Well Media — delivered to your inbox when you need them most.</p>
+        <a href="mailto:Mindy@leavewell.media?subject=Newsletter Signup">Join the List →</a>
+      </div>
+    </div>
+
+    <div class="cn-pull-box fi">
+      <p>"Grief is not meant to be carried alone. Connection is the medicine. This community is the container."</p>
+      <a href="/live-well-library">Explore Free Resources →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cn-cta">
+  <h2 class="fi">Whatever brought you here,<br>you are in the <em>right place.</em></h2>
+  <p class="cn-cta-sub fi">Start with a free resource, capture a story, or simply reach out. There's no wrong way to begin.</p>
+  <div class="cn-cta-btns fi">
+    <a href="/live-well-library" class="btn-dark">Explore Free Resources</a>
+    <a href="https://storystudio.media" class="btn-outline">Start Your Legacy</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="/" class="footer-logo">Leave Well Media</a>
+  <div class="footer-links">
+    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  </div>
+  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+</footer>
+
+<script>
+const nav=document.getElementById('mn');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+document.getElementById('nh').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
+document.getElementById('mc').addEventListener('click',()=>document.getElementById('mob').classList.remove('open'));
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+// Show success banner if redirected after form submit
+if(window.location.search.includes('sent=true')){
+  document.getElementById('success-banner').style.display='block';
+  document.getElementById('success-banner').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body>
+</html>
