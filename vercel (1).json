@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/live-well-library/:slug",
+      "destination": "/live-well-library/article-template/index.html"
+    },
+    {
+      "source": "/live-well-library/:slug/",
+      "destination": "/live-well-library/article-template/index.html"
+    }
+  ]
+}
