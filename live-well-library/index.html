@@ -210,14 +210,30 @@ async function fetchArticles() {
     const res = await fetch(url);
     if (!res.ok) throw new Error('Fetch failed');
     const data = await res.json();
+    
+    // Build assets map from includes
+    const assets = {};
+    if (data.includes && data.includes.Asset) {
+      data.includes.Asset.forEach(asset => {
+        if (asset.fields && asset.fields.file) {
+          assets[asset.sys.id] = 'https:' + asset.fields.file.url;
+        }
+      });
+    }
+    
     allArticles = (data.items || []).map(item => {
       const f = item.fields;
+      let imageUrl = null;
+      const heroField = f.heroImage || f.HeroImage || f.image || f.Image;
+      if (heroField && heroField.sys && heroField.sys.id) {
+        imageUrl = assets[heroField.sys.id] || null;
+      }
       return {
         title: f.title || f.Title || 'Untitled',
         slug: f.slug || f.Slug || item.sys.id,
         excerpt: f.excerpt || f.Excerpt || f.body?.content?.[0]?.content?.[0]?.value?.slice(0, 160) || '',
         category: f.category || f.Category || '',
-        heroImage: null,
+        heroImage: imageUrl,
       };
     });
     renderArticles(allArticles);
@@ -234,10 +250,13 @@ function renderArticles(articles) {
   none.style.display = 'none';
   grid.innerHTML = articles.map((a, i) => {
     const emoji = EMOJI_MAP[a.category] || '📝';
+    const imgContent = a.heroImage 
+      ? `<img src="${a.heroImage}?w=600&h=400&fit=fill" alt="${a.title}">`
+      : `<div class="article-img-placeholder">${emoji}</div>`;
     return `
       <a href="/live-well-library/${a.slug}/" class="article-card">
         <div class="article-img">
-          <div class="article-img-placeholder">${emoji}</div>
+          ${imgContent}
         </div>
         <div class="article-body">
           ${a.category ? `<span class="article-cat">${a.category}</span>` : ''}
