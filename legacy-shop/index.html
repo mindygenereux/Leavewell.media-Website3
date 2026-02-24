@@ -2,206 +2,186 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legacy Shop – Digital Downloads & Resources | Leave Well Media</title>
-<meta name="description" content="Digital downloads, guided journals, Canva templates, and creative resources for families navigating terminal illness, anticipatory grief, and legacy creation.">
+<title>Legacy Shop | Leave Well Media</title>
+<meta name="description" content="Affordable, instant-access legacy tools. Templates, guides, and keepsakes to help you capture what matters before it is too late.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
-nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
-.nl{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;text-decoration:none;}
-.nlinks{display:flex;align-items:center;gap:32px;}
-.nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
-.nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
-.ncta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
-.ncta:hover{background:#4aafa0;color:#fff;}
-.nham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-.nham span{display:block;width:24px;height:2px;background:#fff;}
-.mob{display:none;position:fixed;inset:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
-.mob.open{display:flex;}
-.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
-.mob a:hover{color:#7ecfc0;}
-.mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
-@media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
-.ls-hero{background:#1e3a38;padding:140px 24px 90px;text-align:center;position:relative;overflow:hidden;}
-.ls-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%),radial-gradient(ellipse 50% 50% at 85% 85%,rgba(184,92,56,0.08)0%,transparent 60%);pointer-events:none;}
-.ls-hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;margin-bottom:28px;display:block;position:relative;z-index:1;}
-.ls-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,7vw,6.5rem);font-weight:400;color:#fff;line-height:1.05;max-width:900px;margin:0 auto;position:relative;z-index:1;}
-.ls-hero h1 em{color:#b4e5de;font-style:italic;}
-.ls-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.75rem);font-style:italic;color:#e8d5a3;max-width:640px;margin:28px auto 0;line-height:1.7;position:relative;z-index:1;}
-.pills{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:48px;position:relative;z-index:1;}
-.pill{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#b4e5de;border:1px solid rgba(126,207,192,0.3);padding:8px 20px;border-radius:40px;}
-.ls-products{background:#faf8f5;padding:120px 24px;}
-.ls-pi{max-width:1200px;margin:0 auto;}
-.ls-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:16px;}
-.ls-products h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:700px;margin:0 0 16px;}
-.ls-products h2 em{font-style:italic;color:#b85c38;}
-.ls-sub{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;font-weight:300;color:#3a3a3a;opacity:0.7;max-width:560px;margin:0 0 72px;line-height:1.7;}
-.ls-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
-.ls-card{background:#fff;border-top:4px solid #7ecfc0;padding:0 0 36px;box-shadow:0 6px 30px rgba(44,44,44,0.07);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;}
-.ls-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(44,44,44,0.12);}
-.ls-card:nth-child(2){border-top-color:#b85c38;}
-.ls-card:nth-child(3){border-top-color:#c9a84c;}
-.ls-card:nth-child(4){border-top-color:#6b4c6b;}
-.ls-card:nth-child(5){border-top-color:#4aafa0;}
-.ls-card-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#e8f7f5 0%,#b4e5de 100%);display:flex;align-items:center;justify-content:center;font-size:3rem;overflow:hidden;}
-.ls-card-img img{width:100%;height:100%;object-fit:cover;}
-.ls-card-body{padding:28px 28px 0;flex:1;display:flex;flex-direction:column;}
-.ls-card-price{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#4aafa0;margin-bottom:10px;display:block;}
-.ls-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:#2c2c2c;margin-bottom:14px;line-height:1.2;}
-.ls-card p{font-family:'DM Sans',sans-serif;font-size:0.95rem;line-height:1.85;color:#3a3a3a;opacity:0.72;flex:1;}
-.ls-card-btn{display:inline-block;margin:24px 28px 0;background:#2c2c2c;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 28px;text-decoration:none;transition:all 0.3s;border-radius:2px;text-align:center;}
-.ls-card-btn:hover{background:#4aafa0;transform:translateY(-1px);}
-.ls-courses{background:#2c2c2c;padding:120px 24px;}
-.ls-ci{max-width:1200px;margin:0 auto;}
-.ls-courses h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#fff;line-height:1.05;max-width:700px;margin:0 0 16px;}
-.ls-courses h2 em{font-style:italic;color:#b4e5de;}
-.ls-csub{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;font-weight:300;color:#e8d5a3;opacity:0.75;max-width:560px;margin:0 0 72px;line-height:1.7;}
-.ls-cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.ls-cc{background:rgba(255,255,255,0.05);border:1px solid rgba(126,207,192,0.15);padding:40px 32px;transition:background 0.3s,border-color 0.3s;}
-.ls-cc:hover{background:rgba(126,207,192,0.07);border-color:rgba(126,207,192,0.35);}
-.ls-cc-badge{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#7ecfc0;display:inline-block;border:1px solid rgba(126,207,192,0.4);padding:5px 12px;margin-bottom:20px;border-radius:40px;}
-.ls-cc-badge.soon{color:#e8d5a3;border-color:rgba(232,213,163,0.35);}
-.ls-cc h3{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:400;color:#fff;margin-bottom:14px;line-height:1.15;}
-.ls-cc-price{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;color:#7ecfc0;display:block;margin-bottom:16px;line-height:1;}
-.ls-cc p{font-family:'DM Sans',sans-serif;font-size:0.95rem;line-height:1.85;color:#fff;opacity:0.6;margin-bottom:28px;}
-.ls-cc-btn{display:inline-block;background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 26px;text-decoration:none;transition:all 0.3s;border-radius:2px;}
-.ls-cc-btn:hover{background:#4aafa0;color:#fff;}
-.ls-cc-btn.soon{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);cursor:default;}
-.ls-cc-btn.soon:hover{background:rgba(255,255,255,0.08);transform:none;}
-.ls-studio{background:#e8f7f5;padding:120px 24px;}
-.ls-si{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;}
-@media(max-width:768px){.ls-si{grid-template-columns:1fr;gap:44px;}}
-.ls-st h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:0 0 24px;}
-.ls-st h2 em{font-style:italic;color:#b85c38;}
-.ls-st p{font-family:'DM Sans',sans-serif;font-size:1.05rem;line-height:1.9;color:#3a3a3a;opacity:0.8;margin-bottom:16px;}
-.ls-pull{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;color:#2c2c2c;line-height:1.5;border-left:4px solid #7ecfc0;padding:4px 0 4px 18px;margin:22px 0;opacity:0.82;}
-.ls-studio-btn{display:inline-block;margin-top:12px;background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.07em;padding:18px 44px;text-decoration:none;transition:all 0.3s;border-radius:2px;}
-.ls-studio-btn:hover{background:#4aafa0;transform:translateY(-2px);}
-.ls-sfeats{display:flex;flex-direction:column;gap:14px;}
-.ls-sf{background:#fff;border-left:3px solid #7ecfc0;padding:22px 24px;box-shadow:0 4px 18px rgba(44,44,44,0.06);transition:transform 0.3s,box-shadow 0.3s;}
-.ls-sf:hover{transform:translateY(-3px);}
-.ls-sf:nth-child(2){border-left-color:#b85c38;}
-.ls-sf:nth-child(3){border-left-color:#c9a84c;}
-.ls-sf h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;color:#2c2c2c;margin-bottom:5px;}
-.ls-sf p{font-family:'DM Sans',sans-serif;font-size:0.88rem;line-height:1.72;color:#3a3a3a;opacity:0.65;}
-.ls-cta{background:#1e3a38;padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
-.ls-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.15)0%,transparent 70%);pointer-events:none;}
-.ls-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:400;color:#fff;line-height:1.05;max-width:800px;margin:0 auto 20px;position:relative;z-index:1;}
-.ls-cta h2 em{font-style:italic;color:#b4e5de;}
-.ls-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;color:#e8d5a3;opacity:0.8;max-width:520px;margin:0 auto 48px;line-height:1.8;position:relative;z-index:1;}
-.ls-cta-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
-.btn-mint{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;letter-spacing:0.07em;padding:20px 48px;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-mint:hover{background:#4aafa0;color:#fff;transform:translateY(-2px);}
-.btn-ghost-w{background:transparent;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;padding:20px 48px;border:1px solid rgba(255,255,255,0.3);text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-ghost-w:hover{border-color:#7ecfc0;color:#7ecfc0;}
-.ls-cta-sm{display:block;margin-top:20px;font-family:'DM Sans',sans-serif;font-size:0.76rem;color:#fff;opacity:0.3;letter-spacing:0.1em;position:relative;z-index:1;}
-.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
-.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
-.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
-.footer-links a:hover{opacity:0.75;}
-.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
-.fi{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
-.fi.visible{opacity:1;transform:translateY(0);}
+:root{--mint:#7de8d0;--mint-bg:#d4f5ee;--mint-deep:#4ecdb4;--pink:#f48fb1;--pink-light:#fce4ec;--blush:#fff0f4;--yellow:#fffbe6;--navy:#1a1f36;--white:#ffffff;--text:#2d3748;--cream:#fafffe;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;background:var(--cream);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--mint);}
+.nav-cta{background:var(--pink);color:var(--white)!important;font-size:0.82rem;font-weight:700!important;padding:10px 22px;border-radius:22px;box-shadow:0 4px 14px rgba(244,143,177,0.35);transition:transform 0.2s;}
+.nav-cta:hover{transform:translateY(-1px);}
+
+.hero{padding:140px 52px 80px;background:var(--mint-bg);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.55)0%,transparent 65%);}
+.hero-inner{max-width:760px;position:relative;z-index:1;}
+.eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:400;color:var(--navy);line-height:1.05;margin-bottom:20px;}
+.hero h1 em{font-style:italic;color:var(--pink);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--navy);opacity:0.65;line-height:1.85;max-width:560px;}
+
+.shop{padding:100px 52px;background:var(--white);}
+.shop-inner{max-width:1160px;margin:0 auto;}
+.shop h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:56px;}
+.shop h2 em{font-style:italic;color:var(--pink);}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+
+.product-card{background:var(--white);border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(26,31,54,0.07);border:1px solid rgba(26,31,54,0.05);display:flex;flex-direction:column;transition:transform 0.25s,box-shadow 0.25s;}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(26,31,54,0.12);}
+.product-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;}
+.product-card:nth-child(1) .product-img{background:var(--mint-bg);}
+.product-card:nth-child(2) .product-img{background:var(--pink-light);}
+.product-card:nth-child(3) .product-img{background:var(--yellow);}
+.product-card:nth-child(4) .product-img{background:var(--blush);}
+.product-card:nth-child(5) .product-img{background:linear-gradient(135deg,var(--mint-bg),var(--pink-light));}
+.product-body{padding:26px;flex:1;display:flex;flex-direction:column;}
+.product-price{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:10px;}
+.product-card:nth-child(2) .product-price{color:var(--pink);}
+.product-card:nth-child(3) .product-price{color:#c9950a;}
+.product-card:nth-child(4) .product-price{color:#8b6fcf;}
+.product-card:nth-child(5) .product-price{color:var(--mint-deep);}
+.product-body h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.25;}
+.product-body p{font-size:0.88rem;color:var(--text);opacity:0.65;line-height:1.8;flex:1;}
+.product-btn{display:block;margin:20px 26px 26px;background:var(--navy);color:var(--white);font-size:0.84rem;font-weight:700;letter-spacing:0.06em;padding:13px 24px;border-radius:22px;text-decoration:none;text-align:center;transition:all 0.25s;}
+.product-btn:hover{background:var(--pink);transform:translateY(-1px);}
+
+.bundle{padding:80px 52px;background:var(--navy);}
+.bundle-inner{max-width:800px;margin:0 auto;text-align:center;}
+.bundle h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:var(--white);line-height:1.08;margin-bottom:16px;}
+.bundle h2 em{font-style:italic;color:var(--mint);}
+.bundle p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:36px;}
+.btn-mint{background:var(--mint);color:var(--navy);font-size:0.92rem;font-weight:700;padding:15px 36px;border-radius:28px;text-decoration:none;box-shadow:0 6px 20px rgba(125,232,208,0.25);transition:all 0.25s;display:inline-block;}
+.btn-mint:hover{transform:translateY(-2px);}
+
+footer{background:var(--navy);padding:56px 52px 40px;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+.footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
+.footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
+.footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a:hover{color:rgba(255,255,255,0.7);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+@media(max-width:900px){
+  .products{grid-template-columns:1fr;}
+  nav{padding:12px 20px;} .nav-links{display:none;}
+  .shop,.bundle{padding:72px 24px;}
+  .hero{padding:110px 24px 60px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+}
 </style>
 </head>
 <body>
-<nav id="mn">
-  <a href="/" class="nl">Leave Well Media</a>
-  <div class="nlinks">
-    <a href="/story-studio">Story Studio</a>
-    <a href="/live-well-library">Library</a>
-    <a href="/legacy-shop" class="active">Shop</a>
-    <a href="/about">About</a>
-    <a href="/connect">Connect</a>
+<nav>
+  <a href="/" class="nav-logo">Leave Well Media</a>
+  <div class="nav-links">
+    <a href="/story-studio/">Story Studio</a>
+    <a href="/live-well-library/">Library</a>
+    <a href="/legacy-shop/" class="active">Shop</a>
+    <a href="/about/">About</a>
+    <a href="/connect/">Connect</a>
+    <a href="https://storystudio.media" class="nav-cta" target="_blank">Start Your Legacy</a>
   </div>
-  <a href="https://storystudio.media" class="ncta">Start Your Legacy</a>
-  <div class="nham" id="nh"><span></span><span></span><span></span></div>
 </nav>
-<div class="mob" id="mob">
-  <button class="mclose" id="mc">✕</button>
-  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
-  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
-</div>
-<header class="ls-hero">
-  <span class="ls-hero-eyebrow">Leave Well Media · Legacy Shop</span>
-  <h1>Tools for the story<br>you are still <em>writing.</em></h1>
-  <p class="ls-hero-sub">Digital downloads, guided journals, and creative resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p>
-  <div class="pills">
-    <span class="pill">Instant Download</span>
-    <span class="pill">Canva Templates</span>
-    <span class="pill">Guided Journals</span>
-    <span class="pill">Video Templates</span>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">The Legacy Shop</span>
+    <h1>Start here.<br>Start <em>now.</em></h1>
+    <p class="hero-sub">Affordable, instant-access tools designed to help you capture what matters — without overwhelm. Every product created by a Certified Death Doula.</p>
   </div>
-</header>
-<section class="ls-products">
-  <div class="ls-pi">
-    <span class="ls-ey">Legacy Launchers</span>
-    <h2>Start here.<br>Start <em>now.</em></h2>
-    <p class="ls-sub">Affordable, instant-access tools designed to help you capture what matters, without overwhelm.</p>
-    <div class="ls-grid">
-      <div class="ls-card fi"><div class="ls-card-img">📋</div><div class="ls-card-body"><span class="ls-card-price">$4.97 · Instant Download</span><h3>What to Expect When Your Parent is Actively Dying</h3><p>Compassionate guidance to help you understand death, ease fear, and stay grounded and present during life's most tender endings.</p></div><a href="https://stan.store/mindygenereux/p/what-to-expect-when-your-parent-is-actively-dying" class="ls-card-btn" target="_blank" rel="noopener">Get Instant Access →</a></div>
-      <div class="ls-card fi"><div class="ls-card-img">✉️</div><div class="ls-card-body"><span class="ls-card-price">$9.97 · Instant Download</span><h3>Legacy Letters</h3><p>Transform unspoken love into lasting connection with 5 guided Legacy Letter templates designed to help you express memories, values, and heartfelt messages with ease.</p></div><a href="https://stan.store/mindygenereux/p/living-legacy-letters" class="ls-card-btn" target="_blank" rel="noopener">Get Instant Access →</a></div>
-      <div class="ls-card fi"><div class="ls-card-img">📖</div><div class="ls-card-body"><span class="ls-card-price">$24.97 · Canva Template</span><h3>Legacy Library</h3><p>A 40+ page guided memory journal and legacy book template filled with story prompts, memory capsules, and scheduled messages.</p></div><a href="https://stan.store/mindygenereux/p/legacy-library-" class="ls-card-btn" target="_blank" rel="noopener">Get Instant Access →</a></div>
-      <div class="ls-card fi"><div class="ls-card-img">🎬</div><div class="ls-card-body"><span class="ls-card-price">$21.97 · Canva Template</span><h3>Five-Minute Tribute Video Template</h3><p>An editable celebration of life video and funeral slideshow template you can personalize fast with photos, clips, music, names, and heartfelt messages.</p></div><a href="https://stan.store/mindygenereux/p/5-minute-memorial-video-template-canva" class="ls-card-btn" target="_blank" rel="noopener">Get Instant Access →</a></div>
-      <div class="ls-card fi"><div class="ls-card-img">📸</div><div class="ls-card-body"><span class="ls-card-price">$14.97 · Canva Template</span><h3>10-Page Tribute and Memorial Scrapbook Template</h3><p>A 10 page Scrapbook Template for Canva that makes it easy to create a beautiful digital or printable scrapbook in minutes.</p></div><a href="https://stan.store/mindygenereux/p/10page-tribute-and-memorial-scrapbook-template" class="ls-card-btn" target="_blank" rel="noopener">Get Instant Access →</a></div>
+</section>
+
+<section class="shop">
+  <div class="shop-inner">
+    <span class="eyebrow">Legacy Launchers</span>
+    <h2 class="fade-up">Everything you need to begin<br>building your <em>legacy.</em></h2>
+    <div class="products">
+
+      <div class="product-card fade-up">
+        <div class="product-img">📋</div>
+        <div class="product-body">
+          <span class="product-price">$4.97 · Instant Download</span>
+          <h3>What to Expect When Your Parent Is Actively Dying</h3>
+          <p>Compassionate guidance to help you understand death, ease fear, and stay grounded and present during life's most tender endings.</p>
+        </div>
+        <a href="https://stan.store/mindygenereux/p/what-to-expect-when-your-parent-is-actively-dying" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="product-img">✉️</div>
+        <div class="product-body">
+          <span class="product-price">$9.97 · Instant Download</span>
+          <h3>Legacy Letters</h3>
+          <p>Transform unspoken love into lasting connection with 5 guided Legacy Letter templates — designed to help you express memories, values, and heartfelt messages with ease.</p>
+        </div>
+        <a href="https://stan.store/mindygenereux/p/living-legacy-letters" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="product-img">📖</div>
+        <div class="product-body">
+          <span class="product-price">$24.97 · Canva Template</span>
+          <h3>Legacy Library</h3>
+          <p>A 40+ page guided memory journal and legacy book template filled with story prompts, memory capsules, and scheduled messages. Personalize in Canva, print as a journal, or record audio and video.</p>
+        </div>
+        <a href="https://stan.store/mindygenereux/p/legacy-library-" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="product-img">🎬</div>
+        <div class="product-body">
+          <span class="product-price">$21.97 · Canva Template</span>
+          <h3>Five-Minute Tribute Video Template</h3>
+          <p>An editable celebration of life video and funeral slideshow template you can personalize fast with photos, clips, music, names, and heartfelt messages. Also works as an ethical will or legacy video.</p>
+        </div>
+        <a href="https://stan.store/mindygenereux/p/5-minute-memorial-video-template-canva" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="product-img">📸</div>
+        <div class="product-body">
+          <span class="product-price">$14.97 · Canva Template</span>
+          <h3>10-Page Tribute and Memorial Scrapbook Template</h3>
+          <p>A 10-page Canva scrapbook template that makes it easy to create a beautiful digital or printable memory book in minutes. Add photos, audio, video, captions, and memories — then download or print.</p>
+        </div>
+        <a href="https://stan.store/mindygenereux/p/10page-tribute-and-memorial-scrapbook-template" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="ls-courses">
-  <div class="ls-ci">
-    <span class="ls-ey" style="color:#7ecfc0;">Guided Courses &amp; Creative Tools</span>
-    <h2>Go deeper.<br>Find <em>meaning.</em></h2>
-    <p class="ls-csub">Structured programs for those ready to do the deeper work of legacy, clarity, and intentional living.</p>
-    <div class="ls-cgrid">
-      <div class="ls-cc fi"><span class="ls-cc-badge">Available Now</span><h3>Living Legacy Lab</h3><span class="ls-cc-price">$97</span><p>Modules, Message Builders, and Memory Capsules. Everything you need to capture your story, build your legacy, and leave something lasting for the people you love.</p><a href="https://stan.store/mindygenereux" class="ls-cc-btn" target="_blank" rel="noopener">Enroll Now →</a></div>
-      <div class="ls-cc fi"><span class="ls-cc-badge soon">Coming Soon</span><h3>Meaning Maker</h3><span class="ls-cc-price">$497</span><p>A 6-week structured course offering clarity maps, powerful conversations, and a guided path to reduce regret and create lasting meaning for yourself and your family.</p><span class="ls-cc-btn soon">Coming Soon</span></div>
-      <div class="ls-cc fi"><span class="ls-cc-badge soon">Coming Soon</span><h3>LIVE Legacy Events</h3><span class="ls-cc-price">$47</span><p>In-depth live events and workshops designed to move you from stuck to story. Deep dives, guest experts, and real-time support for the journey you are navigating.</p><span class="ls-cc-btn soon">Coming Soon</span></div>
-    </div>
+
+<section class="bundle">
+  <div class="bundle-inner">
+    <h2 class="fade-up">Want everything in<br>one <em>place?</em></h2>
+    <p>Story Studio includes guided prompts, scheduled messages, family collaboration, and legacy project tools — all in one private, beautiful app.</p>
+    <a href="https://storystudio.media" class="btn-mint" target="_blank">Explore Story Studio</a>
   </div>
 </section>
-<section class="ls-studio">
-  <div class="ls-si">
-    <div class="ls-st fi">
-      <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:16px;">Ready to Go Deeper?</span>
-      <h2>Everything in the shop lives <em>inside</em> Story Studio.</h2>
-      <p>Story Studio is the private, all-in-one legacy app that brings together every tool in this shop and so much more. Guided prompts, memory capsules, scheduled future messages, tribute video creation, and a private journal — all in one beautiful space.</p>
-      <p class="ls-pull">"The shop is where you start. Story Studio is where you live."</p>
-      <a href="/story-studio" class="ls-studio-btn">Explore Story Studio →</a>
-    </div>
-    <div class="ls-sfeats fi">
-      <div class="ls-sf"><h4>🎙️ AI-Guided Story Prompts</h4><p>50+ prompts plus an AI generator tailored to your unique life, culture, and memories.</p></div>
-      <div class="ls-sf"><h4>📅 Scheduled Future Messages</h4><p>Record messages for birthdays and milestones. Delivered exactly when they are needed most.</p></div>
-      <div class="ls-sf"><h4>🔒 100% Private by Design</h4><p>No social media. No ads. Only the people you personally invite can see your Story Studio.</p></div>
-      <div class="ls-sf"><h4>🎬 Final Tribute Video</h4><p>Storyboard plus Canva Integration creates a polished tribute video your family will treasure forever.</p></div>
-    </div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><h3>Leave Well Media</h3><p>Resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a href="/live-well-library/">Library</a><a href="/story-studio/">Story Studio</a><a href="/legacy-shop/">Shop</a><a href="/about/">About</a><a href="/connect/">Connect</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="/live-well-library/">Free Articles</a><a href="https://storystudio.media" target="_blank">Story Studio App</a><a href="/legacy-shop/">Legacy Shop</a></div>
+    <div class="footer-col"><h4>Connect</h4><a href="mailto:Mindy@leavewell.media">Mindy@leavewell.media</a><a href="/connect/">Send a Message</a></div>
   </div>
-</section>
-<section class="ls-cta">
-  <h2 class="fi">The story you leave<br>is the love that <em>stays.</em></h2>
-  <p class="ls-cta-sub fi">Start with one download. Build something your family will carry forever.</p>
-  <div class="ls-cta-btns fi">
-    <a href="https://stan.store/mindygenereux" class="btn-mint" target="_blank" rel="noopener">Shop All Downloads →</a>
-    <a href="https://storystudio.media" class="btn-ghost-w">Explore Story Studio</a>
-  </div>
-  <span class="ls-cta-sm fi">Digital downloads available at stan.store/mindygenereux · Leave Well Media</span>
-</section>
-<footer class="footer">
-  <a href="/" class="footer-logo">Leave Well Media</a>
-  <div class="footer-links">
-    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
-  </div>
-  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 Leave Well Media · Mindy Genereux, Certified Death Doula</span></div>
 </footer>
 <script>
-const nav=document.getElementById('mn');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-document.getElementById('nh').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
-document.getElementById('mc').addEventListener('click',()=>document.getElementById('mob').classList.remove('open'));
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>

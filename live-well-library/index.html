@@ -2,322 +2,266 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Well Library – Free Resources | Leave Well Media</title>
-<meta name="description" content="A free, growing library of articles, guides, and reflections for families navigating terminal illness, anticipatory grief, and legacy planning.">
+<title>Live Well Library | Leave Well Media</title>
+<meta name="description" content="Free articles, guides, and reflections for families navigating terminal illness, anticipatory grief, and the art of showing up for the people you love.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
-nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
-.nl{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;text-decoration:none;}
-.nlinks{display:flex;align-items:center;gap:32px;}
-.nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
-.nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
-.ncta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
-.ncta:hover{background:#4aafa0;color:#fff;}
-.nham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-.nham span{display:block;width:24px;height:2px;background:#fff;}
-.mob{display:none;position:fixed;inset:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
-.mob.open{display:flex;}
-.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
-.mob a:hover{color:#7ecfc0;}
-.mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
-@media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
-.lb-hero{background:#1e3a38;padding:160px 24px 100px;position:relative;overflow:hidden;}
-.lb-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%);pointer-events:none;}
-.lb-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-@media(max-width:768px){.lb-hero-inner{grid-template-columns:1fr;gap:40px;}}
-.lb-ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:20px;position:relative;z-index:1;}
-.lb-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6.5vw,6rem);font-weight:400;color:#fff;line-height:1.05;position:relative;z-index:1;}
-.lb-hero h1 em{color:#b4e5de;font-style:italic;}
-.lb-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.7rem);font-style:italic;color:#e8d5a3;margin-top:24px;line-height:1.7;position:relative;z-index:1;opacity:0.9;}
-.lb-hero-note{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.45);margin-top:32px;display:flex;align-items:center;gap:10px;position:relative;z-index:1;}
-.lb-hero-note::before{content:'';display:inline-block;width:28px;height:1px;background:#7ecfc0;opacity:0.5;}
-.lb-search-area{position:relative;z-index:1;}
-.lb-search-label{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:16px;opacity:0.8;}
-.lb-search-box{display:flex;}
-.lb-search-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(126,207,192,0.3);border-right:none;padding:16px 22px;font-family:'DM Sans',sans-serif;font-size:1rem;color:#fff;outline:none;transition:all 0.3s;border-radius:2px 0 0 2px;}
-.lb-search-input::placeholder{color:rgba(255,255,255,0.35);}
-.lb-search-input:focus{background:rgba(255,255,255,0.12);border-color:#7ecfc0;}
-.lb-search-btn{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:16px 28px;border:none;cursor:pointer;transition:background 0.3s;border-radius:0 2px 2px 0;}
-.lb-search-btn:hover{background:#4aafa0;}
-.lb-search-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
-.lb-tag{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:7px 14px;border-radius:40px;cursor:pointer;transition:all 0.3s;background:none;}
-.lb-tag:hover,.lb-tag.active{color:#b4e5de;border-color:rgba(126,207,192,0.4);background:rgba(126,207,192,0.08);}
-.lb-strip{background:#fff;padding:60px 24px;border-bottom:1px solid rgba(44,44,44,0.06);}
-.lb-strip-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.lb-strip-text{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;color:#3a3a3a;max-width:640px;line-height:1.6;opacity:0.82;}
-.lb-strip-text strong{color:#b85c38;font-weight:400;}
-.lb-free-badge{background:#e8f7f5;border:1px solid rgba(126,207,192,0.3);padding:14px 24px;text-align:center;}
-.lb-free-badge span:first-child{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;color:#4aafa0;display:block;line-height:1;}
-.lb-free-badge span:last-child{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#3a3a3a;opacity:0.45;display:block;margin-top:4px;}
-.lb-live{background:#faf8f5;padding:100px 24px;}
-.lb-live-inner{max-width:1200px;margin:0 auto;}
-.lb-live h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:12px 0 48px;}
-.lb-live h2 em{font-style:italic;color:#b85c38;}
-.lb-filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
-.lb-filter{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#3a3a3a;opacity:0.55;border:1px solid rgba(44,44,44,0.15);padding:8px 18px;border-radius:40px;cursor:pointer;transition:all 0.3s;background:none;}
-.lb-filter:hover,.lb-filter.active{color:#1e3a38;opacity:1;border-color:#7ecfc0;background:#e8f7f5;}
-.lb-articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;}
-.lb-article{background:#fff;border-top:3px solid #7ecfc0;box-shadow:0 4px 18px rgba(44,44,44,0.05);transition:transform 0.3s,box-shadow 0.3s;position:relative;cursor:pointer;text-decoration:none;color:inherit;display:block;}
-.lb-article:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(44,44,44,0.11);}
-.lb-article:nth-child(3n+2){border-top-color:#b85c38;}
-.lb-article:nth-child(3n+2) .lb-art-cat{color:#b85c38;}
-.lb-article:nth-child(3n+3){border-top-color:#c9a84c;}
-.lb-article:nth-child(3n+3) .lb-art-cat{color:#c9a84c;}
-.lb-article-img{width:100%;height:200px;object-fit:cover;display:block;}
-.lb-article-img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#1e3a38 0%,#2c5a54 100%);display:flex;align-items:center;justify-content:center;}
-.lb-article-img-placeholder span{font-family:'Playfair Display',serif;font-size:2.5rem;color:rgba(126,207,192,0.4);font-style:italic;}
-.lb-article-body{padding:28px 24px 36px;}
-.lb-art-cat{font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:10px;}
-.lb-article h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:#2c2c2c;margin-bottom:10px;line-height:1.25;}
-.lb-article p{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.8;color:#3a3a3a;opacity:0.7;margin-bottom:20px;}
-.lb-art-meta{font-family:'DM Sans',sans-serif;font-size:0.72rem;color:#3a3a3a;opacity:0.38;}
-.lb-art-arrow{position:absolute;bottom:22px;right:22px;color:#7ecfc0;opacity:0;transition:opacity 0.3s,transform 0.3s;}
-.lb-article:hover .lb-art-arrow{opacity:1;transform:translateX(4px);}
-.lb-loading{text-align:center;padding:80px 24px;grid-column:1/-1;}
-.lb-loading-spinner{width:40px;height:40px;border:3px solid rgba(126,207,192,0.2);border-top-color:#7ecfc0;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 20px;}
+:root{--mint:#7de8d0;--mint-bg:#d4f5ee;--mint-deep:#4ecdb4;--pink:#f48fb1;--pink-light:#fce4ec;--blush:#fff0f4;--yellow:#fffbe6;--navy:#1a1f36;--white:#ffffff;--text:#2d3748;--cream:#fafffe;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;background:var(--cream);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--mint);}
+.nav-cta{background:var(--pink);color:var(--white)!important;font-size:0.82rem;font-weight:700!important;padding:10px 22px;border-radius:22px;box-shadow:0 4px 14px rgba(244,143,177,0.35);transition:transform 0.2s;}
+.nav-cta:hover{transform:translateY(-1px);}
+
+.hero{padding:140px 52px 80px;background:var(--mint-bg);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.55)0%,transparent 65%);}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:400;color:var(--navy);line-height:1.05;margin-bottom:20px;}
+.hero h1 em{font-style:italic;color:var(--pink);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--navy);opacity:0.65;line-height:1.85;max-width:620px;margin-bottom:36px;}
+.hero-free{display:inline-flex;align-items:center;gap:10px;background:rgba(26,31,54,0.07);padding:8px 20px;border-radius:30px;}
+.hero-free span{font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);opacity:0.55;}
+.hero-free-dot{width:6px;height:6px;border-radius:50%;background:var(--mint-deep);}
+
+/* CATEGORIES */
+.cats{padding:0 52px;background:var(--white);border-bottom:1px solid rgba(26,31,54,0.06);}
+.cats-inner{max-width:1100px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:20px 0;scrollbar-width:none;}
+.cats-inner::-webkit-scrollbar{display:none;}
+.cat-btn{background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;padding:8px 20px;border-radius:22px;border:2px solid rgba(26,31,54,0.1);cursor:pointer;white-space:nowrap;transition:all 0.2s;letter-spacing:0.04em;}
+.cat-btn:hover,.cat-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+
+/* ARTICLES GRID */
+.library{padding:80px 52px;background:var(--white);}
+.library-inner{max-width:1100px;margin:0 auto;}
+
+/* LOADING */
+#loading{text-align:center;padding:80px 20px;}
+.loading-spinner{width:40px;height:40px;border:3px solid var(--mint-bg);border-top-color:var(--mint-deep);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 20px;}
 @keyframes spin{to{transform:rotate(360deg);}}
-.lb-loading p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:#3a3a3a;opacity:0.55;}
-.lb-empty{text-align:center;padding:80px 24px;grid-column:1/-1;}
-.lb-empty h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:#2c2c2c;margin-bottom:12px;}
-.lb-empty p{font-family:'DM Sans',sans-serif;font-size:0.95rem;color:#3a3a3a;opacity:0.55;line-height:1.7;}
-.lb-email{background:#2c2c2c;padding:100px 24px;text-align:center;}
-.lb-email-inner{max-width:640px;margin:0 auto;}
-.lb-email h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:400;color:#fff;line-height:1.1;margin:12px 0 18px;}
-.lb-email h2 em{font-style:italic;color:#b4e5de;}
-.lb-email-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:#e8d5a3;opacity:0.78;margin-bottom:44px;line-height:1.65;}
-.lb-email-form{display:flex;max-width:480px;margin:0 auto;}
-.lb-email-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(126,207,192,0.3);border-right:none;padding:15px 22px;font-family:'DM Sans',sans-serif;font-size:0.97rem;color:#fff;outline:none;border-radius:2px 0 0 2px;}
-.lb-email-btn{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;padding:15px 28px;border:none;cursor:pointer;border-radius:0 2px 2px 0;}
-.lb-cta{background:#e8f7f5;padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
-.lb-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.2)0%,transparent 70%);pointer-events:none;}
-.lb-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:800px;margin:0 auto 20px;position:relative;z-index:1;}
-.lb-cta h2 em{font-style:italic;color:#b85c38;}
-.lb-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#3a3a3a;opacity:0.72;max-width:520px;margin:0 auto 48px;line-height:1.8;position:relative;z-index:1;}
-.lb-cta-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
-.btn-dark{background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;padding:20px 48px;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-dark:hover{background:#4aafa0;transform:translateY(-2px);}
-.btn-outline{background:transparent;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;padding:20px 48px;border:2px solid #1e3a38;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-outline:hover{background:#1e3a38;color:#fff;}
-.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
-.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
-.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
-.footer-links a:hover{opacity:0.75;}
-.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
-.fi{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
-.fi.visible{opacity:1;transform:translateY(0);}
+#loading p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--navy);opacity:0.5;}
+
+/* ARTICLES */
+#articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.article-card{border-radius:22px;overflow:hidden;background:var(--white);box-shadow:0 4px 20px rgba(26,31,54,0.06);border:1px solid rgba(26,31,54,0.05);transition:transform 0.25s,box-shadow 0.25s;text-decoration:none;display:flex;flex-direction:column;}
+.article-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(26,31,54,0.12);}
+.article-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;}
+.article-img img{width:100%;height:100%;object-fit:cover;}
+.article-img-placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
+.article-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.article-cat{font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:8px;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;color:var(--navy);margin-bottom:10px;line-height:1.3;flex:1;}
+.article-body p{font-size:0.85rem;color:var(--text);opacity:0.6;line-height:1.75;margin-bottom:18px;}
+.article-read{font-size:0.78rem;font-weight:700;color:var(--mint-deep);text-decoration:none;letter-spacing:0.06em;display:flex;align-items:center;gap:6px;}
+.article-read::after{content:'→';}
+
+/* COLORS cycling */
+.article-card:nth-child(3n+1) .article-img-placeholder{background:var(--mint-bg);}
+.article-card:nth-child(3n+2) .article-img-placeholder{background:var(--pink-light);}
+.article-card:nth-child(3n) .article-img-placeholder{background:var(--yellow);}
+.article-card:nth-child(3n+1) .article-cat{color:var(--mint-deep);}
+.article-card:nth-child(3n+2) .article-cat{color:var(--pink);}
+.article-card:nth-child(3n) .article-cat{color:#c9950a;}
+
+#no-articles{display:none;text-align:center;padding:80px 20px;}
+#no-articles h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin-bottom:12px;}
+#no-articles p{font-size:0.9rem;color:var(--text);opacity:0.6;line-height:1.75;}
+
+/* NEWSLETTER */
+.newsletter{padding:100px 52px;background:var(--navy);}
+.nl-inner{max-width:640px;margin:0 auto;text-align:center;}
+.nl-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint);display:block;margin-bottom:14px;}
+.newsletter h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:14px;}
+.newsletter h2 em{font-style:italic;color:var(--pink);}
+.newsletter p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:36px;}
+.nl-form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.nl-input{flex:1;min-width:240px;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.15);border-radius:22px;padding:14px 22px;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--white);outline:none;}
+.nl-input::placeholder{color:rgba(255,255,255,0.35);}
+.nl-input:focus{border-color:rgba(125,232,208,0.5);}
+.nl-btn{background:var(--pink);color:var(--white);font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:700;padding:14px 28px;border-radius:22px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(244,143,177,0.3);transition:all 0.25s;white-space:nowrap;}
+.nl-btn:hover{transform:translateY(-1px);}
+
+footer{background:var(--navy);padding:56px 52px 40px;border-top:1px solid rgba(255,255,255,0.05);}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+.footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
+.footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
+.footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a:hover{color:rgba(255,255,255,0.7);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+.footer-email{font-size:0.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
+.footer-email:hover{color:var(--mint);}
+
+@media(max-width:900px){
+  #articles-grid{grid-template-columns:1fr;}
+  nav{padding:12px 20px;} .nav-links{display:none;}
+  .library,.newsletter{padding:72px 24px;}
+  .hero{padding:110px 24px 60px;}
+  .cats{padding:0 24px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .nl-form{flex-direction:column;}
+}
 </style>
 </head>
 <body>
-<nav id="mn">
-  <a href="/" class="nl">Leave Well Media</a>
-  <div class="nlinks">
-    <a href="/story-studio">Story Studio</a>
-    <a href="/live-well-library" class="active">Library</a>
-    <a href="/legacy-shop">Shop</a>
-    <a href="/about">About</a>
-    <a href="/connect">Connect</a>
+<nav>
+  <a href="/" class="nav-logo">Leave Well Media</a>
+  <div class="nav-links">
+    <a href="/story-studio/">Story Studio</a>
+    <a href="/live-well-library/" class="active">Library</a>
+    <a href="/legacy-shop/">Shop</a>
+    <a href="/about/">About</a>
+    <a href="/connect/">Connect</a>
+    <a href="https://storystudio.media" class="nav-cta" target="_blank">Start Your Legacy</a>
   </div>
-  <a href="https://storystudio.media" class="ncta">Start Your Legacy</a>
-  <div class="nham" id="nh"><span></span><span></span><span></span></div>
 </nav>
-<div class="mob" id="mob">
-  <button class="mclose" id="mc">✕</button>
-  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
-  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
-</div>
 
-<header class="lb-hero">
-  <div class="lb-hero-inner">
-    <div>
-      <span class="lb-ey">The Live Well Library</span>
-      <h1>Resources for every<br>part of the <em>journey.</em></h1>
-      <p class="lb-hero-sub">Articles, guides, and reflections for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p>
-      <p class="lb-hero-note">Always free. No account required. Open to everyone.</p>
-    </div>
-    <div class="lb-search-area">
-      <span class="lb-search-label">Find What You Need</span>
-      <div class="lb-search-box">
-        <input type="text" class="lb-search-input" id="lb-search" placeholder="Search topics, feelings, or questions…">
-        <button class="lb-search-btn" onclick="handleSearch()">Search</button>
-      </div>
-      <div class="lb-search-tags">
-        <span class="lb-tag active" onclick="filterByTag(this,'')">All Topics</span>
-        <span class="lb-tag" onclick="filterByTag(this,'Grief')">Grief</span>
-        <span class="lb-tag" onclick="filterByTag(this,'Legacy')">Legacy</span>
-        <span class="lb-tag" onclick="filterByTag(this,'Caregiving')">Caregiving</span>
-        <span class="lb-tag" onclick="filterByTag(this,'Conversations')">Conversations</span>
-        <span class="lb-tag" onclick="filterByTag(this,'Community')">Community</span>
-      </div>
-    </div>
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">The Live Well Library</span>
+    <h1>Read. Reflect.<br><em>Begin.</em></h1>
+    <p class="hero-sub">A free, always-open collection of articles, guides, and reflections for families navigating terminal illness, anticipatory grief, and the art of showing up.</p>
+    <div class="hero-free"><div class="hero-free-dot"></div><span>Always free · No account required</span></div>
   </div>
-</header>
+</section>
 
-<div class="lb-strip">
-  <div class="lb-strip-inner">
-    <p class="lb-strip-text">When someone you love is facing a terminal illness, <strong>the way life is lived becomes everything.</strong> This library exists to give you language, perspective, and permission to feel all of it.</p>
-    <div class="lb-free-badge"><span>100%</span><span>Always Free</span></div>
+<div class="cats">
+  <div class="cats-inner">
+    <button class="cat-btn active" data-cat="all">All Articles</button>
+    <button class="cat-btn" data-cat="Anticipatory Grief">Anticipatory Grief</button>
+    <button class="cat-btn" data-cat="Caregiving">Caregiving</button>
+    <button class="cat-btn" data-cat="Legacy">Legacy</button>
+    <button class="cat-btn" data-cat="Meaningful Living">Meaningful Living</button>
+    <button class="cat-btn" data-cat="Family">Family</button>
+    <button class="cat-btn" data-cat="Healing">Healing</button>
   </div>
 </div>
 
-<section class="lb-live">
-  <div class="lb-live-inner">
-    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:12px;">From the Library</span>
-    <h2 class="fi">Read. Reflect. <em>Begin.</em></h2>
-    <div class="lb-filter-bar fi">
-      <button class="lb-filter active" onclick="setFilter(this,'')">All</button>
-      <button class="lb-filter" onclick="setFilter(this,'Grief')">Anticipatory Grief</button>
-      <button class="lb-filter" onclick="setFilter(this,'Caregiving')">Caregiving</button>
-      <button class="lb-filter" onclick="setFilter(this,'Legacy')">Legacy</button>
-      <button class="lb-filter" onclick="setFilter(this,'Conversations')">Conversations</button>
-      <button class="lb-filter" onclick="setFilter(this,'Community')">Community</button>
+<section class="library">
+  <div class="library-inner">
+    <div id="loading">
+      <div class="loading-spinner"></div>
+      <p>Loading articles...</p>
     </div>
-    <div class="lb-articles" id="articles-grid">
-      <div class="lb-loading">
-        <div class="lb-loading-spinner"></div>
-        <p>Loading articles…</p>
-      </div>
+    <div id="articles-grid"></div>
+    <div id="no-articles">
+      <h3>No articles yet in this category.</h3>
+      <p>Check back soon — new articles are added regularly.</p>
     </div>
   </div>
 </section>
 
-<section class="lb-email">
-  <div class="lb-email-inner">
-    <span style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;display:block;margin-bottom:14px;">Stay Connected</span>
-    <h2 class="fi">New resources,<br>delivered <em>gently.</em></h2>
-    <p class="lb-email-sub fi">New articles added regularly. No noise — just what matters, when you need it.</p>
-    <form class="lb-email-form fi" action="https://formsubmit.co/Mindy@leavewell.media" method="POST">
-      <input type="hidden" name="_subject" value="New Library Newsletter Signup">
+<section class="newsletter">
+  <div class="nl-inner">
+    <span class="nl-eyebrow">Stay Connected</span>
+    <h2>New articles, straight<br>to your <em>inbox.</em></h2>
+    <p>Gentle, thoughtful resources delivered when you need them most. No spam. Unsubscribe any time.</p>
+    <form class="nl-form" action="https://formsubmit.co/Mindy@leavewell.media" method="POST">
+      <input type="hidden" name="_subject" value="New Library newsletter signup">
       <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" style="display:none">
-      <input type="email" name="email" class="lb-email-input" placeholder="your@email.com" required>
-      <button type="submit" class="lb-email-btn">Subscribe →</button>
+      <input class="nl-input" type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit" class="nl-btn">Subscribe</button>
     </form>
   </div>
 </section>
 
-<section class="lb-cta">
-  <h2 class="fi">The library is just<br>the beginning of your <em>journey.</em></h2>
-  <p class="lb-cta-sub fi">When you're ready to go deeper — Story Studio is waiting.</p>
-  <div class="lb-cta-btns fi">
-    <a href="https://storystudio.media" class="btn-dark">Start Your Legacy →</a>
-    <a href="/legacy-shop" class="btn-outline">Explore the Shop</a>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><h3>Leave Well Media</h3><p>Resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a href="/live-well-library/">Library</a><a href="/story-studio/">Story Studio</a><a href="/legacy-shop/">Shop</a><a href="/about/">About</a><a href="/connect/">Connect</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="/live-well-library/">Free Articles</a><a href="https://storystudio.media" target="_blank">Story Studio App</a><a href="/legacy-shop/">Legacy Shop</a></div>
+    <div class="footer-col"><h4>Connect</h4><a href="mailto:Mindy@leavewell.media">Mindy@leavewell.media</a><a href="/connect/">Send a Message</a></div>
   </div>
-</section>
-
-<footer class="footer">
-  <a href="/" class="footer-logo">Leave Well Media</a>
-  <div class="footer-links">
-    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Leave Well Media · Mindy Genereux, Certified Death Doula</span>
+    <a href="mailto:Mindy@leavewell.media" class="footer-email">Mindy@leavewell.media</a>
   </div>
-  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
 </footer>
 
 <script>
-const SPACE = 'z8latd7hk1tb';
-const TOKEN = 'nZNJsKrlUpr8tfAS5_IBwPblJpwhcodFDA7Jd841Xu0';
-const API   = `https://cdn.contentful.com/spaces/${SPACE}/entries`;
+// ─── CONTENTFUL CONFIG — DO NOT CHANGE ───────────────────────────────────────
+const SPACE_ID = 'z8latd7hk1tb';
+const ACCESS_TOKEN = 'nZNJsKrlUpr8tfAS5_IBwPblJpwhcodFDA7Jd841Xu0';
+const CONTENT_TYPE = 'libraryArticle';
+// ─────────────────────────────────────────────────────────────────────────────
+
+const EMOJI_MAP = {
+  'Anticipatory Grief': '🌿',
+  'Caregiving': '💛',
+  'Legacy': '📖',
+  'Meaningful Living': '☀️',
+  'Family': '🌸',
+  'Healing': '✨',
+};
 
 let allArticles = [];
-let activeCategory = '';
-let searchQuery = '';
+let activeCategory = 'all';
 
 async function fetchArticles() {
   try {
-    const res = await fetch(`${API}?content_type=libraryArticle&order=-sys.createdAt&include=1`, {
-      headers: { Authorization: `Bearer ${TOKEN}` }
-    });
+    const url = `https://cdn.contentful.com/spaces/${SPACE_ID}/entries?content_type=${CONTENT_TYPE}&access_token=${ACCESS_TOKEN}&order=-sys.createdAt`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Fetch failed');
     const data = await res.json();
-    const assets = {};
-    if (data.includes && data.includes.Asset) {
-      data.includes.Asset.forEach(a => { assets[a.sys.id] = a.fields.file.url; });
-    }
     allArticles = (data.items || []).map(item => {
       const f = item.fields;
-      let imageUrl = null;
-      if (f.heroImage && f.heroImage.sys) imageUrl = assets[f.heroImage.sys.id] || null;
       return {
-        title:    f.title || f.Title || 'Untitled',
-        slug:     f.slug     || item.sys.id,
-        category: f.category || '',
-        excerpt:  f.excerpt  || '',
-        readTime: f.readtime || f.readTime || '',
-        image:    imageUrl
+        title: f.title || f.Title || 'Untitled',
+        slug: f.slug || f.Slug || item.sys.id,
+        excerpt: f.excerpt || f.Excerpt || f.body?.content?.[0]?.content?.[0]?.value?.slice(0, 160) || '',
+        category: f.category || f.Category || '',
+        heroImage: null,
       };
     });
-    renderArticles();
-  } catch (err) {
-    document.getElementById('articles-grid').innerHTML = `
-      <div class="lb-empty">
-        <h3>Articles coming soon.</h3>
-        <p>Check back shortly — new resources are added regularly.</p>
-      </div>`;
+    renderArticles(allArticles);
+  } catch (e) {
+    document.getElementById('loading').innerHTML = '<p style="color:#f48fb1;font-family:Cormorant Garamond,serif;font-size:1.1rem;font-style:italic;">Could not load articles right now. Please try again soon.</p>';
   }
 }
 
-function renderArticles() {
+function renderArticles(articles) {
+  document.getElementById('loading').style.display = 'none';
   const grid = document.getElementById('articles-grid');
-  let filtered = allArticles;
-  if (activeCategory) filtered = filtered.filter(a => a.category.toLowerCase() === activeCategory.toLowerCase());
-  if (searchQuery) {
-    const q = searchQuery.toLowerCase();
-    filtered = filtered.filter(a =>
-      a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.category.toLowerCase().includes(q)
-    );
-  }
-  if (filtered.length === 0) {
-    grid.innerHTML = `<div class="lb-empty">
-      <h3>${allArticles.length === 0 ? 'Articles coming soon.' : 'No results found.'}</h3>
-      <p>${allArticles.length === 0 ? 'Mindy is writing — resources will appear here automatically when published.' : 'Try a different search or browse all categories.'}</p>
-    </div>`;
-    return;
-  }
-  grid.innerHTML = filtered.map(a => `
-    <a class="lb-article" href="/live-well-library/${a.slug}/">
-      ${a.image
-        ? `<img class="lb-article-img" src="https:${a.image}?w=640&h=400&fit=fill" alt="${a.title}" loading="lazy">`
-        : `<div class="lb-article-img-placeholder"><span>✦</span></div>`}
-      <div class="lb-article-body">
-        ${a.category ? `<span class="lb-art-cat">${a.category}</span>` : ''}
-        <h3>${a.title}</h3>
-        ${a.excerpt ? `<p>${a.excerpt}</p>` : ''}
-        ${a.readTime ? `<span class="lb-art-meta">${a.readTime}</span>` : ''}
-      </div>
-      <span class="lb-art-arrow">→</span>
-    </a>`).join('');
+  const none = document.getElementById('no-articles');
+  if (!articles.length) { none.style.display = 'block'; grid.innerHTML = ''; return; }
+  none.style.display = 'none';
+  grid.innerHTML = articles.map((a, i) => {
+    const emoji = EMOJI_MAP[a.category] || '📝';
+    return `
+      <a href="/live-well-library/${a.slug}/" class="article-card">
+        <div class="article-img">
+          <div class="article-img-placeholder">${emoji}</div>
+        </div>
+        <div class="article-body">
+          ${a.category ? `<span class="article-cat">${a.category}</span>` : ''}
+          <h2>${a.title}</h2>
+          ${a.excerpt ? `<p>${a.excerpt}</p>` : ''}
+          <span class="article-read">Read article</span>
+        </div>
+      </a>`;
+  }).join('');
 }
 
-function setFilter(el, cat) {
-  activeCategory = cat;
-  document.querySelectorAll('.lb-filter').forEach(f => f.classList.remove('active'));
-  el.classList.add('active');
-  renderArticles();
-}
-function filterByTag(el, cat) {
-  activeCategory = cat;
-  document.querySelectorAll('.lb-tag').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  renderArticles();
-}
-function handleSearch() {
-  searchQuery = document.getElementById('lb-search').value.trim();
-  activeCategory = '';
-  document.querySelectorAll('.lb-filter,.lb-tag').forEach(f => f.classList.remove('active'));
-  renderArticles();
-}
-document.getElementById('lb-search').addEventListener('keypress', e => { if (e.key === 'Enter') handleSearch(); });
-
-const nav = document.getElementById('mn');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-document.getElementById('nh').addEventListener('click', () => document.getElementById('mob').classList.add('open'));
-document.getElementById('mc').addEventListener('click', () => document.getElementById('mob').classList.remove('open'));
-const obs = new IntersectionObserver(e => {
-  e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); obs.unobserve(el.target); }});
-}, { threshold: 0.1 });
-document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+// Category filter
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.cat;
+    if (activeCategory === 'all') {
+      renderArticles(allArticles);
+    } else {
+      renderArticles(allArticles.filter(a => a.category === activeCategory));
+    }
+  });
+});
 
 fetchArticles();
 </script>

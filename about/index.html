@@ -2,250 +2,244 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About – Leave Well Media | Mindy Genereux, Certified Death Doula</title>
-<meta name="description" content="Leave Well Media was founded by Mindy Genereux, a Certified Death Doula trained under Alua Arthur and Claire Bidwell Smith. Built at a bedside. Driven by love.">
+<title>About Mindy Genereux | Leave Well Media</title>
+<meta name="description" content="Mindy Genereux is a Certified Death Doula, founder of Leave Well Media, and creator of Story Studio. Trained under Alua Arthur and Claire Bidwell Smith.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
-nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
-.nl{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;text-decoration:none;}
-.nlinks{display:flex;align-items:center;gap:32px;}
-.nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
-.nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
-.ncta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
-.ncta:hover{background:#4aafa0;color:#fff;}
-.nham{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-.nham span{display:block;width:24px;height:2px;background:#fff;}
-.mob{display:none;position:fixed;inset:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
-.mob.open{display:flex;}
-.mob a{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;text-decoration:none;}
-.mob a:hover{color:#7ecfc0;}
-.mclose{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
-@media(max-width:768px){.nlinks,.ncta{display:none;}.nham{display:flex;}nav{padding:14px 18px;}}
-.ab-hero{background:#1e3a38;padding:140px 24px 100px;text-align:center;position:relative;overflow:hidden;}
-.ab-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 85%,rgba(184,92,56,0.08)0%,transparent 60%);pointer-events:none;}
-.ab-hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;margin-bottom:28px;display:block;position:relative;z-index:1;}
-.ab-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,7vw,6.5rem);font-weight:400;color:#fff;line-height:1.05;max-width:950px;margin:0 auto;position:relative;z-index:1;}
-.ab-hero h1 em{color:#b4e5de;font-style:italic;}
-.ab-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.75rem);font-style:italic;color:#e8d5a3;max-width:680px;margin:28px auto 0;line-height:1.7;position:relative;z-index:1;}
-.ab-hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:48px;position:relative;z-index:1;}
-.btn-mint{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;padding:18px 44px;border:none;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
-.btn-mint:hover{background:#4aafa0;color:#fff;transform:translateY(-2px);}
-.btn-ghost{background:transparent;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;padding:18px 44px;border:1px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
-.btn-ghost:hover{border-color:#7ecfc0;color:#7ecfc0;}
-.ab-stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:64px;padding-top:52px;border-top:1px solid rgba(126,207,192,0.15);position:relative;z-index:1;}
-.ab-stat{text-align:center;}
-.ab-stat-n{font-family:'Playfair Display',serif;font-size:2.5rem;font-style:italic;color:#7ecfc0;display:block;line-height:1;}
-.ab-stat-line{width:28px;height:1px;background:#7ecfc0;opacity:0.35;margin:9px auto;}
-.ab-stat-l{font-family:'DM Sans',sans-serif;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.38);}
-.ey{font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:16px;}
-.ab-origin{background:#fff;padding:120px 24px;}
-.ab-oi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:90px;align-items:center;}
-@media(max-width:768px){.ab-oi{grid-template-columns:1fr;gap:44px;}}
-.ab-vis{aspect-ratio:3/4;background:linear-gradient(135deg,#b4e5de 0%,#7ecfc0 55%,#4aafa0 100%);position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(74,175,160,0.22);}
-.ab-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 40%,rgba(255,255,255,0.14)0%,transparent 60%);}
-.ab-vis::after{content:'✦';position:absolute;bottom:22px;right:22px;font-size:2rem;color:white;opacity:0.32;}
-.ab-init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:6.5rem;font-style:italic;color:white;opacity:0.38;}
-.ab-ot h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,4.5vw,4.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:0 0 28px;}
-.ab-ot h2 em{font-style:italic;color:#b85c38;}
-.ab-ot p{font-family:'DM Sans',sans-serif;font-size:1.05rem;line-height:1.95;color:#3a3a3a;opacity:0.82;margin-bottom:18px;}
-.ab-pull{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:300;color:#2c2c2c;line-height:1.5;border-left:4px solid #7ecfc0;padding:4px 0 4px 20px;margin:24px 0;opacity:0.85;}
-.ab-cred{display:inline-block;background:#2c2c2c;color:#b4e5de;font-family:'DM Sans',sans-serif;font-size:0.73rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:11px 20px;margin-top:8px;}
-.ab-mission{background:#2c2c2c;padding:120px 24px;}
-.ab-mi{max-width:1200px;margin:0 auto;}
-.ab-mt{text-align:center;max-width:780px;margin:0 auto 80px;}
-.ab-mt h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#fff;line-height:1.05;margin:12px 0 24px;}
-.ab-mt h2 em{font-style:italic;color:#b4e5de;}
-.ab-mt p{font-family:'DM Sans',sans-serif;font-size:1.1rem;line-height:1.9;color:#fff;opacity:0.65;}
-.ab-mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;}
-.ab-mcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:48px 36px;position:relative;transition:background 0.3s;}
-.ab-mcard:hover{background:rgba(126,207,192,0.07);}
-.ab-mcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.ab-mcard:nth-child(1)::before{background:#7ecfc0;}
-.ab-mcard:nth-child(2)::before{background:#b85c38;}
-.ab-mcard:nth-child(3)::before{background:#c9a84c;}
-.ab-mcard:nth-child(4)::before{background:#6b4c6b;}
-.ab-mcard-icon{font-size:2.4rem;display:block;margin-bottom:20px;}
-.ab-mcard h3{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:400;color:#fff;margin-bottom:14px;line-height:1.15;}
-.ab-mcard p{font-family:'DM Sans',sans-serif;font-size:0.97rem;line-height:1.9;color:#fff;opacity:0.6;}
-.ab-offer{background:#faf8f5;padding:120px 24px;}
-.ab-offeri{max-width:1200px;margin:0 auto;}
-.ab-offer-hdr{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px;}
-@media(max-width:768px){.ab-offer-hdr{grid-template-columns:1fr;gap:22px;}}
-.ab-offer h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:12px 0 0;}
-.ab-offer h2 em{font-style:italic;color:#b85c38;}
-.ab-offer-intro p{font-family:'DM Sans',sans-serif;font-size:1.05rem;line-height:1.9;color:#3a3a3a;opacity:0.8;margin-bottom:14px;}
-.ab-offer-intro a{color:#4aafa0;text-decoration:none;font-weight:500;border-bottom:1px solid #b4e5de;}
-.ab-ogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.ab-ocard{background:#fff;border-top:4px solid #7ecfc0;padding:40px 32px;box-shadow:0 6px 28px rgba(44,44,44,0.06);transition:transform 0.3s,box-shadow 0.3s;}
-.ab-ocard:hover{transform:translateY(-6px);box-shadow:0 20px 52px rgba(44,44,44,0.11);}
-.ab-ocard:nth-child(2){border-top-color:#b85c38;}
-.ab-ocard:nth-child(3){border-top-color:#c9a84c;}
-.ab-ocard-icon{font-size:2.4rem;display:block;margin-bottom:18px;}
-.ab-ocard-tag{font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#4aafa0;display:inline-block;margin-bottom:12px;}
-.ab-ocard:nth-child(2) .ab-ocard-tag{color:#b85c38;}
-.ab-ocard:nth-child(3) .ab-ocard-tag{color:#c9a84c;}
-.ab-ocard h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:#2c2c2c;margin-bottom:14px;line-height:1.15;}
-.ab-ocard p{font-family:'DM Sans',sans-serif;font-size:0.97rem;line-height:1.85;color:#3a3a3a;opacity:0.72;margin-bottom:22px;}
-.ab-ocard-link{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;color:#4aafa0;text-decoration:none;border-bottom:1px solid #b4e5de;}
-.ab-community{background:#1e3a38;padding:120px 24px;text-align:center;}
-.ab-ci{max-width:1000px;margin:0 auto;}
-.ab-community h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#fff;line-height:1.05;margin:12px 0 24px;}
-.ab-community h2 em{font-style:italic;color:#b4e5de;}
-.ab-clead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);font-style:italic;font-weight:300;color:#e8d5a3;max-width:720px;margin:0 auto 64px;line-height:1.7;opacity:0.9;}
-.ab-vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:72px;}
-.ab-vcard{background:rgba(255,255,255,0.05);border:1px solid rgba(126,207,192,0.15);padding:32px 24px;text-align:left;transition:background 0.3s,border-color 0.3s;}
-.ab-vcard:hover{background:rgba(126,207,192,0.08);border-color:rgba(126,207,192,0.3);}
-.ab-vsym{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-style:italic;color:#7ecfc0;opacity:0.5;display:block;margin-bottom:12px;line-height:1;}
-.ab-vcard h4{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:#fff;margin-bottom:10px;}
-.ab-vcard p{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.8;color:#fff;opacity:0.55;}
-.ab-ccta{background:rgba(126,207,192,0.1);border:1px solid rgba(126,207,192,0.25);padding:48px 40px;max-width:680px;margin:0 auto;}
-.ab-ccta p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:#fff;line-height:1.6;margin-bottom:28px;opacity:0.9;}
-.ab-ccta a{display:inline-block;background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:15px 32px;text-decoration:none;border-radius:2px;transition:all 0.3s;}
-.ab-ccta a:hover{background:#4aafa0;color:#fff;transform:translateY(-2px);}
-.ab-cta{background:#e8f7f5;padding:120px 24px;text-align:center;position:relative;overflow:hidden;}
-.ab-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.2)0%,transparent 70%);pointer-events:none;}
-.ab-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:860px;margin:0 auto 20px;position:relative;z-index:1;}
-.ab-cta h2 em{font-style:italic;color:#b85c38;}
-.ab-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#3a3a3a;opacity:0.72;max-width:560px;margin:0 auto 48px;line-height:1.8;position:relative;z-index:1;}
-.ab-cta-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
-.btn-dark{background:#1e3a38;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;padding:20px 48px;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-dark:hover{background:#4aafa0;transform:translateY(-2px);}
-.btn-outline{background:transparent;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1rem;padding:20px 48px;border:2px solid #1e3a38;text-decoration:none;display:inline-block;transition:all 0.3s;border-radius:2px;}
-.btn-outline:hover{background:#1e3a38;color:#fff;}
-.ab-cta-sm{display:block;margin-top:20px;font-family:'DM Sans',sans-serif;font-size:0.76rem;color:#3a3a3a;opacity:0.38;letter-spacing:0.1em;position:relative;z-index:1;}
-.ab-trust{display:flex;gap:36px;flex-wrap:wrap;justify-content:center;margin-top:56px;padding-top:48px;border-top:1px solid rgba(74,175,160,0.2);position:relative;z-index:1;}
-.ab-trust span{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;color:#3a3a3a;opacity:0.45;display:flex;align-items:center;gap:8px;}
-.ab-trust span::before{content:'✓';color:#7ecfc0;font-weight:500;opacity:1;}
-.footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;text-decoration:none;opacity:0.7;}
-.footer-links{display:flex;gap:28px;flex-wrap:wrap;}
-.footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
-.footer-links a:hover{opacity:0.75;}
-.footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
-.fi{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
-.fi.visible{opacity:1;transform:translateY(0);}
+:root{--mint:#7de8d0;--mint-bg:#d4f5ee;--mint-deep:#4ecdb4;--pink:#f48fb1;--pink-light:#fce4ec;--blush:#fff0f4;--yellow:#fffbe6;--navy:#1a1f36;--white:#ffffff;--text:#2d3748;--cream:#fafffe;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;background:var(--cream);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--mint);}
+.nav-cta{background:var(--pink);color:var(--white)!important;font-size:0.82rem;font-weight:700!important;padding:10px 22px;border-radius:22px;box-shadow:0 4px 14px rgba(244,143,177,0.35);transition:transform 0.2s;}
+.nav-cta:hover{transform:translateY(-1px);}
+
+/* HERO */
+.hero{padding:140px 52px 80px;background:var(--mint-bg);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.55)0%,transparent 65%);}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1;}
+.hero-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:16px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:400;color:var(--navy);line-height:1.05;margin-bottom:20px;}
+.hero h1 em{font-style:italic;color:var(--pink);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--navy);opacity:0.65;line-height:1.85;margin-bottom:36px;}
+.btn-pink{background:var(--pink);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 6px 20px rgba(244,143,177,0.35);transition:all 0.25s;display:inline-block;}
+.btn-pink:hover{transform:translateY(-2px);}
+.hero-photo{background:linear-gradient(135deg,var(--mint-bg),var(--pink-light));border-radius:28px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 64px rgba(26,31,54,0.12);}
+.hero-photo-placeholder{text-align:center;}
+.hero-photo-placeholder span{font-size:5rem;display:block;margin-bottom:12px;}
+.hero-photo-placeholder p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--navy);opacity:0.5;}
+
+/* BIO */
+.bio{padding:100px 52px;background:var(--white);}
+.bio-inner{max-width:900px;margin:0 auto;}
+.eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:14px;}
+.bio h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:40px;}
+.bio h2 em{font-style:italic;color:var(--pink);}
+.bio-text p{font-family:'DM Sans',sans-serif;font-size:1.05rem;color:var(--text);line-height:1.95;margin-bottom:22px;opacity:0.82;}
+.bio-text p strong{font-weight:600;color:var(--navy);opacity:1;}
+.bio-quote{background:var(--mint-bg);border-radius:20px;padding:36px 40px;margin:48px 0;border-left:4px solid var(--mint-deep);}
+.bio-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:300;color:var(--navy);line-height:1.6;margin-bottom:16px;}
+.bio-quote cite{font-size:0.78rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--mint-deep);}
+
+/* TRAINING */
+.training{padding:100px 52px;background:var(--blush);}
+.training-inner{max-width:1100px;margin:0 auto;}
+.training h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:400;color:var(--navy);line-height:1.1;margin-bottom:56px;}
+.training h2 em{font-style:italic;color:var(--pink);}
+.training-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.training-card{background:var(--white);border-radius:22px;padding:32px;box-shadow:0 4px 20px rgba(26,31,54,0.06);}
+.tc-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px;}
+.tc-mint{background:var(--mint-bg);}
+.tc-pink{background:var(--pink-light);}
+.tc-yellow{background:var(--yellow);}
+.training-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:10px;line-height:1.2;}
+.training-card p{font-size:0.88rem;color:var(--text);opacity:0.62;line-height:1.8;}
+
+/* ARCHETYPES */
+.archetypes{padding:100px 52px;background:var(--navy);}
+.arch-inner{max-width:1100px;margin:0 auto;}
+.arch-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint);display:block;margin-bottom:14px;}
+.archetypes h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:16px;}
+.archetypes h2 em{font-style:italic;color:var(--pink);}
+.arch-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:rgba(255,255,255,0.55);line-height:1.75;max-width:640px;margin-bottom:56px;}
+.arch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.arch-card{border-radius:20px;padding:28px;}
+.arch-mint{background:rgba(125,232,208,0.1);border:1px solid rgba(125,232,208,0.2);}
+.arch-pink{background:rgba(244,143,177,0.1);border:1px solid rgba(244,143,177,0.2);}
+.arch-yellow{background:rgba(255,251,230,0.08);border:1px solid rgba(255,251,230,0.15);}
+.arch-white{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);}
+.arch-label{font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);display:block;margin-bottom:10px;}
+.arch-pink .arch-label{color:var(--pink);}
+.arch-yellow .arch-label{color:#f9d94e;}
+.arch-white .arch-label{color:rgba(255,255,255,0.5);}
+.arch-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:8px;}
+.arch-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.8;}
+
+/* CTA */
+.cta{padding:100px 52px;background:var(--mint-bg);text-align:center;}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:400;color:var(--navy);line-height:1.1;max-width:680px;margin:0 auto 18px;}
+.cta h2 em{font-style:italic;color:var(--pink);}
+.cta p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);opacity:0.6;max-width:480px;margin:0 auto 44px;line-height:1.85;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-navy{background:var(--navy);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;transition:all 0.25s;display:inline-block;}
+.btn-navy:hover{transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--navy);font-size:0.92rem;font-weight:600;padding:15px 34px;border-radius:28px;border:2px solid rgba(26,31,54,0.2);text-decoration:none;transition:all 0.25s;display:inline-block;}
+.btn-outline:hover{border-color:var(--navy);}
+
+/* FOOTER */
+footer{background:var(--navy);padding:56px 52px 40px;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+.footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
+.footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
+.footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a:hover{color:rgba(255,255,255,0.7);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+.footer-email{font-size:0.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
+.footer-email:hover{color:var(--mint);}
+
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+@media(max-width:900px){
+  .hero-inner,.training-grid,.arch-grid{grid-template-columns:1fr;}
+  .hero-photo{display:none;}
+  nav{padding:12px 20px;} .nav-links{display:none;}
+  .bio,.training,.archetypes,.cta{padding:72px 24px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+}
 </style>
 </head>
 <body>
-<nav id="mn">
-  <a href="/" class="nl">Leave Well Media</a>
-  <div class="nlinks">
-    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a>
-    <a href="/about" class="active">About</a><a href="/connect">Connect</a>
+<nav>
+  <a href="/" class="nav-logo">Leave Well Media</a>
+  <div class="nav-links">
+    <a href="/story-studio/">Story Studio</a>
+    <a href="/live-well-library/">Library</a>
+    <a href="/legacy-shop/">Shop</a>
+    <a href="/about/" class="active">About</a>
+    <a href="/connect/">Connect</a>
+    <a href="https://storystudio.media" class="nav-cta" target="_blank">Start Your Legacy</a>
   </div>
-  <a href="https://storystudio.media" class="ncta">Start Your Legacy</a>
-  <div class="nham" id="nh"><span></span><span></span><span></span></div>
 </nav>
-<div class="mob" id="mob">
-  <button class="mclose" id="mc">✕</button>
-  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
-  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
-</div>
-<header class="ab-hero">
-  <span class="ab-hero-eyebrow">Leave Well Media · About Us</span>
-  <h1>We exist so no one<br>has to navigate loss<br><em>alone.</em></h1>
-  <p class="ab-hero-sub">A digital media company built at the intersection of grief, storytelling, and legacy. Created by a Certified Death Doula. Designed for the people who need it most.</p>
-  <div class="ab-hero-btns">
-    <a href="https://storystudio.media" class="btn-mint">Start Your Legacy Today</a>
-    <a href="/live-well-library" class="btn-ghost">Explore Free Resources →</a>
-  </div>
-  <div class="ab-stats">
-    <div class="ab-stat"><span class="ab-stat-n">1M</span><div class="ab-stat-line"></div><span class="ab-stat-l">Our vision: 1 million people</span></div>
-    <div class="ab-stat"><span class="ab-stat-n">∞</span><div class="ab-stat-line"></div><span class="ab-stat-l">Stories worth preserving</span></div>
-    <div class="ab-stat"><span class="ab-stat-n">100%</span><div class="ab-stat-line"></div><span class="ab-stat-l">Human. Creative. Compassionate.</span></div>
-  </div>
-</header>
-<section class="ab-origin">
-  <div class="ab-oi">
-    <div class="ab-vis fi">
-      <!-- Replace with: <img src="/assets/mindy.jpg" alt="Mindy Genereux" style="width:100%;height:100%;object-fit:cover;object-position:center top;"> -->
-      <div class="ab-init">MG</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">About Mindy</span>
+      <h1>Built at a<br>bedside. Born<br>from <em>love.</em></h1>
+      <p class="hero-sub">Certified Death Doula, founder of Leave Well Media, and creator of Story Studio. Mindy writes at the intersection of grief, legacy, and love.</p>
+      <a href="/connect/" class="btn-pink">Say Hello</a>
     </div>
-    <div class="ab-ot fi">
-      <span class="ey">Our Story</span>
-      <h2>Built from grief.<br><em>Driven by love.</em></h2>
-      <p>Leave Well Media was created by Mindy Genereux, a Certified Death Doula trained under world-renowned end-of-life educators Alua Arthur and Claire Bidwell Smith. It was not built in a boardroom or funded by investors. It was built at a bedside, in grief, with a singular conviction: that the end of life deserves better tools.</p>
-      <p class="ab-pull">"I watched my family lose time they could never get back. I built Leave Well Media so yours doesn't have to."</p>
-      <p>What started as a personal mission became a movement. Today Leave Well Media reaches families navigating terminal illness, anticipatory grief, hospice care, and legacy planning with digital resources that are human, creative, and rooted in compassion.</p>
-      <span class="ab-cred">Mindy Genereux · Certified Death Doula · Trained under Alua Arthur &amp; Claire Bidwell Smith</span>
+    <div class="hero-photo">
+      <div class="hero-photo-placeholder">
+        <span>🌿</span>
+        <p>Mindy Genereux</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="ab-mission">
-  <div class="ab-mi">
-    <div class="ab-mt fi">
-      <span class="ey" style="color:#7ecfc0;">Our Mission and Vision</span>
-      <h2>Helping one million people<br>approach death with<br><em>less fear.</em></h2>
-      <p>We believe end of life support should not be clinical or cold. It should be human, creative, and rooted in compassion. These are the four pillars that guide everything we build.</p>
-    </div>
-    <div class="ab-mgrid">
-      <div class="ab-mcard fi"><span class="ab-mcard-icon">🌿</span><h3>Presence Over Panic</h3><p>We create tools that bring people back to the present moment. Anticipatory grief thrives in fear of the future. Our resources are designed to reduce that weight and return people to what matters most — right now.</p></div>
-      <div class="ab-mcard fi"><span class="ab-mcard-icon">✦</span><h3>Stories Over Silence</h3><p>The stories we leave behind are the love that stays. We build platforms and tools that make capturing, organizing, and preserving life stories accessible to every family.</p></div>
-      <div class="ab-mcard fi"><span class="ab-mcard-icon">🤝</span><h3>Connection Over Isolation</h3><p>Grief is not meant to be carried alone. We are building community spaces where honesty is welcome, grief is not hidden, and the end of life becomes a shared act of care.</p></div>
-      <div class="ab-mcard fi"><span class="ab-mcard-icon">💡</span><h3>Clarity Over Confusion</h3><p>When people have space to reflect, speak openly, and share their stories, they feel peace rather than pain. Our tools offer structure without pressure and connection without noise.</p></div>
-    </div>
-  </div>
-</section>
-<section class="ab-offer">
-  <div class="ab-offeri">
-    <div class="ab-offer-hdr">
-      <div class="fi"><span class="ey">How We Support You</span><h2>Everything you need<br>for the journey <em>ahead.</em></h2></div>
-      <div class="ab-offer-intro fi"><p>From free resources to full legacy platforms, Leave Well Media meets you exactly where you are. Whether you are just beginning to think about these conversations or are ready to build something lasting, we have the tools to support you.</p></div>
-    </div>
-    <div class="ab-ogrid">
-      <div class="ab-ocard fi"><span class="ab-ocard-icon">📚</span><span class="ab-ocard-tag">Always Free</span><h3>The Live Well Library</h3><p>A free, growing collection of resources for anyone navigating terminal illness, anticipatory grief, or legacy planning. Open to everyone, anytime, at no cost.</p><a href="/live-well-library" class="ab-ocard-link">Explore the Library →</a></div>
-      <div class="ab-ocard fi"><span class="ab-ocard-icon">🛍️</span><span class="ab-ocard-tag">Digital Downloads</span><h3>Legacy Shop</h3><p>Affordable, instant-access digital tools including guided journals, Canva templates, tribute video builders, and legacy letter guides.</p><a href="/legacy-shop" class="ab-ocard-link">Browse the Shop →</a></div>
-      <div class="ab-ocard fi"><span class="ab-ocard-icon">✦</span><span class="ab-ocard-tag">All-in-One Platform</span><h3>Story Studio</h3><p>The private, all-in-one legacy platform at the heart of everything we do. Designed specifically for terminal illness, hospice, and anticipatory grief.</p><a href="https://storystudio.media" class="ab-ocard-link">Explore Story Studio →</a></div>
+
+<section class="bio">
+  <div class="bio-inner">
+    <span class="eyebrow">The Story</span>
+    <h2 class="fade-up">Because no one should have<br>to navigate loss <em>alone.</em></h2>
+    <div class="bio-text">
+      <p>Mindy Genereux is a <strong>Certified Death Doula and End-of-Life Coach</strong>, trained under Alua Arthur and Claire Bidwell Smith — two of the most respected voices in the death doula space. She is the founder of Leave Well Media and the creator of Story Studio, a private app for capturing family stories and building lasting legacies.</p>
+      <p>Leave Well Media was born at a bedside. Built in grief, shaped by love, and designed so that no family has to lose the voice of the person they adore. Mindy understands the particular ache of anticipatory grief — the strange suspended time where someone you love is still here, and also leaving.</p>
+      <div class="bio-quote">
+        <blockquote>Nobody prepared you for this moment. We did.</blockquote>
+        <cite>Mindy Genereux, Leave Well Media</cite>
+      </div>
+      <p>Through the Live Well Library, Story Studio, and the Legacy Shop, Mindy offers families practical tools, emotional resources, and a community that understands. Her work is rooted in one belief: that the story you leave is the love that stays.</p>
+      <p>Mindy reads every message personally. If you are walking through something hard right now, she wants to hear from you.</p>
     </div>
   </div>
 </section>
-<section class="ab-community">
-  <div class="ab-ci">
-    <span class="ey" style="color:#7ecfc0;">Our Community</span>
-    <h2 class="fi">You belong here.<br>Exactly as you <em>are.</em></h2>
-    <p class="ab-clead fi">Leave Well Media is more than a resource hub. It is a community of people who believe that grief deserves space, stories deserve to be told, and no one should have to figure this out alone.</p>
-    <div class="ab-vgrid">
-      <div class="ab-vcard fi"><span class="ab-vsym">01</span><h4>Honest Conversations Welcome</h4><p>We believe the most powerful thing you can do at the end of life is speak truthfully. Hard conversations are not just allowed — they are encouraged.</p></div>
-      <div class="ab-vcard fi"><span class="ab-vsym">02</span><h4>Grief Is Not Hidden Here</h4><p>Anticipatory grief is real, exhausting, and rarely acknowledged. We name it, we hold space for it, and we build every tool with it in mind.</p></div>
-      <div class="ab-vcard fi"><span class="ab-vsym">03</span><h4>Healing Through Community</h4><p>Powerful conversations reduce blame, shame, and guilt for both the dying and the people who love them.</p></div>
-      <div class="ab-vcard fi"><span class="ab-vsym">04</span><h4>Digital Tools, Deeply Human</h4><p>We believe technology and humanity are not opposites. Our tools are designed to feel warm, gentle, and safe — especially when emotions are running high.</p></div>
-    </div>
-    <div class="ab-ccta fi">
-      <p>"When people have space to reflect, speak openly, and share their stories, they are more likely to feel peace rather than pain."</p>
-      <a href="/connect">Join Our Community →</a>
+
+<section class="training">
+  <div class="training-inner">
+    <span class="eyebrow">Training and Credentials</span>
+    <h2 class="fade-up">Guided by the best<br>in the <em>field.</em></h2>
+    <div class="training-grid">
+      <div class="training-card fade-up">
+        <div class="tc-icon tc-mint">🎓</div>
+        <h3>Certified Death Doula</h3>
+        <p>Trained under Alua Arthur, one of the most respected death doulas in North America, and Claire Bidwell Smith, a renowned grief therapist and author.</p>
+      </div>
+      <div class="training-card fade-up">
+        <div class="tc-icon tc-pink">💛</div>
+        <h3>End-of-Life Coach</h3>
+        <p>Specialized training in supporting families through the emotional, practical, and legacy dimensions of terminal illness and anticipatory grief.</p>
+      </div>
+      <div class="training-card fade-up">
+        <div class="tc-icon tc-yellow">📖</div>
+        <h3>Leave Well Media Founder</h3>
+        <p>Creator of Story Studio, the Live Well Library, and the Legacy Shop — a complete ecosystem of resources for families navigating loss together.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="ab-cta">
-  <span class="ey" style="color:#4aafa0;">Ready to Begin?</span>
-  <h2 class="fi">Your story is worth<br><em>preserving.</em></h2>
-  <p class="ab-cta-sub fi">Start with a free resource, explore the shop, or dive straight into Story Studio. Whatever feels right for where you are today.</p>
-  <div class="ab-cta-btns fi">
-    <a href="https://storystudio.media" class="btn-dark">Start Story Studio</a>
-    <a href="/live-well-library" class="btn-outline">Explore Free Resources</a>
-  </div>
-  <span class="ab-cta-sm fi">Trained under Alua Arthur &amp; Claire Bidwell Smith · Certified Death Doula · Leave Well Media</span>
-  <div class="ab-trust fi">
-    <span>100% Private</span><span>No Social Media</span><span>Built by a Death Doula</span><span>Free Resources Always Available</span><span>Designed for Anticipatory Grief</span>
+
+<section class="archetypes">
+  <div class="arch-inner">
+    <span class="arch-eyebrow">The Story Studio Framework</span>
+    <h2 class="fade-up">Every person has a<br><em>place in the story.</em></h2>
+    <p class="arch-sub">Story Studio was built around four archetypes. Each person in your family has a unique and valuable role to play.</p>
+    <div class="arch-grid">
+      <div class="arch-card arch-mint fade-up">
+        <span class="arch-label">The Hero</span>
+        <h3>Lead the Story</h3>
+        <p>The person whose story is being told. They invite their people, add stories in words, photos, or video, and build the final legacy project.</p>
+      </div>
+      <div class="arch-card arch-pink fade-up">
+        <span class="arch-label">The Guide</span>
+        <h3>Be the Steady Companion</h3>
+        <p>The caregiver, the coordinator, the one who holds everything together. The Guide helps gather stories, provides support, and assists with organizing memories.</p>
+      </div>
+      <div class="arch-card arch-yellow fade-up">
+        <span class="arch-label">The Builder</span>
+        <h3>Shape the Legacy</h3>
+        <p>Family members and friends who contribute stories, photos, and reflections that make the final keepsake richer and more complete.</p>
+      </div>
+      <div class="arch-card arch-white fade-up">
+        <span class="arch-label">The Witness</span>
+        <h3>Hold Space</h3>
+        <p>Those who read, watch, and honor the story as it unfolds. Their presence and attention matters deeply to the Hero and the family.</p>
+      </div>
+    </div>
   </div>
 </section>
-<footer class="footer">
-  <a href="/" class="footer-logo">Leave Well Media</a>
-  <div class="footer-links">
-    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+
+<section class="cta">
+  <h2 class="fade-up">Ready to start<br>your <em>story?</em></h2>
+  <p>Story Studio is waiting. The library is free. And Mindy is here.</p>
+  <div class="cta-btns">
+    <a href="https://storystudio.media" class="btn-navy" target="_blank">Start Your Living Legacy</a>
+    <a href="/connect/" class="btn-outline">Say Hello to Mindy</a>
   </div>
-  <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><h3>Leave Well Media</h3><p>Resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a href="/live-well-library/">Library</a><a href="/story-studio/">Story Studio</a><a href="/legacy-shop/">Shop</a><a href="/about/">About</a><a href="/connect/">Connect</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="/live-well-library/">Free Articles</a><a href="https://storystudio.media" target="_blank">Story Studio App</a><a href="/legacy-shop/">Legacy Shop</a></div>
+    <div class="footer-col"><h4>Connect</h4><a href="mailto:Mindy@leavewell.media">Mindy@leavewell.media</a><a href="/connect/">Send a Message</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Leave Well Media · Mindy Genereux, Certified Death Doula</span>
+    <a href="mailto:Mindy@leavewell.media" class="footer-email">Mindy@leavewell.media</a>
+  </div>
 </footer>
 <script>
-const nav=document.getElementById('mn');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-document.getElementById('nh').addEventListener('click',()=>document.getElementById('mob').classList.add('open'));
-document.getElementById('mc').addEventListener('click',()=>document.getElementById('mob').classList.remove('open'));
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>

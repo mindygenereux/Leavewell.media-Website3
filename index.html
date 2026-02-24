@@ -2,262 +2,345 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leave Well Media – Keep Living While Loss is Part of the Picture</title>
-<meta name="description" content="Leave Well Media provides practical and creative resources for families navigating terminal illness, anticipatory grief, and legacy creation.">
+<title>Leave Well Media | Keep Living While Love Is Part of the Picture</title>
+<meta name="description" content="Practical and creative resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind. Always free. Always here.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#faf8f5;color:#2c2c2c;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+:root{--mint:#7de8d0;--mint-bg:#d4f5ee;--mint-deep:#4ecdb4;--pink:#f48fb1;--pink-light:#fce4ec;--blush:#fff0f4;--yellow:#fffbe6;--navy:#1a1f36;--white:#ffffff;--text:#2d3748;--cream:#fafffe;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;background:var(--cream);}
+
 /* NAV */
-.lw-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s ease,padding 0.3s ease;}
-.lw-nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
-.lw-nav-logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:#ffffff;text-decoration:none;letter-spacing:0.03em;}
-.lw-nav-links{display:flex;align-items:center;gap:32px;}
-.lw-nav-links a{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s ease;}
-.lw-nav-links a:hover{color:#7ecfc0;}
-.lw-nav-cta{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:0.84rem;font-weight:500;letter-spacing:0.06em;padding:10px 24px;text-decoration:none;border-radius:2px;transition:all 0.3s ease;}
-.lw-nav-cta:hover{background:#4aafa0;color:#ffffff;}
-.lw-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
-.lw-hamburger span{display:block;width:24px;height:2px;background:#ffffff;}
-.lw-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(30,58,56,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
-.lw-mobile-menu.open{display:flex;}
-.lw-mobile-menu a{font-family:'Playfair Display',serif;font-size:2rem;color:#ffffff;text-decoration:none;}
-.lw-mobile-menu a:hover{color:#7ecfc0;}
-.lw-mobile-close{position:absolute;top:24px;right:24px;font-size:2rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;border:none;}
-@media(max-width:768px){.lw-nav-links,.lw-nav-cta{display:none;}.lw-hamburger{display:flex;}.lw-nav{padding:14px 18px;}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--mint);}
+.nav-cta{background:var(--pink);color:var(--white)!important;font-size:0.82rem;font-weight:700!important;padding:10px 22px;border-radius:22px;box-shadow:0 4px 14px rgba(244,143,177,0.35);transition:transform 0.2s;}
+.nav-cta:hover{transform:translateY(-1px);}
+
 /* HERO */
-.lw-hero{background:#1e3a38;padding:140px 24px 120px;text-align:center;position:relative;overflow:hidden;min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.lw-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(126,207,192,0.2)0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 90%,rgba(184,92,56,0.08)0%,transparent 60%);pointer-events:none;}
-.lw-hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#7ecfc0;margin-bottom:32px;display:block;position:relative;z-index:1;opacity:0;animation:lwFadeUp 0.8s ease forwards 0.2s;}
-.lw-hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8vw,7.5rem);font-weight:400;color:#ffffff;line-height:1.05;max-width:1000px;margin:0 auto;position:relative;z-index:1;opacity:0;animation:lwFadeUp 0.9s ease forwards 0.4s;}
-.lw-hero h1 em{color:#b4e5de;font-style:italic;}
-.lw-hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.8vw,1.9rem);font-style:italic;color:#e8d5a3;max-width:680px;margin:32px auto 0;line-height:1.7;position:relative;z-index:1;opacity:0;animation:lwFadeUp 1s ease forwards 0.6s;}
-.lw-hero-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:56px;position:relative;z-index:1;opacity:0;animation:lwFadeUp 1s ease forwards 0.8s;}
-.lw-btn-mint{background:#7ecfc0;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;letter-spacing:0.06em;padding:20px 48px;border:none;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s ease;}
-.lw-btn-mint:hover{background:#4aafa0;color:#fff;transform:translateY(-2px);box-shadow:0 12px 36px rgba(126,207,192,0.35);}
-.lw-btn-ghost{background:transparent;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:300;letter-spacing:0.06em;padding:20px 48px;border:1px solid rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s ease;}
-.lw-btn-ghost:hover{border-color:#7ecfc0;color:#7ecfc0;}
-.lw-hero-three{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:72px;padding-top:60px;border-top:1px solid rgba(126,207,192,0.15);position:relative;z-index:1;opacity:0;animation:lwFadeUp 1s ease forwards 1s;}
-.lw-hero-pill{text-align:center;}
-.lw-hero-pill-word{font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;color:#7ecfc0;display:block;line-height:1;}
-.lw-hero-pill-line{width:30px;height:1px;background:#7ecfc0;opacity:0.4;margin:10px auto;}
-.lw-hero-pill span:last-child{font-family:'DM Sans',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);}
-/* INTRO */
-.lw-intro{background:#ffffff;padding:110px 24px;text-align:center;position:relative;overflow:hidden;}
-.lw-intro::before{content:'"';font-family:'Playfair Display',serif;font-size:16rem;color:#e8f7f5;position:absolute;top:-40px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;}
-.lw-intro-q{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,3rem);font-style:italic;font-weight:300;color:#3a3a3a;max-width:820px;margin:0 auto;line-height:1.5;position:relative;z-index:1;}
-.lw-intro-q strong{color:#b85c38;font-weight:400;}
-.lw-intro-sub{font-family:'DM Sans',sans-serif;font-size:1.1rem;color:#3a3a3a;opacity:0.75;margin:28px auto 0;max-width:620px;line-height:1.9;position:relative;z-index:1;}
-.lw-divider{width:60px;height:3px;background:linear-gradient(to right,#7ecfc0,#b4e5de);margin:36px auto 0;border-radius:2px;}
-/* PILLARS */
-.lw-pillars{background:#faf8f5;padding:120px 24px;}
-.lw-pillars-inner{max-width:1200px;margin:0 auto;}
-.lw-eyebrow{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:#4aafa0;display:block;margin-bottom:18px;}
-.lw-pillars h2{font-family:'Playfair Display',serif;font-size:clamp(3rem,5vw,5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:800px;margin:0 0 72px;}
-.lw-pillars h2 em{font-style:italic;color:#b85c38;}
-.lw-pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-@media(max-width:768px){.lw-pillars-grid{grid-template-columns:1fr;}}
-.lw-pillar{background:#2c2c2c;padding:56px 40px;position:relative;transition:background 0.3s ease;}
-.lw-pillar:hover{background:#1e3a38;}
-.lw-pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.lw-pillar:nth-child(1)::before{background:#7ecfc0;}
-.lw-pillar:nth-child(2)::before{background:#b85c38;}
-.lw-pillar:nth-child(3)::before{background:#c9a84c;}
-.lw-pillar-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-style:italic;color:#7ecfc0;opacity:0.25;line-height:1;margin-bottom:20px;display:block;}
-.lw-pillar h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:400;color:#ffffff;margin-bottom:16px;line-height:1.15;}
-.lw-pillar p{font-family:'DM Sans',sans-serif;font-size:1rem;line-height:1.9;color:#ffffff;opacity:0.65;}
-/* LIBRARY */
-.lw-library{background:#faf8f5;padding:120px 24px;}
-.lw-library-inner{max-width:1200px;margin:0 auto;}
-.lw-library-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px;}
-@media(max-width:768px){.lw-library-header{grid-template-columns:1fr;gap:24px;}}
-.lw-library h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;color:#2c2c2c;line-height:1.1;margin-top:12px;}
-.lw-library h2 em{font-style:italic;color:#b85c38;}
-.lw-library-intro p{font-family:'DM Sans',sans-serif;font-size:1.1rem;line-height:1.9;color:#3a3a3a;opacity:0.8;}
-.lw-library-intro a{color:#4aafa0;text-decoration:none;font-weight:500;border-bottom:1px solid #b4e5de;}
-.lw-cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-.lw-card{background:#ffffff;border-top:4px solid #7ecfc0;padding:36px 28px;box-shadow:0 6px 30px rgba(44,44,44,0.06);transition:transform 0.3s ease,box-shadow 0.3s ease;text-decoration:none;display:block;position:relative;}
-.lw-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(44,44,44,0.12);}
-.lw-card:nth-child(2){border-top-color:#b85c38;}
-.lw-card:nth-child(3){border-top-color:#c9a84c;}
-.lw-card:nth-child(4){border-top-color:#7ecfc0;}
-.lw-card:nth-child(5){border-top-color:#6b4c6b;}
-.lw-card:nth-child(6){border-top-color:#b85c38;}
-.lw-card-icon{font-size:2.2rem;display:block;margin-bottom:18px;}
-.lw-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:#2c2c2c;margin-bottom:12px;line-height:1.2;}
-.lw-card p{font-family:'DM Sans',sans-serif;font-size:0.97rem;line-height:1.85;color:#3a3a3a;opacity:0.72;}
-.lw-card-arrow{position:absolute;bottom:24px;right:24px;color:#7ecfc0;font-size:1.2rem;opacity:0;transition:opacity 0.3s ease,transform 0.3s ease;}
-.lw-card:hover .lw-card-arrow{opacity:1;transform:translateX(4px);}
-/* STUDIO */
-.lw-studio{background:#1e3a38;padding:120px 24px;}
-.lw-studio-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;}
-@media(max-width:768px){.lw-studio-inner{grid-template-columns:1fr;gap:48px;}}
-.lw-studio-text h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:400;color:#ffffff;line-height:1.05;margin:0 0 28px;}
-.lw-studio-text h2 em{font-style:italic;color:#b4e5de;}
-.lw-studio-text p{font-family:'DM Sans',sans-serif;font-size:1.1rem;line-height:1.95;color:#ffffff;opacity:0.75;margin-bottom:18px;}
-.lw-studio-features{display:flex;flex-direction:column;gap:16px;}
-.lw-sf{background:rgba(255,255,255,0.06);border-left:3px solid #7ecfc0;padding:22px 24px;transition:background 0.3s ease;}
-.lw-sf:hover{background:rgba(126,207,192,0.1);}
-.lw-sf:nth-child(2){border-left-color:#b85c38;}
-.lw-sf:nth-child(3){border-left-color:#c9a84c;}
-.lw-sf h4{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;color:#ffffff;margin-bottom:6px;}
-.lw-sf p{font-family:'DM Sans',sans-serif;font-size:0.9rem;line-height:1.75;color:#ffffff;opacity:0.6;}
-/* ABOUT */
-.lw-about{background:#ffffff;padding:120px 24px;}
-.lw-about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:90px;align-items:center;}
-@media(max-width:768px){.lw-about-inner{grid-template-columns:1fr;gap:44px;}}
-.lw-about-vis{aspect-ratio:3/4;background:linear-gradient(135deg,#b4e5de 0%,#7ecfc0 55%,#4aafa0 100%);position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(74,175,160,0.22);}
-.lw-about-vis::after{content:'✦';position:absolute;bottom:22px;right:22px;font-size:2rem;color:white;opacity:0.35;}
-.lw-about-init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:7rem;font-style:italic;color:white;opacity:0.4;}
-.lw-about-text h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,4.5vw,4.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;margin:12px 0 28px;}
-.lw-about-text h2 em{font-style:italic;color:#b85c38;}
-.lw-about-text p{font-family:'DM Sans',sans-serif;font-size:1.1rem;line-height:1.95;color:#3a3a3a;opacity:0.82;margin-bottom:18px;}
-.lw-about-pull{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:300;color:#2c2c2c;line-height:1.5;border-left:4px solid #7ecfc0;padding:4px 0 4px 20px;margin:24px 0;opacity:0.85;}
-.lw-about-cred{display:inline-block;background:#2c2c2c;color:#b4e5de;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;padding:12px 22px;margin-top:8px;text-decoration:none;}
-/* CTA */
-.lw-cta{background:#e8f7f5;padding:140px 24px;text-align:center;position:relative;overflow:hidden;}
-.lw-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(126,207,192,0.22)0%,transparent 70%);pointer-events:none;}
-.lw-cta h2{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:400;color:#2c2c2c;line-height:1.05;max-width:900px;margin:0 auto 24px;position:relative;z-index:1;}
-.lw-cta h2 em{font-style:italic;color:#b85c38;}
-.lw-cta-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:#3a3a3a;opacity:0.72;max-width:560px;margin:0 auto 56px;line-height:1.8;position:relative;z-index:1;}
-.lw-cta-btns{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
-.lw-cta-btn-dark{background:#1e3a38;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;letter-spacing:0.07em;padding:22px 52px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s ease;border-radius:2px;}
-.lw-cta-btn-dark:hover{background:#4aafa0;transform:translateY(-2px);}
-.lw-cta-btn-outline{background:transparent;color:#1e3a38;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:400;padding:22px 52px;border:2px solid #1e3a38;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s ease;border-radius:2px;}
-.lw-cta-btn-outline:hover{background:#1e3a38;color:#ffffff;}
-.lw-cta-small{display:block;margin-top:24px;font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#3a3a3a;opacity:0.4;letter-spacing:0.1em;position:relative;z-index:1;}
+.hero{min-height:100vh;background:var(--mint-bg);display:grid;grid-template-columns:1.1fr 0.9fr;position:relative;overflow:hidden;padding-top:70px;}
+.hero::before{content:'';position:absolute;top:-150px;right:-150px;width:560px;height:560px;background:radial-gradient(circle,rgba(255,255,255,0.55)0%,transparent 65%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:25%;width:360px;height:360px;background:radial-gradient(circle,rgba(244,143,177,0.15)0%,transparent 65%);pointer-events:none;}
+.hero-left{padding:90px 64px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(26,31,54,0.08);padding:7px 18px;border-radius:30px;margin-bottom:28px;width:fit-content;}
+.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--pink);}
+.hero-pill span{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);opacity:0.55;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,5.2vw,5.5rem);font-weight:400;color:var(--navy);line-height:1.02;margin-bottom:26px;}
+.hero h1 em{font-style:italic;color:var(--pink);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-style:italic;color:var(--navy);opacity:0.62;line-height:1.85;margin-bottom:42px;max-width:460px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
+.btn-pink{background:var(--pink);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 6px 20px rgba(244,143,177,0.35);transition:all 0.25s;}
+.btn-pink:hover{transform:translateY(-2px);}
+.btn-white{background:var(--white);color:var(--navy);font-size:0.92rem;font-weight:600;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 4px 16px rgba(26,31,54,0.09);transition:all 0.25s;}
+.btn-white:hover{transform:translateY(-2px);}
+.hero-stats{display:flex;gap:32px;}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--navy);display:block;line-height:1;}
+.hero-stat-label{font-size:0.7rem;font-weight:500;color:var(--navy);opacity:0.4;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-top:4px;}
+
+/* HERO RIGHT */
+.hero-right{display:flex;flex-direction:column;justify-content:center;padding:90px 52px 80px 20px;gap:16px;position:relative;z-index:1;}
+.hero-card-big{background:var(--white);border-radius:28px;padding:30px;box-shadow:0 20px 56px rgba(26,31,54,0.1);}
+.hcb-tag{font-size:0.63rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:12px;}
+.hero-card-big h3{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:400;color:var(--navy);line-height:1.25;margin-bottom:10px;}
+.hero-card-big p{font-size:0.87rem;color:var(--text);opacity:0.6;line-height:1.8;margin-bottom:20px;}
+.today-prompt{background:var(--mint-bg);border-radius:16px;padding:16px;border-left:3px solid var(--mint-deep);}
+.tp-label{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:6px;}
+.today-prompt p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:12px;}
+.tp-btn{background:var(--navy);color:var(--mint);font-size:0.75rem;font-weight:700;padding:9px 20px;border-radius:16px;border:none;cursor:pointer;width:100%;letter-spacing:0.05em;}
+.hero-mini-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.mini-card{border-radius:20px;padding:20px;}
+.mini-mint{background:var(--mint-bg);}
+.mini-blush{background:var(--pink-light);}
+.mini-tag{font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);opacity:0.4;display:block;margin-bottom:8px;}
+.mini-card h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:400;color:var(--navy);line-height:1.3;}
+
+/* PHILOSOPHY */
+.philosophy{background:var(--navy);padding:52px;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:40px;align-items:center;}
+.phil-div{background:rgba(255,255,255,0.08);height:72px;}
+.phil-item{text-align:center;}
+.phil-item h3{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:400;color:var(--white);margin-bottom:8px;}
+.phil-item h3 em{font-style:italic;color:var(--mint);}
+.phil-item p{font-size:0.84rem;color:rgba(255,255,255,0.42);line-height:1.75;}
+
+/* LIVING WELL */
+.living{padding:110px 52px;background:var(--white);}
+.living-inner{max-width:1160px;margin:0 auto;}
+.eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:14px;}
+.living-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px;}
+.living h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,4vw,4.2rem);font-weight:400;color:var(--navy);line-height:1.06;}
+.living h2 em{font-style:italic;color:var(--pink);}
+.living-intro p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--text);opacity:0.7;line-height:1.85;margin-bottom:22px;}
+.living-intro a{font-size:0.85rem;font-weight:700;color:var(--mint-deep);text-decoration:none;border-bottom:2px solid rgba(78,205,180,0.3);padding-bottom:2px;}
+.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.art-card{border-radius:22px;overflow:hidden;box-shadow:0 4px 20px rgba(26,31,54,0.06);background:var(--white);border:1px solid rgba(26,31,54,0.05);transition:transform 0.25s,box-shadow 0.25s;cursor:pointer;text-decoration:none;}
+.art-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(26,31,54,0.12);}
+.art-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;}
+.art-card:nth-child(1) .art-img{background:var(--mint-bg);}
+.art-card:nth-child(2) .art-img{background:var(--pink-light);}
+.art-card:nth-child(3) .art-img{background:var(--yellow);}
+.art-body{padding:22px;}
+.art-cat{font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:7px;}
+.art-card:nth-child(2) .art-cat{color:var(--pink);}
+.art-card:nth-child(3) .art-cat{color:#c9950a;}
+.art-body h3{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:400;color:var(--navy);margin-bottom:8px;line-height:1.3;}
+.art-body p{font-size:0.84rem;color:var(--text);opacity:0.58;line-height:1.75;}
+
+/* STORY STUDIO SECTION */
+.studio-section{padding:110px 52px;background:var(--mint-bg);position:relative;overflow:hidden;}
+.studio-section::before{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.4)0%,transparent 65%);}
+.ss-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.ss-text h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:400;color:var(--navy);line-height:1.08;margin-bottom:18px;}
+.ss-text h2 em{font-style:italic;color:var(--pink);}
+.ss-text p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--navy);opacity:0.65;line-height:1.85;margin-bottom:34px;}
+.ss-features{display:flex;flex-direction:column;gap:12px;margin-bottom:38px;}
+.ss-feat{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.6);border-radius:14px;padding:13px 16px;}
+.ss-feat-icon{width:34px;height:34px;border-radius:10px;background:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;box-shadow:0 2px 8px rgba(26,31,54,0.07);}
+.ss-feat span{font-size:0.9rem;font-weight:500;color:var(--navy);}
+.ss-mockup{background:var(--white);border-radius:26px;overflow:hidden;box-shadow:0 28px 72px rgba(26,31,54,0.13);position:relative;z-index:1;}
+.sm-top{background:var(--navy);padding:13px 18px;display:flex;align-items:center;gap:10px;}
+.sm-logo{width:28px;height:28px;background:var(--pink);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:800;color:var(--white);}
+.sm-name{font-size:0.88rem;font-weight:600;color:var(--white);}
+.sm-body{background:var(--mint-bg);padding:16px;}
+.sm-welcome{background:var(--white);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 2px 10px rgba(26,31,54,0.06);}
+.sm-welcome h4{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.sm-welcome p{font-size:0.78rem;color:var(--text);opacity:0.58;}
+.sm-actions{display:flex;flex-direction:column;gap:9px;margin-bottom:12px;}
+.sm-act-pink{background:var(--pink);border-radius:13px;padding:13px 15px;display:flex;align-items:center;gap:11px;}
+.sm-act-light{background:var(--mint-bg);border-radius:13px;padding:13px 15px;display:flex;align-items:center;gap:11px;}
+.sm-act-yellow{background:var(--yellow);border-radius:13px;padding:13px 15px;display:flex;align-items:center;gap:11px;}
+.sm-act-icon{font-size:1rem;}
+.sm-act-title{font-size:0.82rem;font-weight:700;color:var(--navy);}
+.sm-act-pink .sm-act-title{color:var(--white);}
+.sm-act-sub{font-size:0.68rem;color:var(--navy);opacity:0.5;}
+.sm-act-pink .sm-act-sub{color:rgba(255,255,255,0.75);opacity:1;}
+.sm-prompt{background:var(--white);border-radius:13px;padding:13px;border-left:3px solid var(--mint-deep);}
+.sm-prompt-lbl{font-size:0.56rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:5px;}
+.sm-prompt p{font-family:'Cormorant Garamond',serif;font-size:0.88rem;font-style:italic;color:var(--navy);line-height:1.5;margin-bottom:9px;}
+.sm-prompt-btn{background:var(--navy);color:var(--mint);font-size:0.7rem;font-weight:700;padding:7px 14px;border-radius:12px;border:none;width:100%;cursor:pointer;}
+
+/* CLOSING */
+.closing{padding:120px 52px;background:var(--blush);text-align:center;}
+.closing h2{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:400;color:var(--navy);line-height:1.05;max-width:800px;margin:0 auto 18px;}
+.closing h2 em{font-style:italic;color:var(--pink);}
+.closing-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--navy);opacity:0.58;max-width:540px;margin:0 auto 46px;line-height:1.85;}
+.closing-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-navy{background:var(--navy);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;transition:all 0.25s;}
+.btn-navy:hover{transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--navy);font-size:0.92rem;font-weight:600;padding:15px 34px;border-radius:28px;border:2px solid rgba(26,31,54,0.2);text-decoration:none;transition:all 0.25s;}
+.btn-outline:hover{border-color:var(--navy);}
+
 /* FOOTER */
-.lw-footer{background:#2c2c2c;padding:56px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.lw-footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#ffffff;text-decoration:none;opacity:0.7;}
-.lw-footer-links{display:flex;gap:28px;flex-wrap:wrap;}
-.lw-footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#ffffff;opacity:0.35;text-decoration:none;transition:opacity 0.3s ease;}
-.lw-footer-links a:hover{opacity:0.75;}
-.lw-footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#ffffff;opacity:0.25;}
-@keyframes lwFadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-.lw-fade{opacity:0;transform:translateY(18px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.lw-fade.visible{opacity:1;transform:translateY(0);}
+footer{background:var(--navy);padding:56px 52px 40px;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+.footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
+.footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
+.footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a:hover{color:rgba(255,255,255,0.7);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+.footer-email{font-size:0.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
+.footer-email:hover{color:var(--mint);}
+
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  .hero,.ss-inner,.living-header{grid-template-columns:1fr;}
+  .hero-right,.living-intro{display:none;}
+  .philosophy{grid-template-columns:1fr;}
+  .phil-div{display:none;}
+  .articles{grid-template-columns:1fr;}
+  nav{padding:12px 20px;}
+  .nav-links{display:none;}
+  .living,.studio-section,.closing{padding:72px 24px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+}
 </style>
 </head>
 <body>
-<nav class="lw-nav" id="lw-nav">
-  <a href="/" class="lw-nav-logo">Leave Well Media</a>
-  <div class="lw-nav-links">
-    <a href="/story-studio">Story Studio</a>
-    <a href="/live-well-library">Library</a>
-    <a href="/legacy-shop">Shop</a>
-    <a href="/about">About</a>
-    <a href="/connect">Connect</a>
+
+<nav>
+  <a href="/" class="nav-logo">Leave Well Media</a>
+  <div class="nav-links">
+    <a href="/story-studio/">Story Studio</a>
+    <a href="/live-well-library/">Library</a>
+    <a href="/legacy-shop/">Shop</a>
+    <a href="/about/">About</a>
+    <a href="/connect/">Connect</a>
+    <a href="https://storystudio.media" class="nav-cta" target="_blank">Start Your Legacy</a>
   </div>
-  <a href="https://storystudio.media" class="lw-nav-cta">Start Your Legacy</a>
-  <div class="lw-hamburger" id="lw-hamburger"><span></span><span></span><span></span></div>
 </nav>
-<div class="lw-mobile-menu" id="lw-mobile-menu">
-  <button class="lw-mobile-close" id="lw-mobile-close">✕</button>
-  <a href="/">Home</a><a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
-  <a href="https://storystudio.media" style="color:#7ecfc0;">Start Your Legacy →</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-pill"><div class="hero-pill-dot"></div><span>Leave Well Media</span></div>
+    <h1>Keep living<br>while love is<br>part of the<br><em>picture.</em></h1>
+    <p class="hero-sub">Resources, tools, and a community for families who are learning to hold love and loss at the same time.</p>
+    <div class="hero-btns">
+      <a href="https://storystudio.media" class="btn-pink" target="_blank">Start Your Story</a>
+      <a href="/live-well-library/" class="btn-white">Explore the Library</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="hero-stat-num">Free</span><span class="hero-stat-label">Always</span></div>
+      <div><span class="hero-stat-num">10+</span><span class="hero-stat-label">Articles</span></div>
+      <div><span class="hero-stat-num">1</span><span class="hero-stat-label">Community</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card-big">
+      <span class="hcb-tag">Today's Invitation</span>
+      <h3>You do not have to choose between grief and living.</h3>
+      <p>Leave Well Media was built for the in-between. The messy, tender, beautiful space where someone you love is still here.</p>
+      <div class="today-prompt">
+        <span class="tp-label">Today's Prompt</span>
+        <p>What is one moment from this week that you want to remember forever?</p>
+        <button class="tp-btn" onclick="window.open('https://storystudio.media','_blank')">Write It Down</button>
+      </div>
+    </div>
+    <div class="hero-mini-row">
+      <div class="mini-card mini-mint"><span class="mini-tag">Library</span><h4>Read. Reflect. Begin.</h4></div>
+      <div class="mini-card mini-blush"><span class="mini-tag">Story Studio</span><h4>Capture what matters most.</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<div class="philosophy">
+  <div class="phil-item"><h3>Live <em>fully.</em></h3><p>Presence over performance. You are allowed to be here and grieve at the same time.</p></div>
+  <div class="phil-div"></div>
+  <div class="phil-item"><h3>Love <em>deeply.</em></h3><p>The story between you is worth capturing. Every ordinary Tuesday. Every quiet moment.</p></div>
+  <div class="phil-div"></div>
+  <div class="phil-item"><h3>Leave <em>well.</em></h3><p>A legacy is not just what you leave behind. It is how people feel when they think of you.</p></div>
 </div>
-<header class="lw-hero">
-  <span class="lw-hero-eyebrow">Leave Well Media</span>
-  <h1>Keep living while<br>loss is part of<br>the <em>picture.</em></h1>
-  <p class="lw-hero-sub">Practical and creative resources for those navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p>
-  <div class="lw-hero-btns">
-    <a href="/live-well-library" class="lw-btn-mint">Explore the Library</a>
-    <a href="https://storystudio.media" class="lw-btn-ghost">Capture Your Story →</a>
-  </div>
-  <div class="lw-hero-three">
-    <div class="lw-hero-pill"><span class="lw-hero-pill-word">Reflection</span><div class="lw-hero-pill-line"></div><span>For the journey inward</span></div>
-    <div class="lw-hero-pill"><span class="lw-hero-pill-word">Clarity</span><div class="lw-hero-pill-line"></div><span>For the decisions ahead</span></div>
-    <div class="lw-hero-pill"><span class="lw-hero-pill-word">Direction</span><div class="lw-hero-pill-line"></div><span>For the legacy you leave</span></div>
-  </div>
-</header>
-<section class="lw-intro">
-  <p class="lw-intro-q lw-fade">When someone you love is facing a terminal illness,<br><strong>the way life is lived becomes everything.</strong></p>
-  <p class="lw-intro-sub lw-fade">Anticipatory grief introduces urgency, clarity, and choice into everyday moments. This space gives you the tools to live well now while considering what will be left behind.</p>
-  <div class="lw-divider lw-fade"></div>
-</section>
-<section class="lw-pillars">
-  <div class="lw-pillars-inner">
-    <span class="lw-eyebrow lw-fade">How We Help</span>
-    <h2 class="lw-fade">From reacting to life,<br>to <em>choosing</em> how you live it.</h2>
-    <div class="lw-pillars-grid">
-      <div class="lw-pillar lw-fade"><span class="lw-pillar-num">01</span><h3>Live Well Now</h3><p>Resources, articles, and perspectives that help you stay present, make intentional choices, and find meaning in the time that remains.</p></div>
-      <div class="lw-pillar lw-fade"><span class="lw-pillar-num">02</span><h3>Support Your People</h3><p>Practical tools for partners, adult children, friends, and caregivers. How to show up well, stay connected, and walk this next path together.</p></div>
-      <div class="lw-pillar lw-fade"><span class="lw-pillar-num">03</span><h3>Leave a Legacy</h3><p>Capture the stories, wisdom, and love that will carry forward long after you're gone. Story Studio gives families a private, guided space to preserve what matters most.</p></div>
+
+<!-- LIVING WELL LIBRARY -->
+<section class="living">
+  <div class="living-inner">
+    <div class="living-header">
+      <div>
+        <span class="eyebrow">From the Library</span>
+        <h2 class="fade-up">Living well while love<br>is part of the <em>picture.</em></h2>
+      </div>
+      <div class="living-intro">
+        <p>A free, always-open collection of articles, reflections, and guides for families navigating terminal illness, anticipatory grief, and the art of showing up.</p>
+        <a href="/live-well-library/">Explore all articles →</a>
+      </div>
+    </div>
+    <div class="articles">
+      <a href="/live-well-library/when-your-person-gets-the-diagnosis/" class="art-card fade-up">
+        <div class="art-img">🌿</div>
+        <div class="art-body">
+          <span class="art-cat">Anticipatory Grief</span>
+          <h3>When Your Person Gets the Diagnosis</h3>
+          <p>What your body, mind, and heart are going through right now and how to find your footing.</p>
+        </div>
+      </a>
+      <a href="/live-well-library/" class="art-card fade-up">
+        <div class="art-img">💛</div>
+        <div class="art-body">
+          <span class="art-cat">Caregiving</span>
+          <h3>The Invisible Labor of Being the Guide</h3>
+          <p>Nobody hands you a manual. You become the coordinator, the communicator, the strong one.</p>
+        </div>
+      </a>
+      <a href="/live-well-library/" class="art-card fade-up">
+        <div class="art-img">📖</div>
+        <div class="art-body">
+          <span class="art-cat">Legacy</span>
+          <h3>What Prepared Me: A Mini Workbook</h3>
+          <p>You already have what you need. This workbook just helps you remember where you put it.</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
-<section class="lw-library">
-  <div class="lw-library-inner">
-    <div class="lw-library-header">
-      <div class="lw-fade"><span class="lw-eyebrow">The Live Well Library</span><h2>Resources for every part of the <em>journey.</em></h2></div>
-      <div class="lw-library-intro lw-fade"><p>Articles, guides, and perspectives covering every dimension of anticipatory grief and terminal illness. Written without clinical jargon, designed for the real moments you're navigating.</p><p style="margin-top:16px;"><a href="/live-well-library">Browse the full library →</a></p></div>
+
+<!-- STORY STUDIO -->
+<section class="studio-section">
+  <div class="ss-inner">
+    <div class="ss-text fade-up">
+      <span class="eyebrow">Story Studio</span>
+      <h2>Your story deserves<br>to be <em>remembered.</em></h2>
+      <p>The private, emotionally safe app that helps you capture a lifetime of memories before the moments you cannot take back are gone.</p>
+      <div class="ss-features">
+        <div class="ss-feat"><div class="ss-feat-icon">📖</div><span>Write, record, or speak your stories</span></div>
+        <div class="ss-feat"><div class="ss-feat-icon">📅</div><span>Schedule messages for future milestones</span></div>
+        <div class="ss-feat"><div class="ss-feat-icon">👥</div><span>Invite family as Hero, Guide, Builder, or Witness</span></div>
+        <div class="ss-feat"><div class="ss-feat-icon">🎁</div><span>Build legacy keepsake books and videos</span></div>
+      </div>
+      <a href="https://storystudio.media" class="btn-pink" target="_blank">Start Your Living Legacy</a>
     </div>
-    <div class="lw-cards-grid">
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">🌿</span><h3>Living With Anticipated Change</h3><p>Articles and guides that address anticipatory grief when life shifts due to cancer or terminal illness.</p><span class="lw-card-arrow">→</span></a>
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">🤝</span><h3>Supporting Someone You Love</h3><p>Resources for partners, adult children, friends, and caregivers. Creative and practical tools to help you support well and stay connected.</p><span class="lw-card-arrow">→</span></a>
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">💬</span><h3>Conversations That Matter</h3><p>Language, prompts, and communication tools for talking about what matters now, later, and eventually.</p><span class="lw-card-arrow">→</span></a>
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">🧭</span><h3>Making Sense of What You Are Feeling</h3><p>Short reads and reflections that help you name what is happening internally. Clear perspective without clinical language.</p><span class="lw-card-arrow">→</span></a>
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">✦</span><h3>Legacy and Meaning</h3><p>Legacy is built through relationships, shared stories, and the memories people carry forward.</p><span class="lw-card-arrow">→</span></a>
-      <a href="/live-well-library" class="lw-card lw-fade"><span class="lw-card-icon">🌱</span><h3>Community</h3><p>A shared space to learn, reflect, and connect with others navigating anticipatory grief and terminal illness.</p><span class="lw-card-arrow">→</span></a>
-    </div>
-  </div>
-</section>
-<section class="lw-studio">
-  <div class="lw-studio-inner">
-    <div class="lw-studio-text lw-fade">
-      <span class="lw-eyebrow" style="color:#7ecfc0;">Story Studio</span>
-      <h2>A simple way to capture stories<br>that <em>matter.</em></h2>
-      <p>Story Studio is a private digital space where families can gather meaningful moments, reflections, and memories while navigating terminal illness and anticipatory grief.</p>
-      <p>One person leads their story. Loved ones contribute in their own words. Everything is organized into a storyboard and keepsake video you can save, share, and return to forever.</p>
-      <a href="/story-studio" class="lw-btn-mint" style="margin-top:12px;display:inline-block;">Learn More About Story Studio →</a>
-    </div>
-    <div class="lw-studio-features lw-fade">
-      <div class="lw-sf"><h4>🎙️ AI-Guided Story Prompts</h4><p>50+ prompts plus an AI generator that creates personalized questions based on your unique life and memories.</p></div>
-      <div class="lw-sf"><h4>📅 Scheduled Future Messages</h4><p>Record messages for birthdays, graduations, and milestones. They arrive exactly when they are needed most.</p></div>
-      <div class="lw-sf"><h4>🔒 100% Private by Design</h4><p>No social media. No ads. Only the people you personally invite can see your Story Studio.</p></div>
-      <div class="lw-sf"><h4>🎬 Final Tribute Video</h4><p>Storyboard plus Canva Integration creates a polished tribute video to share with your inner circle.</p></div>
-    </div>
-  </div>
-</section>
-<section class="lw-about">
-  <div class="lw-about-inner">
-    <div class="lw-about-vis lw-fade">
-      <!-- Replace with: <img src="/assets/mindy.jpg" alt="Mindy Genereux" style="width:100%;height:100%;object-fit:cover;object-position:center top;"> -->
-      <div class="lw-about-init">MG</div>
-    </div>
-    <div class="lw-about-text lw-fade">
-      <span class="lw-eyebrow">About Leave Well Media</span>
-      <h2>Changing how people<br><em>live before loss.</em></h2>
-      <p>Leave Well Media was founded by Mindy Genereux, Certified Death Doula and Anticipatory Grief Coach, after sitting beside a dying parent and recognizing how few resources existed for the space between diagnosis and death.</p>
-      <p class="lw-about-pull">"The goal is not to prepare for death. It is to live fully, right until the end."</p>
-      <p>This space was built for the people navigating terminal illness alongside someone they love. For those who want to live well, support well, and leave something meaningful behind.</p>
-      <a href="/about" class="lw-about-cred">About Mindy Genereux · Leave Well Media</a>
+    <div class="ss-mockup fade-up">
+      <div class="sm-top"><div class="sm-logo">SS</div><span class="sm-name">Story Studio</span></div>
+      <div class="sm-body">
+        <div class="sm-welcome"><h4>✨ Welcome back, Mindy!</h4><p>Your story matters. Take your time, one memory at a time.</p></div>
+        <div class="sm-actions">
+          <div class="sm-act-pink"><span class="sm-act-icon">📖</span><div><div class="sm-act-title">New Story</div><div class="sm-act-sub">Write from a prompt or freestyle</div></div></div>
+          <div class="sm-act-light"><span class="sm-act-icon">✏️</span><div><div class="sm-act-title">Journal Entry</div><div class="sm-act-sub">Capture today's thoughts</div></div></div>
+          <div class="sm-act-yellow"><span class="sm-act-icon">📷</span><div><div class="sm-act-title">Add Memory</div><div class="sm-act-sub">Upload photos or videos</div></div></div>
+        </div>
+        <div class="sm-prompt">
+          <span class="sm-prompt-lbl">Today's Prompt</span>
+          <p>Three breaths and one truth about today and why it matters.</p>
+          <button class="sm-prompt-btn">Start Writing</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<section class="lw-cta">
-  <h2 class="lw-fade">You don't have to<br>navigate this <em>alone.</em></h2>
-  <p class="lw-cta-sub lw-fade">Resources, tools, and a community for every part of the journey ahead.</p>
-  <div class="lw-cta-btns lw-fade">
-    <a href="/live-well-library" class="lw-cta-btn-dark">Explore the Library</a>
-    <a href="https://storystudio.media" class="lw-cta-btn-outline">Start Your Story Studio</a>
+
+<!-- CLOSING CTA -->
+<section class="closing">
+  <h2 class="fade-up">The story you leave<br>is the love that <em>stays.</em></h2>
+  <p class="closing-sub">Begin anywhere. Begin today. The library is free and Story Studio is waiting for you.</p>
+  <div class="closing-btns">
+    <a href="https://storystudio.media" class="btn-navy" target="_blank">Start Your Living Legacy</a>
+    <a href="/live-well-library/" class="btn-outline">Explore the Library</a>
   </div>
-  <span class="lw-cta-small lw-fade">leavewell.media · Private · Safe · Built with Love</span>
 </section>
-<footer class="lw-footer">
-  <a href="/" class="lw-footer-logo">Leave Well Media</a>
-  <div class="lw-footer-links">
-    <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/about">About</a><a href="/connect">Connect</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Leave Well Media</h3>
+      <p>Practical and creative resources for families navigating terminal illness, anticipatory grief, and the legacy they will leave behind.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="/live-well-library/">Library</a>
+      <a href="/story-studio/">Story Studio</a>
+      <a href="/legacy-shop/">Shop</a>
+      <a href="/about/">About</a>
+      <a href="/connect/">Connect</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/live-well-library/">Free Articles</a>
+      <a href="https://storystudio.media" target="_blank">Story Studio App</a>
+      <a href="/legacy-shop/">Legacy Shop</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:Mindy@leavewell.media">Mindy@leavewell.media</a>
+      <a href="/connect/">Send a Message</a>
+    </div>
   </div>
-  <span class="lw-footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Leave Well Media · Mindy Genereux, Certified Death Doula</span>
+    <a href="mailto:Mindy@leavewell.media" class="footer-email">Mindy@leavewell.media</a>
+  </div>
 </footer>
+
 <script>
-const nav=document.getElementById('lw-nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-document.getElementById('lw-hamburger').addEventListener('click',()=>document.getElementById('lw-mobile-menu').classList.add('open'));
-document.getElementById('lw-mobile-close').addEventListener('click',()=>document.getElementById('lw-mobile-menu').classList.remove('open'));
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
-document.querySelectorAll('.lw-fade').forEach(el=>obs.observe(el));
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
