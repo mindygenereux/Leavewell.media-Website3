@@ -31,15 +31,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:fl
 .hero-pill span{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);opacity:0.55;}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,5.2vw,5.5rem);font-weight:400;color:var(--navy);line-height:1.02;margin-bottom:26px;}
 .hero h1 em{font-style:italic;color:var(--pink);}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-style:italic;color:var(--navy);opacity:0.62;line-height:1.85;margin-bottom:42px;max-width:460px;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-style:italic;color:var(--navy);line-height:1.85;margin-bottom:42px;max-width:460px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px;}
 .btn-pink{background:var(--pink);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 6px 20px rgba(244,143,177,0.35);transition:all 0.25s;}
 .btn-pink:hover{transform:translateY(-2px);}
 .btn-white{background:var(--white);color:var(--navy);font-size:0.92rem;font-weight:600;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 4px 16px rgba(26,31,54,0.09);transition:all 0.25s;}
 .btn-white:hover{transform:translateY(-2px);}
-.hero-stats{display:flex;gap:32px;}
-.hero-stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--navy);display:block;line-height:1;}
-.hero-stat-label{font-size:0.7rem;font-weight:500;color:var(--navy);opacity:0.4;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-top:4px;}
+.hero-links{display:flex;flex-direction:column;gap:8px;}
+.hero-link{font-size:0.88rem;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;}
+.hero-link:hover{color:var(--mint-deep);}
+.hero-link span{font-weight:600;}
 
 /* HERO RIGHT */
 .hero-right{display:flex;flex-direction:column;justify-content:center;padding:90px 52px 80px 20px;gap:16px;position:relative;z-index:1;}
@@ -186,10 +187,9 @@ footer{background:var(--navy);padding:56px 52px 40px;}
       <a href="https://storystudio.media" class="btn-pink" target="_blank">Start Your Story</a>
       <a href="/live-well-library/" class="btn-white">Explore the Library</a>
     </div>
-    <div class="hero-stats">
-      <div><span class="hero-stat-num">Free</span><span class="hero-stat-label">Always</span></div>
-      <div><span class="hero-stat-num">10+</span><span class="hero-stat-label">Articles</span></div>
-      <div><span class="hero-stat-num">1</span><span class="hero-stat-label">Community</span></div>
+    <div class="hero-links">
+      <a href="https://storystudio.media" class="hero-link" target="_blank">→ <span>Start your story</span> at storystudio.media</a>
+      <a href="/story-studio/" class="hero-link">→ <span>Learn more</span> at leavewell.media/story-studio</a>
     </div>
   </div>
   <div class="hero-right">
