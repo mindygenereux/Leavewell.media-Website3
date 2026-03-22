@@ -14,13 +14,35 @@ body {
 }
 
 .mtmm-hero {
-    min-height: 85vh;
+    min-height: calc(85vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 40px;
+    padding: 48px 24px 64px;
     background: linear-gradient(135deg, #dcfce7 0%, #fce7f3 100%);
+}
+
+.mtmm-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mtmm-hero h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 auto 32px;
+    color: #1e3a38;
+    text-align: center;
+    width: 100%;
 }
 
 h1 {
@@ -34,9 +56,12 @@ h1 {
 
 .hero-tagline {
     font-size: clamp(1.3rem, 3vw, 2rem);
-    margin-bottom: 48px;
+    margin: 0 auto 48px;
     max-width: 900px;
+    width: 100%;
     color: #1e3a38;
+    text-align: center;
+    line-height: 1.45;
 }
 
 .cta {
@@ -301,6 +326,14 @@ ul li:before {
 .cta-container {
     text-align: center;
     margin: 48px 0;
+}
+
+.mtmm-hero .cta-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 968px) {
