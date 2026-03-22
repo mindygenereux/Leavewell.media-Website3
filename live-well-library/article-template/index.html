@@ -11,7 +11,7 @@
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,padding 0.3s;}
 nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:12px 40px;}
 .nl{display:flex;align-items:center;text-decoration:none;}
-.nl img{height:36px;width:auto;}
+.nl img{height:42px;width:auto;display:block;}
 .nlinks{display:flex;align-items:center;gap:32px;}
 .nlinks a{font-family:'DM Sans',sans-serif;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s;}
 .nlinks a:hover,.nlinks a.active{color:#7ecfc0;}
@@ -120,7 +120,7 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
 <body>
 
 <nav id="mn">
-  <a href="/" class="nl"><img src="/assets/logo.svg" alt="Leave Well Media"></a>
+  <a href="/" class="nl"><img src="/assets/logo.png" alt="Leave Well Media" decoding="async"></a>
   <div class="nlinks">
     <a href="/story-studio">Story Studio</a>
     <a href="/live-well-library" class="active">Library</a>
