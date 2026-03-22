@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.7;
+    color: #1e3a38;
+}
+
+.mtmm-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #dcfce7 0%, #fce7f3 100%);
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    color: #1e3a38;
+}
+
+.hero-tagline {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin-bottom: 48px;
+    max-width: 900px;
+    color: #1e3a38;
+}
+
+.cta {
+    display: inline-block;
+    padding: 20px 60px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    background: #f9a8d4;
+    color: white;
+}
+
+.cta:hover {
+    background: #e891b9;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.15rem;
+    margin-bottom: 24px;
+    line-height: 1.8;
+}
+
+.highlight-mint {
+    color: #7ecfc0;
+    font-weight: 600;
+}
+
+.highlight-pink {
+    color: #e891b9;
+    font-weight: 600;
+}
+
+.highlight-yellow {
+    color: #ca8a04;
+    font-weight: 600;
+}
+
+.problem-section {
+    background: #fefce8;
+    padding: 100px 40px;
+}
+
+.problem-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.truth-section {
+    background: #fef3c7;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.truth-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.outcomes-section {
+    background: white;
+}
+
+.outcome {
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outcome-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1e3a38;
+}
+
+.process-section {
+    background: #fdf6ee;
+}
+
+.week {
+    margin-bottom: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.week h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1e3a38;
+}
+
+.week-label {
+    color: #7ecfc0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pricing-section {
+    background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 100%);
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 60px auto 40px auto;
+}
+
+.price-card {
+    background: white;
+    padding: 48px 32px;
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-label {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    color: #1e3a38;
+}
+
+.price-detail {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-top: 8px;
+}
+
+.pay-in-full {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+    border: 3px solid #f9a8d4;
+}
+
+.pay-in-full .price-amount {
+    color: #e891b9;
+}
+
+.faq-section {
+    background: white;
+}
+
+.faq {
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+}
+
+.faq-q {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e3a38;
+}
+
+.final-cta {
+    background: linear-gradient(135deg, #a7f3d0 0%, #f9a8d4 100%);
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.final-cta h2 {
+    margin-bottom: 32px;
+}
+
+.final-cta .big {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 48px 0;
+}
+
+ul {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+ul li {
+    padding: 12px 0;
+    font-size: 1.1rem;
+    padding-left: 24px;
+    position: relative;
+}
+
+ul li:before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #7ecfc0;
+    font-size: 1.3rem;
+}
+
+.image-placeholder {
+    background: #e5e7eb;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    color: #6b7280;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.video-placeholder {
+    background: #1e3a38;
+    border-radius: 20px;
+    padding: 100px 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cta-container {
+    text-align: center;
+    margin: 48px 0;
+}
+
+@media (max-width: 968px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta {
+        padding: 18px 40px;
+        font-size: 1.1rem;
+    }
+}
