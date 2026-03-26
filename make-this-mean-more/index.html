@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make This Mean More | Live Well, Leave Well Media</title>
+    <title>Make This Mean More | Leave Well Media</title>
     <meta name="description" content="8-week 1:1 coaching for daughters navigating a parent's terminal diagnosis—anticipatory grief, legacy, and showing up with Mindy Genereux, Certified Death Doula.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{--mint:#7ecfc0;--pink:#f9a8d4;--pink-hover:#e891b9;--navy:#1e3a38;--white:#fff;--yellow:#ca8a04;}
+        :root{--mint:#7de8d0;--mint-deep:#4ecdb4;--pink:#f48fb1;--pink-light:#fce4ec;--navy:#1a1f36;--white:#fff;--yellow:#ca8a04;--cream:#fafffe;}
         
         * {
             margin: 0;
@@ -18,17 +18,19 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
             line-height: 1.7;
             color: var(--navy);
+            background: var(--cream);
         }
         
-        nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(30,58,56,0.97);backdrop-filter:blur(10px);}
-        .nav-logo{font-family:'Libre Baskerville',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
-        .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
-        .nav-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;transition:color .2s;}
+        nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+        .nav-links{display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+        .nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
         .nav-links a:hover,.nav-links a.active{color:var(--mint);}
-        .nav-cta{background:var(--pink)!important;color:var(--white)!important;font-size:0.78rem!important;font-weight:700!important;padding:10px 20px!important;border-radius:22px;text-decoration:none;}
+        .nav-cta{background:var(--pink)!important;color:var(--white)!important;font-size:0.82rem!important;font-weight:700!important;padding:10px 22px!important;border-radius:22px;text-decoration:none;box-shadow:0 4px 14px rgba(244,143,177,0.35);}
         @media(max-width:900px){.nav-links{display:none;}}
         
         .hero {
@@ -38,40 +40,50 @@
             justify-content: center;
             text-align: center;
             padding: 120px 40px 80px;
-            background: linear-gradient(135deg, #dcfce7 0%, #fce7f3 100%);
+            background: linear-gradient(135deg, #d4f5ee 0%, #fce4ec 100%);
+        }
+        
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         h1 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 400;
             line-height: 1.1;
             margin-bottom: 32px;
             color: var(--navy);
         }
         
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            color: var(--navy);
+        }
+        
         .hero-tagline {
-            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
             margin-bottom: 48px;
-            max-width: 900px;
             color: var(--navy);
         }
         
         .cta {
             display: inline-block;
-            padding: 20px 60px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.2rem;
+            padding: 15px 34px;
+            border-radius: 28px;
+            font-weight: 700;
+            font-size: 0.92rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.25s;
             background: var(--pink);
             color: white;
+            box-shadow: 0 6px 20px rgba(244,143,177,0.35);
         }
         
         .cta:hover {
-            background: var(--pink-hover);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
         
         section {
@@ -81,26 +93,27 @@
         }
         
         h2 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
             margin-bottom: 60px;
             text-align: center;
             line-height: 1.2;
         }
         
         p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin-bottom: 24px;
             line-height: 1.8;
         }
         
         .highlight-mint {
-            color: var(--mint);
+            color: var(--mint-deep);
             font-weight: 600;
         }
         
         .highlight-pink {
-            color: var(--pink-hover);
+            color: var(--pink);
             font-weight: 600;
         }
         
@@ -325,7 +338,7 @@
         
         footer{background:var(--navy);padding:56px 52px 40px;}
         .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-        .footer-brand h3{font-family:'Libre Baskerville',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+        .footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
         .footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
         .footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
         .footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;}
@@ -365,9 +378,9 @@
 </nav>
 
     <div class="hero">
-        <div>
+        <div class="hero-inner">
             <h1>Make This Mean More</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto;">Your dad has terminal cancer. You're drowning in fear and worst-case timelines while he's still here.</p>
+            <p class="hero-subtitle">Your dad has terminal cancer. You're drowning in fear and worst-case timelines while he's still here.</p>
             <p class="hero-tagline">In 8 weeks, you go from <strong><span class="highlight-pink">cancer stole the plot</span></strong> to <strong><em><span class="highlight-mint">you write the story anyway.</span></em></strong></p>
             <div class="cta-container">
                 <a href="#pricing" class="cta">Start Make This Mean More</a>
