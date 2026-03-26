@@ -3,24 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make This Mean More | Leave Well Media</title>
+    <title>Make This Mean More | Live Well, Leave Well Media</title>
     <meta name="description" content="8-week 1:1 coaching for daughters navigating a parent's terminal diagnosis—anticipatory grief, legacy, and showing up with Mindy Genereux, Certified Death Doula.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/make-this-mean-more/mtmm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{--mint:#7de8d0;--pink:#f48fb1;--navy:#1a1f36;--white:#fff;}
-        nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(26,31,54,0.97);backdrop-filter:blur(10px);}
-        .nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
+        :root{--mint:#7ecfc0;--pink:#f9a8d4;--pink-hover:#e891b9;--navy:#1e3a38;--white:#fff;--yellow:#ca8a04;}
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--navy);
+        }
+        
+        nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:16px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(30,58,56,0.97);backdrop-filter:blur(10px);}
+        .nav-logo{font-family:'Libre Baskerville',serif;font-size:1.1rem;color:var(--white);text-decoration:none;}
         .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
         .nav-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;transition:color .2s;}
         .nav-links a:hover,.nav-links a.active{color:var(--mint);}
         .nav-cta{background:var(--pink)!important;color:var(--white)!important;font-size:0.78rem!important;font-weight:700!important;padding:10px 20px!important;border-radius:22px;text-decoration:none;}
         @media(max-width:900px){.nav-links{display:none;}}
+        
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+            background: linear-gradient(135deg, #dcfce7 0%, #fce7f3 100%);
+        }
+        
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            color: var(--navy);
+        }
+        
+        .hero-tagline {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            margin-bottom: 48px;
+            max-width: 900px;
+            color: var(--navy);
+        }
+        
+        .cta {
+            display: inline-block;
+            padding: 20px 60px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            background: var(--pink);
+            color: white;
+        }
+        
+        .cta:hover {
+            background: var(--pink-hover);
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 100px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 60px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        
+        .highlight-mint {
+            color: var(--mint);
+            font-weight: 600;
+        }
+        
+        .highlight-pink {
+            color: var(--pink-hover);
+            font-weight: 600;
+        }
+        
+        .highlight-yellow {
+            color: var(--yellow);
+            font-weight: 600;
+        }
+        
+        .problem-section {
+            background: #fefce8;
+            padding: 100px 40px;
+        }
+        
+        .problem-text {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .problem-text h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 40px 0 16px 0;
+            color: var(--navy);
+        }
+        
+        .truth-section {
+            background: #fef3c7;
+            padding: 100px 40px;
+            text-align: center;
+        }
+        
+        .truth-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .outcomes-section {
+            background: white;
+        }
+        
+        .outcome {
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .outcome-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+        
+        .process-section {
+            background: #fdf6ee;
+        }
+        
+        .week {
+            margin-bottom: 48px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .week h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+        
+        .week h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 16px 0 8px 0;
+            color: var(--mint);
+        }
+        
+        .week-label {
+            color: var(--mint);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 100%);
+            text-align: center;
+            padding: 100px 40px;
+            max-width: none;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+            max-width: 1000px;
+            margin: 60px auto 40px auto;
+        }
+        
+        .price-card {
+            background: white;
+            padding: 48px 32px;
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .price-label {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            color: var(--navy);
+        }
+        
+        .price-detail {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            margin-top: 8px;
+        }
+        
+        .faq-section {
+            background: white;
+        }
+        
+        .faq {
+            max-width: 900px;
+            margin: 0 auto 32px auto;
+        }
+        
+        .faq-q {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #a7f3d0 0%, #f9a8d4 100%);
+            padding: 120px 40px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            margin-bottom: 32px;
+        }
+        
+        .final-cta .big {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 48px 0;
+        }
+        
+        ul {
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        ul li {
+            padding: 12px 0;
+            font-size: 1.1rem;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        ul li:before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--mint);
+            font-size: 1.3rem;
+        }
+        
+        .image-placeholder {
+            background: #e5e7eb;
+            border: 2px dashed #9ca3af;
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            color: #6b7280;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .video-placeholder {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 100px 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 32px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 48px 0;
+        }
+        
         footer{background:var(--navy);padding:56px 52px 40px;}
         .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-        .footer-brand h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+        .footer-brand h3{font-family:'Libre Baskerville',serif;font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:12px;}
         .footer-brand p{font-size:0.86rem;color:rgba(255,255,255,0.38);line-height:1.8;max-width:270px;}
         .footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
         .footer-col a{display:block;font-size:0.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;}
@@ -28,7 +333,20 @@
         .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
         .footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
         .footer-email{font-size:0.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
-        @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+        
+        @media (max-width: 968px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-top{grid-template-columns:1fr 1fr;}
+        }
+        
+        @media (max-width: 640px) {
+            .cta {
+                padding: 18px 40px;
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -46,9 +364,10 @@
   </div>
 </nav>
 
-    <div class="mtmm-hero">
-        <div class="mtmm-hero-inner">
+    <div class="hero">
+        <div>
             <h1>Make This Mean More</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto;">Your dad has terminal cancer. You're drowning in fear and worst-case timelines while he's still here.</p>
             <p class="hero-tagline">In 8 weeks, you go from <strong><span class="highlight-pink">cancer stole the plot</span></strong> to <strong><em><span class="highlight-mint">you write the story anyway.</span></em></strong></p>
             <div class="cta-container">
                 <a href="#pricing" class="cta">Start Make This Mean More</a>
@@ -56,43 +375,66 @@
         </div>
     </div>
 
+    <!-- VIDEO SECTION -->
     <div style="background: white; padding: 80px 40px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
+            <!-- REPLACE THIS DIV WITH YOUR VIDEO EMBED CODE -->
             <div class="video-placeholder">
                 <p style="font-size: 1.1rem; opacity: 0.8;">[ Your video goes here ]</p>
                 <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 12px;">Replace this entire div with your video embed code</p>
             </div>
+            <!-- END VIDEO PLACEHOLDER -->
         </div>
     </div>
 
     <div class="problem-section">
         <h2>Right now, you're <em>drowning.</em></h2>
-
+        
+        <!-- OPTIONAL IMAGE PLACEHOLDER -->
         <div class="image-placeholder">
             <p style="font-size: 1rem;">[ Add image here ]</p>
             <p style="font-size: 0.85rem; margin-top: 8px;">Delete this div if not using an image</p>
         </div>
-
+        
         <div class="problem-text">
-            <p>He told you the diagnosis. Your brain turned it into <strong>the worst version</strong>. You heard <strong><span class="highlight-pink">metastatic</span></strong> without knowing what it meant but you knew it meant <strong><span class="highlight-pink">too late</span></strong>. The echo made it <em>seven types of cancer</em> when it was two. <strong>Your sky fell right in front of him and he saw it.</strong></p>
+            <h3><strong>I want to feel in control of my reaction to his diagnosis.</strong></h3>
+            <p>Every Google search sends you down a rabbit hole. You can't stop thinking about timelines and worst-case scenarios. You can't stop crying in the car on the way home. You feel like you're floating above your body.</p>
 
-            <p><strong><span class="highlight-mint">Every Google search sends you down a rabbit hole.</span></strong> You can't stop thinking about <em>timelines</em> and <em>worst-case scenarios</em>. You can't stop crying in the car on the way home. <strong>You feel like you're floating above your body.</strong></p>
+            <h3><strong>I want to know what to expect when a parent is dying.</strong></h3>
+            <p>How is he going to go from being "how he is now" to dying? I want to know the stages of terminal illness. None of my friends have lost their parents yet. I feel alone in this even though I know cancer is common.</p>
 
-            <p><strong>You think it's too late. The good parts are over.</strong> You feel like you're running out of time with him. <em>What if you miss your chance?</em></p>
+            <h3><strong>I want to know there's still time.</strong></h3>
+            <p>I think it's too late. The good parts are over. I feel like I'm running out of time with him. What if I miss my chance?</p>
 
-            <p><strong>All you see is the cancer.</strong> You forget who he was before this. You don't know how to remember his life pulls him through this moment.</p>
+            <h3><strong>I want to see him as more than his diagnosis.</strong></h3>
+            <p>All I see is the cancer. I see him struggling from the pain and the physical signs. I forget who he was before this. I don't know how to remember his life pulls him through this moment.</p>
 
-            <p><strong>He's smiling while hiding the hard parts.</strong> He's pretending it's not as bad as it is. <em>You know he's protecting you because you're still his child.</em></p>
+            <h3><strong>I want to understand what he's doing.</strong></h3>
+            <p>He's selling everything or buying things he won't use. I don't know if this is normal or if I should stop him. Is it okay to let him get rid of his stuff? He's cleaning out the garage. Should I be worried?</p>
 
-            <p><strong>You don't know what to say.</strong> You're terrified you'll make it worse or burden him with your fear.</p>
+            <h3><strong>I want to know what he's not saying.</strong></h3>
+            <p>He's smiling while hiding the hard parts. He's pretending it's not as bad as it is. I know he's protecting me because I'm still his child. I can tell he's hiding something but I don't know what to do.</p>
 
-            <p><strong>You're terrified of forgetting him.</strong> <em>You're scared to take his picture as if you think he is going to die.</em></p>
+            <h3><strong>I want to show up without making it about me.</strong></h3>
+            <p>I don't know what to say. I'm terrified I'll make it worse or burden him with my fear. I want to keep the focus on him. He is so sick now. It must be so hard on him.</p>
 
-            <p>Everyone says <strong>"Fuck Cancer."</strong> <em>The way you view cancer seems abnormal compared to others.</em></p>
+            <h3><strong>I want to know how to help him when his body changes.</strong></h3>
+            <p>I don't know how to help him in the bathroom without making it worse. He can't do things he's always done himself and I can see it bothers him. I'm his daughter, this feels wrong. How do I keep his dignity?</p>
 
-            <p><strong>You're terrified when he dies, he's gone.</strong> <em>How do you tell him how to haunt you?</em></p>
+            <h3><strong>I want to capture what matters.</strong></h3>
+            <p>I'm terrified of forgetting him. I don't know what to save or how to do it. He seems so hopeful. I'm scared to take his picture as if I think he is going to die. I don't want to use the hand cast kits as they acknowledge he is dying. Should I say I'm sorry first? What do I want him to know I love him for? How do I let him know what I will remember him by?</p>
 
-            <p><strong>You're stuck in fear and logistics. This feels like waiting for the worst.</strong></p>
+            <h3><strong>I want to be able to make memories.</strong></h3>
+            <p>I want to make happy memories and not cry uncontrollably. I want to know how to say goodbye.</p>
+
+            <h3><strong>I want to reframe how I see cancer.</strong></h3>
+            <p>Everyone says "Fuck Cancer." I hear cancer is the villain. Everyone acts like cancer took time like a thief in the night. The way I view cancer seems abnormal compared to others. It's hard to find someone to relate to. Is the ball going to drop one day?</p>
+
+            <h3><strong>I want to keep the relationship after.</strong></h3>
+            <p>I'm terrified when he dies, he's gone. I don't know how to stay connected. How do I let him know I will carry him forward? How do I tell him how to haunt me? How does he want to be remembered? What is his favourite music? Flowers?</p>
+
+            <h3><strong>I want this year to mean something.</strong></h3>
+            <p>I'm stuck in fear and logistics. This feels like waiting for the worst. I'm floating above my body. I can't speak to him about this when he is planning his vacation next week, even though I know he's too sick to go. I hope he knows I stuck by him when he needed me the most. I hope he knows his life mattered.</p>
         </div>
     </div>
 
@@ -102,13 +444,14 @@
             <p style="font-size: 1.3rem;"><strong>Fear has the pen right now.</strong> It's writing worst-case timelines and a horror story where cancer stole everything.</p>
             <p style="font-size: 1.3rem;">That's not the story.</p>
             <p style="font-size: 1.8rem; font-weight: 700; margin-top: 40px;"><strong><span class="highlight-mint">The window is open RIGHT NOW.</span></strong> This is the added chapter, not the ending. <strong><em>You get to write it WITH him.</em></strong></p>
-
+            
             <div class="cta-container">
                 <a href="#pricing" class="cta">Start Make This Mean More</a>
             </div>
         </div>
     </div>
 
+    <!-- IMAGE PLACEHOLDER AFTER TRUTH -->
     <div style="background: white; padding: 80px 40px;">
         <div class="image-placeholder">
             <p style="font-size: 1rem;">[ Add image here ]</p>
@@ -118,7 +461,7 @@
 
     <section class="outcomes-section">
         <h2>By the time we finish, here's where you'll be:</h2>
-
+        
         <div class="outcome">
             <div class="outcome-title"><strong><span class="highlight-mint">You'll feel in control of your reaction to his diagnosis.</span></strong></div>
             <p>The echo stops controlling you. You can hear the word <strong>"terminal"</strong> without your brain shutting off. <em>You're an important player in his game</em> and you can be there to support him, no matter what the future holds.</p>
@@ -126,7 +469,7 @@
 
         <div class="outcome">
             <div class="outcome-title"><strong><span class="highlight-mint">You'll know what to expect when a parent is dying.</span></strong></div>
-            <p>I teach you the natural steps between diagnosis and death. <strong>Your dad will follow his own path and timeline.</strong> <em>Awareness that outcomes vary</em>, and you'll meet others at treatments with different experiences.</p>
+            <p>I teach you the natural steps between diagnosis and death. <strong>Your dad will follow his own path and timeline.</strong> You recognize good stories and moments are not commonly posted because they require less support than worst-case scenarios. <em>Awareness that outcomes vary</em>, and you'll meet others at treatments with different experiences.</p>
         </div>
 
         <div class="outcome">
@@ -156,17 +499,17 @@
 
         <div class="outcome">
             <div class="outcome-title"><strong><span class="highlight-mint">You capture what matters.</span></strong></div>
-            <p><strong>You capture his voice, his values, his humor, the real him.</strong> You have tools and support to build his living legacy.</p>
+            <p><strong>You capture his voice, his values, his humor, the real him.</strong> You have tools and support to build his living legacy. <em>He contributes. His inner circle contributes.</em></p>
         </div>
 
         <div class="outcome">
             <div class="outcome-title"><strong><span class="highlight-mint">You reframe how you see cancer.</span></strong></div>
-            <p>You see what cancer gave you both. <strong>The clarity, urgency, and the gift for dad to finish this story with purpose.</strong></p>
+            <p>You see what cancer gave you both. <strong>The clarity, urgency, and the gift for dad to finish this story with purpose.</strong> You normalize your own feelings around cancer and are connected to others who see death as the last chapter.</p>
         </div>
 
         <div class="outcome">
             <div class="outcome-title"><strong><span class="highlight-mint">You keep the relationship after.</span></strong></div>
-            <p><strong>You read the signals and know he's not gone, just different.</strong> <em>You are confident knowing he will show up for you after death</em>.</p>
+            <p><strong>You read the signals and know he's not gone, just different.</strong> <em>You are confident knowing he will show up for you after death.</em></p>
         </div>
 
         <div class="outcome">
@@ -175,7 +518,7 @@
         </div>
 
         <p style="font-size: 1.6rem; font-weight: 700; text-align: center; margin-top: 60px;"><strong><em><span class="highlight-pink">The light in you is proof the living legacy lives in you.</span></em></strong></p>
-
+        
         <div class="cta-container">
             <a href="#pricing" class="cta">Start Make This Mean More</a>
         </div>
@@ -187,52 +530,52 @@
 
         <div class="week">
             <span class="week-label">Week 1</span>
-            <h3>Drowning in the diagnosis</h3>
-            <p>You're spiraling. <strong>Every search confirms the worst thought.</strong> I teach you <strong><span class="highlight-mint">the diagnosis is one data point</span></strong>. Not the whole chapter. You can hear the word <strong>"terminal"</strong> without your brain shutting off.</p>
+            <h3>Understanding the Diagnosis</h3>
+            <p>You're spiraling. Every search confirms the worst thought. I teach you <strong><span class="highlight-mint">the diagnosis is one data point</span></strong>, not the whole chapter. You can hear the word "terminal" without your brain shutting off.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 2</span>
-            <h3>The window is open</h3>
-            <p>You think you're out of time. I teach you <strong><span class="highlight-mint">the window is open RIGHT NOW</span></strong>. <em>You realize there's still time.</em> You start seeing <strong>your dad as the HERO</strong>.</p>
+            <h3>Making Memories</h3>
+            <p>You think you're out of time. I teach you <strong><span class="highlight-mint">the window is open RIGHT NOW</span></strong>. You realize there's still time. You stop acting like he's already gone. You start seeing your dad as the HERO and begin capturing memories with a smile.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 3</span>
-            <h3>Main character energy</h3>
-            <p>You remember <strong><em>the whole character</em></strong>. Every level he played before this one. <strong>You tell a story about him that includes him being sick.</strong></p>
+            <h3>Remembering Who He Is</h3>
+            <p>All you see is the cancer. You remember <strong><em>the whole character</em></strong>. Every level he played before this one. You tell a story about him that includes him being sick. You know the player and how he will get through this next chapter, his way.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 4</span>
-            <h3>Connect the dots</h3>
-            <p><strong>He's smiling while hiding the hard parts.</strong> I teach you to see past the performance. <strong><span class="highlight-mint">To read what he's not saying</span></strong>.</p>
+            <h3>Reading Between the Lines</h3>
+            <p>He's smiling while hiding the hard parts. I teach you to see past the performance. <strong><span class="highlight-mint">To read what he's not saying</span></strong>. You show him you can handle it by reading between the lines to observe the truth without saying it.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 5</span>
-            <h3>FOMO</h3>
-            <p><strong>He's buying things he won't use.</strong> I give you <em>permission to witness without fixing</em>. To let him buy the muffin, the car, the dream. <strong><em>You're the comfort because you trust his process</em></strong>.</p>
+            <h3>Letting Him Live His Way</h3>
+            <p>He's buying things he won't use. I give you <em>permission to witness without fixing</em>. To let him buy the muffin, the car, the dream. <strong><em>You're the comfort because you trust his process</em></strong>.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 6</span>
-            <h3>Letting go</h3>
-            <p><strong>You're watching him lose control of things he's always done himself.</strong> I teach you how to support him. <strong><em><span class="highlight-pink">This is next level love and support</span></em></strong>.</p>
+            <h3>Supporting Him Through the Hard Parts</h3>
+            <p>You're watching him lose control of things he's always done himself. I teach you how to support him. <strong><em><span class="highlight-pink">This is next level love and support</span></em></strong>.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 7</span>
-            <h3>The thief in the night</h3>
-            <p>You hear <strong>cancer is the villain</strong>. You're aware <strong><span class="highlight-mint">cancer isn't the villain, but an alarm clock</span></strong>. It woke you both up and gave you this window to make this chapter matter.</p>
+            <h3>What Cancer Actually Gave You</h3>
+            <p>Everyone says "Fuck Cancer." You're aware <strong><span class="highlight-mint">cancer isn't the villain, but an alarm clock</span></strong>. It woke you both up and gave you this window to make this chapter matter.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 8</span>
-            <h3>Continue?</h3>
-            <p><strong>You're terrified it's game over when he dies.</strong> <strong><em>You trust he's not gone.</em></strong> You know the story continues because his character lives in you.</p>
+            <h3>The Relationship Continues</h3>
+            <p>You're terrified it's game over when he dies. <strong><em>You trust he's not gone.</em></strong> You know the story continues because his character lives in you. Having fun while being curious and proving you both won.</p>
         </div>
-
+        
         <div class="cta-container">
             <a href="#pricing" class="cta">Start Make This Mean More</a>
         </div>
@@ -252,7 +595,7 @@
 
     <section style="background: white;">
         <h2>What's included:</h2>
-
+        
         <div style="max-width: 800px; margin: 0 auto;">
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">8 weekly 1:1 coaching sessions (60 minutes each)</span></strong></h3>
@@ -265,8 +608,8 @@
             </div>
 
             <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Tools to build his living legacy</span></strong></h3>
-                <p>You capture his voice, his values, his humor while he's here. <em>He contributes. His inner circle contributes.</em></p>
+                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Story Studio lifetime access</span></strong></h3>
+                <p>The creative tool for building his living legacy. <em>He contributes. His inner circle contributes.</em> You capture his voice, his values, his humor while he's here. ($297 value included)</p>
             </div>
 
             <div style="margin-bottom: 40px;">
@@ -283,14 +626,15 @@
 
     <section style="background: #dcfce7;">
         <h2>Why <em>me:</em></h2>
-
+        
+        <!-- OPTIONAL IMAGE PLACEHOLDER -->
         <div class="image-placeholder" style="max-width: 500px;">
             <p style="font-size: 1rem;">[ Add your image here ]</p>
             <p style="font-size: 0.85rem; margin-top: 8px;">Delete this div if not using an image</p>
         </div>
-
+        
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>I'm <strong>Mindy Genereux</strong>. Certified Death Doula, Anticipatory Grief Coach, and Founder of Leave Well Media.</p>
+            <p>I'm <strong>Mindy Genereux</strong>. Certified Death Doula, Anticipatory Grief Coach, and Founder of Live Well, Leave Well Media.</p>
 
             <p>I created this program because I know what it's like to watch the window close. <strong><em>I watched too many daughters miss it because fear kept them out of the room.</em></strong> I built a better way to walk this path.</p>
 
@@ -311,31 +655,20 @@
         <div class="pricing-grid">
             <div class="price-card">
                 <div class="price-label">2 Payments</div>
-                <span class="price-amount">$2,111</span>
+                <span class="price-amount">$1,700</span>
                 <div class="price-detail">each</div>
             </div>
 
             <div class="price-card">
-                <div class="price-label">3 Payments</div>
-                <span class="price-amount">$1,444</span>
-                <div class="price-detail">each</div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-label">6 Payments</div>
-                <span class="price-amount">$722</span>
-                <div class="price-detail">each</div>
+                <div style="background: #f9a8d4; color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Best Value</div>
+                <div class="price-label">Pay in Full</div>
+                <span class="price-amount">$2,997</span>
+                <p style="font-size: 0.95rem; margin-top: 16px; color: #1e3a38;">Includes Story Studio lifetime access ($297 value)</p>
             </div>
         </div>
-
-        <div class="pay-in-full">
-            <div style="background: #f9a8d4; color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Best Value</div>
-            <div class="price-label">Pay in Full</div>
-            <span class="price-amount">$4,000</span>
-        </div>
-
+        
         <div class="cta-container">
-            <a href="/connect/" class="cta">Start Make This Mean More</a>
+            <a href="#enroll" class="cta">Start Make This Mean More</a>
         </div>
 
         <p style="font-style: italic; margin-top: 32px; opacity: 0.8;">(Only 3 spots available per month to ensure you get the support you need)</p>
@@ -344,7 +677,7 @@
             <h3 style="font-size: 1.6rem; margin-bottom: 24px; text-align: center;"><strong>What happens next:</strong></h3>
             <p>When you enroll, you'll receive a welcome email within 24 hours with a link to book your first session.</p>
             <p>We start Week 1 together within 5 days. <strong>You stop drowning in the diagnosis</strong> and get back to what's real so you can be in the room with him.</p>
-            <p>You get the tools and support to start capturing his voice while there's time.</p>
+            <p>You get immediate access to Story Studio and the tools to start capturing his voice while there's time.</p>
             <p>By Week 8, <strong>you walk away knowing you showed up</strong>. You wrote this chapter WITH him. You built his living legacy while he was here.</p>
             <p style="font-weight: 700; font-size: 1.2rem; margin-top: 32px; text-align: center;"><strong><em><span class="highlight-pink">The story continues because the light is proof the legacy lives in you.</span></em></strong></p>
         </div>
@@ -354,7 +687,7 @@
         <h2>Questions you might have:</h2>
 
         <div class="faq">
-            <div class="faq-q">Are you drowning in the diagnosis and can't stop thinking worst-case scenarios?</div>
+            <div class="faq-q">Will this work if I'm drowning in the echo and can't stop thinking worst-case scenarios?</div>
             <p><strong>Yes. That's exactly where we start.</strong> Week 1 is designed to stop the spiral and bring you back to what's real right now. <em>We work with that</em> and get you back in the room with him.</p>
         </div>
 
