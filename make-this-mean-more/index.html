@@ -127,16 +127,32 @@
             padding: 100px 40px;
         }
         
-        .problem-text {
-            max-width: 900px;
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        .problem-text h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 40px 0 16px 0;
+        .problem-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--pink);
+        }
+        
+        .problem-card strong {
+            display: block;
+            margin-bottom: 8px;
             color: var(--navy);
+            font-size: 1.1rem;
+        }
+        
+        .problem-card p {
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.6;
         }
         
         .truth-section {
@@ -154,18 +170,31 @@
             background: white;
         }
         
-        .outcome {
-            margin-bottom: 40px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
-        .outcome-title {
-            font-size: 1.4rem;
+        .outcome-card {
+            background: #d4f5ee;
+            padding: 32px;
+            border-radius: 16px;
+        }
+        
+        .outcome-card h3 {
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: var(--navy);
+        }
+        
+        .outcome-card p {
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.7;
         }
         
         .process-section {
@@ -180,21 +209,15 @@
         }
         
         .week h3 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 400;
             margin-bottom: 16px;
             color: var(--navy);
         }
         
-        .week h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 16px 0 8px 0;
-            color: var(--mint);
-        }
-        
         .week-label {
-            color: var(--mint);
+            color: var(--mint-deep);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -203,8 +226,59 @@
             display: block;
         }
         
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+        
+        .column-box {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+        }
+        
+        .column-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .column-box ul {
+            list-style: none;
+        }
+        
+        .column-box li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        .column-box.for-you li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--mint-deep);
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .column-box.not-for-you li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: var(--pink);
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
         .pricing-section {
-            background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 100%);
+            background: linear-gradient(135deg, #fce4ec 0%, #fef3c7 100%);
             text-align: center;
             padding: 100px 40px;
             max-width: none;
@@ -212,9 +286,9 @@
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             gap: 24px;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 60px auto 40px auto;
         }
         
@@ -283,25 +357,16 @@
             margin: 48px 0;
         }
         
-        ul {
-            list-style: none;
+        .video-placeholder {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 100px 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 32px;
             max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        ul li {
-            padding: 12px 0;
-            font-size: 1.1rem;
-            padding-left: 24px;
-            position: relative;
-        }
-        
-        ul li:before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: var(--mint);
-            font-size: 1.3rem;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .image-placeholder {
@@ -313,18 +378,6 @@
             color: #6b7280;
             margin: 40px auto;
             max-width: 800px;
-        }
-        
-        .video-placeholder {
-            background: var(--navy);
-            border-radius: 20px;
-            padding: 100px 40px;
-            text-align: center;
-            color: white;
-            margin-bottom: 32px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .text-center {
@@ -348,7 +401,7 @@
         .footer-email{font-size:0.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
         
         @media (max-width: 968px) {
-            .pricing-grid {
+            .pricing-grid, .two-column, .outcomes-grid, .problem-grid {
                 grid-template-columns: 1fr;
             }
             .footer-top{grid-template-columns:1fr 1fr;}
@@ -380,7 +433,7 @@
     <div class="hero">
         <div class="hero-inner">
             <h1>Make This Mean More</h1>
-            <p class="hero-subtitle">Your dad has terminal cancer. You're drowning in fear and worst-case timelines while he's still here.</p>
+            <p class="hero-subtitle">Your dad has terminal cancer. Fear is writing this story. Every Google search ends in worst-case scenarios. You can't stop crying in the car.</p>
             <p class="hero-tagline">In 8 weeks, you go from <strong><span class="highlight-pink">cancer stole the plot</span></strong> to <strong><em><span class="highlight-mint">you write the story anyway.</span></em></strong></p>
             <div class="cta-container">
                 <a href="#pricing" class="cta">Start Make This Mean More</a>
@@ -391,63 +444,81 @@
     <!-- VIDEO SECTION -->
     <div style="background: white; padding: 80px 40px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
-            <!-- REPLACE THIS DIV WITH YOUR VIDEO EMBED CODE -->
             <div class="video-placeholder">
                 <p style="font-size: 1.1rem; opacity: 0.8;">[ Your video goes here ]</p>
-                <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 12px;">Replace this entire div with your video embed code</p>
+                <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 12px;">Replace this div with your video embed code</p>
             </div>
-            <!-- END VIDEO PLACEHOLDER -->
         </div>
     </div>
 
     <div class="problem-section">
         <h2>Right now, you're <em>drowning.</em></h2>
         
-        <!-- OPTIONAL IMAGE PLACEHOLDER -->
-        <div class="image-placeholder">
-            <p style="font-size: 1rem;">[ Add image here ]</p>
-            <p style="font-size: 0.85rem; margin-top: 8px;">Delete this div if not using an image</p>
-        </div>
-        
-        <div class="problem-text">
-            <h3><strong>I want to feel in control of my reaction to his diagnosis.</strong></h3>
-            <p>Every Google search sends you down a rabbit hole. You can't stop thinking about timelines and worst-case scenarios. You can't stop crying in the car on the way home. You feel like you're floating above your body.</p>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <strong>I want to feel in control of my reaction to his diagnosis.</strong>
+                <p>Every Google search sends you down a rabbit hole. You can't stop crying in the car. You feel like you're floating above your body.</p>
+            </div>
 
-            <h3><strong>I want to know what to expect when a parent is dying.</strong></h3>
-            <p>How is he going to go from being "how he is now" to dying? I want to know the stages of terminal illness. None of my friends have lost their parents yet. I feel alone in this even though I know cancer is common.</p>
+            <div class="problem-card">
+                <strong>I want to know what to expect when a parent is dying.</strong>
+                <p>How is he going to go from being "how he is now" to dying? None of my friends have lost their parents yet. I feel alone in this.</p>
+            </div>
 
-            <h3><strong>I want to know there's still time.</strong></h3>
-            <p>I think it's too late. The good parts are over. I feel like I'm running out of time with him. What if I miss my chance?</p>
+            <div class="problem-card">
+                <strong>I want to know there's still time.</strong>
+                <p>I think it's too late. The good parts are over. What if I miss my chance?</p>
+            </div>
 
-            <h3><strong>I want to see him as more than his diagnosis.</strong></h3>
-            <p>All I see is the cancer. I see him struggling from the pain and the physical signs. I forget who he was before this. I don't know how to remember his life pulls him through this moment.</p>
+            <div class="problem-card">
+                <strong>I want to see him as more than his diagnosis.</strong>
+                <p>All I see is the cancer. I forget who he was before this.</p>
+            </div>
 
-            <h3><strong>I want to understand what he's doing.</strong></h3>
-            <p>He's selling everything or buying things he won't use. I don't know if this is normal or if I should stop him. Is it okay to let him get rid of his stuff? He's cleaning out the garage. Should I be worried?</p>
+            <div class="problem-card">
+                <strong>I want to understand what he's doing.</strong>
+                <p>He's selling everything or buying things he won't use. He's cleaning out the garage. Should I be worried?</p>
+            </div>
 
-            <h3><strong>I want to know what he's not saying.</strong></h3>
-            <p>He's smiling while hiding the hard parts. He's pretending it's not as bad as it is. I know he's protecting me because I'm still his child. I can tell he's hiding something but I don't know what to do.</p>
+            <div class="problem-card">
+                <strong>I want to know what he's not saying.</strong>
+                <p>He's smiling while hiding the hard parts. I know he's protecting me. I can tell he's hiding something but I don't know what to do.</p>
+            </div>
 
-            <h3><strong>I want to show up without making it about me.</strong></h3>
-            <p>I don't know what to say. I'm terrified I'll make it worse or burden him with my fear. I want to keep the focus on him. He is so sick now. It must be so hard on him.</p>
+            <div class="problem-card">
+                <strong>I want to show up without making it about me.</strong>
+                <p>I don't know what to say. I'm terrified I'll make it worse or burden him with my fear.</p>
+            </div>
 
-            <h3><strong>I want to know how to help him when his body changes.</strong></h3>
-            <p>I don't know how to help him in the bathroom without making it worse. He can't do things he's always done himself and I can see it bothers him. I'm his daughter, this feels wrong. How do I keep his dignity?</p>
+            <div class="problem-card">
+                <strong>I want to know how to help him when his body changes.</strong>
+                <p>I'm his daughter, this feels wrong. How do I keep his dignity?</p>
+            </div>
 
-            <h3><strong>I want to capture what matters.</strong></h3>
-            <p>I'm terrified of forgetting him. I don't know what to save or how to do it. He seems so hopeful. I'm scared to take his picture as if I think he is going to die. I don't want to use the hand cast kits as they acknowledge he is dying. Should I say I'm sorry first? What do I want him to know I love him for? How do I let him know what I will remember him by?</p>
+            <div class="problem-card">
+                <strong>I want to capture what matters.</strong>
+                <p>I'm terrified of forgetting him. I'm scared to take his picture as if I think he is going to die.</p>
+            </div>
 
-            <h3><strong>I want to be able to make memories.</strong></h3>
-            <p>I want to make happy memories and not cry uncontrollably. I want to know how to say goodbye.</p>
+            <div class="problem-card">
+                <strong>I want to be able to make memories.</strong>
+                <p>I want to make happy memories and not cry uncontrollably. I want to know how to say goodbye.</p>
+            </div>
 
-            <h3><strong>I want to reframe how I see cancer.</strong></h3>
-            <p>Everyone says "Fuck Cancer." I hear cancer is the villain. Everyone acts like cancer took time like a thief in the night. The way I view cancer seems abnormal compared to others. It's hard to find someone to relate to. Is the ball going to drop one day?</p>
+            <div class="problem-card">
+                <strong>I want to reframe how I see cancer.</strong>
+                <p>Everyone says "Fuck Cancer." The way I view cancer seems abnormal compared to others.</p>
+            </div>
 
-            <h3><strong>I want to keep the relationship after.</strong></h3>
-            <p>I'm terrified when he dies, he's gone. I don't know how to stay connected. How do I let him know I will carry him forward? How do I tell him how to haunt me? How does he want to be remembered? What is his favourite music? Flowers?</p>
+            <div class="problem-card">
+                <strong>I want to keep the relationship after.</strong>
+                <p>I'm terrified when he dies, he's gone. How do I tell him how to haunt me?</p>
+            </div>
 
-            <h3><strong>I want this year to mean something.</strong></h3>
-            <p>I'm stuck in fear and logistics. This feels like waiting for the worst. I'm floating above my body. I can't speak to him about this when he is planning his vacation next week, even though I know he's too sick to go. I hope he knows I stuck by him when he needed me the most. I hope he knows his life mattered.</p>
+            <div class="problem-card">
+                <strong>I want this year to mean something.</strong>
+                <p>I'm stuck in fear and logistics. I hope he knows I stuck by him. I hope he knows his life mattered.</p>
+            </div>
         </div>
     </div>
 
@@ -464,70 +535,64 @@
         </div>
     </div>
 
-    <!-- IMAGE PLACEHOLDER AFTER TRUTH -->
-    <div style="background: white; padding: 80px 40px;">
-        <div class="image-placeholder">
-            <p style="font-size: 1rem;">[ Add image here ]</p>
-            <p style="font-size: 0.85rem; margin-top: 8px;">Delete this div if not using an image</p>
-        </div>
-    </div>
-
     <section class="outcomes-section">
-        <h2>By the time we finish, here's where you'll be:</h2>
+        <h2>By the time we finish:</h2>
         
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You'll feel in control of your reaction to his diagnosis.</span></strong></div>
-            <p>The echo stops controlling you. You can hear the word <strong>"terminal"</strong> without your brain shutting off. <em>You're an important player in his game</em> and you can be there to support him, no matter what the future holds.</p>
-        </div>
+        <div class="outcomes-grid">
+            <div class="outcome-card">
+                <h3>Feel in control of your reaction</h3>
+                <p>You can hear the word "terminal" without your brain shutting off. You're there to support him.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You'll know what to expect when a parent is dying.</span></strong></div>
-            <p>I teach you the natural steps between diagnosis and death. <strong>Your dad will follow his own path and timeline.</strong> You recognize good stories and moments are not commonly posted because they require less support than worst-case scenarios. <em>Awareness that outcomes vary</em>, and you'll meet others at treatments with different experiences.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Know what to expect</h3>
+                <p>You understand the natural steps and recognize that outcomes vary. You're not alone.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You realize there's still time.</span></strong></div>
-            <p>You stop acting like he's already gone. <strong>You see this as the added chapter, not the ending.</strong> You start seeing <strong><em>your dad as the HERO</em></strong>, and this is his time to do what he wants and needs to do to <span class="highlight-pink">live well, love well, and leave well</span>.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Realize there's still time</h3>
+                <p>You see this as the added chapter. You start seeing your dad as the HERO.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You know the whole character.</span></strong></div>
-            <p><em>Every level he played before this one. The wins, the failures, the tenacity.</em> The character he built before cancer ever showed up. The same character that gets him through this next chapter, <strong>his way</strong>.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Know the whole character</h3>
+                <p>Every level he played before this one. You tell a story about him that includes him being sick.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You read what he's not saying.</span></strong></div>
-            <p>You stop pretending with him. You see what he's protecting you from. <strong>You show him you can handle it</strong> by reading between the lines to observe the truth without saying it.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Read what he's not saying</h3>
+                <p>You see what he's protecting you from. You show him you can handle it.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You show up without making it about you.</span></strong></div>
-            <p><strong>You show up as his daughter, not his emotional support.</strong> You can keep your attention on your dad and the impact of his illness on him.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Show up as his daughter</h3>
+                <p>Not his emotional support. You keep your attention on him.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You know how to help him when his body changes.</span></strong></div>
-            <p>You help him with something he can't do anymore with the same values he cared for you. <strong><em>This is next level love and support.</em></strong></p>
-        </div>
+            <div class="outcome-card">
+                <h3>Help when his body changes</h3>
+                <p>This is next level love and support. You honor him by trusting the process.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You capture what matters.</span></strong></div>
-            <p><strong>You capture his voice, his values, his humor, the real him.</strong> You have tools and support to build his living legacy. <em>He contributes. His inner circle contributes.</em></p>
-        </div>
+            <div class="outcome-card">
+                <h3>Capture what matters</h3>
+                <p>His voice, his values, his humor. He contributes. His inner circle contributes.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You reframe how you see cancer.</span></strong></div>
-            <p>You see what cancer gave you both. <strong>The clarity, urgency, and the gift for dad to finish this story with purpose.</strong> You normalize your own feelings around cancer and are connected to others who see death as the last chapter.</p>
-        </div>
+            <div class="outcome-card">
+                <h3>Reframe how you see cancer</h3>
+                <p>Cancer is the alarm clock. It gave you this window to make this chapter matter.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">You keep the relationship after.</span></strong></div>
-            <p><strong>You read the signals and know he's not gone, just different.</strong> <em>You are confident knowing he will show up for you after death.</em></p>
-        </div>
+            <div class="outcome-card">
+                <h3>Keep the relationship after</h3>
+                <p>You know he's not gone, just different. The relationship continues.</p>
+            </div>
 
-        <div class="outcome">
-            <div class="outcome-title"><strong><span class="highlight-mint">This year means something.</span></strong></div>
-            <p><strong>You make this year count and walk away knowing you showed up.</strong> <em>You leave with less regret, blame, and shame</em>, knowing you were calm, present, and knowledgeable about the end-of-life process.</p>
+            <div class="outcome-card">
+                <h3>Make this year mean something</h3>
+                <p>Less regret, blame, and shame. You showed up. You were calm, present, and knowledgeable.</p>
+            </div>
         </div>
 
         <p style="font-size: 1.6rem; font-weight: 700; text-align: center; margin-top: 60px;"><strong><em><span class="highlight-pink">The light in you is proof the living legacy lives in you.</span></em></strong></p>
@@ -539,7 +604,7 @@
 
     <section class="process-section" id="how">
         <h2>How it works: <em><span class="highlight-pink">Live Well, Love Well, Leave Well</span></em></h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 60px auto;">This is an 8-week process. <strong>Each week tackles one transformation.</strong> You show up. We do the work. <em>You leave knowing you didn't miss this time.</em></p>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 60px auto;">8 weeks. Each week tackles one transformation. You show up. We do the work. <em>You leave knowing you didn't miss this time.</em></p>
 
         <div class="week">
             <span class="week-label">Week 1</span>
@@ -550,19 +615,19 @@
         <div class="week">
             <span class="week-label">Week 2</span>
             <h3>Making Memories</h3>
-            <p>You think you're out of time. I teach you <strong><span class="highlight-mint">the window is open RIGHT NOW</span></strong>. You realize there's still time. You stop acting like he's already gone. You start seeing your dad as the HERO and begin capturing memories with a smile.</p>
+            <p>You think you're out of time. I teach you <strong><span class="highlight-mint">the window is open RIGHT NOW</span></strong>. You realize there's still time. You start seeing your dad as the HERO and begin capturing memories with a smile.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 3</span>
             <h3>Remembering Who He Is</h3>
-            <p>All you see is the cancer. You remember <strong><em>the whole character</em></strong>. Every level he played before this one. You tell a story about him that includes him being sick. You know the player and how he will get through this next chapter, his way.</p>
+            <p>All you see is the cancer. You remember <strong><em>the whole character</em></strong>. Every level he played before this one. You tell a story about him that includes him being sick.</p>
         </div>
 
         <div class="week">
             <span class="week-label">Week 4</span>
             <h3>Reading Between the Lines</h3>
-            <p>He's smiling while hiding the hard parts. I teach you to see past the performance. <strong><span class="highlight-mint">To read what he's not saying</span></strong>. You show him you can handle it by reading between the lines to observe the truth without saying it.</p>
+            <p>He's smiling while hiding the hard parts. I teach you to see past the performance. <strong><span class="highlight-mint">To read what he's not saying</span></strong>. You show him you can handle it.</p>
         </div>
 
         <div class="week">
@@ -586,7 +651,7 @@
         <div class="week">
             <span class="week-label">Week 8</span>
             <h3>The Relationship Continues</h3>
-            <p>You're terrified it's game over when he dies. <strong><em>You trust he's not gone.</em></strong> You know the story continues because his character lives in you. Having fun while being curious and proving you both won.</p>
+            <p>You're terrified it's game over when he dies. <strong><em>You trust he's not gone.</em></strong> You know the story continues because his character lives in you.</p>
         </div>
         
         <div class="cta-container">
@@ -594,68 +659,90 @@
         </div>
     </section>
 
-    <section style="background: #fce7f3;">
-        <h2>This is for <em>you</em> if:</h2>
-        <ul>
-            <li>Your dad has a terminal diagnosis and you want to <strong>show up without drowning in fear</strong></li>
-            <li>You're emotionally aware and already invest in personal growth work</li>
-            <li>You're ready to do the work, not just read about it</li>
-            <li>You want to <strong><span class="highlight-mint">process anticipatory grief NOW</span></strong> so you leave with less regret after he dies</li>
-            <li>You're open to seeing death as a transition and the relationship continuing</li>
-            <li>You want to <strong><em>capture his living legacy WITH him</em></strong> while he's still here</li>
-        </ul>
+    <section style="background: #fce4ec; padding: 100px 40px; max-width: none;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <h2>Is this for <em>you?</em></h2>
+            
+            <div class="two-column">
+                <div class="column-box for-you" style="background: #d4f5ee; border: none;">
+                    <h3 style="color: var(--navy);">This is for you if:</h3>
+                    <ul>
+                        <li>Your dad has a terminal diagnosis</li>
+                        <li>You're emotionally aware and invest in personal growth</li>
+                        <li>You're ready to do the work</li>
+                        <li>You want to process anticipatory grief NOW</li>
+                        <li>You're open to seeing death as a transition</li>
+                        <li>You want to capture his living legacy WITH him</li>
+                    </ul>
+                </div>
+
+                <div class="column-box not-for-you" style="background: #fef3c7; border: none;">
+                    <h3 style="color: var(--navy);">This is NOT for you if:</h3>
+                    <ul>
+                        <li>You're looking for traditional grief therapy</li>
+                        <li>You want someone to tell you exactly what to do</li>
+                        <li>You're not ready to face the hard parts</li>
+                        <li>You want a memory book or scrapbooking project</li>
+                        <li>You're not willing to see cancer as anything other than the villain</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section style="background: white;">
         <h2>What's included:</h2>
         
         <div style="max-width: 800px; margin: 0 auto;">
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">8 weekly 1:1 coaching sessions (60 minutes each)</span></strong></h3>
-                <p>We work through each transformation together over Zoom at a time that works for you.</p>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 12px;"><strong><span class="highlight-mint">8 weekly 1:1 coaching sessions</span></strong></h3>
+                <p style="margin: 0;">60 minutes each over Zoom at a time that works for you.</p>
             </div>
 
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Voxer access between sessions</span></strong></h3>
-                <p>When something comes up and you need support before our next call, you can reach me.</p>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Voxer access between sessions</span></strong></h3>
+                <p style="margin: 0;">You can reach me when something comes up.</p>
             </div>
 
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Story Studio lifetime access</span></strong></h3>
-                <p>The creative tool for building his living legacy. <em>He contributes. His inner circle contributes.</em> You capture his voice, his values, his humor while he's here. ($297 value included)</p>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Story Studio lifetime access</span></strong></h3>
+                <p style="margin: 0;">Build his living legacy. He contributes. His inner circle contributes. Included in both payment options.</p>
             </div>
 
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Community support</span></strong></h3>
-                <p>Connect with other daughters walking this path. <em>As you get one step ahead, you support others in the group.</em></p>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 12px;"><strong><span class="highlight-mint">Community support</span></strong></h3>
+                <p style="margin: 0;">Connect with other daughters walking this path.</p>
             </div>
 
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 12px;"><strong><span class="highlight-mint">The Live Well, Love Well, Leave Well framework</span></strong></h3>
-                <p>The process that helps you <strong>consciously write this chapter with him</strong> instead of letting fear write it for you.</p>
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 12px;"><strong><span class="highlight-mint">The Live Well, Love Well, Leave Well framework</span></strong></h3>
+                <p style="margin: 0;">Consciously write this chapter with him instead of letting fear write it for you.</p>
             </div>
         </div>
     </section>
 
-    <section style="background: #dcfce7;">
+    <section style="background: #d4f5ee;">
         <h2>Why <em>me:</em></h2>
         
-        <!-- OPTIONAL IMAGE PLACEHOLDER -->
         <div class="image-placeholder" style="max-width: 500px;">
             <p style="font-size: 1rem;">[ Add your image here ]</p>
             <p style="font-size: 0.85rem; margin-top: 8px;">Delete this div if not using an image</p>
         </div>
         
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>I'm <strong>Mindy Genereux</strong>. Certified Death Doula, Anticipatory Grief Coach, and Founder of Live Well, Leave Well Media.</p>
+            <p style="font-size: 1.15rem; margin-bottom: 24px;">I'm <strong>Mindy Genereux</strong>. Certified Death Doula, Anticipatory Grief Coach, and Founder of Live Well, Leave Well Media.</p>
 
-            <p>I created this program because I know what it's like to watch the window close. <strong><em>I watched too many daughters miss it because fear kept them out of the room.</em></strong> I built a better way to walk this path.</p>
+            <p style="font-size: 1.15rem; margin-bottom: 24px;"><strong>I created Make This Mean More after losing my dad to Stage 4 Metastatic Bone Cancer.</strong></p>
 
-            <p><strong>I have a fresh perspective on death and dying.</strong> I see death as a transition. I see cancer as <em>the alarm clock that woke you both up</em> and gave you this window to make this chapter matter.</p>
+            <p style="font-size: 1.15rem; margin-bottom: 24px;">I know what it's like to be <strong>terrified of forgetting him</strong>. To feel like <strong>you're floating above your body</strong> while he's still here. To want <strong>this year to mean something</strong>.</p>
 
-            <p>I guide daughters through the diagnosis to death process so they <strong>show up, capture what matters, and leave with less regret</strong>.</p>
+            <p style="font-size: 1.15rem; margin-bottom: 24px;"><strong>I captured his voice. I made memories with a smile. I wrote this chapter WITH him.</strong></p>
 
-            <p>I believe <strong><em>the relationship continues</em></strong>. He's not gone, just different. <strong><span class="highlight-pink">The light in you is proof the living legacy lives in you.</span></strong></p>
+            <p style="font-size: 1.15rem; margin-bottom: 24px;">I created this program because I watched too many daughters miss it because fear kept them out of the room.</p>
+
+            <p style="font-size: 1.15rem; margin-bottom: 24px;"><strong>I have a fresh perspective on death and dying.</strong> I see death as a transition. I see cancer as the alarm clock that woke you both up.</p>
+
+            <p style="font-size: 1.15rem; margin-bottom: 24px;">I guide daughters through the diagnosis to death process so they show up, capture what matters, and leave with less regret.</p>
 
             <p style="font-weight: 700; font-size: 1.3rem; margin-top: 48px;"><strong><em><span class="highlight-pink">This work honours the time you have left. It's about living well, loving well, and leaving well.</span></em></strong></p>
         </div>
@@ -667,82 +754,89 @@
 
         <div class="pricing-grid">
             <div class="price-card">
-                <div class="price-label">2 Payments</div>
+                <div class="price-label">Payment Plan</div>
                 <span class="price-amount">$1,700</span>
-                <div class="price-detail">each</div>
+                <div class="price-detail">2 monthly payments</div>
+                <p style="font-size: 0.9rem; margin: 24px 0; opacity: 0.7;">Total: $3,400</p>
+                <p style="font-size: 0.95rem; margin: 16px 0; font-weight: 500;">Flexibility to spread the investment</p>
+                <a href="#enroll" class="cta" style="margin: 24px 0 0 0; width: 100%; text-align: center; display: block; padding: 16px 40px;">Choose Payment Plan</a>
             </div>
 
-            <div class="price-card">
-                <div style="background: #f9a8d4; color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Best Value</div>
+            <div class="price-card" style="border: 3px solid var(--pink);">
+                <div style="background: var(--pink); color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Best Value - Save $403</div>
                 <div class="price-label">Pay in Full</div>
                 <span class="price-amount">$2,997</span>
-                <p style="font-size: 0.95rem; margin-top: 16px; color: #1e3a38;">Includes Story Studio lifetime access ($297 value)</p>
+                <p style="font-size: 0.95rem; margin: 16px 0; font-weight: 500;">Start immediately, save money</p>
+                <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 8px;">$403 savings vs payment plan</p>
+                <a href="#enroll" class="cta" style="margin: 24px 0 0 0; width: 100%; text-align: center; display: block; padding: 16px 40px;">Enroll Now & Save</a>
             </div>
         </div>
-        
-        <div class="cta-container">
-            <a href="#enroll" class="cta">Start Make This Mean More</a>
-        </div>
 
-        <p style="font-style: italic; margin-top: 32px; opacity: 0.8;">(Only 3 spots available per month to ensure you get the support you need)</p>
+        <p style="font-style: italic; margin-top: 32px; opacity: 0.8;">(Only 3 spots available per month)</p>
 
         <div style="max-width: 700px; margin: 80px auto 0 auto; text-align: left; background: white; padding: 48px; border-radius: 20px;">
             <h3 style="font-size: 1.6rem; margin-bottom: 24px; text-align: center;"><strong>What happens next:</strong></h3>
             <p>When you enroll, you'll receive a welcome email within 24 hours with a link to book your first session.</p>
-            <p>We start Week 1 together within 5 days. <strong>You stop drowning in the diagnosis</strong> and get back to what's real so you can be in the room with him.</p>
-            <p>You get immediate access to Story Studio and the tools to start capturing his voice while there's time.</p>
-            <p>By Week 8, <strong>you walk away knowing you showed up</strong>. You wrote this chapter WITH him. You built his living legacy while he was here.</p>
-            <p style="font-weight: 700; font-size: 1.2rem; margin-top: 32px; text-align: center;"><strong><em><span class="highlight-pink">The story continues because the light is proof the legacy lives in you.</span></em></strong></p>
+            <p>We start Week 1 together within 5 days. You stop drowning in the diagnosis and get back to what's real.</p>
+            <p>You get immediate access to Story Studio and start capturing his voice while there's time.</p>
+            <p>By Week 8, you walk away knowing you showed up. You wrote this chapter WITH him.</p>
         </div>
     </section>
 
     <section class="faq-section">
-        <h2>Questions you might have:</h2>
+        <h2>Questions:</h2>
 
         <div class="faq">
-            <div class="faq-q">Will this work if I'm drowning in the echo and can't stop thinking worst-case scenarios?</div>
-            <p><strong>Yes. That's exactly where we start.</strong> Week 1 is designed to stop the spiral and bring you back to what's real right now. <em>We work with that</em> and get you back in the room with him.</p>
+            <div class="faq-q">Will this work if I'm drowning and can't stop thinking worst-case scenarios?</div>
+            <p><strong>Yes. That's exactly where we start.</strong> Week 1 stops the spiral and brings you back to what's real right now.</p>
         </div>
 
         <div class="faq">
             <div class="faq-q">What if my dad isn't ready to talk about dying?</div>
-            <p>We work with where he is. <strong>You'll learn to read what he's saying without words</strong> and honour his process.</p>
+            <p>We work with where he is. You'll learn to read what he's saying without words and honour his process.</p>
         </div>
 
         <div class="faq">
-            <div class="faq-q">I'm so busy. Can I really commit to 8 weeks?</div>
-            <p><strong>You already know the answer.</strong> Something inside you clicked when you read this page. <em>That's your intuition telling you this matters.</em> One hour a week to make sure you show up for this time with him.</p>
+            <div class="faq-q">Can I really commit to 8 weeks?</div>
+            <p><strong>You already know the answer.</strong> Something inside you clicked when you read this page. One hour a week to make sure you show up for this time with him.</p>
         </div>
 
         <div class="faq">
             <div class="faq-q">What if he dies before the 8 weeks are over?</div>
-            <p><strong>The program adapts.</strong> We process anticipatory grief during the diagnosis to death process, and we continue the work of reading the signals and trusting the relationship continues after. <em>You're supported through all of it.</em></p>
+            <p>The program adapts. You're supported through all of it.</p>
         </div>
 
         <div class="faq">
             <div class="faq-q">Is this grief therapy?</div>
-            <p><strong>This is Death Doula work and Anticipatory Grief Coaching.</strong> I guide you through the diagnosis to death process so you show up and capture what matters while he's here. <em>This is about conscious living, building his legacy WITH him, and processing grief before loss.</em></p>
+            <p><strong>This is Death Doula work and Anticipatory Grief Coaching.</strong> This is about conscious living, building his legacy WITH him, and processing grief before loss.</p>
         </div>
 
         <div class="faq">
             <div class="faq-q">What makes this different from other grief programs?</div>
-            <p><strong>Most grief programs start after death. This one starts NOW, while he's still here.</strong> We focus on building his legacy WITH him and processing anticipatory grief before loss so you leave with less regret, blame, and shame.</p>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">I'm not sure if I believe the relationship continues after death. Will this still work for me?</div>
-            <p><strong>Yes. We work with your beliefs.</strong> The foundation is showing up NOW, capturing what matters, and processing anticipatory grief. <em>The "continue" piece in Week 8 adapts to what feels true for you.</em></p>
+            <p><strong>Most grief programs start after death. This one starts NOW.</strong> We focus on building his legacy WITH him and processing anticipatory grief before loss.</p>
         </div>
     </section>
 
-    <div class="final-cta">
-        <h2><strong>The window is open.</strong> <em>There's still time.</em></h2>
-        <p style="font-size: 1.4rem; font-weight: 600;"><strong><span class="highlight-yellow">Cancer isn't the villain. It's the alarm clock.</span></strong></p>
-        <p style="font-size: 1.2rem;">It woke you both up. It gave you this chapter to make the story matter. <strong>To capture his voice.</strong> <em>To build his living legacy while he's here.</em></p>
-        <p class="big"><strong><em>You get to write this chapter WITH him. On purpose. While he's still living.</em></strong></p>
-        <p style="font-size: 2.2rem; font-weight: 700; margin: 48px 0;"><strong>Let's make this mean more.</strong></p>
-        <a href="#pricing" class="cta">Start Make This Mean More</a>
-        <p style="font-style: italic; margin-top: 32px;">(Only 3 spots available per month)</p>
+    <div class="final-cta" style="padding: 120px 40px;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Main CTA Message -->
+            <div style="text-align: center;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 400; line-height: 1.2; margin-bottom: 48px;">The window is open. <br><em style="color: var(--navy);">There's still time.</em></h2>
+                
+                <p style="font-size: clamp(1.2rem, 2.5vw, 1.6rem); line-height: 1.7; margin: 48px auto; max-width: 800px; font-weight: 500;">Cancer isn't the villain. It's the alarm clock. The diagnosis turns off <strong>autopilot</strong>. It woke you both up and gave you both a <strong>chapter</strong> to make his <strong>story matter</strong>.</p>
+                
+                <p style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.4; margin: 60px auto; max-width: 850px;"><em>You get to write this chapter WITH him. <br>On purpose. <br>While he's still living.</em></p>
+                
+                <div style="margin: 80px 0 48px 0;">
+                    <p style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 400; margin-bottom: 48px; line-height: 1.1;">Let's make this mean more.</p>
+                    <a href="#pricing" class="cta" style="font-size: 1.4rem; padding: 28px 72px; box-shadow: 0 8px 24px rgba(244, 143, 177, 0.4);">Start Make This Mean More</a>
+                </div>
+                
+                <p style="font-style: italic; margin-top: 48px; font-size: 1.05rem; opacity: 0.9;">(Only 3 spots available per month)</p>
+            </div>
+            
+        </div>
     </div>
 
 <footer>
@@ -760,4 +854,3 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
-
