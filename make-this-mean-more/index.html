@@ -67,7 +67,8 @@
         .final-cta{background:linear-gradient(135deg,#a7f3d0 0%,#f9a8d4 100%);padding:120px 40px;text-align:center;}
         .final-cta h2{margin-bottom:48px;}
         .final-cta p{font-size:clamp(1.2rem,2.5vw,1.6rem);line-height:1.7;max-width:850px;margin-left:auto;margin-right:auto;}
-        .video-placeholder{background:var(--navy);border-radius:20px;padding:100px 40px;text-align:center;color:#fff;margin-bottom:32px;max-width:900px;margin-left:auto;margin-right:auto;}
+        .video-embed-wrap{position:relative;max-width:900px;margin:0 auto 32px;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 20px 50px rgba(26,31,54,0.12);padding-bottom:56.25%;height:0;}
+        .video-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
         .image-placeholder{background:#e5e7eb;border:2px dashed #9ca3af;border-radius:12px;padding:60px 40px;text-align:center;color:#6b7280;margin:40px auto;max-width:800px;}
         .cta-container{text-align:center;margin:48px 0;}
         footer{background:var(--navy);padding:56px 52px 40px;}
@@ -102,7 +103,7 @@
     <div class="hero">
         <div class="hero-inner">
             <h1>Make This Mean More</h1>
-            <p class="hero-intro"><strong>Your dad has terminal cancer.</strong> Fear is writing this story. <strong>Every Google search ends in worst-case scenarios.</strong> You can't stop crying in the car.</p>
+            <p class="hero-intro"><strong>Your dad has terminal cancer.</strong> You're <strong>drowning in fear</strong> and <strong>worst-case timelines</strong> while <strong>he's still here</strong>.</p>
             <p class="hero-tagline">In 8 weeks, you go from <strong><span class="highlight-pink">cancer stole the plot</span></strong> to <strong><em><span class="highlight-mint">you write the story anyway.</span></em></strong></p>
             <div class="cta-container">
                 <a href="https://buy.stripe.com/7sY9AT8bC7Fs0tgdNq1VK05" class="cta">Start Make This Mean More</a>
@@ -112,9 +113,8 @@
 
     <div style="background:#fff;padding:80px 40px;text-align:center;">
         <div style="max-width:900px;margin:0 auto;">
-            <div class="video-placeholder">
-                <p style="font-size:1.1rem;opacity:.8;">[ Your video goes here ]</p>
-                <p style="font-size:.9rem;opacity:.6;margin-top:12px;">Replace this div with your video embed code</p>
+            <div class="video-embed-wrap">
+                <iframe src="https://www.youtube.com/embed/RCMAORVM_L4" title="Make This Mean More — video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
