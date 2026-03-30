@@ -114,9 +114,10 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
 .footer-links a{font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
 .footer-links a:hover{opacity:0.75;}
 .footer-mid{display:flex;flex-direction:column;align-items:flex-end;gap:16px;}
-.footer-social{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:flex-end;}
-.footer-social a{font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
+.footer-social{display:flex;align-items:center;gap:14px;justify-content:flex-end;}
+.footer-social a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;color:#fff;opacity:0.35;text-decoration:none;transition:opacity 0.3s;}
 .footer-social a:hover{opacity:0.75;}
+.footer-social svg{width:18px;height:18px;fill:currentColor;}
 .footer-copy{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#fff;opacity:0.25;}
 </style>
 </head>
@@ -154,12 +155,12 @@ nav.scrolled{background:rgba(30,58,56,0.97);backdrop-filter:blur(12px);padding:1
     <div class="footer-links">
       <a href="/story-studio">Story Studio</a><a href="/live-well-library">Library</a><a href="/legacy-shop">Shop</a><a href="/make-this-mean-more">Make This Mean More</a><a href="/about">About</a><a href="/connect">Connect</a>
     </div>
-    <nav class="footer-social" aria-label="Follow on social media">
-      <a href="https://www.instagram.com/mindy_genereux/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.facebook.com/mindygenereux" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="https://www.tiktok.com/@mindygenereux" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://mindygenereux.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-    </nav>
+    <div class="footer-social" role="navigation" aria-label="Follow on social media">
+      <a href="https://www.instagram.com/mindy_genereux/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg></a>
+      <a href="https://www.facebook.com/mindygenereux" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"/></svg></a>
+      <a href="https://www.tiktok.com/@mindygenereux" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/></svg></a>
+      <a href="https://mindygenereux.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack"><svg viewBox="0 0 24 24"><path d="M3.75 3h16.5v2.1H3.75Zm0 4.05h16.5v2.1H3.75ZM20.25 9.15V21L12 16.05 3.75 21V9.15h16.5Z"/></svg></a>
+    </div>
   </div>
   <span class="footer-copy">© 2026 Leave Well Media. All Rights Reserved.</span>
 </footer>
