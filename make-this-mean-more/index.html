@@ -19,7 +19,18 @@
         .nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
         .nav-links a:hover,.nav-links a.active{color:var(--mint);}
         .nav-cta{background:var(--pink)!important;color:var(--white)!important;font-size:0.82rem!important;font-weight:700!important;padding:10px 22px!important;border-radius:22px;text-decoration:none;box-shadow:0 4px 14px rgba(244,143,177,0.35);}
-        @media(max-width:900px){.nav-links{display:none;}}
+        .nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;}
+        .nav-hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
+        .mobile-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--navy);z-index:400;padding:80px 36px 40px;display:flex;flex-direction:column;gap:8px;transition:right 0.35s ease;box-shadow:-8px 0 30px rgba(0,0,0,0.3);}
+        .mobile-menu.open{right:0;}
+        .mobile-menu a{font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:400;color:rgba(255,255,255,0.6);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+        .mobile-menu a:hover,.mobile-menu a.active{color:var(--mint);}
+        .mobile-menu .mob-cta{background:var(--pink);color:var(--white);font-weight:700;padding:14px 28px;border-radius:24px;text-align:center;margin-top:16px;border:none;box-shadow:0 4px 14px rgba(244,143,177,0.35);}
+        .mobile-menu-close{position:absolute;top:22px;right:22px;background:none;border:none;font-size:1.6rem;color:rgba(255,255,255,0.5);cursor:pointer;transition:color 0.2s;line-height:1;}
+        .mobile-menu-close:hover{color:var(--white);}
+        .mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:399;opacity:0;pointer-events:none;transition:opacity 0.35s;}
+        .mobile-overlay.open{opacity:1;pointer-events:auto;}
+        @media(max-width:900px){.nav-links{display:none;}.nav-hamburger{display:flex;}nav{padding:12px 20px;}}
         .hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 40px 80px;background:linear-gradient(135deg,#d4f5ee 0%,#fce4ec 100%);}
         .hero-inner{max-width:900px;margin:0 auto;}
         h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.1;margin-bottom:32px;color:var(--navy);}
@@ -108,7 +119,20 @@
     <a href="/connect/">Connect</a>
     <a href="https://storystudio.media" class="nav-cta" target="_blank" rel="noopener">Start Your Legacy</a>
   </div>
+  <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-overlay" id="mob-overlay"></div>
+<div class="mobile-menu" id="mob-menu">
+  <button class="mobile-menu-close" id="mob-close" aria-label="Close menu">&times;</button>
+  <a href="/">Home</a>
+  <a href="/story-studio/">Story Studio</a>
+  <a href="/live-well-library/">Library</a>
+  <a href="/legacy-shop/">Shop</a>
+  <a href="/make-this-mean-more/" class="active">Make This Mean More</a>
+  <a href="/about/">About</a>
+  <a href="/connect/">Connect</a>
+  <a href="https://storystudio.media" class="mob-cta" target="_blank">Start Your Legacy</a>
+</div>
 
     <div class="hero">
         <div class="hero-inner">
@@ -437,6 +461,9 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){const btn=document.querySelector('.nav-hamburger'),menu=document.getElementById('mob-menu'),overlay=document.getElementById('mob-overlay'),close=document.getElementById('mob-close');function toggle(open){menu.classList.toggle('open',open);overlay.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}btn.addEventListener('click',()=>toggle(true));close.addEventListener('click',()=>toggle(false));overlay.addEventListener('click',()=>toggle(false));})();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

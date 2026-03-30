@@ -18,6 +18,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:fl
 .nav-links a:hover,.nav-links a.active{color:var(--mint);}
 .nav-cta{background:var(--pink);color:var(--white)!important;font-size:0.82rem;font-weight:700!important;padding:10px 22px;border-radius:22px;box-shadow:0 4px 14px rgba(244,143,177,0.35);transition:transform 0.2s;}
 .nav-cta:hover{transform:translateY(-1px);}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
+.mobile-menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--navy);z-index:200;padding:80px 36px 40px;display:flex;flex-direction:column;gap:8px;transition:right 0.35s ease;box-shadow:-8px 0 30px rgba(0,0,0,0.3);}
+.mobile-menu.open{right:0;}
+.mobile-menu a{font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:400;color:rgba(255,255,255,0.6);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--mint);}
+.mobile-menu .mob-cta{background:var(--pink);color:var(--white);font-weight:700;padding:14px 28px;border-radius:24px;text-align:center;margin-top:16px;border:none;box-shadow:0 4px 14px rgba(244,143,177,0.35);}
+.mobile-menu-close{position:absolute;top:22px;right:22px;background:none;border:none;font-size:1.6rem;color:rgba(255,255,255,0.5);cursor:pointer;transition:color 0.2s;line-height:1;}
+.mobile-menu-close:hover{color:var(--white);}
+.mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:199;opacity:0;pointer-events:none;transition:opacity 0.35s;}
+.mobile-overlay.open{opacity:1;pointer-events:auto;}
+@media(max-width:900px){.nav-hamburger{display:flex;}}
 
 .hero{padding:140px 52px 80px;background:var(--mint-bg);position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.55)0%,transparent 65%);}
@@ -101,7 +113,20 @@ footer{background:var(--navy);padding:56px 52px 40px;}
     <a href="/connect/">Connect</a>
     <a href="https://storystudio.media" class="nav-cta" target="_blank">Start Your Legacy</a>
   </div>
+  <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-overlay" id="mob-overlay"></div>
+<div class="mobile-menu" id="mob-menu">
+  <button class="mobile-menu-close" id="mob-close" aria-label="Close menu">&times;</button>
+  <a href="/">Home</a>
+  <a href="/story-studio/">Story Studio</a>
+  <a href="/live-well-library/">Library</a>
+  <a href="/legacy-shop/" class="active">Shop</a>
+  <a href="/make-this-mean-more/">Make This Mean More</a>
+  <a href="/about/">About</a>
+  <a href="/connect/">Connect</a>
+  <a href="https://storystudio.media" class="mob-cta" target="_blank">Start Your Legacy</a>
+</div>
 
 <section class="hero">
   <div class="hero-inner">
@@ -199,6 +224,9 @@ footer{background:var(--navy);padding:56px 52px 40px;}
 <script>
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+<script>
+(function(){const btn=document.querySelector('.nav-hamburger'),menu=document.getElementById('mob-menu'),overlay=document.getElementById('mob-overlay'),close=document.getElementById('mob-close');function toggle(open){menu.classList.toggle('open',open);overlay.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}btn.addEventListener('click',()=>toggle(true));close.addEventListener('click',()=>toggle(false));overlay.addEventListener('click',()=>toggle(false));})();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
