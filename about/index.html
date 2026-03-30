@@ -29,10 +29,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:fl
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--navy);line-height:1.85;margin-bottom:36px;}
 .btn-pink{background:var(--pink);color:var(--white);font-size:0.92rem;font-weight:700;padding:15px 34px;border-radius:28px;text-decoration:none;box-shadow:0 6px 20px rgba(244,143,177,0.35);transition:all 0.25s;display:inline-block;}
 .btn-pink:hover{transform:translateY(-2px);}
-.hero-photo{background:linear-gradient(135deg,var(--mint-bg),var(--pink-light));border-radius:28px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 64px rgba(26,31,54,0.12);}
-.hero-photo-placeholder{text-align:center;}
-.hero-photo-placeholder span{font-size:5rem;display:block;margin-bottom:12px;}
-.hero-photo-placeholder p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--navy);}
+.hero-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 24px 64px rgba(26,31,54,0.12);}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
 
 /* BIO */
 .bio{padding:100px 52px;background:var(--white);}
@@ -147,10 +145,7 @@ footer{background:var(--navy);padding:56px 52px 40px;}
       <a href="/connect/" class="btn-pink">Say Hello</a>
     </div>
     <div class="hero-photo">
-      <div class="hero-photo-placeholder">
-        <span>🌿</span>
-        <p>Mindy Genereux</p>
-      </div>
+      <img src="/images/mindy-about.png" alt="Mindy Genereux, Certified Death Doula and founder of Leave Well Media" width="800" height="1000">
     </div>
   </div>
 </section>
