@@ -78,9 +78,14 @@
         .footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);margin-bottom:16px;}
         .footer-col a{display:block;font-size:.84rem;color:rgba(255,255,255,0.35);text-decoration:none;margin-bottom:10px;}
         .footer-col a:hover{color:rgba(255,255,255,0.7);}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
         .footer-copy{font-size:.7rem;color:rgba(255,255,255,0.2);}
         .footer-email{font-size:.78rem;color:rgba(255,255,255,0.28);text-decoration:none;}
+        .footer-email:hover{color:var(--mint);}
+        .footer-bottom-right{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;justify-content:flex-end;}
+        .footer-social{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;}
+        .footer-social a{font-size:.72rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color .2s;}
+        .footer-social a:hover{color:var(--mint);}
         @media(max-width:968px){.pricing-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}}
         @media(max-width:640px){.cta{padding:18px 40px;font-size:1.1rem;}}
     </style>
@@ -416,7 +421,15 @@
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 Leave Well Media · Mindy Genereux, Certified Death Doula</span>
-    <a href="/connect/" class="footer-email">Contact via form</a>
+    <div class="footer-bottom-right">
+      <a href="/connect/" class="footer-email">Contact via form</a>
+      <nav class="footer-social" aria-label="Follow on social media">
+        <a href="https://www.instagram.com/mindy_genereux/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/mindygenereux" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.tiktok.com/@mindygenereux" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://mindygenereux.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+      </nav>
+    </div>
   </div>
 </footer>
 <script defer src="/_vercel/insights/script.js"></script>
