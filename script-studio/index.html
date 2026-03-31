@@ -4,879 +4,684 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Script Studio — Fill Your Templates · Leave Well Media</title>
+<title>Script Studio — Content Templates · Leave Well Media</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-:root {
-  --brand-mint-green:   #a7f3d0;
-  --brand-pink:         #f9a8d4;
-  --brand-cream:        #fefce8;
-  --brand-yellow:       #fde047;
-  --brand-dark-teal:    #1e3a38;
-  --brand-light-pink:   #fce7f3;
-  --brand-light-green:  #dcfce7;
-  --brand-light-yellow: #fef3c7;
-  --brand-warm-cream:   #fdf6ee;
-  --brand-mint-accent:  #7ecfc0;
-  --brand-dusty-pink:   #e891b9;
-
-  --text-primary:   #1e3a38;
-  --text-secondary: #3d6b64;
-  --text-muted:     #7aada6;
-  --surface-nav:    #1e3a38;
-  --border-light:   rgba(30,58,56,.12);
-  --border-mid:     rgba(30,58,56,.22);
-  --border-strong:  rgba(30,58,56,.35);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-pill: 99px;
+:root{
+  --mint:#a7f3d0;--pink:#f9a8d4;--cream:#fefce8;--yellow:#fde047;
+  --teal:#1e3a38;--lpink:#fce7f3;--lgreen:#dcfce7;--lyellow:#fef3c7;
+  --wcream:#fdf6ee;--macc:#7ecfc0;--dpink:#e891b9;
+  --txt:#1e3a38;--txt2:#3d6b64;--muted:#7aada6;
+  --bl:rgba(30,58,56,.12);--bm:rgba(30,58,56,.22);
+  --pill:99px;--r:12px;
 }
-
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--brand-warm-cream); color: var(--text-primary); min-height: 100vh; font-size: 16px; line-height: 1.6; }
-
-/* ── NAV ── */
-.site-nav { background: var(--surface-nav); padding: 0 2.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; }
-.nav-brand { font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 500; color: white; text-decoration: none; }
-.nav-tag { font-size: .7rem; color: var(--brand-mint-accent); letter-spacing: .08em; text-transform: uppercase; opacity: .8; }
-
-/* ── HERO ── */
-.hero { background: var(--brand-mint-green); padding: 3rem 2.5rem 2.5rem; }
-.hero-inner { max-width: 820px; margin: 0 auto; }
-.hero-eyebrow { font-size: .7rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: .75rem; }
-.hero-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 4.5vw, 2.8rem); font-weight: 700; color: var(--text-primary); line-height: 1.15; margin-bottom: .9rem; }
-.hero-title .accent { color: var(--brand-dusty-pink); font-style: italic; }
-.hero-sub { font-size: .98rem; color: var(--text-secondary); font-style: italic; font-family: 'Libre Baskerville', serif; line-height: 1.65; max-width: 580px; }
-
-/* HOW IT WORKS strip */
-.how-strip { background: var(--brand-dark-teal); padding: 1.1rem 2.5rem; }
-.how-strip-inner { max-width: 820px; margin: 0 auto; display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; }
-.how-step { display: flex; align-items: flex-start; gap: .65rem; }
-.how-num { width: 22px; height: 22px; border-radius: 50%; background: var(--brand-mint-accent); color: var(--brand-dark-teal); font-size: .65rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .05rem; }
-.how-text { font-size: .76rem; color: rgba(255,255,255,.75); line-height: 1.5; font-weight: 300; }
-.how-text strong { color: white; font-weight: 500; }
-
-/* ── LAYOUT ── */
-.app { display: grid; grid-template-columns: 440px 1fr; min-height: calc(100vh - 56px); align-items: start; }
-@media(max-width:1020px){ .app{ grid-template-columns: 1fr } .main{ padding: 1.5rem 1.25rem 4rem; } }
-
-/* ── SIDEBAR ── */
-.sidebar { background: var(--surface-nav); position: sticky; top: 56px; height: calc(100vh - 56px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--brand-mint-accent) transparent; }
-.progress-bar { height: 4px; background: rgba(255,255,255,.1); }
-.progress-fill { height: 100%; background: var(--brand-mint-accent); transition: width .35s ease; width: 0%; }
-
-.sb-head { padding: 1.8rem 2rem 1.4rem; border-bottom: 1px solid rgba(255,255,255,.07); }
-.sb-eyebrow { font-size: .74rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; color: var(--brand-mint-accent); margin-bottom: .5rem; }
-.sb-title { font-family: 'Libre Baskerville', serif; font-size: 1.25rem; color: white; line-height: 1.3; font-weight: 700; }
-.sb-sub { font-size: .88rem; color: rgba(255,255,255,.85); margin-top: .5rem; line-height: 1.65; font-weight: 300; }
-
-.sb-instruction { margin: 1.1rem 2rem 0; background: rgba(167,243,208,.1); border: 1px solid rgba(167,243,208,.2); border-radius: var(--radius-md); padding: 1rem 1.15rem; }
-.sb-instruction p { font-size: .86rem; color: white; line-height: 1.7; font-weight: 300; }
-.sb-instruction p + p { margin-top: .55rem; }
-.sb-instruction strong { color: var(--brand-mint-accent); font-weight: 500; }
-
-.fsec { padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,.06); }
-.fsec-label { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--brand-mint-accent); margin-bottom: .95rem; display: flex; align-items: center; gap: .5rem; }
-.fsec-badge { background: rgba(167,243,208,.12); color: var(--brand-mint-accent); font-size: .66rem; font-style: normal; padding: .15rem .55rem; border-radius: var(--radius-pill); font-weight: 500; }
-
-.field { margin-bottom: 1rem; }
-.field:last-child { margin-bottom: 0; }
-
-.field label { display: block; font-size: .76rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: white; margin-bottom: .35rem; }
-
-.field .hint-label { display: block; font-size: .78rem; color: rgba(249,168,212,.65); font-style: italic; margin-bottom: .4rem; line-height: 1.5; font-weight: 300; }
-
-.field input, .field textarea { width: 100%; padding: .65rem .9rem; border: 1.5px solid rgba(255,255,255,.1); border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: .95rem; color: white; background: rgba(255,255,255,.07); outline: none; transition: border-color .15s, background .15s; resize: vertical; line-height: 1.55; }
-.field input:focus, .field textarea:focus { border-color: var(--brand-mint-accent); background: rgba(126,207,192,.12); }
-.field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,.25); font-style: italic; font-size: .88rem; }
-.field textarea { min-height: 60px; }
-
-.tnav { padding: 1rem 2rem; border-bottom: 1px solid rgba(255,255,255,.06); }
-.tnav-label { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: white; margin-bottom: .5rem; }
-.tnav-links { display: flex; flex-direction: column; gap: .12rem; }
-.tnav-link { font-size: .88rem; color: rgba(255,255,255,.85); text-decoration: none; padding: .35rem .55rem; border-radius: var(--radius-sm); transition: all .15s; display: flex; align-items: center; gap: .5rem; }
-.tnav-link:hover { background: rgba(255,255,255,.07); color: white; }
-.tnav-link .tn { font-size: .7rem; font-weight: 600; color: var(--brand-mint-accent); width: 16px; flex-shrink: 0; }
-
-.sb-actions { padding: 1.15rem 2rem 2rem; }
-.btn-pink { width: 100%; padding: .8rem 1rem; border-radius: var(--radius-pill); background: var(--brand-pink); border: none; color: var(--text-primary); font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 500; cursor: pointer; transition: background .15s, transform .1s; }
-.btn-pink:hover { background: var(--brand-dusty-pink); color: white; }
-.btn-pink:active { transform: scale(.98); }
-.btn-ghost { width: 100%; padding: .6rem 1rem; border-radius: var(--radius-pill); background: transparent; border: 1.5px solid rgba(255,255,255,.35); color: white; font-family: 'DM Sans', sans-serif; font-size: .88rem; cursor: pointer; transition: all .15s; margin-top: .5rem; }
-.btn-ghost:hover { border-color: var(--brand-mint-accent); color: var(--brand-mint-accent); }
-
-/* ── MAIN ── */
-.main { padding: 2.5rem 3rem 6rem; max-width: 900px; margin: 0 auto; }
-
-.how-banner { background: white; border: 1.5px solid var(--border-light); border-left: 4px solid var(--brand-mint-accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.1rem 1.4rem; margin-bottom: 1.75rem; }
-.how-banner-title { font-family: 'Libre Baskerville', serif; font-size: .92rem; font-weight: 700; color: var(--text-primary); margin-bottom: .6rem; }
-.how-banner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; }
-@media(max-width:600px){ .how-banner-grid{ grid-template-columns: 1fr } }
-.how-item { display: flex; align-items: flex-start; gap: .55rem; }
-.how-icon { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .7rem; margin-top: .05rem; }
-.how-icon-mint { background: var(--brand-mint-green); color: var(--text-primary); }
-.how-icon-pink { background: var(--brand-light-pink); color: #9d174d; }
-.how-icon-yellow { background: var(--brand-light-yellow); color: #78350f; }
-.how-icon-teal { background: var(--brand-dark-teal); color: white; }
-.how-item-text { font-size: .78rem; color: var(--text-secondary); line-height: 1.55; }
-.how-item-text strong { color: var(--text-primary); font-weight: 500; }
-
-.comp { display: none; align-items: center; gap: .35rem; font-size: .74rem; color: var(--text-muted); padding: .3rem .75rem; background: rgba(167,243,208,.15); border-radius: var(--radius-pill); margin-bottom: 1.4rem; border: 1px solid rgba(167,243,208,.25); }
-.comp strong { color: var(--brand-dark-teal); }
-
-.filter-row { display: flex; gap: .42rem; flex-wrap: wrap; margin-bottom: 2rem; }
-.pill { font-family: 'DM Sans', sans-serif; font-size: .78rem; font-weight: 400; padding: .4rem 1.05rem; border-radius: var(--radius-pill); border: 1.5px solid var(--border-mid); color: var(--text-secondary); cursor: pointer; background: white; transition: all .15s; }
-.pill:hover { border-color: var(--text-primary); color: var(--text-primary); }
-.pill.active { background: var(--text-primary); border-color: var(--text-primary); color: white; font-weight: 500; }
-
-/* ── TEMPLATE CARDS ── */
-.tc { background: white; border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; transition: box-shadow .2s, border-color .2s; scroll-margin-top: 1.5rem; }
-.tc:hover { box-shadow: 0 4px 28px rgba(30,58,56,.08); border-color: var(--border-mid); }
-.tc.hidden { display: none; }
-
-.tc-head { background: var(--brand-mint-green); padding: 1.1rem 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; cursor: pointer; user-select: none; }
-.tc-hl { flex: 1; min-width: 0; }
-.tc-num { font-size: .62rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: .2rem; }
-.tc-title { font-family: 'Libre Baskerville', serif; font-size: .98rem; color: var(--text-primary); line-height: 1.3; font-weight: 700; }
-.tc-sub { font-size: .71rem; color: var(--text-secondary); margin-top: .3rem; font-style: italic; font-family: 'Libre Baskerville', serif; }
-.tc-chips { display: flex; gap: .32rem; flex-wrap: wrap; margin-top: .5rem; }
-.chip { font-size: .62rem; padding: .16rem .52rem; border-radius: var(--radius-pill); font-weight: 500; font-family: 'DM Sans', sans-serif; }
-.chip-fmt  { background: rgba(30,58,56,.12); color: var(--text-primary); }
-.chip-save { background: var(--brand-light-pink); color: #9d174d; }
-.chip-algo { background: var(--brand-light-yellow); color: #78350f; }
-.tc-arr { color: var(--text-secondary); font-size: .9rem; transition: transform .2s; flex-shrink: 0; margin-top: .1rem; }
-.tc.open .tc-arr { transform: rotate(180deg); }
-.tc-body { display: none; padding: 1.5rem; border-top: 1px solid var(--border-light); }
-.tc.open .tc-body { display: block; }
-
-/* ── SCRIPT BLOCKS ── */
-.sb { margin-bottom: 1.2rem; }
-.sb:last-of-type { margin-bottom: 0; }
-
-.btag { display: inline-flex; align-items: center; font-size: .61rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .18rem .58rem; border-radius: 5px; margin-bottom: .45rem; font-family: 'DM Sans', sans-serif; }
-.tag-hook, .tag-moment, .tag-emotion { background: var(--brand-light-pink); color: #9d174d; }
-.tag-stick  { background: var(--brand-light-green); color: #166534; }
-.tag-shift  { background: var(--brand-light-yellow); color: #78350f; }
-.tag-serve  { background: rgba(167,243,208,.3); color: #065f46; }
-.tag-cta    { background: var(--brand-mint-green); color: var(--text-primary); }
-.tag-bridge { background: rgba(167,243,208,.3); color: #065f46; }
-.tag-slide  { background: var(--brand-light-green); color: #166534; }
-
-.sl { font-family: 'Libre Baskerville', serif; font-size: .89rem; line-height: 2; color: var(--text-primary); background: var(--brand-warm-cream); border-left: 3px solid var(--brand-mint-accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: .85rem 1.1rem .85rem 1rem; }
-
-.fv { display: inline; color: var(--brand-mint-accent); font-style: italic; border-bottom: 1.5px dashed var(--brand-mint-accent); padding-bottom: 1px; transition: color .2s, border-color .2s, font-style .15s; }
-.fv.has { color: var(--text-primary); font-style: normal; border-bottom-color: rgba(126,207,192,.35); }
-
-.gh {
-  display: inline-block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: .66rem;
-  font-weight: 500;
-  font-style: normal;
-  color: #9d174d;
-  background: var(--brand-light-pink);
-  border-radius: 4px;
-  padding: .1rem .42rem;
-  margin: 0 .18rem;
-  vertical-align: middle;
-  white-space: nowrap;
-  letter-spacing: .02em;
-  line-height: 1;
-}
-
-.beat { display: inline-flex; align-items: center; background: var(--brand-light-yellow); color: #78350f; font-size: .61rem; font-weight: 600; font-family: 'DM Sans', sans-serif; letter-spacing: .07em; text-transform: uppercase; padding: .07rem .4rem; border-radius: 4px; vertical-align: middle; margin: 0 .1rem; font-style: normal; }
-
-.dir { font-family: 'DM Sans', sans-serif; font-size: .75rem; font-style: italic; color: var(--text-muted); margin-top: .48rem; padding-left: .78rem; border-left: 2px solid var(--border-mid); line-height: 1.6; }
-
-.slide-head {
-  font-family: 'DM Sans', sans-serif;
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--brand-dusty-pink);
-  margin-top: .75rem;
-  margin-bottom: .22rem;
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-}
-.slide-head:first-child { margin-top: 0; }
-.slide-head::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-dusty-pink); flex-shrink: 0; }
-.slide-content { font-family: 'Libre Baskerville', serif; font-size: .87rem; line-height: 1.7; color: var(--text-primary); margin-bottom: .5rem; padding-left: 1rem; }
-
-.copy-btn { display: inline-flex; align-items: center; gap: .38rem; font-family: 'DM Sans', sans-serif; font-size: .74rem; font-weight: 500; color: var(--text-secondary); border: 1.5px solid var(--border-mid); border-radius: var(--radius-pill); padding: .38rem .85rem; cursor: pointer; background: white; transition: all .15s; margin-top: 1rem; }
-.copy-btn:hover { background: var(--text-primary); color: white; border-color: var(--text-primary); }
-.copy-btn.ok { background: var(--brand-mint-accent); color: white; border-color: var(--brand-mint-accent); }
-
-/* ── LEGEND BAR ── */
-.legend { background: white; border-bottom: 1px solid var(--border-light); padding: .7rem 2rem; display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; }
-.legend-item { display: flex; align-items: center; gap: .4rem; font-size: .72rem; color: var(--text-secondary); }
-.legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
-
-@media(max-width:1020px){ .sidebar{ position:relative; height:auto; top:0; } .filter-row{ display:none; } }
-@media print{ .site-nav,.hero,.how-strip,.sidebar,.filter-row,.copy-btn,.tc-arr,.legend{ display:none!important; } .tc{ break-inside:avoid; border:1px solid #ccc; } .tc-body{ display:block!important; } .tc-head{ background:var(--brand-mint-green)!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--wcream);color:var(--txt);min-height:100vh}
+.nav{background:var(--teal);padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.nav-brand{font-size:.95rem;font-weight:500;color:white;text-decoration:none}
+.nav-tag{font-size:.68rem;color:var(--macc);letter-spacing:.08em;text-transform:uppercase}
+.hero{background:var(--mint);padding:3rem 2.5rem 2.5rem}
+.hero-inner{max-width:820px;margin:0 auto}
+.hero-eye{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);margin-bottom:.65rem}
+.hero-h{font-family:'Libre Baskerville',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.15;margin-bottom:.85rem}
+.hero-h .acc{color:var(--dpink);font-style:italic}
+.hero-sub{font-size:.97rem;color:var(--txt2);font-style:italic;font-family:'Libre Baskerville',serif;line-height:1.65;max-width:580px}
+.how{background:var(--teal);padding:1rem 2.5rem}
+.how-in{max-width:820px;margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap}
+.hs{display:flex;align-items:flex-start;gap:.6rem}
+.hn{width:20px;height:20px;border-radius:50%;background:var(--macc);color:var(--teal);font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.05rem}
+.ht{font-size:.76rem;color:rgba(255,255,255,.75);line-height:1.5;font-weight:300}
+.ht strong{color:white;font-weight:500}
+.app{display:grid;grid-template-columns:420px 1fr;min-height:calc(100vh - 56px);align-items:start}
+@media(max-width:960px){.app{grid-template-columns:1fr}}
+.sb{background:var(--teal);position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--macc) transparent}
+.prog{height:4px;background:rgba(255,255,255,.1)}
+.progf{height:100%;background:var(--macc);transition:width .3s ease;width:0%}
+.sbh{padding:1.6rem 1.75rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.sbeye{font-size:.63rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--macc);margin-bottom:.4rem}
+.sbtitle{font-family:'Libre Baskerville',serif;font-size:1.05rem;color:white;line-height:1.3;font-weight:700}
+.sbsub{font-size:.75rem;color:rgba(255,255,255,.85);margin-top:.38rem;line-height:1.6;font-weight:300}
+.ai-box{margin:1rem 1.75rem 0;background:rgba(249,168,212,.08);border:1px solid rgba(249,168,212,.2);border-radius:10px;padding:.9rem 1rem}
+.ai-box-title{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dpink);margin-bottom:.4rem}
+.ai-box p{font-size:.73rem;color:rgba(255,255,255,.85);line-height:1.6;font-weight:300}
+.ai-box p strong{color:white;font-weight:500}
+.ai-cpbtn{display:inline-flex;align-items:center;gap:.35rem;margin-top:.65rem;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;color:var(--dpink);border:1px solid rgba(249,168,212,.3);border-radius:var(--pill);padding:.3rem .65rem;cursor:pointer;background:rgba(249,168,212,.08);transition:all .15s}
+.ai-cpbtn:hover{background:rgba(249,168,212,.18);border-color:var(--dpink)}
+.ai-cpbtn.ok{background:var(--dpink);color:white;border-color:var(--dpink)}
+.fsec{padding:1.1rem 1.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.fsec-lbl{font-size:.61rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--macc);margin-bottom:.8rem;display:flex;align-items:center;gap:.45rem}
+.fbadge{background:rgba(167,243,208,.12);color:var(--macc);font-size:.57rem;padding:.1rem .45rem;border-radius:var(--pill);font-weight:500}
+.field{margin-bottom:.8rem}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:.63rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:white;margin-bottom:.22rem}
+.field .ex{display:block;font-size:.66rem;color:rgba(249,168,212,.55);font-style:italic;margin-bottom:.28rem;line-height:1.4;font-weight:300}
+.field input,.field textarea{width:100%;padding:.5rem .75rem;border:1.5px solid rgba(255,255,255,.1);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.82rem;color:white;background:rgba(255,255,255,.07);outline:none;transition:border-color .15s,background .15s;resize:vertical;line-height:1.5}
+.field input:focus,.field textarea:focus{border-color:var(--macc);background:rgba(126,207,192,.1)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.2);font-style:italic}
+.field textarea{min-height:50px}
+.tnav{padding:.8rem 1.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.tnav-lbl{font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:white;margin-bottom:.4rem}
+.tnav-links{display:flex;flex-direction:column;gap:.08rem}
+.tnav-a{font-size:.75rem;color:rgba(255,255,255,.85);text-decoration:none;padding:.26rem .46rem;border-radius:7px;transition:all .15s;display:flex;align-items:center;gap:.42rem}
+.tnav-a:hover{background:rgba(255,255,255,.07);color:white}
+.tn{font-size:.6rem;font-weight:600;color:var(--macc);width:14px;flex-shrink:0}
+.sba{padding:.9rem 1.75rem 1.75rem}
+.btnp{width:100%;padding:.68rem 1rem;border-radius:var(--pill);background:var(--pink);border:none;color:var(--txt);font-family:'DM Sans',sans-serif;font-size:.83rem;font-weight:500;cursor:pointer;transition:all .15s}
+.btnp:hover{background:var(--dpink);color:white}
+.btng{width:100%;padding:.5rem 1rem;border-radius:var(--pill);background:transparent;border:1.5px solid rgba(255,255,255,.3);color:white;font-family:'DM Sans',sans-serif;font-size:.76rem;cursor:pointer;transition:all .15s;margin-top:.42rem}
+.btng:hover{border-color:var(--macc);color:var(--macc)}
+.main{padding:2.5rem 3rem 6rem;max-width:900px;margin:0 auto}
+.banner{background:white;border:1.5px solid var(--bl);border-left:4px solid var(--macc);border-radius:0 var(--r) var(--r) 0;padding:1.1rem 1.4rem;margin-bottom:1.75rem}
+.banner-title{font-family:'Libre Baskerville',serif;font-size:.92rem;font-weight:700;color:var(--txt);margin-bottom:.65rem}
+.banner-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:580px){.banner-grid{grid-template-columns:1fr}}
+.bi{display:flex;align-items:flex-start;gap:.52rem}
+.bicon{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.68rem;margin-top:.04rem}
+.btext{font-size:.77rem;color:var(--txt2);line-height:1.55}
+.btext strong{color:var(--txt);font-weight:500}
+.ab-sample{display:inline-block;font-size:.7rem;background:var(--lpink);color:#9d174d;border-radius:4px;padding:.05rem .38rem;font-weight:500;font-style:normal;vertical-align:middle}
+.comp{display:none;align-items:center;gap:.32rem;font-size:.73rem;color:var(--muted);padding:.3rem .7rem;background:rgba(167,243,208,.12);border-radius:var(--pill);margin-bottom:1.35rem;border:1px solid rgba(167,243,208,.2)}
+.comp strong{color:var(--teal)}
+.frow{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.85rem}
+.pill{font-family:'DM Sans',sans-serif;font-size:.77rem;font-weight:400;padding:.38rem 1rem;border-radius:var(--pill);border:1.5px solid var(--bm);color:var(--txt2);cursor:pointer;background:white;transition:all .15s}
+.pill:hover{border-color:var(--txt);color:var(--txt)}
+.pill.active{background:var(--txt);border-color:var(--txt);color:white;font-weight:500}
+.tc{background:white;border:1.5px solid var(--bl);border-radius:16px;overflow:hidden;margin-bottom:1.2rem;transition:box-shadow .2s,border-color .2s;scroll-margin-top:1.5rem}
+.tc:hover{box-shadow:0 4px 26px rgba(30,58,56,.08);border-color:var(--bm)}
+.tc.hidden{display:none}
+.tch{background:var(--mint);padding:1.1rem 1.5rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;cursor:pointer;user-select:none}
+.tchl{flex:1;min-width:0}
+.tcnum{font-size:.61rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);margin-bottom:.2rem}
+.tctitle{font-family:'Libre Baskerville',serif;font-size:.97rem;color:var(--txt);line-height:1.3;font-weight:700}
+.tcsub{font-size:.7rem;color:var(--txt2);margin-top:.28rem;font-style:italic;font-family:'Libre Baskerville',serif}
+.tcchips{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.48rem}
+.chip{font-size:.61rem;padding:.15rem .5rem;border-radius:var(--pill);font-weight:500;font-family:'DM Sans',sans-serif}
+.cf{background:rgba(30,58,56,.1);color:var(--txt)}
+.cs{background:var(--lpink);color:#9d174d}
+.ca{background:var(--lyellow);color:#78350f}
+.tcarr{color:var(--txt2);font-size:.9rem;transition:transform .2s;flex-shrink:0;margin-top:.1rem}
+.tc.open .tcarr{transform:rotate(180deg)}
+.tcb{display:none;padding:1.5rem;border-top:1px solid var(--bl)}
+.tc.open .tcb{display:block}
+.sbl{margin-bottom:1.2rem}
+.sbl:last-of-type{margin-bottom:0}
+.btag{display:inline-flex;align-items:center;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.17rem .56rem;border-radius:5px;margin-bottom:.42rem;font-family:'DM Sans',sans-serif}
+.tag-h,.tag-m,.tag-e{background:var(--lpink);color:#9d174d}
+.tag-st{background:var(--lgreen);color:#166534}
+.tag-sh{background:var(--lyellow);color:#78350f}
+.tag-sv{background:rgba(167,243,208,.3);color:#065f46}
+.tag-c{background:var(--mint);color:var(--txt)}
+.tag-br{background:rgba(167,243,208,.3);color:#065f46}
+.tag-sl{background:var(--lgreen);color:#166534}
+.sl{font-family:'Libre Baskerville',serif;font-size:.89rem;line-height:2;color:var(--txt);background:var(--wcream);border-left:3px solid var(--macc);border-radius:0 8px 8px 0;padding:.82rem 1.05rem .82rem .95rem}
+.fv{display:inline;color:var(--macc);font-style:italic;border-bottom:1.5px dashed var(--macc);padding-bottom:1px;transition:color .2s,font-style .15s}
+.fv.has{color:var(--txt);font-style:normal;border-bottom-color:rgba(126,207,192,.35)}
+.ab{display:inline;color:#9d174d;font-family:'DM Sans',sans-serif;font-size:.84rem;font-style:normal;font-weight:400}
+.beat{display:inline-flex;align-items:center;background:var(--lyellow);color:#78350f;font-size:.61rem;font-weight:600;font-family:'DM Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase;padding:.07rem .38rem;border-radius:4px;vertical-align:middle;margin:0 .1rem;font-style:normal}
+.dir{font-family:'DM Sans',sans-serif;font-size:.74rem;font-style:italic;color:var(--muted);margin-top:.45rem;padding-left:.75rem;border-left:2px solid var(--bm);line-height:1.6}
+.slide-head{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dpink);margin-top:.75rem;margin-bottom:.2rem;display:flex;align-items:center;gap:.38rem}
+.slide-head:first-child{margin-top:0}
+.slide-head::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--dpink);flex-shrink:0}
+.slide-copy{font-family:'Libre Baskerville',serif;font-size:.87rem;line-height:1.7;color:var(--txt);margin-bottom:.4rem;padding-left:.95rem}
+.cpbtn{display:inline-flex;align-items:center;gap:.36rem;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;color:var(--txt2);border:1.5px solid var(--bm);border-radius:var(--pill);padding:.36rem .82rem;cursor:pointer;background:white;transition:all .15s;margin-top:.9rem}
+.cpbtn:hover{background:var(--txt);color:white;border-color:var(--txt)}
+.cpbtn.ok{background:var(--macc);color:white;border-color:var(--macc)}
+@media(max-width:960px){.sb{position:relative;height:auto;top:0}.main{padding:1.25rem 1rem 4rem}.frow{display:none}}
+@media print{.nav,.hero,.how,.sb,.frow,.cpbtn,.tcarr,.banner{display:none!important}.tc{break-inside:avoid;border:1px solid #ccc}.tcb{display:block!important}.tch{background:var(--mint)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-nav">
+<nav class="nav">
   <a class="nav-brand" href="/">Leave Well Media</a>
-  <span class="nav-tag">Script Studio</span>
+  <span class="nav-tag">Script Studio · leavewell.media</span>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Script Studio — Content Templates</div>
-    <h1 class="hero-title">Fill. Film.<br><span class="accent">Post.</span></h1>
-    <p class="hero-sub">7 fill-in-the-blank templates built on the M.E.S.S. framework. Fill in your details once — every template updates live.</p>
+    <div class="hero-eye">Script Studio — by Mindy Genereux · leavewell.media</div>
+    <h1 class="hero-h">Fill it in.<br>Film it.<br><span class="acc">Post it.</span></h1>
+    <p class="hero-sub">7 ready-to-film TikTok scripts. Fill in the sidebar once — your words drop into every template live. The structure does the heavy lifting. You just show up and talk.</p>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<div class="how-strip">
-  <div class="how-strip-inner">
-    <div class="how-step">
-      <div class="how-num">1</div>
-      <div class="how-text"><strong>Fill the sidebar</strong> — type your details into the fields on the left. They push into every template instantly.</div>
-    </div>
-    <div class="how-step">
-      <div class="how-num">2</div>
-      <div class="how-text"><strong>Read the grammar hints</strong> — pink labels in the script show you what type of word or phrase belongs in each blank.</div>
-    </div>
-    <div class="how-step">
-      <div class="how-num">3</div>
-      <div class="how-text"><strong>Keep every other word</strong> — the structure is the formula. Only the blanks change. Everything else stays exactly as written.</div>
-    </div>
-    <div class="how-step">
-      <div class="how-num">4</div>
-      <div class="how-text"><strong>Copy and film</strong> — hit the copy button on any template to pull the full script to your clipboard, ready to paste into Notes.</div>
-    </div>
+<div class="how">
+  <div class="how-in">
+    <div class="hs"><div class="hn">1</div><div class="ht"><strong>Fill the sidebar.</strong> Type your details into the fields on the left. Every template updates the second you type.</div></div>
+    <div class="hs"><div class="hn">2</div><div class="ht"><strong>Read the angle brackets.</strong> Anything in <span style="color:var(--pink)">&lt;brackets&gt;</span> is yours to fill in. The example inside shows you the format.</div></div>
+    <div class="hs"><div class="hn">3</div><div class="ht"><strong>Keep everything else.</strong> The words between the blanks are the formula. Don't change them — just fill the gaps and film.</div></div>
+    <div class="hs"><div class="hn">4</div><div class="ht"><strong>Or use AI.</strong> Hit "Copy AI prompt" in the sidebar, paste it into ChatGPT or Claude, answer the questions, and it'll fill the tool for you.</div></div>
   </div>
 </div>
 
-<!-- LEGEND -->
-<div class="legend">
-  <span style="font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-right:.25rem">Key</span>
-  <div class="legend-item"><div class="legend-dot" style="background:var(--brand-light-pink);border:1px solid #f9a8d4"></div> HOOK — stop the scroll</div>
-  <div class="legend-item"><div class="legend-dot" style="background:var(--brand-light-green);border:1px solid #86efac"></div> STICK — name the pain</div>
-  <div class="legend-item"><div class="legend-dot" style="background:var(--brand-light-yellow);border:1px solid #fde047"></div> SHIFT — the reframe</div>
-  <div class="legend-item"><div class="legend-dot" style="background:rgba(167,243,208,.5);border:1px solid var(--brand-mint-accent)"></div> SERVE — the takeaway</div>
-  <div class="legend-item"><div class="legend-dot" style="background:var(--brand-mint-green);border:1px solid var(--brand-mint-accent)"></div> CTA — one next step</div>
-  <div class="legend-item" style="padding-left:.5rem;border-left:1px solid var(--border-light)">
-    <span style="font-family:'DM Sans',sans-serif;font-size:.66rem;font-weight:500;color:#9d174d;background:var(--brand-light-pink);border-radius:4px;padding:.1rem .42rem;">noun phrase</span>
-    <span style="font-size:.72rem;color:var(--text-secondary)">grammar hint — tells you what word type to use</span>
-  </div>
-  <div class="legend-item">
-    <span style="font-family:'DM Sans',sans-serif;font-size:.61rem;font-weight:600;background:var(--brand-light-yellow);color:#78350f;border-radius:4px;padding:.07rem .4rem;letter-spacing:.07em;text-transform:uppercase;">beat</span>
-    <span style="font-size:.72rem;color:var(--text-secondary)">natural pause — hold it</span>
-  </div>
-</div>
-
-<!-- APP -->
 <div class="app">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+<aside class="sb">
+  <div class="prog"><div class="progf" id="prog"></div></div>
 
-    <div class="sb-head">
-      <div class="sb-eyebrow">Step 1 — Your details</div>
-      <div class="sb-title">Type here first.<br>Templates fill as you go.</div>
-      <div class="sb-sub">Every field you complete pushes into the matching blanks across all 7 templates in real time.</div>
+  <div class="sbh">
+    <div class="sbeye">Step 1 — your details</div>
+    <div class="sbtitle">Type once.<br>Fills everywhere.</div>
+    <div class="sbsub">Fill these in and watch your scripts build themselves on the right in real time.</div>
+  </div>
+
+  <div class="ai-box">
+    <div class="ai-box-title">&#x2728; Want AI to fill this for you?</div>
+    <p>Copy the prompt below. Paste it into <strong>ChatGPT or Claude</strong>. Answer the questions it asks. It'll hand back everything formatted and ready to drop into this tool.</p>
+    <button class="ai-cpbtn" id="ai-btn" onclick="copyAIPrompt()">Copy AI prompt</button>
+  </div>
+
+  <div class="fsec">
+    <div class="fsec-lbl">Layer 1 — fills every template <span class="fbadge">start here</span></div>
+    <div class="field">
+      <label>Who you talk to</label>
+      <span class="ex">e.g. "adult daughters whose dad just got a terminal diagnosis" / "new coaches who can't get clients" / "women going through divorce in their 40s"</span>
+      <input type="text" id="f-audience" placeholder="e.g. adult daughters with a terminally ill parent">
     </div>
-
-    <div class="sb-instruction">
-      <p>The <strong>pink labels</strong> inside each template (like <span style="font-size:.7rem;font-weight:500;color:#e891b9">noun phrase</span> or <span style="font-size:.7rem;font-weight:500;color:#e891b9">one sentence</span>) tell you what kind of word or phrase belongs in that blank. Use the examples as a guide for the format — then write your own version.</p>
-      <p><strong>Keep every other word exactly as written.</strong> The structure is the formula. Only fill in what is highlighted.</p>
+    <div class="field">
+      <label>The thing they're scared of losing</label>
+      <span class="ex">Specific and sensory — e.g. "the way he laughs at his own jokes" / "her voice on the phone" / "feeling like yourself again"</span>
+      <input type="text" id="f-fear" placeholder="e.g. the way he laughs before the punchline">
     </div>
-
-    <!-- LAYER 1 -->
-    <div class="fsec">
-      <div class="fsec-label">Layer 1 — fills every template <span class="fsec-badge">universal</span></div>
-
-      <div class="field">
-        <label>Your audience — one phrase</label>
-        <span class="hint-label">noun phrase — e.g. "adult daughters navigating a parent's terminal illness," "new coaches building their first offer"</span>
-        <input type="text" id="f-audience" placeholder="e.g. women navigating divorce in their 40s">
-      </div>
-      <div class="field">
-        <label>Their core fear or pain</label>
-        <span class="hint-label">noun phrase — e.g. "losing the feel of him," "starting over alone," "being invisible in their industry"</span>
-        <input type="text" id="f-pain" placeholder="e.g. losing the feel of him before he's gone">
-      </div>
-      <div class="field">
-        <label>Your core reframe — one sentence</label>
-        <span class="hint-label">one complete sentence — e.g. "That fear is love with nowhere to go yet." / "That confusion is the beginning of clarity."</span>
-        <textarea id="f-reframe" rows="2" placeholder="e.g. That fear is love with nowhere to go yet."></textarea>
-      </div>
-      <div class="field">
-        <label>Your offer or resource name</label>
-        <span class="hint-label">proper noun — e.g. "Story Studio," "the free library," "Make This Mean More"</span>
-        <input type="text" id="f-offer" placeholder="e.g. Story Studio">
-      </div>
-      <div class="field">
-        <label>Your CTA phrase — 5 words max</label>
-        <span class="hint-label">short phrase — e.g. "the window is still open," "start before you feel ready," "the door is open"</span>
-        <input type="text" id="f-cta" placeholder="e.g. the window is still open">
-      </div>
-      <div class="field">
-        <label>The context word for your audience</label>
-        <span class="hint-label">single noun — e.g. "chapter," "season," "moment," "transition," "journey"</span>
-        <input type="text" id="f-context" placeholder="e.g. chapter">
-      </div>
+    <div class="field">
+      <label>Your one-line truth — the thing you want them to know</label>
+      <span class="ex">e.g. "That fear is just love with nowhere to go yet." / "Confusion isn't a sign you're failing — it means you're paying attention."</span>
+      <textarea id="f-truth" rows="2" placeholder="e.g. That fear is just love with nowhere to go yet."></textarea>
     </div>
-
-    <!-- LAYER 2 -->
-    <div class="fsec">
-      <div class="fsec-label">Layer 2 — template-specific <span class="fsec-badge">per video</span></div>
-
-      <div class="field">
-        <label>The specific irreplaceable detail (T1 · T3 · T4)</label>
-        <span class="hint-label">noun phrase — something sensory and specific e.g. "the way he laughs before the punchline," "her handwriting on a birthday card," "the sound of his voice on voicemail"</span>
-        <input type="text" id="f-specific" placeholder="e.g. the way he laughs before the punchline">
-      </div>
-      <div class="field">
-        <label>The concrete daily detail they live with (T1)</label>
-        <span class="hint-label">list of specific details — e.g. "the way he takes his coffee, the exact words he uses when he's proud but won't say it"</span>
-        <textarea id="f-daily" rows="2" placeholder="e.g. the small things you've memorised without meaning to — how he takes his coffee"></textarea>
-      </div>
-      <div class="field">
-        <label>The action or takeaway (T1 · T3 · T4)</label>
-        <span class="hint-label">imperative phrase — e.g. "ask him one question you've never asked," "write down three things you noticed this week," "record a 2-minute voice note today"</span>
-        <textarea id="f-action" rows="2" placeholder="e.g. ask him one question you've never asked — not a big one, something small"></textarea>
-      </div>
-      <div class="field">
-        <label>Bold opening statement (T2 — text on screen)</label>
-        <span class="hint-label">short declarative sentence — punchy, 5–8 words e.g. "Dad is still in the room." / "You are not behind." / "This is not your fault."</span>
-        <input type="text" id="f-bold" placeholder="e.g. Dad is still in the room.">
-      </div>
-      <div class="field">
-        <label>The specific scene from your story (T3)</label>
-        <span class="hint-label">present-tense scene description — e.g. "eating dinner, and he made that joke he always makes," "sitting in the car outside the hospital"</span>
-        <textarea id="f-scene" rows="2" placeholder="e.g. eating dinner, and he made that joke he always makes"></textarea>
-      </div>
-      <div class="field">
-        <label>The moment of realisation in your story (T3)</label>
-        <span class="hint-label">question or thought — e.g. "how many more times do I get to hear that joke?" / "what if this is the last good day?"</span>
-        <textarea id="f-realise" rows="2" placeholder="e.g. how many more times do I get to hear that joke?"></textarea>
-      </div>
-      <div class="field">
-        <label>What they already carry from this person (T4)</label>
-        <span class="hint-label">noun phrase + examples — e.g. "his values are still running your family — the way he talked about work, about loyalty" / "her voice is still in your head when you make decisions"</span>
-        <textarea id="f-legacy" rows="2" placeholder="e.g. his values are still running your family — the way he talked about work, about loyalty"></textarea>
-      </div>
-      <div class="field">
-        <label>What it is not — the reframe setup (T4)</label>
-        <span class="hint-label">noun phrase — e.g. "a box of things," "a folder of documents," "a list of tasks," "a highlight reel"</span>
-        <input type="text" id="f-not-noun" placeholder="e.g. a box of things">
-      </div>
-      <div class="field">
-        <label>Carousel list title (T5)</label>
-        <span class="hint-label">number + topic — e.g. "5 signs your grief started before the loss," "3 things nobody tells new coaches," "4 reasons your content isn't converting"</span>
-        <input type="text" id="f-list-title" placeholder="e.g. 5 signs your grief started before the loss">
-      </div>
-      <div class="field">
-        <label>Carousel items — one per line (T5)</label>
-        <span class="hint-label">each item = one specific, observable truth. Start with the best. Save the most surprising for last.</span>
-        <textarea id="f-list-items" rows="5" placeholder="You count things — time left, occasions he might still see.&#10;You feel guilty for being happy.&#10;You rehearse the phone call in your head.&#10;You miss him mid-conversation with him."></textarea>
-      </div>
-      <div class="field">
-        <label>The stuck feeling your product solves (T6)</label>
-        <span class="hint-label">verb phrase — the specific barrier e.g. "it feels too big, or too final, or you can't find the words" / "you don't know where to start or what to say first"</span>
-        <textarea id="f-stuck" rows="2" placeholder="e.g. it feels too big, or too final, or you can't find the words"></textarea>
-      </div>
-      <div class="field">
-        <label>The result they actually want (T6)</label>
-        <span class="hint-label">infinitive phrase — the outcome e.g. "to sit down with him and walk away with something real" / "to show up on camera and sound like yourself"</span>
-        <textarea id="f-want" rows="2" placeholder="e.g. to sit down with him and walk away with something real"></textarea>
-      </div>
-      <div class="field">
-        <label>Your proof line or testimonial (T6)</label>
-        <span class="hint-label">direct quote or result — e.g. "I didn't know how much I needed this until I started." / "Within a week I had filmed 3 videos I was actually proud of."</span>
-        <textarea id="f-proof" rows="2" placeholder="e.g. I didn't know how much I needed this until I started."></textarea>
-      </div>
-      <div class="field">
-        <label>Poll option A (T7)</label>
-        <span class="hint-label">product name + one-line benefit e.g. "Legacy Priority Map — figure out what to capture first"</span>
-        <textarea id="f-optA" rows="2" placeholder="e.g. Legacy Priority Map — figure out what to capture first"></textarea>
-      </div>
-      <div class="field">
-        <label>Poll option B (T7)</label>
-        <span class="hint-label">product name + one-line benefit e.g. "Values and Beliefs Guide — put into words what he stood for"</span>
-        <textarea id="f-optB" rows="2" placeholder="e.g. Values and Beliefs Guide — put into words what he stood for"></textarea>
-      </div>
-      <div class="field">
-        <label>Poll price point (T7)</label>
-        <span class="hint-label">price — e.g. "$7," "$27," "free"</span>
-        <input type="text" id="f-price" placeholder="e.g. $7">
-      </div>
+    <div class="field">
+      <label>What you offer</label>
+      <span class="ex">e.g. "Story Studio" / "the free library at leavewell.media" / "Make This Mean More" / "my 6-week programme"</span>
+      <input type="text" id="f-offer" placeholder="e.g. Story Studio">
     </div>
+    <div class="field">
+      <label>Your closing line — 5 words max</label>
+      <span class="ex">e.g. "the window is still open" / "start before you feel ready" / "you don't have to do this alone"</span>
+      <input type="text" id="f-close" placeholder="e.g. the window is still open">
+    </div>
+    <div class="field">
+      <label>One word for where your person is right now</label>
+      <span class="ex">e.g. "chapter" / "season" / "moment" / "transition" — whatever fits your niche</span>
+      <input type="text" id="f-moment" placeholder="e.g. chapter">
+    </div>
+  </div>
 
-    <!-- NAV -->
-    <div class="tnav">
-      <div class="tnav-label">Jump to template</div>
-      <div class="tnav-links">
-        <a class="tnav-link" href="#t1"><span class="tn">1</span>Talking Head</a>
-        <a class="tnav-link" href="#t2"><span class="tn">2</span>Text on Screen</a>
-        <a class="tnav-link" href="#t3"><span class="tn">3</span>Personal Story</a>
-        <a class="tnav-link" href="#t4"><span class="tn">4</span>Voiceover + B-roll</a>
-        <a class="tnav-link" href="#t5"><span class="tn">5</span>Carousel</a>
-        <a class="tnav-link" href="#t6"><span class="tn">6</span>Product Promo</a>
-        <a class="tnav-link" href="#t7"><span class="tn">7</span>Poll Video</a>
+  <div class="fsec">
+    <div class="fsec-lbl">Layer 2 — one video at a time <span class="fbadge">per video</span></div>
+    <div class="field">
+      <label>The one thing they can't get back (T1 · T3 · T4)</label>
+      <span class="ex">e.g. "the way he takes his coffee" / "her laugh" / "feeling known by someone who really saw you"</span>
+      <input type="text" id="f-detail" placeholder="e.g. the way he takes his coffee, the exact words he uses when he's proud">
+    </div>
+    <div class="field">
+      <label>One small thing they can do today (T1 · T3 · T4)</label>
+      <span class="ex">e.g. "ask him one question you've never asked" / "write down three things you noticed this week" / "record a two-minute voice note"</span>
+      <textarea id="f-action" rows="2" placeholder="e.g. ask him one question you've never asked — not a big one, something small"></textarea>
+    </div>
+    <div class="field">
+      <label>Your big bold opening line (T2 — text on screen)</label>
+      <span class="ex">Short and punchy — e.g. "Dad is still in the room." / "You are not behind." / "Stop waiting for the right moment."</span>
+      <input type="text" id="f-bold" placeholder="e.g. Dad is still in the room.">
+    </div>
+    <div class="field">
+      <label>The scene from your story (T3)</label>
+      <span class="ex">e.g. "we were eating dinner and he made that joke he always makes" / "I was sitting in the car outside the hospital"</span>
+      <textarea id="f-scene" rows="2" placeholder="e.g. eating dinner, and he made that joke he always makes"></textarea>
+    </div>
+    <div class="field">
+      <label>The thought that hit you in that moment (T3)</label>
+      <span class="ex">e.g. "how many more times do I get to hear that joke?" / "what if I run out of time before I feel ready?"</span>
+      <textarea id="f-moment3" rows="2" placeholder="e.g. how many more times do I get to hear that joke?"></textarea>
+    </div>
+    <div class="field">
+      <label>What they already carry from this person (T4)</label>
+      <span class="ex">e.g. "the way he talked about loyalty and showing up" / "her voice in your head when you make a hard call"</span>
+      <textarea id="f-carry" rows="2" placeholder="e.g. the way he talked about work, about loyalty, about showing up"></textarea>
+    </div>
+    <div class="field">
+      <label>What it is NOT — the reframe setup (T4)</label>
+      <span class="ex">The thing people think it is — e.g. "a box of stuff" / "a folder of old photos" / "just a memory" / "a list of achievements"</span>
+      <input type="text" id="f-notnoun" placeholder="e.g. a box of stuff">
+    </div>
+    <div class="field">
+      <label>Your carousel title (T5)</label>
+      <span class="ex">Number + topic — e.g. "5 signs your grief started before the loss" / "3 things nobody tells new coaches" / "4 reasons you feel stuck right now"</span>
+      <input type="text" id="f-listtitle" placeholder="e.g. 5 signs your grief started before the loss">
+    </div>
+    <div class="field">
+      <label>Carousel items — one per line (T5)</label>
+      <span class="ex">Specific beats general. Start with the best. Save the most surprising for last. Write them the way you'd say them out loud.</span>
+      <textarea id="f-listitems" rows="5" placeholder="You start counting things — time left, occasions he might still see.&#10;You feel guilty for being happy.&#10;You rehearse the phone call in your head. Not to prepare — just because you can't stop.&#10;You miss him mid-conversation with him. He's right there. You already miss him."></textarea>
+    </div>
+    <div class="field">
+      <label>What keeps them stuck (T6)</label>
+      <span class="ex">e.g. "it feels too big or too final" / "you don't know where to start" / "you're scared you'll do it wrong"</span>
+      <textarea id="f-stuck" rows="2" placeholder="e.g. it feels too big, or too final, or you can't find the words"></textarea>
+    </div>
+    <div class="field">
+      <label>What they actually want (T6)</label>
+      <span class="ex">e.g. "to sit down with him and walk away with something real" / "to show up on camera and actually sound like yourself"</span>
+      <textarea id="f-want" rows="2" placeholder="e.g. to sit down with him and walk away with something real"></textarea>
+    </div>
+    <div class="field">
+      <label>A real result or quote (T6)</label>
+      <span class="ex">e.g. "I didn't know how much I needed this until I started." / "My clients go from frozen to filming in a week."</span>
+      <textarea id="f-proof" rows="2" placeholder="e.g. I didn't know how much I needed this until I started."></textarea>
+    </div>
+    <div class="field">
+      <label>Poll option A (T7)</label>
+      <span class="ex">Name + one-line benefit — e.g. "Legacy Priority Map — figure out what to capture first"</span>
+      <textarea id="f-opta" rows="2" placeholder="e.g. Legacy Priority Map — figure out what to capture first"></textarea>
+    </div>
+    <div class="field">
+      <label>Poll option B (T7)</label>
+      <span class="ex">Name + one-line benefit — e.g. "Values Guide — put into words what he stood for"</span>
+      <textarea id="f-optb" rows="2" placeholder="e.g. Values Guide — put into words what he stood for"></textarea>
+    </div>
+    <div class="field">
+      <label>Price (T7)</label>
+      <span class="ex">e.g. "$7" / "$27" / "free"</span>
+      <input type="text" id="f-price" placeholder="e.g. $7">
+    </div>
+  </div>
+
+  <div class="tnav">
+    <div class="tnav-lbl">Jump to template</div>
+    <div class="tnav-links">
+      <a class="tnav-a" href="#t1"><span class="tn">1</span>Talking Head</a>
+      <a class="tnav-a" href="#t2"><span class="tn">2</span>Text on Screen</a>
+      <a class="tnav-a" href="#t3"><span class="tn">3</span>Personal Story</a>
+      <a class="tnav-a" href="#t4"><span class="tn">4</span>Voiceover + B-roll</a>
+      <a class="tnav-a" href="#t5"><span class="tn">5</span>Carousel</a>
+      <a class="tnav-a" href="#t6"><span class="tn">6</span>Product Promo</a>
+      <a class="tnav-a" href="#t7"><span class="tn">7</span>Poll Video</a>
+    </div>
+  </div>
+
+  <div class="sba">
+    <button class="btnp" onclick="copyAll()">Copy all scripts as text</button>
+    <button class="btng" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+</aside>
+
+<main class="main">
+
+  <div class="banner">
+    <div class="banner-title">How to read these scripts</div>
+    <div class="banner-grid">
+      <div class="bi">
+        <div class="bicon" style="background:var(--mint);color:var(--teal)">&rarr;</div>
+        <div class="btext"><strong>Teal dashed text</strong> = a blank that fills live from the sidebar. Type in the field on the left and it updates here instantly.</div>
       </div>
-    </div>
-
-    <div class="sb-actions">
-      <button class="btn-pink" onclick="copyAll()">Copy all scripts as text</button>
-      <button class="btn-ghost" onclick="window.print()">Print / Save as PDF</button>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <div class="how-banner">
-      <div class="how-banner-title">How to read these templates</div>
-      <div class="how-banner-grid">
-        <div class="how-item">
-          <div class="how-icon how-icon-mint">&#x2726;</div>
-          <div class="how-item-text"><strong>Teal dashed text</strong> = a blank that fills from the sidebar. Type in the field and it updates here live.</div>
-        </div>
-        <div class="how-item">
-          <div class="how-icon how-icon-pink">&#x25B8;</div>
-          <div class="how-item-text"><strong>Pink label badges</strong> = grammar hints. They tell you what kind of word or phrase belongs in that blank. They do not disappear — use them as a guide.</div>
-        </div>
-        <div class="how-item">
-          <div class="how-icon how-icon-yellow">&#x25B8;</div>
-          <div class="how-item-text"><strong>Yellow beat markers</strong> = a natural pause. Hold it for one full second before continuing. Do not fill the silence.</div>
-        </div>
-        <div class="how-item">
-          <div class="how-icon how-icon-teal">&#x25B8;</div>
-          <div class="how-item-text"><strong>Grey italic text</strong> = camera or delivery direction. It is for your reference only — do not say it on camera.</div>
-        </div>
+      <div class="bi">
+        <div class="bicon" style="background:var(--lpink);color:#9d174d">[ ]</div>
+        <div class="btext"><strong>Angle brackets</strong> <span class="ab-sample">&lt;like this&gt;</span> = fill this in yourself. The example inside shows you the format. Replace the whole thing — brackets and all — with your version.</div>
+      </div>
+      <div class="bi">
+        <div class="bicon" style="background:var(--lyellow);color:#78350f">&#x25B8;</div>
+        <div class="btext"><strong>Yellow BEAT</strong> = pause here for one full second. Don't fill the silence — it's doing the work for you.</div>
+      </div>
+      <div class="bi">
+        <div class="bicon" style="background:rgba(30,58,56,.1);color:var(--teal)">i</div>
+        <div class="btext"><strong>Grey italic text</strong> = camera note. It's just for you before you hit record. Don't say it out loud.</div>
       </div>
     </div>
+  </div>
 
-    <div class="comp" id="comp"><strong id="comp-n">0</strong>&nbsp;of 21 fields filled</div>
+  <div class="comp" id="comp"><strong id="compn">0</strong>&nbsp;of 21 fields filled</div>
 
-    <div class="filter-row" id="filters">
-      <button class="pill active" data-filter="all">All Templates</button>
-      <button class="pill" data-filter="th">Talking Head</button>
-      <button class="pill" data-filter="ts">Text on Screen</button>
-      <button class="pill" data-filter="ps">Personal Story</button>
-      <button class="pill" data-filter="vo">Voiceover</button>
-      <button class="pill" data-filter="ca">Carousel</button>
-      <button class="pill" data-filter="pp">Product Promo</button>
-      <button class="pill" data-filter="po">Poll</button>
+  <div class="frow" id="filters">
+    <button class="pill active" data-f="all">All Templates</button>
+    <button class="pill" data-f="th">Talking Head</button>
+    <button class="pill" data-f="ts">Text on Screen</button>
+    <button class="pill" data-f="ps">Personal Story</button>
+    <button class="pill" data-f="vo">Voiceover</button>
+    <button class="pill" data-f="ca">Carousel</button>
+    <button class="pill" data-f="pp">Product Promo</button>
+    <button class="pill" data-f="po">Poll</button>
+  </div>
+
+  <!-- T1 -->
+  <div class="tc open" id="t1" data-t="th">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 1</div>
+        <div class="tctitle">Talking Head — Core Truth / Reframe</div>
+        <div class="tcsub">60–75 sec · TikTok / Reels · Opinion, identity, educational content</div>
+        <div class="tcchips"><span class="chip cf">Talking Head</span><span class="chip cs">High save</span><span class="chip ca">Algorithm loves this</span></div>
+      </div>
+      <span class="tcarr">&#x25BE;</span>
     </div>
-
-    <!-- ── T1: TALKING HEAD ── -->
-    <div class="tc open" id="t1" data-type="th">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 1</div>
-          <div class="tc-title">Talking Head — Core Truth / Reframe</div>
-          <div class="tc-sub">60–75 sec · TikTok / Reels · Educational, identity, opinion content</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Talking Head</span><span class="chip chip-save">High save</span><span class="chip chip-algo">Algorithm favourite</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">HOOK — 0–3 sec · straight down the lens · no warm-up</div>
+        <div class="sl">You're not scared of <span class="fv" data-f="fear">the thing they're scared of losing</span>. <span class="beat">beat</span> You're scared of losing <span class="fv" data-f="detail">the one thing you can't get back</span>.</div>
+        <div class="dir">CAM: Medium close-up. Straight to camera. First sentence. Pause. Second sentence. Don't rush it.</div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">HOOK — 0–3 sec · direct eye contact</div>
-          <div class="sl">You're not afraid of <span class="fv" data-f="pain">their core fear or pain</span>. <span class="beat">beat</span> You're afraid of losing <span class="fv" data-f="specific">the specific irreplaceable detail</span>.</div>
-          <div class="dir">CAM: Medium close-up. Eye line dead to lens. Say the first sentence and let it land before the second. No movement.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-stick">STICK — 3–15 sec · name the specific feeling</div>
-          <div class="sl">And that is such a specific kind of thing to carry. <span class="beat">beat</span> It is not about the abstract version. It is about <span class="fv" data-f="daily">the concrete daily detail</span>. It is about what disappears when <span class="gh">pronoun — e.g. "he," "she," "they," "it"</span> does.</div>
-          <div class="dir">CAM: Hold frame. Slower delivery — let them catch up to you.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">SHIFT — 15–40 sec · the reframe</div>
-          <div class="sl">Here is what I know. <span class="beat">beat</span> <span class="fv" data-f="reframe">your core reframe</span>. And the people who feel this most acutely are the ones paying the closest attention. <span class="beat">beat</span> That is you. You are already noticing everything, which means you already know what matters.</div>
-          <div class="dir">CAM: Can lean in slightly mid-section. Return to neutral for the last line.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-serve">SERVE — 40–55 sec · practical takeaway</div>
-          <div class="sl"><span class="fv" data-f="action">the action or takeaway</span>. <span class="beat">beat</span> You will be surprised what you get.</div>
-          <div class="dir">CAM: Slightly warmer energy. This is the part they save.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">CTA — last 5–8 sec</div>
-          <div class="sl"><span class="fv" data-f="offer">your offer</span> was built for exactly this <span class="fv" data-f="context">context word</span>. <span class="fv" data-f="cta">your CTA phrase</span>. Link is in my bio.</div>
-          <div class="dir">CAM: Natural. Not a pivot — just the next sentence.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+      <div class="sbl">
+        <div class="btag tag-st">STICK — 3–15 sec · say the thing they've never heard out loud</div>
+        <div class="sl">And that's a really specific thing to carry around. <span class="beat">beat</span> It's not about <span class="ab">&lt;the big scary word for it — e.g. "death," "the diagnosis," "the divorce," "losing the business"&gt;</span>. It's about <span class="fv" data-f="detail">the one thing you can't get back</span>. It's about what disappears when <span class="ab">&lt;he/she/they/it&gt;</span> does.</div>
+        <div class="dir">CAM: Stay still. Slow your pace right down — give them time to feel it.</div>
       </div>
+      <div class="sbl">
+        <div class="btag tag-sh">SHIFT — 15–40 sec · the reframe · this is the gift</div>
+        <div class="sl">Here's what I know. <span class="beat">beat</span> <span class="fv" data-f="truth">your one-line truth</span>. <span class="beat">beat</span> The people who feel this the hardest are the ones paying the closest attention. That's you. You already know what matters — you've known for a while. You just needed someone to say it.</div>
+        <div class="dir">CAM: Lean in slightly here. Come back to neutral for the last line.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sv">SERVE — 40–55 sec · give them something to actually do</div>
+        <div class="sl"><span class="fv" data-f="action">one small thing they can do today</span>. <span class="beat">beat</span> It doesn't have to be perfect. It just has to happen.</div>
+        <div class="dir">CAM: Warmer energy here. This is the bit they save and come back to.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">CTA — last 5–8 sec · one ask only</div>
+        <div class="sl"><span class="fv" data-f="offer">your offer</span> was made for this exact <span class="fv" data-f="moment">moment/chapter/season</span>. <span class="fv" data-f="close">your closing line</span>. Link's in my bio.</div>
+        <div class="dir">CAM: Don't pivot into a different energy. Same tone. Just the next sentence.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
     </div>
+  </div>
 
-    <!-- ── T2: TEXT ON SCREEN ── -->
-    <div class="tc" id="t2" data-type="ts">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 2</div>
-          <div class="tc-title">Text on Screen — Identity Statement</div>
-          <div class="tc-sub">30–45 sec · TikTok / Reels / Stories · Highest save and share rate</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Text on Screen</span><span class="chip chip-save">Highest save</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+  <!-- T2 -->
+  <div class="tc" id="t2" data-t="ts">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 2</div>
+        <div class="tctitle">Text on Screen — Bold Statement</div>
+        <div class="tcsub">30–45 sec · TikTok / Reels / Stories · Highest save and share rate of all 7 formats</div>
+        <div class="tcchips"><span class="chip cf">Text on Screen</span><span class="chip cs">Highest save</span></div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">LINE 1 — full screen · large text · 0–2 sec</div>
-          <div class="sl"><span class="fv" data-f="bold">your bold opening statement</span></div>
-          <div class="dir">Text appears instantly — no fade-in. This line alone must stop the scroll.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-stick">LINES 2–3 · each gets its own beat · 1.5 sec between lines</div>
-          <div class="sl">Stop <span class="gh">verb-ing — e.g. "bracing," "waiting," "shrinking," "performing"</span> for the <span class="gh">noun — e.g. "ending," "approval," "right moment"</span>.<br>You are <span class="gh">verb-ing — e.g. "grieving," "carrying," "holding"</span> <span class="gh">noun phrase — e.g. "time you still have," "a weight nobody named," "something real"</span>.</div>
-          <div class="dir">Each line gets its own beat. 1.5 seconds minimum between lines. Let each one land.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">LINES 4–5 · the reframe</div>
-          <div class="sl"><span class="fv" data-f="reframe">your core reframe</span>.<br>And that changes what is possible right now.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-serve">LINES 6–7 · the invitation</div>
-          <div class="sl">What you do with this <span class="fv" data-f="context">context word</span> is the whole thing.<br><span class="fv" data-f="action">the action or takeaway</span>.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">FINAL LINE — text only · 4 words max</div>
-          <div class="sl"><span class="fv" data-f="offer">your offer</span>. Link in bio.</div>
-          <div class="dir">Text CTAs outperform spoken ones in this format. Four words maximum.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
-      </div>
+      <span class="tcarr">&#x25BE;</span>
     </div>
-
-    <!-- ── T3: PERSONAL STORY ── -->
-    <div class="tc" id="t3" data-type="ps">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 3</div>
-          <div class="tc-title">Personal Story — M.E.S.S. Full Arc</div>
-          <div class="tc-sub">75–90 sec · TikTok / Reels · Highest trust format · Use twice a week maximum</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Personal Story</span><span class="chip chip-save">Highest trust</span><span class="chip chip-algo">Drives follows</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">LINE 1 — big text · full screen · hits at 0 sec</div>
+        <div class="sl"><span class="fv" data-f="bold">your big bold opening line</span></div>
+        <div class="dir">Text hits the screen instantly. No fade. No delay. If this one line doesn't make someone feel something, rewrite it before you post.</div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-moment">MOMENT — 0–5 sec · drop into the scene, no setup</div>
-          <div class="sl">I remember the exact moment I realised <span class="fv" data-f="specific">the specific irreplaceable detail</span> was something I could lose.</div>
-          <div class="dir">CAM: Close-up. Warm but direct. Drop directly into the scene — no preamble. No "hey guys."</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-emotion">EMOTION — 5–25 sec · the specific feeling, not a summary of it</div>
-          <div class="sl">We were <span class="fv" data-f="scene">your specific scene</span>. And instead of being present, <span class="beat">beat</span> I thought, <span class="fv" data-f="realise">your moment of realisation</span>. <span class="beat">beat</span> And everything shifted.</div>
-          <div class="dir">CAM: Slower delivery. Let there be some quiet. Do not fill every second.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">SHIFT — 25–55 sec · what you learned</div>
-          <div class="sl">What I know now that I did not know then: <span class="fv" data-f="reframe">your core reframe</span>. <span class="beat">beat</span> And it does not mean something is wrong with you. <span class="beat">beat</span> It means you are paying attention. It means you already know what matters.</div>
-          <div class="dir">CAM: Back to lens. Energy slightly lifted — this is the gift you are giving them.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-serve">SERVE — 55–75 sec · what they can do with this</div>
-          <div class="sl"><span class="fv" data-f="action">the action or takeaway</span>. <span class="beat">beat</span> You will be glad you did.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">CTA — last 8 sec</div>
-          <div class="sl"><span class="fv" data-f="offer">your offer</span> was built for this exact <span class="fv" data-f="context">context word</span>. <span class="fv" data-f="cta">your CTA phrase</span>. Link is in my bio.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+      <div class="sbl">
+        <div class="btag tag-st">LINES 2–3 · drop in one at a time · wait between each one</div>
+        <div class="sl">Stop <span class="ab">&lt;what they keep doing that isn't working — e.g. "bracing for it," "waiting to feel ready," "holding it all in," "shrinking"&gt;</span>.<br>You're already in <span class="fv" data-f="fear">the thing they're scared of</span> — and you can still do something with it.</div>
+        <div class="dir">1.5 seconds between lines minimum. The silence between them is where it lands.</div>
       </div>
+      <div class="sbl">
+        <div class="btag tag-sh">LINES 4–5 · the reframe</div>
+        <div class="sl"><span class="fv" data-f="truth">your one-line truth</span>.<br>That changes what's possible right now.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sv">LINES 6–7 · the invitation</div>
+        <div class="sl">What you do with this <span class="fv" data-f="moment">moment/chapter/season</span> is the whole thing.<br><span class="fv" data-f="action">one small thing they can do today</span>.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">LAST LINE — text only · 4 words max · nothing longer</div>
+        <div class="sl"><span class="fv" data-f="offer">your offer</span>. Link in bio.</div>
+        <div class="dir">Text-only CTAs do better than spoken ones in this format. Short. Direct. Four words maximum.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
     </div>
+  </div>
 
-    <!-- ── T4: VOICEOVER ── -->
-    <div class="tc" id="t4" data-type="vo">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 4</div>
-          <div class="tc-title">Voiceover + B-roll — Quiet Emotional</div>
-          <div class="tc-sub">45–60 sec · TikTok / Reels · Pairs with hands / nature / everyday footage</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Voiceover + B-roll</span><span class="chip chip-save">High share</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+  <!-- T3 -->
+  <div class="tc" id="t3" data-t="ps">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 3</div>
+        <div class="tctitle">Personal Story — M.E.S.S. Full Arc</div>
+        <div class="tcsub">75–90 sec · TikTok / Reels · Your highest-trust format. Don't overuse it — twice a week maximum.</div>
+        <div class="tcchips"><span class="chip cf">Personal Story</span><span class="chip cs">Highest trust</span><span class="chip ca">Drives follows</span></div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">VO LINE 1 — over opening b-roll · first 3 sec</div>
-          <div class="sl"><span class="fv" data-f="reframe">your core reframe</span>. <span class="beat">beat</span> It does not disappear. It changes form.</div>
-          <div class="dir">B-ROLL: Something still — hands, a window, a table. Nothing competing with the words.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-stick">VO LINES 2–3 · the specific thing they already carry</div>
-          <div class="sl"><span class="fv" data-f="legacy">what they already carry from this person</span>. <span class="beat">beat</span> You absorbed all of it. <span class="beat">beat</span> You did not even know you were learning.</div>
-          <div class="dir">B-ROLL: Shift to something warmer — light through a window, something domestic and lived-in.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">VO LINES 4–5 · the reframe</div>
-          <div class="sl">What they left you is not <span class="fv" data-f="not-noun">the reframe setup noun</span>. <span class="beat">beat</span> It is the way <span class="fv" data-f="specific">the specific irreplaceable detail</span> lives in you now. <span class="beat">beat</span> That is already yours. It will stay yours.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-serve">VO LINE 6 · the action</div>
-          <div class="sl"><span class="fv" data-f="action">the action or takeaway</span>. <span class="beat">beat</span> Not for you — for the people who come after.</div>
-          <div class="dir">B-ROLL: Something forward-facing — a child, open air, early morning light.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">TEXT OVERLAY on final clip</div>
-          <div class="sl"><span class="fv" data-f="offer">your offer</span>. <span class="fv" data-f="cta">your CTA phrase</span>. Link in bio.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
-      </div>
+      <span class="tcarr">&#x25BE;</span>
     </div>
-
-    <!-- ── T5: CAROUSEL ── -->
-    <div class="tc" id="t5" data-type="ca">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 5</div>
-          <div class="tc-title">Carousel — The List That Earns the Save</div>
-          <div class="tc-sub">5–7 slides · Instagram · Start with the best · Save the most surprising for last</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Carousel</span><span class="chip chip-save">Highest save</span><span class="chip chip-algo">List format</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-m">MOMENT — 0–5 sec · start in the scene · no warm-up at all</div>
+        <div class="sl">I remember the exact moment I realised <span class="fv" data-f="detail">the one thing you can't get back</span> was something I could lose.</div>
+        <div class="dir">CAM: Close-up. No "hey guys." No intro. Go straight into the memory like you're telling your best friend something important.</div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">SLIDE 1 — cover · stop the scroll</div>
-          <div class="sl"><span class="fv" data-f="list-title">your carousel list title</span></div>
-          <div class="dir">Design: Large headline font, brand background colour, clean. No clutter. This is your scroll-stop — it must make someone think "that's me."</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-slide">SLIDES 2 ONWARDS — one truth per slide</div>
-          <div id="carousel-display"><span class="fv" style="font-family:'Libre Baskerville',serif;font-size:.87rem;line-height:2;color:var(--brand-mint-accent);font-style:italic;border-bottom:1.5px dashed var(--brand-mint-accent);">Add your list items in the sidebar — one per line. They will appear here as pink slide headings.</span></div>
-          <div class="dir">Each slide: one truth, large text, max 2 lines. Specific beats general every time. Make it so specific they think you wrote it about them.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">SECOND LAST SLIDE — the reframe</div>
-          <div class="sl"><span class="fv" data-f="reframe">your core reframe</span>.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">LAST SLIDE — one action only</div>
-          <div class="sl"><span class="fv" data-f="offer">your offer</span> was built for <span class="fv" data-f="audience">your audience</span>. <span class="fv" data-f="cta">your CTA phrase</span>. Link in bio.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+      <div class="sbl">
+        <div class="btag tag-e">EMOTION — 5–25 sec · the specific moment · not the summary of it</div>
+        <div class="sl">We were <span class="fv" data-f="scene">the scene from your story</span>. And instead of just being there, <span class="beat">beat</span> I remember thinking — <span class="fv" data-f="moment3">the thought that hit you</span>. <span class="beat">beat</span> And something shifted after that.</div>
+        <div class="dir">CAM: Slow right down. Let the pauses breathe. If you're not feeling it a little when you say it, keep rehearsing.</div>
       </div>
+      <div class="sbl">
+        <div class="btag tag-sh">SHIFT — 25–55 sec · what you know now that you didn't then</div>
+        <div class="sl">What I know now that I didn't know then: <span class="fv" data-f="truth">your one-line truth</span>. <span class="beat">beat</span> And it doesn't mean something's wrong with you. <span class="beat">beat</span> It means you're paying attention. It means you already know what matters — you just needed someone to give you permission to act on it.</div>
+        <div class="dir">CAM: Come back up to camera. Slightly more energy — this is the thing you want them to carry away.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sv">SERVE — 55–75 sec · what to do with it</div>
+        <div class="sl"><span class="fv" data-f="action">one small thing they can do today</span>. <span class="beat">beat</span> You'll be glad you didn't wait.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">CTA — last 8 sec</div>
+        <div class="sl"><span class="fv" data-f="offer">your offer</span> was built for this exact <span class="fv" data-f="moment">moment/chapter/season</span>. <span class="fv" data-f="close">your closing line</span>. Link in my bio.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
     </div>
+  </div>
 
-    <!-- ── T6: PRODUCT PROMO ── -->
-    <div class="tc" id="t6" data-type="pp">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 6</div>
-          <div class="tc-title">Product Promo — Bridge Method</div>
-          <div class="tc-sub">60–90 sec · TikTok / Reels · Never lead with the product — lead with the problem</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Product Promo</span><span class="chip chip-algo">Converts</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+  <!-- T4 -->
+  <div class="tc" id="t4" data-t="vo">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 4</div>
+        <div class="tctitle">Voiceover + B-roll — Quiet Emotional</div>
+        <div class="tcsub">45–60 sec · TikTok / Reels · Film the ordinary stuff. Hands, windows, kitchens, a walk. Let the words do the work.</div>
+        <div class="tcchips"><span class="chip cf">Voiceover + B-roll</span><span class="chip cs">High share</span></div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">WHERE THEY ARE — 0–8 sec · the stuck feeling</div>
-          <div class="sl">You know there are things you want to do with this <span class="fv" data-f="context">context word</span>. <span class="beat">beat</span> Things you want to say and <span class="gh">verb — e.g. "capture," "create," "record," "share"</span>. <span class="beat">beat</span> But every time you try to start, <span class="fv" data-f="stuck">the stuck feeling your product solves</span>.</div>
-          <div class="dir">CAM: Medium close. Empathy tone — not urgency. You are with them, not pitching at them.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-bridge">WHERE THEY WANT TO BE — 8–25 sec</div>
-          <div class="sl">What you actually want is <span class="fv" data-f="want">the result they actually want</span>. <span class="beat">beat</span> Something real. Something that does not disappear when the <span class="gh">noun — e.g. "moment," "conversation," "session," "visit"</span> does.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-stick">THE BRIDGE — 25–50 sec · your offer as the solution, not a feature list</div>
-          <div class="sl">That is what <span class="fv" data-f="offer">your offer</span> is for. <span class="beat">beat</span> It gives <span class="fv" data-f="audience">your audience</span> a clear way to start — without having to figure out the <span class="gh">noun — e.g. "words," "steps," "framework," "structure"</span> on their own. <span class="beat">beat</span> You do not have to know where to begin. It does that for you.</div>
-          <div class="dir">CAM: Can shift to screen recording or product b-roll here if available.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-serve">PROOF — 50–70 sec</div>
-          <div class="sl"><span class="fv" data-f="proof">your proof line or testimonial</span>. <span class="beat">beat</span> You do not have to wait until you feel ready. You start, and ready comes.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">CTA — last 8 sec</div>
-          <div class="sl">Link is in my bio. <span class="fv" data-f="offer">your offer</span>. <span class="beat">beat</span> <span class="fv" data-f="cta">your CTA phrase</span>.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
-      </div>
+      <span class="tcarr">&#x25BE;</span>
     </div>
-
-    <!-- ── T7: POLL VIDEO ── -->
-    <div class="tc" id="t7" data-type="po">
-      <div class="tc-head" onclick="tog(this)">
-        <div class="tc-hl">
-          <div class="tc-num">Template 7</div>
-          <div class="tc-title">Poll Video — Let Them Choose</div>
-          <div class="tc-sub">30 sec · TikTok · Product validation · Run this before you build · Check results in 24 hours</div>
-          <div class="tc-chips"><span class="chip chip-fmt">Poll Video</span><span class="chip chip-algo">High comment rate</span></div>
-        </div>
-        <span class="tc-arr">&#x25BE;</span>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">VO LINE 1 — over the opening clip · first 3 sec</div>
+        <div class="sl"><span class="fv" data-f="truth">your one-line truth</span>. <span class="beat">beat</span> It doesn't end. It just changes shape.</div>
+        <div class="dir">B-ROLL: Something still. Hands on a table. Light through a window. Nothing competing with the words.</div>
       </div>
-      <div class="tc-body">
-        <div class="sb">
-          <div class="btag tag-hook">HOOK — 0–4 sec</div>
-          <div class="sl">I am building something and I need your help deciding which one goes first.</div>
-          <div class="dir">CAM: Light, direct, slightly conspiratorial. You are letting them in on something — not asking a favour.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-stick">SETUP — 4–15 sec</div>
-          <div class="sl">Both of these are for <span class="fv" data-f="audience">your audience</span>. Both are <span class="fv" data-f="price">your price point</span>. I can only build one first — so I am letting you decide.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-shift">THE OPTIONS — 15–25 sec · name clearly · no pressure either way</div>
-          <div class="sl">Option A: <span class="fv" data-f="optA">poll option A</span>. <span class="beat">beat</span> Option B: <span class="fv" data-f="optB">poll option B</span>.</div>
-        </div>
-        <div class="sb">
-          <div class="btag tag-cta">CTA — last 5 sec</div>
-          <div class="sl">Comment A or B. <span class="beat">beat</span> The one with the most votes gets built first.</div>
-          <div class="dir">Do not offer both. Scarcity of choice is what drives the comment. Check results in 24 hours and build the winner.</div>
-        </div>
-        <button class="copy-btn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+      <div class="sbl">
+        <div class="btag tag-st">VO LINES 2–3 · the thing they're already carrying</div>
+        <div class="sl"><span class="fv" data-f="carry">what they already carry from this person</span>. <span class="beat">beat</span> You took all of it in. <span class="beat">beat</span> You didn't even realise it was happening.</div>
+        <div class="dir">B-ROLL: Something warmer — morning light, a kitchen, something lived-in and real.</div>
       </div>
+      <div class="sbl">
+        <div class="btag tag-sh">VO LINES 4–5 · the reframe</div>
+        <div class="sl">What they gave you isn't <span class="fv" data-f="notnoun">what people think it is</span>. <span class="beat">beat</span> It's the way <span class="fv" data-f="detail">the one thing you can't get back</span> is still with you right now. <span class="beat">beat</span> It always will be.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sv">VO LINE 6 · the action</div>
+        <div class="sl"><span class="fv" data-f="action">one small thing they can do today</span>. <span class="beat">beat</span> Not just for you — for the people who come after you.</div>
+        <div class="dir">B-ROLL: Something forward-looking. A child. Morning light. An open door. Something that says "there is still time."</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">TEXT OVERLAY on the last clip</div>
+        <div class="sl"><span class="fv" data-f="offer">your offer</span>. <span class="fv" data-f="close">your closing line</span>. Link in bio.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
     </div>
+  </div>
 
-  </main>
+  <!-- T5 -->
+  <div class="tc" id="t5" data-t="ca">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 5</div>
+        <div class="tctitle">Carousel — The List That Gets the Save</div>
+        <div class="tcsub">5–7 slides · Instagram · Best tip first. Most surprising last. One idea per slide — no cramming.</div>
+        <div class="tcchips"><span class="chip cf">Carousel</span><span class="chip cs">Highest save</span><span class="chip ca">List format</span></div>
+      </div>
+      <span class="tcarr">&#x25BE;</span>
+    </div>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">SLIDE 1 — cover · this stops the scroll</div>
+        <div class="sl"><span class="fv" data-f="listtitle">your carousel title</span></div>
+        <div class="dir">Design: Big serif headline, mint background, clean. No clutter. If someone sees just this slide and nothing else, it has to make them think "that's me."</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sl">SLIDES 2 ONWARDS — one truth per slide</div>
+        <div id="carousel-display"><span class="fv" style="font-family:'Libre Baskerville',serif;font-size:.87rem;line-height:2;color:var(--macc);font-style:italic;border-bottom:1.5px dashed var(--macc)">Add your carousel items in the sidebar — one per line. They'll show up here as pink slide headings.</span></div>
+        <div class="dir">Rule: if your reader could say "that could be anyone" — make it more specific. The goal is "how did she know?"</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sh">SECOND LAST SLIDE — the reframe · the reason they save it</div>
+        <div class="sl"><span class="fv" data-f="truth">your one-line truth</span>.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">LAST SLIDE — one ask only</div>
+        <div class="sl"><span class="fv" data-f="offer">your offer</span> was made for <span class="fv" data-f="audience">who you talk to</span>. <span class="fv" data-f="close">your closing line</span>. Link in bio.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+    </div>
+  </div>
+
+  <!-- T6 -->
+  <div class="tc" id="t6" data-t="pp">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 6</div>
+        <div class="tctitle">Product Promo — Bridge Method</div>
+        <div class="tcsub">60–90 sec · TikTok / Reels · Lead with the problem. Don't mention your offer until 30 seconds in.</div>
+        <div class="tcchips"><span class="chip cf">Product Promo</span><span class="chip ca">Converts</span></div>
+      </div>
+      <span class="tcarr">&#x25BE;</span>
+    </div>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">WHERE THEY ARE — 0–8 sec · name the stuckness</div>
+        <div class="sl">You know there are things you want to do with this <span class="fv" data-f="moment">moment/chapter/season</span>. <span class="beat">beat</span> Things you want to say, things you want to <span class="ab">&lt;verb — e.g. "capture," "create," "record," "share," "get out of your head"&gt;</span>. <span class="beat">beat</span> But every time you try to start — <span class="fv" data-f="stuck">the thing keeping them stuck</span>.</div>
+        <div class="dir">CAM: Medium close. No urgency. You're sitting next to them — not selling from a stage.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-br">WHERE THEY WANT TO BE — 8–25 sec</div>
+        <div class="sl">What you actually want is <span class="fv" data-f="want">what they actually want</span>. <span class="beat">beat</span> Something real. Something that doesn't disappear when the <span class="ab">&lt;moment/conversation/visit/session/call&gt;</span> ends.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-st">THE BRIDGE — 25–50 sec · introduce what you offer · lead with what it gives them, not what it is</div>
+        <div class="sl">That's what <span class="fv" data-f="offer">your offer</span> is for. <span class="beat">beat</span> It gives <span class="fv" data-f="audience">who you talk to</span> a way in — without having to figure out where to start on their own. <span class="beat">beat</span> You don't have to have it all worked out. That's the whole point.</div>
+        <div class="dir">CAM: Can cut to a screen recording or product walkthrough here if you have one.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sv">PROOF — 50–70 sec · something true · not a pitch</div>
+        <div class="sl"><span class="fv" data-f="proof">a real result or quote</span>. <span class="beat">beat</span> You don't need to wait until you feel ready. You start — and ready shows up after.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">CTA — last 8 sec · one ask</div>
+        <div class="sl">Link in my bio. <span class="fv" data-f="offer">your offer</span>. <span class="beat">beat</span> <span class="fv" data-f="close">your closing line</span>.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+    </div>
+  </div>
+
+  <!-- T7 -->
+  <div class="tc" id="t7" data-t="po">
+    <div class="tch" onclick="tog(this)">
+      <div class="tchl">
+        <div class="tcnum">Template 7</div>
+        <div class="tctitle">Poll Video — Let Them Choose</div>
+        <div class="tcsub">30 sec · TikTok · Run this BEFORE you build the product. Check comments in 24 hours. Build the winner only.</div>
+        <div class="tcchips"><span class="chip cf">Poll Video</span><span class="chip ca">High comment rate</span></div>
+      </div>
+      <span class="tcarr">&#x25BE;</span>
+    </div>
+    <div class="tcb">
+      <div class="sbl">
+        <div class="btag tag-h">HOOK — 0–4 sec · let them in on something</div>
+        <div class="sl">I'm building something and I need your help picking which one comes first.</div>
+        <div class="dir">CAM: Light, direct, slightly conspiratorial — like you're letting them in on a decision, not asking for a favour.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-st">SETUP — 4–15 sec</div>
+        <div class="sl">Both of these are for <span class="fv" data-f="audience">who you talk to</span>. Both are <span class="fv" data-f="price">your price</span>. I can only make one first — so I'm letting you decide.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-sh">THE TWO OPTIONS — 15–25 sec · no pressure either way</div>
+        <div class="sl">Option A: <span class="fv" data-f="opta">poll option A</span>. <span class="beat">beat</span> Option B: <span class="fv" data-f="optb">poll option B</span>.</div>
+      </div>
+      <div class="sbl">
+        <div class="btag tag-c">CTA — last 5 sec · dead simple</div>
+        <div class="sl">Comment A or B. <span class="beat">beat</span> Most votes wins. I'll build it this week.</div>
+        <div class="dir">Don't offer both. One product. The choice between two options is what drives the comment. Check in 24 hours and build whatever won.</div>
+      </div>
+      <button class="cpbtn" onclick="copyCard(this)">&#x2398; Copy this script</button>
+    </div>
+  </div>
+
+</main>
 </div>
 
 <script>
-const FIELDS = {
-  audience:'f-audience', pain:'f-pain', reframe:'f-reframe',
-  offer:'f-offer', cta:'f-cta', context:'f-context',
-  specific:'f-specific', daily:'f-daily', action:'f-action',
-  bold:'f-bold', scene:'f-scene', realise:'f-realise',
-  legacy:'f-legacy', 'not-noun':'f-not-noun',
-  'list-title':'f-list-title',
-  stuck:'f-stuck', want:'f-want', proof:'f-proof',
-  optA:'f-optA', optB:'f-optB', price:'f-price'
-};
+const FM={fear:'f-fear',truth:'f-truth',offer:'f-offer',close:'f-close',moment:'f-moment',audience:'f-audience',detail:'f-detail',action:'f-action',bold:'f-bold',scene:'f-scene',moment3:'f-moment3',carry:'f-carry',notnoun:'f-notnoun',listtitle:'f-listtitle',stuck:'f-stuck',want:'f-want',proof:'f-proof',opta:'f-opta',optb:'f-optb',price:'f-price'};
+document.querySelectorAll('.fv[data-f]').forEach(el=>{el.dataset.def=el.textContent.trim()});
+Object.entries(FM).forEach(([key,id])=>{const el=document.getElementById(id);if(!el)return;el.addEventListener('input',()=>{push(key,el.value.trim());updateProg()})});
+const ci=document.getElementById('f-listitems');
+ci&&ci.addEventListener('input',()=>{renderCarousel();updateProg()});
+function push(key,val){document.querySelectorAll(`.fv[data-f="${key}"]`).forEach(el=>{if(val){el.textContent=val;el.classList.add('has')}else{el.textContent=el.dataset.def||key;el.classList.remove('has')}})}
+function renderCarousel(){const raw=ci.value.trim();const el=document.getElementById('carousel-display');if(!raw){el.innerHTML='<span class="fv" style="font-family:\'Libre Baskerville\',serif;font-size:.87rem;line-height:2;color:var(--macc);font-style:italic;border-bottom:1.5px dashed var(--macc)">Add your carousel items in the sidebar — one per line. They\'ll show up here as pink slide headings.</span>';return}el.innerHTML=raw.split('\n').filter(l=>l.trim()).map((line,i)=>`<div class="slide-head">Slide ${i+2}</div><div class="slide-copy">${esc(line.trim())}</div>`).join('')}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function updateProg(){const ids=Object.values(FM).map(id=>document.getElementById(id)).filter(Boolean);const cf=ci&&ci.value.trim().length>0;const filled=ids.filter(el=>el.value.trim().length>0).length+(cf?1:0);const total=ids.length+1;document.getElementById('prog').style.width=Math.round(filled/total*100)+'%';const c=document.getElementById('comp');c.style.display='inline-flex';c.innerHTML=`<strong>${filled}</strong>&nbsp;of ${total} fields filled`}
+function tog(h){h.closest('.tc').classList.toggle('open')}
+document.getElementById('filters').addEventListener('click',e=>{const pill=e.target.closest('.pill');if(!pill)return;document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');const f=pill.dataset.f;document.querySelectorAll('.tc').forEach(c=>{c.classList.toggle('hidden',f!=='all'&&c.dataset.t!==f)})});
+function getText(card){const title=card.querySelector('.tctitle').textContent;let t=title+'\n'+'\u2500'.repeat(Math.min(title.length,44))+'\n\n';card.querySelectorAll('.sbl').forEach(block=>{const tag=block.querySelector('.btag')?.textContent?.split('\u2014')[0].trim()||'';const sl=block.querySelector('.sl');const dir=block.querySelector('.dir');const cd=block.querySelector('#carousel-display');if(tag)t+='['+tag+']\n';if(sl){let s='';sl.childNodes.forEach(n=>{if(n.nodeType===3)s+=n.textContent;else if(n.classList?.contains('beat'))s+=' [beat] ';else if(n.classList?.contains('fv'))s+=n.textContent.trim();else if(n.classList?.contains('ab'))s+=n.textContent.trim();else if(n.tagName==='BR')s+='\n';else s+=n.textContent});t+=s.replace(/ +/g,' ').trim()+'\n'}if(cd&&!sl){cd.querySelectorAll('.slide-head').forEach(sh=>{const content=sh.nextElementSibling?.textContent?.trim()||'';if(content)t+=sh.textContent+': '+content+'\n'})}if(dir)t+='('+dir.textContent.trim()+')\n';t+='\n'});return t.trim()}
+function copyCard(btn){const text=getText(btn.closest('.tc'));navigator.clipboard.writeText(text).then(()=>{btn.textContent='\u2713 Copied';btn.classList.add('ok');setTimeout(()=>{btn.textContent='\u2398 Copy this script';btn.classList.remove('ok')},2200)}).catch(()=>{btn.textContent='Select manually';setTimeout(()=>{btn.textContent='\u2398 Copy this script'},2000)})}
+function copyAll(){let all='';document.querySelectorAll('.tc:not(.hidden)').forEach(c=>{all+='\n\n'+getText(c)});navigator.clipboard.writeText(all.trim()).then(()=>{const btn=document.querySelector('.btnp');btn.textContent='\u2713 All scripts copied';setTimeout(()=>{btn.textContent='Copy all scripts as text'},2500)})}
+function copyAIPrompt(){const p=`You are helping me fill in a TikTok script template tool called Script Studio, created by Mindy Genereux at leavewell.media.
 
-document.querySelectorAll('.fv[data-f]').forEach(el => {
-  el.dataset.default = el.textContent.trim();
-});
+Ask me the following questions ONE AT A TIME. Wait for my answer before asking the next one. After I have answered all of them, give me all my answers back in the exact format shown at the bottom \u2014 so I can copy and paste them into the tool.
 
-Object.entries(FIELDS).forEach(([key, id]) => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.addEventListener('input', () => { push(key, el.value.trim()); updateProgress(); });
-});
+QUESTIONS TO ASK ME (one at a time):
+1. Who do you talk to? Describe your audience in one phrase.
+2. What is the thing they are most scared of losing? Be specific and sensory \u2014 not abstract.
+3. What is your one-line truth \u2014 the core thing you want them to know? Write it as one complete sentence.
+4. What is your offer or resource called?
+5. What is your closing line \u2014 5 words or fewer?
+6. What one word describes where your person is right now? (e.g. chapter, season, moment, transition)
+7. What is the one specific detail they can\u2019t get back \u2014 the thing that\u2019s sensory and irreplaceable?
+8. What is one small, doable thing they can do today?
+9. What is your big bold opening line for a text-on-screen video? Make it short and punchy.
+10. Describe a specific scene from your own story \u2014 what were you doing, where were you?
+11. What was the exact thought that hit you in that moment?
+12. What does your person already carry from the person they are losing or have lost?
+13. What is it NOT \u2014 the thing people think legacy or connection or healing is, before you reframe it? (e.g. \u201Ca box of stuff,\u201D \u201Ca folder of old photos\u201D)
+14. What is your carousel list title? Give me a number plus a topic.
+15. Give me 4 carousel items \u2014 specific, one per line, written the way you would say them out loud.
+16. What keeps your person stuck from taking action?
+17. What do they actually want \u2014 the real outcome they are hoping for?
+18. Give me one real result or quote \u2014 from a client, or from your own experience.
+19. Poll option A: name plus one-line benefit.
+20. Poll option B: name plus one-line benefit.
+21. What is your price point for the poll products?
 
-const carouselInput = document.getElementById('f-list-items');
-if (carouselInput) {
-  carouselInput.addEventListener('input', () => { renderCarousel(); updateProgress(); });
-}
+After I have answered all 21 questions, give me my answers back in this EXACT format so I can paste them into the tool:
 
-function push(key, val) {
-  document.querySelectorAll(`.fv[data-f="${key}"]`).forEach(el => {
-    if (val) { el.textContent = val; el.classList.add('has'); }
-    else { el.textContent = el.dataset.default || key; el.classList.remove('has'); }
-  });
-}
+Audience: [my answer]
+Fear: [my answer]
+Truth: [my answer]
+Offer: [my answer]
+Closing line: [my answer]
+Moment word: [my answer]
+Detail: [my answer]
+Action: [my answer]
+Bold line: [my answer]
+Scene: [my answer]
+Realisation: [my answer]
+What they carry: [my answer]
+What it is not: [my answer]
+Carousel title: [my answer]
+Carousel item 1: [my answer]
+Carousel item 2: [my answer]
+Carousel item 3: [my answer]
+Carousel item 4: [my answer]
+Stuck feeling: [my answer]
+What they want: [my answer]
+Proof: [my answer]
+Option A: [my answer]
+Option B: [my answer]
+Price: [my answer]
 
-function renderCarousel() {
-  const raw = carouselInput.value.trim();
-  const el = document.getElementById('carousel-display');
-  if (!raw) {
-    el.innerHTML = '<span class="fv" style="font-family:\'Libre Baskerville\',serif;font-size:.87rem;line-height:2;color:var(--brand-mint-accent);font-style:italic;border-bottom:1.5px dashed var(--brand-mint-accent);">Add your list items in the sidebar — one per line. They will appear here as pink slide headings.</span>';
-    return;
-  }
-  const lines = raw.split('\n').filter(l => l.trim());
-  el.innerHTML = lines.map((line, i) => `
-    <div class="slide-head">Slide ${i + 2}</div>
-    <div class="slide-content">${esc(line.trim())}</div>
-  `).join('');
-}
-
-function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-function updateProgress() {
-  const ids = Object.values(FIELDS).map(id => document.getElementById(id)).filter(Boolean);
-  const carouselFilled = carouselInput && carouselInput.value.trim().length > 0;
-  const filled = ids.filter(el => el.value.trim().length > 0).length + (carouselFilled ? 1 : 0);
-  const total = ids.length + 1;
-  document.getElementById('prog').style.width = Math.round(filled / total * 100) + '%';
-  const c = document.getElementById('comp');
-  c.style.display = 'inline-flex';
-  c.innerHTML = `<strong id="comp-n">${filled}</strong>&nbsp;of ${total} fields filled`;
-}
-
-function tog(h) { h.closest('.tc').classList.toggle('open'); }
-
-document.getElementById('filters').addEventListener('click', e => {
-  const pill = e.target.closest('.pill');
-  if (!pill) return;
-  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  const f = pill.dataset.filter;
-  document.querySelectorAll('.tc').forEach(c => {
-    c.classList.toggle('hidden', f !== 'all' && c.dataset.type !== f);
-  });
-});
-
-function getText(card) {
-  const title = card.querySelector('.tc-title').textContent;
-  let t = title + '\n' + '\u2500'.repeat(Math.min(title.length, 44)) + '\n\n';
-  card.querySelectorAll('.sb').forEach(block => {
-    const tag = block.querySelector('.btag')?.textContent?.split('\u2014')[0].trim() || '';
-    const sl = block.querySelector('.sl');
-    const dir = block.querySelector('.dir');
-    const carouselEl = block.querySelector('#carousel-display');
-    if (tag) t += '[' + tag + ']\n';
-    if (sl) {
-      let s = '';
-      sl.childNodes.forEach(n => {
-        if (n.nodeType === 3) s += n.textContent;
-        else if (n.classList?.contains('beat')) s += ' [beat] ';
-        else if (n.classList?.contains('fv')) s += n.textContent.trim();
-        else if (n.classList?.contains('gh')) s += '[' + n.textContent.trim() + ']';
-        else if (n.tagName === 'BR') s += '\n';
-        else s += n.textContent;
-      });
-      t += s.replace(/ +/g, ' ').trim() + '\n';
-    }
-    if (carouselEl && !sl) {
-      carouselEl.querySelectorAll('.slide-head').forEach(sh => {
-        const content = sh.nextElementSibling?.textContent?.trim() || '';
-        if (content) t += sh.textContent + ': ' + content + '\n';
-      });
-    }
-    if (dir) t += '(' + dir.textContent.trim() + ')\n';
-    t += '\n';
-  });
-  return t.trim();
-}
-
-function copyCard(btn) {
-  const text = getText(btn.closest('.tc'));
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '\u2713 Copied';
-    btn.classList.add('ok');
-    setTimeout(() => { btn.textContent = '\u2398 Copy this script'; btn.classList.remove('ok'); }, 2200);
-  }).catch(() => {
-    btn.textContent = 'Select text manually';
-    setTimeout(() => { btn.textContent = '\u2398 Copy this script'; }, 2000);
-  });
-}
-
-function copyAll() {
-  let all = '';
-  document.querySelectorAll('.tc:not(.hidden)').forEach(c => { all += '\n\n' + getText(c); });
-  navigator.clipboard.writeText(all.trim()).then(() => {
-    const btn = document.querySelector('.btn-pink');
-    btn.textContent = '\u2713 All scripts copied';
-    setTimeout(() => { btn.textContent = 'Copy all scripts as text'; }, 2500);
-  });
-}
-
-updateProgress();
+Script Studio \u00B7 Created by Mindy Genereux \u00B7 leavewell.media`;
+navigator.clipboard.writeText(p).then(()=>{const btn=document.getElementById('ai-btn');btn.textContent='\u2713 Copied \u2014 paste into ChatGPT or Claude';btn.classList.add('ok');setTimeout(()=>{btn.textContent='Copy AI prompt';btn.classList.remove('ok')},3500)})}
+updateProg();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
