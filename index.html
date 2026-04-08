@@ -196,7 +196,12 @@ footer{background:var(--navy);padding:56px 52px 40px;}
 .cp-li{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.92);border-radius:999px;padding:14px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
 .cp-li-icon{color:#f48fb1;font-size:1rem;line-height:1.4;flex-shrink:0;margin-top:2px;}
 .cp-li span{font-family:'DM Sans',sans-serif;font-size:clamp(0.95rem,1.4vw,1.08rem);font-weight:600;color:#1a1f36;line-height:1.35;}
-.cp-actions{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
+.cp-blurb{grid-column:1/-1;max-width:720px;margin:0 auto;text-align:center;padding:8px 12px 0;}
+.cp-blurb-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.2vw,1.5rem);font-style:italic;font-weight:400;color:rgba(255,255,255,.98);line-height:1.45;margin-bottom:1.35rem;}
+.cp-blurb-body,.cp-blurb-close{font-family:'DM Sans',sans-serif;font-size:clamp(0.94rem,1.4vw,1.06rem);font-weight:300;color:rgba(255,255,255,.93);line-height:1.8;margin-bottom:1.15rem;}
+.cp-blurb-close{margin-bottom:0;font-weight:400;}
+.cp-blurb strong{font-weight:700;color:var(--white);}
+.cp-actions{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;margin-top:8px;}
 .cp-btn{background:var(--white);color:#ad1457;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;padding:16px 36px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:transform 0.2s,box-shadow 0.2s;}
 .cp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.22);}
 .cp-audience{font-family:'Playfair Display',serif;font-size:clamp(0.78rem,1.2vw,0.95rem);letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,.95);text-align:center;line-height:1.5;max-width:36ch;}
@@ -220,9 +225,11 @@ dialog.clarity-dlg::backdrop{background:rgba(26,31,54,0.55);}
 @media(max-width:900px){
   .clarity-promo{padding:56px 24px 64px;}
   .cp-inner{grid-template-columns:1fr;gap:36px;}
+  .cp-head{order:1;}
   .cp-mock-wrap{order:2;}
   .cp-side{order:3;}
-  .cp-actions{order:4;}
+  .cp-blurb{order:4;}
+  .cp-actions{order:5;}
   .hero,.ss-inner,.living-header{grid-template-columns:1fr;}
   .hero-right,.living-intro{display:none;}
   .philosophy{grid-template-columns:1fr;}
@@ -332,8 +339,13 @@ dialog.clarity-dlg::backdrop{background:rgba(26,31,54,0.55);}
         <div class="cp-li"><span class="cp-li-icon" aria-hidden="true">✦</span><span>You write this chapter with him</span></div>
       </div>
     </div>
+    <div class="cp-blurb">
+      <p class="cp-blurb-lead">If his diagnosis has <strong>fear</strong> writing <strong>the story</strong>, this is where <strong>you start</strong>.</p>
+      <p class="cp-blurb-body"><strong>The Clarity Map</strong> is a <strong>free</strong> <strong>interactive guide</strong> that walks you through the <strong>four stages</strong> from spiral to presence — and a <strong>five-page workbook</strong> you fill out right in your <strong>browser</strong>. <strong>Circle</strong> the words that feel true. <strong>Rewrite</strong> fear&rsquo;s narrative. <strong>Write</strong> him a note. <strong>Track</strong> your presence level. <strong>Come back to the room</strong> while <strong>the window</strong> is still open.</p>
+      <p class="cp-blurb-close"><strong>No printing.</strong> <strong>No downloading.</strong> Just <strong>you</strong>, showing up for <strong>him</strong>.</p>
+    </div>
     <div class="cp-actions">
-      <button type="button" class="cp-btn" id="clarityOpenBtn">Open the interactive guide</button>
+      <button type="button" class="cp-btn" id="clarityOpenBtn">Get The Clarity Map</button>
       <p class="cp-audience">For daughters whose dad has a terminal diagnosis</p>
       <p class="cp-url"><a href="/clarity-map/">leavewell.media/clarity-map</a></p>
     </div>
