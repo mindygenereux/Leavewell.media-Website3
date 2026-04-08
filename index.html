@@ -333,7 +333,7 @@ dialog.clarity-dlg::backdrop{background:rgba(26,31,54,0.55);}
       </div>
     </div>
     <div class="cp-actions">
-      <button type="button" class="cp-btn" id="clarityOpenBtn">Get your copy now</button>
+      <button type="button" class="cp-btn" id="clarityOpenBtn">Open the interactive guide</button>
       <p class="cp-audience">For daughters whose dad has a terminal diagnosis</p>
       <p class="cp-url"><a href="/clarity-map/">leavewell.media/clarity-map</a></p>
     </div>
@@ -342,15 +342,15 @@ dialog.clarity-dlg::backdrop{background:rgba(26,31,54,0.55);}
 
 <dialog class="clarity-dlg" id="clarityDlg" aria-labelledby="clarityDlgTitle">
   <div class="clarity-dlg-inner">
-    <h3 id="clarityDlgTitle">Get your Clarity Map</h3>
-    <p>Enter your email and we&rsquo;ll send you through to the interactive workbook. You&rsquo;ll land on <strong>leavewell.media/clarity-map</strong> right after.</p>
+    <h3 id="clarityDlgTitle">Clarity Map</h3>
+    <p>The Clarity Map is an <strong>interactive guide</strong> you use in the browser — not a PDF. Add your email, then we&rsquo;ll take you straight to <strong>leavewell.media/clarity-map</strong> so you can begin.</p>
     <form class="clarity-dlg-form" method="POST" action="https://formsubmit.co/Mindy@leavewell.media">
-      <input type="hidden" name="_subject" value="Clarity Map — Get your copy (homepage)">
+      <input type="hidden" name="_subject" value="Clarity Map — Interactive guide (homepage)">
       <input type="hidden" name="_next" value="https://leavewell.media/clarity-map/">
       <input type="hidden" name="_captcha" value="false">
       <label for="clarityEmail">Email address</label>
       <input id="clarityEmail" type="email" name="email" placeholder="you@email.com" autocomplete="email" required>
-      <button type="submit" class="clarity-dlg-submit">Continue to Clarity Map</button>
+      <button type="submit" class="clarity-dlg-submit">Continue to the guide</button>
     </form>
     <button type="button" class="clarity-dlg-cancel" id="clarityDlgClose">Cancel</button>
   </div>
