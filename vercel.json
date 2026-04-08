@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/clarity-map",
+      "destination": "/stop-drowning-in-the-diagnosis/",
+      "permanent": true
+    },
+    {
+      "source": "/clarity-map/",
+      "destination": "/stop-drowning-in-the-diagnosis/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/live-well-library/:slug",
