@@ -171,7 +171,58 @@ footer{background:var(--navy);padding:56px 52px 40px;}
 .fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
 .fade-up.visible{opacity:1;transform:translateY(0);}
 
+/* CLARITY MAP PROMO */
+.clarity-promo{background:linear-gradient(165deg,#ff7aa8 0%,#f06292 45%,#ec407a 100%);padding:72px 52px 80px;position:relative;overflow:hidden;}
+.clarity-promo::before{content:'';position:absolute;top:-80px;right:-60px;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,0.2) 0%,transparent 65%);pointer-events:none;}
+.cp-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px 56px;align-items:center;position:relative;z-index:1;}
+.cp-head{grid-column:1/-1;text-align:center;}
+.cp-actions{grid-column:1/-1;}
+.cp-kicker{font-family:'DM Sans',sans-serif;font-size:clamp(2rem,4vw,3.25rem);font-weight:700;letter-spacing:0.06em;color:var(--white);text-transform:uppercase;line-height:1.05;margin-bottom:14px;text-shadow:0 2px 24px rgba(0,0,0,0.12);}
+.cp-banner{display:inline-block;background:#1a3d34;padding:10px 28px;border-radius:6px;margin-bottom:0;}
+.cp-banner span{font-family:'Playfair Display',serif;font-size:clamp(0.85rem,1.5vw,1.05rem);font-weight:600;letter-spacing:0.14em;color:var(--white);text-transform:uppercase;}
+.cp-mock-wrap{display:flex;justify-content:center;}
+.cp-tablet{background:#0d0d0d;border-radius:18px;padding:10px 10px 14px;box-shadow:0 28px 60px rgba(0,0,0,0.35);max-width:340px;width:100%;}
+.cp-tablet-screen{background:linear-gradient(160deg,#e8f5f2 0%,#fdf6f8 50%,#fce4ec 100%);border-radius:12px;padding:22px 18px 26px;min-height:320px;text-align:left;}
+.cp-ts-eyebrow{font-size:0.58rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#2e9e8a;margin-bottom:10px;display:block;}
+.cp-ts-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:400;color:#162828;line-height:1.2;margin-bottom:8px;}
+.cp-ts-sub{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:#2d3748;margin-bottom:14px;line-height:1.45;}
+.cp-ts-box{background:rgba(255,255,255,.72);border:1px solid rgba(46,158,138,.18);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
+.cp-ts-box p{font-family:'Playfair Display',serif;font-size:0.82rem;color:#162828;line-height:1.55;margin-bottom:8px;}
+.cp-ts-box p:last-child{margin-bottom:0;}
+.cp-ts-tag{font-family:'Playfair Display',serif;font-size:0.95rem;color:#162828;line-height:1.45;margin-top:4px;}
+.cp-ts-tag .cp-pink{color:#c2185b;font-weight:700;}
+.cp-ts-tag .cp-teal{color:#00897b;font-weight:700;font-style:italic;}
+.cp-list{display:flex;flex-direction:column;gap:12px;}
+.cp-li{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.92);border-radius:999px;padding:14px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+.cp-li-icon{color:#f48fb1;font-size:1rem;line-height:1.4;flex-shrink:0;margin-top:2px;}
+.cp-li span{font-family:'DM Sans',sans-serif;font-size:clamp(0.95rem,1.4vw,1.08rem);font-weight:600;color:#1a1f36;line-height:1.35;}
+.cp-actions{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
+.cp-btn{background:var(--white);color:#ad1457;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;padding:16px 36px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:transform 0.2s,box-shadow 0.2s;}
+.cp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.22);}
+.cp-audience{font-family:'Playfair Display',serif;font-size:clamp(0.78rem,1.2vw,0.95rem);letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,.95);text-align:center;line-height:1.5;max-width:36ch;}
+.cp-url{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,.75);letter-spacing:0.04em;}
+.cp-url a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);}
+.cp-url a:hover{border-bottom-color:var(--white);}
+dialog.clarity-dlg{border:none;border-radius:22px;padding:0;max-width:440px;width:calc(100% - 32px);box-shadow:0 24px 80px rgba(0,0,0,0.35);}
+dialog.clarity-dlg::backdrop{background:rgba(26,31,54,0.55);}
+.clarity-dlg-inner{padding:32px 28px 28px;}
+.clarity-dlg-inner h3{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:400;color:var(--navy);margin-bottom:8px;line-height:1.2;}
+.clarity-dlg-inner>p{font-size:0.92rem;color:var(--navy);line-height:1.55;margin-bottom:22px;opacity:.88;}
+.clarity-dlg-form{display:flex;flex-direction:column;gap:14px;}
+.clarity-dlg-form label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mint-deep);}
+.clarity-dlg-form input[type=email]{width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid rgba(26,31,54,0.12);font-size:1rem;font-family:'DM Sans',sans-serif;}
+.clarity-dlg-form input:focus{outline:none;border-color:var(--mint-deep);box-shadow:0 0 0 3px rgba(125,232,208,0.25);}
+.clarity-dlg-submit{background:var(--pink);color:var(--white);font-size:0.95rem;font-weight:700;padding:14px 20px;border-radius:999px;border:none;cursor:pointer;transition:transform 0.2s;}
+.clarity-dlg-submit:hover{transform:translateY(-1px);}
+.clarity-dlg-cancel{background:transparent;color:var(--navy);font-size:0.88rem;padding:8px;border:none;cursor:pointer;opacity:.65;margin-top:4px;}
+.clarity-dlg-cancel:hover{opacity:1;}
+
 @media(max-width:900px){
+  .clarity-promo{padding:56px 24px 64px;}
+  .cp-inner{grid-template-columns:1fr;gap:36px;}
+  .cp-mock-wrap{order:2;}
+  .cp-side{order:3;}
+  .cp-actions{order:4;}
   .hero,.ss-inner,.living-header{grid-template-columns:1fr;}
   .hero-right,.living-intro{display:none;}
   .philosophy{grid-template-columns:1fr;}
@@ -251,6 +302,59 @@ footer{background:var(--navy);padding:56px 52px 40px;}
   <div class="phil-div"></div>
   <div class="phil-item"><h3>Leave <em>well.</em></h3><p>A legacy is not just what you leave behind. It is how people feel when they think of you.</p></div>
 </div>
+
+<!-- CLARITY MAP -->
+<section class="clarity-promo" aria-labelledby="clarity-heading">
+  <div class="cp-inner">
+    <div class="cp-head">
+      <p class="cp-kicker" id="clarity-heading">Clarity Map</p>
+      <div class="cp-banner"><span>Stop drowning in the diagnosis</span></div>
+    </div>
+    <div class="cp-mock-wrap">
+      <div class="cp-tablet" aria-hidden="true">
+        <div class="cp-tablet-screen">
+          <span class="cp-ts-eyebrow">A Clarity Map · Live Well, Leave Well Media</span>
+          <div class="cp-ts-title">Stop Drowning in the Diagnosis</div>
+          <p class="cp-ts-sub">If your dad has a terminal diagnosis, this is for you.</p>
+          <div class="cp-ts-box">
+            <p><strong>Fear has the pen right now.</strong> It is writing worst-case timelines — and that is not the whole story.</p>
+            <p>The window is open <strong>right now.</strong> This is the added chapter, not the ending.</p>
+          </div>
+          <p class="cp-ts-tag">In 8 weeks you go from <span class="cp-pink">cancer stole the plot</span> to <span class="cp-teal">you write the story anyway.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cp-side">
+      <div class="cp-list">
+        <div class="cp-li"><span class="cp-li-icon" aria-hidden="true">✦</span><span>Name the spiral</span></div>
+        <div class="cp-li"><span class="cp-li-icon" aria-hidden="true">✦</span><span>Find him again</span></div>
+        <div class="cp-li"><span class="cp-li-icon" aria-hidden="true">✦</span><span>Return to the room</span></div>
+        <div class="cp-li"><span class="cp-li-icon" aria-hidden="true">✦</span><span>You write this chapter with him</span></div>
+      </div>
+    </div>
+    <div class="cp-actions">
+      <button type="button" class="cp-btn" id="clarityOpenBtn">Get your copy now</button>
+      <p class="cp-audience">For daughters whose dad has a terminal diagnosis</p>
+      <p class="cp-url"><a href="/clarity-map/">leavewell.media/clarity-map</a></p>
+    </div>
+  </div>
+</section>
+
+<dialog class="clarity-dlg" id="clarityDlg" aria-labelledby="clarityDlgTitle">
+  <div class="clarity-dlg-inner">
+    <h3 id="clarityDlgTitle">Get your Clarity Map</h3>
+    <p>Enter your email and we&rsquo;ll send you through to the interactive workbook. You&rsquo;ll land on <strong>leavewell.media/clarity-map</strong> right after.</p>
+    <form class="clarity-dlg-form" method="POST" action="https://formsubmit.co/Mindy@leavewell.media">
+      <input type="hidden" name="_subject" value="Clarity Map — Get your copy (homepage)">
+      <input type="hidden" name="_next" value="https://leavewell.media/clarity-map/">
+      <input type="hidden" name="_captcha" value="false">
+      <label for="clarityEmail">Email address</label>
+      <input id="clarityEmail" type="email" name="email" placeholder="you@email.com" autocomplete="email" required>
+      <button type="submit" class="clarity-dlg-submit">Continue to Clarity Map</button>
+    </form>
+    <button type="button" class="clarity-dlg-cancel" id="clarityDlgClose">Cancel</button>
+  </div>
+</dialog>
 
 <!-- LIVING WELL LIBRARY -->
 <section class="living">
@@ -408,6 +512,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 <script>
 (function(){const btn=document.querySelector('.nav-hamburger'),menu=document.getElementById('mob-menu'),overlay=document.getElementById('mob-overlay'),close=document.getElementById('mob-close');function toggle(open){menu.classList.toggle('open',open);overlay.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}btn.addEventListener('click',()=>toggle(true));close.addEventListener('click',()=>toggle(false));overlay.addEventListener('click',()=>toggle(false));})();
+(function(){const d=document.getElementById('clarityDlg'),open=document.getElementById('clarityOpenBtn'),close=document.getElementById('clarityDlgClose');if(!d||!open)return;open.addEventListener('click',function(){d.showModal();});close.addEventListener('click',function(){d.close();});d.addEventListener('click',function(e){if(e.target===d)d.close();});})();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
