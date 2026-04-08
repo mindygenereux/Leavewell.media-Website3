@@ -1,13 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/clarity-map",
-      "destination": "/stop-drowning-in-the-diagnosis/",
+      "source": "/stop-drowning-in-the-diagnosis",
+      "destination": "/clarity-map/",
       "permanent": true
     },
     {
-      "source": "/clarity-map/",
-      "destination": "/stop-drowning-in-the-diagnosis/",
+      "source": "/stop-drowning-in-the-diagnosis/",
+      "destination": "/clarity-map/",
       "permanent": true
     }
   ],
