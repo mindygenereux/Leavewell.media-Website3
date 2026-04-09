@@ -50,11 +50,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 52px;display:fl
 .product-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;overflow:hidden;}
 .product-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
 .product-img--photo{padding:0;font-size:0;background:#1a1f36;}
-.product-card:nth-child(1) .product-img{background:var(--mint-bg);}
-.product-card:nth-child(2) .product-img{background:var(--pink-light);}
+.product-card:nth-child(1) .product-img:not(.product-img--photo){background:var(--mint-bg);}
+.product-card:nth-child(2) .product-img:not(.product-img--photo){background:var(--pink-light);}
 .product-card:nth-child(3) .product-img:not(.product-img--photo){background:var(--yellow);}
-.product-card:nth-child(4) .product-img{background:var(--blush);}
-.product-card:nth-child(5) .product-img{background:linear-gradient(135deg,var(--mint-bg),var(--pink-light));}
+.product-card:nth-child(4) .product-img:not(.product-img--photo){background:var(--blush);}
+.product-card:nth-child(5) .product-img:not(.product-img--photo){background:linear-gradient(135deg,var(--mint-bg),var(--pink-light));}
 .product-body{padding:26px;flex:1;display:flex;flex-direction:column;}
 .product-price{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--mint-deep);display:block;margin-bottom:10px;}
 .product-card:nth-child(2) .product-price{color:var(--pink);}
@@ -145,21 +145,25 @@ footer{background:var(--navy);padding:56px 52px 40px;}
     <div class="products">
 
       <div class="product-card fade-up">
-        <div class="product-img">📋</div>
+        <div class="product-img product-img--photo">
+          <img src="/images/what-to-expect-parent-dying.png" alt="What to Expect When Your Parent Is Dying — honest guide with tablet preview" width="800" height="600" loading="lazy">
+        </div>
         <div class="product-body">
           <span class="product-price">$4.97 · Instant Download</span>
-          <h3>What to Expect When Your Parent Is Actively Dying</h3>
+          <h3>What to Expect When Your Parent Is Dying</h3>
           <p>Compassionate guidance to help you understand death, ease fear, and stay grounded and present during life's most tender endings.</p>
         </div>
         <a href="https://stan.store/mindygenereux/p/what-to-expect-when-your-parent-is-actively-dying" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
       </div>
 
       <div class="product-card fade-up">
-        <div class="product-img">✉️</div>
+        <div class="product-img product-img--photo">
+          <img src="/images/living-legacy-letters.png" alt="Living Legacy Letters — Canva templates, print or email" width="800" height="600" loading="lazy">
+        </div>
         <div class="product-body">
           <span class="product-price">$9.97 · Instant Download</span>
-          <h3>Legacy Letters</h3>
-          <p>Transform unspoken love into lasting connection with 5 guided Legacy Letter templates — designed to help you express memories, values, and heartfelt messages with ease.</p>
+          <h3>Living Legacy Letters</h3>
+          <p>Transform unspoken love into lasting connection with 5 guided letter templates — designed to help you express memories, values, and heartfelt messages with ease.</p>
         </div>
         <a href="https://stan.store/mindygenereux/p/living-legacy-letters" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
       </div>
@@ -177,20 +181,24 @@ footer{background:var(--navy);padding:56px 52px 40px;}
       </div>
 
       <div class="product-card fade-up">
-        <div class="product-img">🎬</div>
+        <div class="product-img product-img--photo">
+          <img src="/images/living-legacy-video-template.png" alt="Living Legacy Video Template — celebration of life and memorial slideshow for Canva" width="800" height="600" loading="lazy">
+        </div>
         <div class="product-body">
           <span class="product-price">$21.97 · Canva Template</span>
-          <h3>Five-Minute Tribute Video Template</h3>
+          <h3>Living Legacy Video Template</h3>
           <p>An editable celebration of life video and funeral slideshow template you can personalize fast with photos, clips, music, names, and heartfelt messages. Also works as an ethical will or legacy video.</p>
         </div>
         <a href="https://stan.store/mindygenereux/p/5-minute-memorial-video-template-canva" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
       </div>
 
       <div class="product-card fade-up">
-        <div class="product-img">📸</div>
+        <div class="product-img product-img--photo">
+          <img src="/images/living-legacy-digital-scrapbook.png" alt="Living Legacy Digital Scrapbook — memory book template for Canva" width="800" height="600" loading="lazy">
+        </div>
         <div class="product-body">
           <span class="product-price">$14.97 · Canva Template</span>
-          <h3>10-Page Tribute and Memorial Scrapbook Template</h3>
+          <h3>Living Legacy Digital Scrapbook</h3>
           <p>A 10-page Canva scrapbook template that makes it easy to create a beautiful digital or printable memory book in minutes. Add photos, audio, video, captions, and memories — then download or print.</p>
         </div>
         <a href="https://stan.store/mindygenereux/p/10page-tribute-and-memorial-scrapbook-template" class="product-btn" target="_blank" rel="noopener">Get Instant Access →</a>
