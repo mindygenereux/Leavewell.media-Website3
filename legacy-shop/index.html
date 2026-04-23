@@ -94,11 +94,19 @@ footer{background:var(--navy);padding:56px 52px 40px;}
 
 .fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
 .fade-up.visible{opacity:1;transform:translateY(0);}
+.shop-ribbon{background:linear-gradient(105deg,var(--mint-bg) 0%,#fff0f3 100%);border-bottom:1px solid rgba(26,31,54,0.08);padding:18px 52px;}
+.shop-ribbon-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 24px;}
+.shop-ribbon p{font-size:0.9rem;font-weight:500;color:var(--navy);line-height:1.5;max-width:36rem;}
+.shop-ribbon p strong{font-weight:600;}
+.shop-ribbon a{background:var(--navy);color:var(--white)!important;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;padding:11px 20px;border-radius:22px;text-decoration:none;white-space:nowrap;transition:background 0.2s,transform 0.2s;}
+.shop-ribbon a:hover{background:var(--pink);transform:translateY(-1px);}
 @media(max-width:900px){
   .products{grid-template-columns:1fr;}
   nav{padding:12px 20px;} .nav-links{display:none;}
   .shop,.bundle{padding:72px 24px;}
   .hero{padding:110px 24px 60px;}
+  .shop-ribbon{padding:16px 24px}
+  .shop-ribbon-inner{flex-direction:column;text-align:center}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
 }
 </style>
@@ -137,6 +145,13 @@ footer{background:var(--navy);padding:56px 52px 40px;}
     <p class="hero-sub">Affordable, instant-access tools designed to help you capture what matters — without overwhelm. Every product created by a Certified Death Doula.</p>
   </div>
 </section>
+
+<div class="shop-ribbon" role="region" aria-label="Free Presence Workbook">
+  <div class="shop-ribbon-inner">
+    <p><strong>Free</strong> · <strong>The Presence Workbook</strong> — sign up to get the pages by email, then continue in the interactive workbook in your browser.</p>
+    <a href="/presence-workbook/">Get the Presence Workbook</a>
+  </div>
+</div>
 
 <section class="shop">
   <div class="shop-inner">
