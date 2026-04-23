@@ -95,26 +95,26 @@ footer{background:var(--navy);padding:56px 52px 40px;}
 .fade-up{opacity:0;transform:translateY(18px);transition:opacity 0.7s,transform 0.7s;}
 .fade-up.visible{opacity:1;transform:translateY(0);}
 
-/* Presence Workbook promo — matches homepage Clarity Map band */
-.clarity-promo{background:linear-gradient(165deg,#ff7aa8 0%,#f06292 45%,#ec407a 100%);padding:56px 52px 72px;position:relative;overflow:hidden;}
-.clarity-promo::before{content:'';position:absolute;top:-80px;right:-60px;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,0.2) 0%,transparent 65%);pointer-events:none;}
+/* Presence Workbook promo — compact, same family as home Clarity band */
+.clarity-promo{background:linear-gradient(165deg,#ff7aa8 0%,#f06292 45%,#ec407a 100%);padding:32px 24px 40px;position:relative;overflow:hidden;}
+.clarity-promo::before{content:'';position:absolute;top:-100px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,255,255,0.18) 0%,transparent 65%);pointer-events:none;}
 .cp-inner{max-width:1160px;margin:0 auto;position:relative;z-index:1;}
-.shop-pw-inner{display:flex!important;flex-direction:column;align-items:center;gap:28px;max-width:920px;margin:0 auto;}
+.shop-pw-inner{display:flex!important;flex-direction:column;align-items:center;gap:16px;max-width:640px;margin:0 auto;}
 .cp-head{text-align:center;}
-.cp-kicker{font-family:'DM Sans',sans-serif;font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:700;letter-spacing:0.06em;color:var(--white);text-transform:uppercase;line-height:1.05;margin-bottom:14px;text-shadow:0 2px 24px rgba(0,0,0,0.12);}
-.cp-banner{display:inline-block;background:#1a3d34;padding:10px 28px;border-radius:6px;margin-bottom:0;}
-.cp-banner span{font-family:'Playfair Display',serif;font-size:clamp(0.85rem,1.5vw,1.05rem);font-weight:600;letter-spacing:0.14em;color:var(--white);text-transform:uppercase;}
-.shop-pw-visual{text-align:center;width:100%;}
-.shop-pw-img{max-width:min(100%,520px);width:100%;height:auto;border-radius:12px;box-shadow:0 24px 56px rgba(0,0,0,0.22);display:block;margin:0 auto;}
-.cp-blurb{max-width:720px;margin:0 auto;text-align:center;padding:0 12px;}
-.cp-blurb-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.2vw,1.5rem);font-style:italic;font-weight:400;color:rgba(255,255,255,.98);line-height:1.45;margin-bottom:1rem;}
-.cp-blurb-body{font-family:'DM Sans',sans-serif;font-size:clamp(0.94rem,1.4vw,1.06rem);font-weight:300;color:rgba(255,255,255,.93);line-height:1.75;margin-bottom:0;}
+.cp-kicker{font-family:'DM Sans',sans-serif;font-size:clamp(1.05rem,2.2vw,1.4rem);font-weight:700;letter-spacing:0.08em;color:var(--white);text-transform:uppercase;line-height:1.1;margin-bottom:8px;text-shadow:0 1px 12px rgba(0,0,0,0.1);}
+.cp-banner{display:inline-block;background:#1a3d34;padding:6px 16px;border-radius:5px;margin-bottom:0;}
+.cp-banner span{font-family:'Playfair Display',serif;font-size:clamp(0.7rem,1.2vw,0.88rem);font-weight:600;letter-spacing:0.12em;color:var(--white);text-transform:uppercase;}
+.shop-pw-visual{text-align:center;width:100%;line-height:0}
+.shop-pw-img{max-width:min(100%,300px,70vw);width:100%;height:auto;border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,0.2);display:block;margin:0 auto;object-fit:contain;}
+.cp-blurb{max-width:34rem;margin:0 auto;text-align:center;padding:0 8px;}
+.cp-blurb-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,1.8vw,1.25rem);font-style:italic;font-weight:400;color:rgba(255,255,255,.98);line-height:1.4;margin-bottom:0.5rem;}
+.cp-blurb-body{font-family:'DM Sans',sans-serif;font-size:clamp(0.8rem,1.1vw,0.9rem);font-weight:300;color:rgba(255,255,255,.9);line-height:1.6;margin-bottom:0;}
 .cp-blurb strong{font-weight:700;color:var(--white);}
-.cp-actions{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;margin-top:4px;}
-a.cp-btn{background:var(--white);color:#ad1457;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;padding:16px 36px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;display:inline-block;}
-a.cp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.22);}
-.cp-audience{font-family:'Playfair Display',serif;font-size:clamp(0.78rem,1.2vw,0.95rem);letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,.95);text-align:center;line-height:1.5;max-width:36ch;}
-.cp-url{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,.75);letter-spacing:0.04em;}
+.cp-actions{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;margin-top:0;}
+a.cp-btn{background:var(--white);color:#ad1457;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:700;padding:12px 22px;border-radius:999px;box-shadow:0 4px 20px rgba(0,0,0,0.15);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;display:inline-block;}
+a.cp-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+.cp-audience{font-family:'Playfair Display',serif;font-size:clamp(0.65rem,1.1vw,0.78rem);letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.9);line-height:1.45;max-width:34ch;}
+.cp-url{font-size:0.75rem;}
 .cp-url a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);}
 .cp-url a:hover{border-bottom-color:var(--white);}
 @media(max-width:900px){
@@ -122,7 +122,7 @@ a.cp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.22
   nav{padding:12px 20px;} .nav-links{display:none;}
   .shop,.bundle{padding:72px 24px;}
   .hero{padding:110px 24px 60px;}
-  .clarity-promo{padding:44px 24px 56px;}
+  .clarity-promo{padding:24px 20px 32px;}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
 }
 </style>
@@ -169,7 +169,7 @@ a.cp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.22
       <div class="cp-banner"><span>Stop drowning in the diagnosis</span></div>
     </div>
     <div class="shop-pw-visual">
-      <img class="shop-pw-img" src="/images/presence-workbook-hero.png" alt="The Presence Workbook — interactive pages: name the fear, personal power, move in grief. For daughters whose dad has a terminal diagnosis." width="1024" height="1024" loading="lazy" decoding="async">
+      <img class="shop-pw-img" src="../images/presence-workbook-hero.png" alt="The Presence Workbook — interactive pages: name the fear, personal power, move in grief. For daughters whose dad has a terminal diagnosis." width="1024" height="1024" loading="lazy" decoding="async" fetchpriority="low">
     </div>
     <div class="cp-blurb">
       <p class="cp-blurb-lead">If fear has the pen, this is where you <strong>come back to the room</strong> with him.</p>
