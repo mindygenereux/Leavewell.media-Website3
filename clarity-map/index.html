@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stop Drowning in the Diagnosis — Live Well, Leave Well Media</title>
+<title>The Clarity Map — Live Well, Leave Well Media</title>
+<meta name="description" content="For daughters whose fear took over after a dad's terminal diagnosis. Anticipatory grief, fear vs. truth, writing prompts, and the path back to the room.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -268,6 +269,43 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 /* CELEBRATE */
 @keyframes pop{0%{transform:scale(0.8);opacity:0}60%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
 .celebrate{animation:pop .4s cubic-bezier(0.16,1,0.3,1) both}
+
+/* Clarity Map linear sections */
+.cm-pillars{text-align:center;font-size:var(--bs);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:var(--s5);line-height:1.5}
+.cm-pillars .sep{color:var(--pink);margin:0 .25em}
+.cover h1 em{font-style:italic;color:var(--pink)}
+.cm-byline{max-width:40rem;margin:0 auto var(--s8);text-align:center}
+.cm-byline .cm-wm{font-size:var(--sm);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:var(--s2)}
+.cm-byline p{font-family:var(--fd);font-size:var(--lg);font-weight:400;color:var(--body);line-height:1.65;max-width:none}
+.cm-prose{max-width:48rem;margin:0 auto}
+.cm-prose p{font-size:var(--bs);line-height:1.8;margin-bottom:var(--s4);max-width:none}
+.cm-prose p:last-child{margin-bottom:0}
+.cm-sec-eyebrow{display:block;font-size:var(--xs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--s4)}
+.cm-sec h2.sec-h{margin-bottom:var(--s4)}
+.how-list{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s4);font-size:var(--bs);line-height:1.75;max-width:40rem}
+.how-list li{padding-left:var(--s4);position:relative;list-style:none}
+.how-list li::before{content:'\2014';position:absolute;left:0;color:var(--teal);font-weight:600}
+.cm-fear th{padding:var(--s3) var(--s4);font-size:var(--xs);font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:left;border-bottom:2px solid var(--div)}
+.cm-fear th.f-p{color:var(--pink)}
+.cm-fear th.f-t{color:var(--teal)}
+.cm-fear td{padding:var(--s3) var(--s4);border-bottom:1px solid var(--teal-bg);line-height:1.65;vertical-align:top;font-size:var(--bs)}
+.cm-fear tr:last-child td{border-bottom:none}
+.cm-fear .cm-table{width:100%;border-collapse:collapse;margin-top:var(--s4)}
+.cm-pull{font-family:var(--fd);font-size:var(--lg);line-height:1.55;max-width:40rem;margin:var(--s6) auto 0;padding:var(--s5) var(--s6);background:rgba(224,104,130,.08);border-left:3px solid var(--pink);color:var(--body);font-style:italic}
+.cm-pull cite{display:block;margin-top:var(--s3);font-size:var(--sm);font-style:normal;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.cm-window h3{font-family:var(--fd);font-size:var(--2xl);font-weight:400;color:var(--navy);text-align:center;margin-bottom:var(--s6);line-height:1.2}
+.cm-window h3 em{font-style:italic;color:var(--pink)}
+.cm-window .cm-lead{font-size:var(--lg);text-align:center;max-width:38rem;margin:0 auto var(--s6);font-family:var(--fd);line-height:1.5}
+.cm-prompts{margin-top:var(--s8);max-width:44rem;margin-left:auto;margin-right:auto}
+.cm-prompt{display:flex;gap:var(--s3);align-items:flex-start;margin-bottom:var(--s5)}
+.cm-prompt .cm-arrow{flex-shrink:0;font-size:var(--lg);color:var(--teal);line-height:1.5;margin-top:2px}
+.cm-prompt .fill-ta{min-height:5.5rem}
+.cm-reflect{font-size:var(--bs);line-height:1.85;max-width:48rem;margin:var(--s10) auto 0}
+.cm-reflect p{margin-bottom:var(--s4);max-width:none}
+.cta-mtm .cta-body{max-width:40rem}
+.cta-mtm .cta-locs{font-size:var(--sm);margin-top:var(--s2);line-height:1.6;opacity:.9}
+.cta-mtm .cta-locs a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.cta-mtm .cta-locs a:hover{opacity:.85}
 </style>
 </head>
 <body>
@@ -280,217 +318,129 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 <main class="doc" role="main">
 
 <!-- ══ COVER ══ -->
-<section class="pg cover" aria-label="Cover">
+<section class="pg cover" aria-label="The Clarity Map">
   <div class="pg-in">
-    <span class="eyebrow">A Clarity Map · Live Well, Leave Well Media</span>
-    <h1>Stop Drowning<br>in the Diagnosis</h1>
-    <p class="cover-for">If your dad has a terminal diagnosis, this is for you.</p>
-    <div class="cover-box">
-      <p><strong>Fear has the pen right now.</strong> It is writing worst-case timelines and a horror story where cancer stole everything.</p>
-      <p>That is not the story.</p>
-      <p>The window is open <strong class="tb">RIGHT NOW.</strong> This is the added chapter, not the ending. You get to write it <strong class="tb">WITH</strong> him.</p>
+    <p class="cm-pillars" role="doc-subtitle">Live Well <span class="sep" aria-hidden="true">·</span> Love Well <span class="sep" aria-hidden="true">·</span> Leave Well</p>
+    <h1>The Clarity <em>Map</em></h1>
+    <p class="cover-for" style="margin-bottom:var(--s6)">For daughters whose fear took over after their dad&rsquo;s terminal diagnosis.</p>
+    <div class="cm-byline">
+      <span class="cm-wm">With Mindy Genereux</span>
+      <p>Creator of Leave Well Media, helping you stop living at the ending and come back to the chapter you are still in.</p>
     </div>
-    <p class="tagline">In 8 weeks, you go from <span class="tp">cancer stole the plot</span><br>to <span class="tt"><em>you write the story anyway.</em></span></p>
+    <div class="cm-prose" style="text-align:left">
+      <p><strong>If your dad has a terminal diagnosis, this is for you.</strong></p>
+      <p>I know what happens when you get that news. Your brain goes straight to the ending. Every Google search pulls you further in. You&rsquo;re sitting across from him at dinner and you&rsquo;re already imagining life without your best friend.</p>
+      <p>That&rsquo;s what it looks like to love someone you&rsquo;re terrified of losing.</p>
+      <p>That&rsquo;s anticipatory grief, and it&rsquo;s one of the loneliest places to be because nobody around you knows you&rsquo;re already grieving someone who&rsquo;s still right there.</p>
+      <p style="margin-bottom:var(--s5)">This clarity map will bring you back to the room where he still is.</p>
+    </div>
+    <blockquote class="cm-pull">
+      <p style="margin:0;font-size:inherit">&ldquo;You are not living in the present. You are living in fear&rsquo;s version of the future.&rdquo;</p>
+      <cite>— Mindy Genereux, Certified Death Doula</cite>
+    </blockquote>
   </div>
 </section>
 
-<!-- ══ STEP 1 ══ -->
-<article class="pg" aria-label="Step 1">
+<!-- ══ HOW TO USE ══ -->
+<section class="pg cm-sec" aria-label="How to use the Clarity Map">
   <div class="stripe s-teal"></div>
-  <div class="acc-hdr" onclick="acc(this)" role="button" tabindex="0" aria-expanded="true" aria-label="Step 1: Fear Takes the Pen">
-    <div class="sbadge b-teal">1</div>
-    <div class="smeta">
-      <span class="spillar pt">Live Well</span>
-      <h2 class="stitle">Fear Takes the Pen</h2>
-      <span class="sfeel">You feel: Shock and spiral</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+  <div class="pg-in">
+    <span class="cm-sec-eyebrow">How to use the Clarity Map</span>
+    <ul class="how-list" role="list">
+      <li>Read it slowly.</li>
+      <li>Sit with the part that stops you.</li>
+      <li>All you have to do is notice where you are — and this is the first step back to being in the room.</li>
+    </ul>
   </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-t">What is happening</div>
-            <p>He told you the diagnosis. Your brain turned it into the worst version. Your sky fell right in front of him. <strong>Every Google search confirms a new fear.</strong> You are living at the ending before the chapter has been written.</p>
-          </div>
-          <div class="col">
-            <div class="ch ch-p">What fear says</div>
-            <ul>
-              <li>He is not going to survive this</li>
-              <li>I need to know the timeline right now</li>
-              <li>Every search confirms the worst thought</li>
-              <li>I can not stop crying in the car</li>
-              <li>I feel like I am floating above my body</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What is true</div>
-            <ul>
-              <li>Fear is not a reliable narrator</li>
-              <li><strong>The diagnosis is one data point.</strong> Not the whole chapter</li>
-              <li>Someone else's story is writing your fear. Not his</li>
-              <li>Cancer showed up. The ending is not written</li>
-            </ul>
-          </div>
-        </div>
-        <p class="anchor an-t">Fear pretends to narrate the future. It jumps to the worst outcome and stays there. It is not the author. <strong>You are.</strong></p>
-      </div>
-    </div>
-  </div>
-</article>
+</section>
 
-<!-- ══ STEP 2 ══ -->
-<article class="pg" aria-label="Step 2">
+<!-- ══ WHAT IS HAPPENING ══ -->
+<section class="pg cm-sec" aria-label="What is happening">
   <div class="stripe s-pink"></div>
-  <div class="acc-hdr pink" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 2: You Lose Sight of Him">
-    <div class="sbadge b-pink">2</div>
-    <div class="smeta">
-      <span class="spillar pp">Live Well</span>
-      <h2 class="stitle">You Lose Sight of Him</h2>
-      <span class="sfeel">You feel: Dread and guilt</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-p">What is happening</div>
-            <p>All you can see is the cancer. The pain. The physical signs. <strong>You forget who he was before this.</strong> Scared to take his picture. Acting like the window has already closed.</p>
-          </div>
-          <div class="col">
-            <div class="ch ch-p">What fear says</div>
-            <ul>
-              <li>It is too late. The good parts are over</li>
-              <li>Taking his picture means I have given up</li>
-              <li>I am running out of time</li>
-              <li>I am grieving him while he is still here</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What is true</div>
-            <ul>
-              <li><strong>The window is open RIGHT NOW</strong></li>
-              <li>He is still the same character he has always been</li>
-              <li>Taking his picture is an act of love</li>
-              <li>Grieving him now is love being honest</li>
-            </ul>
-          </div>
-        </div>
-        <p class="anchor an-p">He is still funny. He still says the thing only he says. <strong>He is still in the room.</strong> That is where you go next.</p>
-      </div>
+  <div class="pg-in">
+    <span class="cm-sec-eyebrow">What is happening</span>
+    <div class="cm-prose">
+      <p>He told you the diagnosis. Your brain turned it into the worst version. Every Google search confirms a new fear. You are living at the ending before the chapter has been written.</p>
+      <p>This is anticipatory grief. It is the grief that starts before the loss, when you love someone and your brain tries to protect you by rehearsing what has not happened yet. It is real, it is named, and you are definitely not alone in it.</p>
     </div>
   </div>
-</article>
+</section>
 
-<!-- ══ STEP 3 ══ -->
-<article class="pg" aria-label="Step 3">
+<!-- ══ FEAR VS. WHAT IS TRUE ══ -->
+<section class="pg cm-sec cm-fear" aria-label="Fear vs what is true">
   <div class="stripe s-teal"></div>
-  <div class="acc-hdr" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 3: You Return to the Room">
-    <div class="sbadge b-teal">3</div>
-    <div class="smeta">
-      <span class="spillar pt">Love Well</span>
-      <h2 class="stitle">You Return to the Room</h2>
-      <span class="sfeel">You feel: Present and open</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+  <div class="pg-in">
+    <span class="cm-sec-eyebrow">Fear vs. what is true</span>
+    <table class="cm-table">
+      <thead>
+        <tr>
+          <th class="f-p" scope="col">Fear says</th>
+          <th class="f-t" scope="col">What is true</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>He is not going to survive this</td>
+          <td>The ending is not written yet</td>
+        </tr>
+        <tr>
+          <td>I need the timeline right now</td>
+          <td>Right now, he is still here</td>
+        </tr>
+        <tr>
+          <td>Every search confirms the worst</td>
+          <td>Someone else&rsquo;s story is not his story</td>
+        </tr>
+        <tr>
+          <td>I cannot stop crying in the car</td>
+          <td>Anticipatory grief is love that does not yet know where to go</td>
+        </tr>
+        <tr>
+          <td>I feel like I am floating away</td>
+          <td>Noticing that is the first step back</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-t">What is happening</div>
-            <p><strong>Not as a caretaker managing a situation.</strong> As a daughter loving her dad. You see the whole version of him again. The laugh. The thing he always says. The way he is still specifically, irreplaceably him.</p>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What shifts</div>
-            <ul>
-              <li>You see the character, not just the diagnosis</li>
-              <li>You let him be funny without it feeling wrong</li>
-              <li>You stop floating above the moment</li>
-              <li>You start being real with him</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What becomes possible</div>
-            <ul>
-              <li>Real conversation without perfect words</li>
-              <li>Making memories <strong>with a smile</strong></li>
-              <li>Letting him be the hero of his own chapter</li>
-              <li>Showing up as yourself</li>
-            </ul>
-          </div>
-        </div>
-        <p class="anchor an-t">Joy and grief live in the same space. <strong>Both are love. Both are allowed.</strong></p>
-      </div>
-    </div>
-  </div>
-</article>
+</section>
 
-<!-- ══ STEP 4 ══ -->
-<article class="pg" aria-label="Step 4">
+<!-- ══ THE WINDOW ══ -->
+<section class="pg cm-sec cm-window" aria-label="The window is open">
   <div class="stripe s-gold"></div>
-  <div class="acc-hdr gold" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 4: You write this chapter with him">
-    <div class="sbadge b-gold">4</div>
-    <div class="smeta">
-      <span class="spillar pg-c">Love Well</span>
-      <h2 class="stitle">You write this chapter with him</h2>
-      <span class="sfeel">You feel: Grounded and present</span>
+  <div class="pg-in">
+    <h3><em style="color:var(--pink);font-style:italic">The window is open</em> right now</h3>
+    <p class="cm-lead">Fear takes the elevator. The truth takes the staircase.<br>But it always catches up.</p>
+    <div class="cm-prose">
+      <p>Fear pretends to narrate the future. It jumps to the worst outcome and stays there. Fear&rsquo;s not the author. You and your dad get to write this last chapter together.</p>
+      <p>Just write what&rsquo;s true right now. Take your time with each one. Write the first thing that comes. There are no wrong answers here.</p>
     </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-g">What is happening</div>
-            <p><strong>You stop acting like he is already gone.</strong> You can fall apart on the drive home and still show up the next morning. You are writing this chapter WITH him. On purpose. While he is still living.</p>
-          </div>
-          <div class="col">
-            <div class="ch ch-g">What you can do now</div>
-            <ul>
-              <li>Hear "terminal" without shutting down</li>
-              <li>Capture his voice and humor while he is here</li>
-              <li>Ask the questions without waiting for permission</li>
-              <li>Show up as his daughter</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-g">What you carry now</div>
-            <ul>
-              <li><strong>The diagnosis does not get to write this.</strong> You do</li>
-              <li>Dad is still in the room. The window is open</li>
-              <li>Cancer is the alarm clock, not the villain</li>
-              <li>The light in you proves the legacy lives in you</li>
-            </ul>
-          </div>
+    <div class="cm-prompts">
+      <div class="cm-prompt">
+        <span class="cm-arrow" aria-hidden="true">→</span>
+        <div style="flex:1">
+          <label class="fill-label" for="cmw1" style="font-size:var(--bs);font-style:normal;margin-bottom:var(--s2)">One thing I want him to know that I have never said out loud.</label>
+          <textarea class="fill-ta" id="cmw1" rows="5" placeholder=" "></textarea>
         </div>
-        <p class="anchor an-g">This is the added chapter, not the ending. <strong>You get to write it WITH him.</strong></p>
+      </div>
+      <div class="cm-prompt">
+        <span class="cm-arrow" aria-hidden="true">→</span>
+        <div style="flex:1">
+          <label class="fill-label" for="cmw2" style="font-size:var(--bs);font-style:normal;margin-bottom:var(--s2)">One memory that makes me feel close to him even now.</label>
+          <textarea class="fill-ta" id="cmw2" rows="5" placeholder=" "></textarea>
+        </div>
+      </div>
+      <div class="cm-prompt">
+        <span class="cm-arrow" aria-hidden="true">→</span>
+        <div style="flex:1">
+          <label class="fill-label" for="cmw3" style="font-size:var(--bs);font-style:normal;margin-bottom:var(--s2)">One small way I can be in the room with him this week.</label>
+          <textarea class="fill-ta" id="cmw3" rows="5" placeholder=" "></textarea>
+        </div>
       </div>
     </div>
-  </div>
-</article>
-
-<!-- ══ THE SHIFT ══ -->
-<section class="pg" aria-label="The shift">
-  <div class="shift-in pg-in">
-    <h2 class="sh2">From <span class="sp">cancer stole the plot</span><br>to <span class="st">you write the story anyway.</span></h2>
-    <div class="sh-grid">
-      <div class="sh-box sh-from">
-        <div class="sh-lbl">Where you are right now</div>
-        <p>Floating above the moment. Fear has the pen. Living at the ending while he is still here.</p>
-      </div>
-      <div class="sh-arr" aria-hidden="true">&#8594;</div>
-      <div class="sh-box sh-to">
-        <div class="sh-lbl">Where you are going</div>
-        <p>In the room with him. You hold the pen. The window is wide open <strong>RIGHT NOW.</strong></p>
-      </div>
+    <div class="cm-reflect cm-prose" style="margin-top:var(--s8)">
+      <p>Something quietly shifted just now. You moved from fear into truth, and truth is where trust lives. You know what you want him to know. You know the memory that holds you both. You know one way to show up this week.</p>
+      <p>You came back to yourself. Now, go back to him. <strong>The window is open.</strong></p>
     </div>
-    <p class="sh-foot">The diagnosis is one fact. It is not the author. There is still time. The light in you is proof the living legacy lives in you.</p>
   </div>
 </section>
 
@@ -499,22 +449,24 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
   <div class="stripe s-pink"></div>
   <div class="pg-in" style="text-align:center;max-width:42rem;margin:0 auto">
     <h2 class="sec-h" style="text-align:center">Your <em>Presence Workbook</em></h2>
-    <p class="sec-sub" style="text-align:center;margin-left:auto;margin-right:auto;margin-bottom:var(--s5)">Open the full five pages in your browser. Circle the words that feel true, rewrite fear’s narrative, write him a note, and track your presence level.</p>
+    <p class="sec-sub" style="text-align:center;margin-left:auto;margin-right:auto;margin-bottom:var(--s5)">Open the full five pages in your browser. Circle the words that feel true, rewrite fear&rsquo;s narrative, write him a note, and track your presence level.</p>
     <a href="/interactive-presence-workbook/" class="cta-btn" style="display:inline-flex;justify-content:center">Open the interactive workbook →</a>
   </div>
 </section>
 
-<!-- ══ CTA ══ -->
-<section class="pg cta-pg" aria-label="Make This Mean More">
+<!-- ══ MAKE THIS MEAN MORE ══ -->
+<section class="pg cta-pg cta-mtm" aria-label="Make This Mean More">
   <div class="pg-in">
-    <span class="eyebrow">Ready to go all the way through this?</span>
-    <h2 class="cta-h">Make This Mean More is the<br><em>8-week program</em> that takes you there.</h2>
-    <p class="cta-body">From fear and spiraling to capturing his living legacy while he is still here to be part of it. Three spots each month. The window is open <strong>RIGHT NOW.</strong></p>
+    <span class="eyebrow">Ready to write the story with him?</span>
+    <h2 class="cta-h">Make This Mean More is the <em>8-week 1:1</em> coaching program for daughters whose dad has a terminal diagnosis.</h2>
+    <p class="cta-body">You go from <strong>cancer stole the plot</strong> to <strong>you write the story anyway</strong>. You stop Googling timelines and get back in the room where he still is. You learn to read what he&rsquo;s not saying so you can show him you have it covered. You give yourself permission to witness without fixing, to let him buy the muffin, the car, the dream. You capture his voice, his humor, his values, the whole character he built before cancer ever showed up. You make memories with a smile and make this year count. And when it&rsquo;s over, you walk away knowing you showed up, you were calm and present, and you didn&rsquo;t miss a single moment of this chapter.</p>
+    <p class="cta-body" style="margin-top:var(--s4)">That&rsquo;s what eight weeks looks like when fear stops writing and you pick up the pen. The window is open right now. Only three spots are available each month.</p>
     <a href="/make-this-mean-more/" class="cta-btn">
       Start Make This Mean More
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
-    <p class="cta-note">leavewell.media · mindy@leavewell.media</p>
+    <p class="cta-locs" style="margin-top:var(--s2);font-size:var(--sm)"><a href="https://leavewell.media/make-this-mean-more">leavewell.media/make-this-mean-more</a></p>
+    <p class="cta-note cta-locs">Mindy Genereux &nbsp;·&nbsp; Certified Death Doula &nbsp;·&nbsp; Leave Well Media &nbsp;·&nbsp; <a href="https://leavewell.media/">leavewell.media</a> &nbsp;·&nbsp; <a href="mailto:mindy@leavewell.media">mindy@leavewell.media</a></p>
   </div>
 </section>
 
@@ -531,20 +483,6 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
   <p class="ftr-copy">2026 Live Well, Leave Well Media · Mindy Genereux, Certified Death Doula</p>
 </footer>
 
-<script>
-// ── ACCORDION ──
-function acc(h){
-  const a=h.closest('article');
-  const open=a.classList.toggle('acc-open');
-  h.setAttribute('aria-expanded',open);
-}
-document.querySelectorAll('.acc-hdr').forEach(h=>{
-  h.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();acc(h)}});
-});
-// open first step
-document.querySelector('.acc-hdr').closest('article').classList.add('acc-open');
-document.querySelector('.acc-hdr').setAttribute('aria-expanded','true');
-</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
