@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stop Drowning in the Diagnosis — Live Well, Leave Well Media</title>
+<title>Interactive Presence Workbook — Live Well, Leave Well Media</title>
+<meta name="description" content="Five in-browser pages: name where you are, fear vs. fact, see the whole character, the window, what you carry. From the Clarity Map.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -81,6 +82,7 @@ p,li{text-wrap:pretty}
 .cover .pg-in{text-align:center;padding-top:clamp(var(--s12),8vw,var(--s20));padding-bottom:clamp(var(--s12),8vw,var(--s20))}
 .eyebrow{font-size:var(--xs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:var(--s5)}
 .cover h1{font-family:var(--fd);font-size:var(--3xl);font-weight:300;color:var(--navy);margin-bottom:var(--s4);letter-spacing:-.01em}
+.cover h1 em{font-style:italic;color:var(--pink)}
 .cover-for{font-size:var(--bs);color:var(--body);margin-bottom:var(--s8)}
 .cover-box{max-width:min(44rem,100%);margin:0 auto var(--s8);text-align:left;background:rgba(255,255,255,.6);border:1px solid rgba(46,158,138,.15);border-radius:var(--rx);padding:var(--s6) var(--s8)}
 .cover-box p{font-family:var(--fd);font-size:var(--lg);font-weight:400;color:var(--body);line-height:1.65;max-width:none}
@@ -280,229 +282,260 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 <main class="doc" role="main">
 
 <!-- ══ COVER ══ -->
-<section class="pg cover" aria-label="Cover">
+<section class="pg cover" aria-label="Interactive Presence Workbook">
   <div class="pg-in">
-    <span class="eyebrow">A Clarity Map · Live Well, Leave Well Media</span>
-    <h1>Stop Drowning<br>in the Diagnosis</h1>
-    <p class="cover-for">If your dad has a terminal diagnosis, this is for you.</p>
-    <div class="cover-box">
-      <p><strong>Fear has the pen right now.</strong> It is writing worst-case timelines and a horror story where cancer stole everything.</p>
-      <p>That is not the story.</p>
-      <p>The window is open <strong class="tb">RIGHT NOW.</strong> This is the added chapter, not the ending. You get to write it <strong class="tb">WITH</strong> him.</p>
-    </div>
-    <p class="tagline">In 8 weeks, you go from <span class="tp">cancer stole the plot</span><br>to <span class="tt"><em>you write the story anyway.</em></span></p>
+    <span class="eyebrow">A Clarity Map companion · Live Well, Leave Well Media</span>
+    <h1>Your <em>Interactive Presence Workbook</em></h1>
+    <p class="cover-for" style="max-width:46rem;margin-left:auto;margin-right:auto;margin-bottom:0">The five in-browser pages below are the same <strong>Presence Workbook</strong> from the <a href="/clarity-map/" style="color:var(--teal);font-weight:600">Clarity Map</a>. <a href="/clarity-map/" style="color:var(--teal);font-weight:600">Back to the map</a></p>
   </div>
 </section>
 
-<!-- ══ STEP 1 ══ -->
-<article class="pg" aria-label="Step 1">
+<!-- ══════════════════════════════════════════
+     INTERACTIVE WORKBOOK
+══════════════════════════════════════════ -->
+<section class="pg" aria-label="Interactive workbook" id="workbook">
   <div class="stripe s-teal"></div>
-  <div class="acc-hdr" onclick="acc(this)" role="button" tabindex="0" aria-expanded="true" aria-label="Step 1: Fear Takes the Pen">
-    <div class="sbadge b-teal">1</div>
-    <div class="smeta">
-      <span class="spillar pt">Live Well</span>
-      <h2 class="stitle">Fear Takes the Pen</h2>
-      <span class="sfeel">You feel: Shock and spiral</span>
+  <div class="pg-in">
+    <h2 class="sec-h">Your <em>Presence Workbook</em></h2>
+    <p class="sec-sub">Five pages. Each one brings you back to the room. Fill them out here, in your own words, at your own pace.</p>
+
+    <!-- PROGRESS -->
+    <div class="progress-wrap" role="progressbar" aria-label="Workbook progress">
+      <div class="prog-label">
+        <span id="prog-text">Page 1 of 5 · Name Where You Are</span>
+        <span id="prog-pct">0% complete</span>
+      </div>
+      <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill"></div></div>
+      <div class="prog-steps" id="prog-steps" aria-hidden="true">
+        <span class="prog-step active" data-step="0">1. Name It</span>
+        <span class="prog-step" data-step="1">2. Fear vs. Fact</span>
+        <span class="prog-step" data-step="2">3. See the Character</span>
+        <span class="prog-step" data-step="3">4. The Window</span>
+        <span class="prog-step" data-step="4">5. What You Carry</span>
+      </div>
     </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-t">What is happening</div>
-            <p>He told you the diagnosis. Your brain turned it into the worst version. Your sky fell right in front of him. <strong>Every Google search confirms a new fear.</strong> You are living at the ending before the chapter has been written.</p>
+
+    <!-- ─── WB PAGE 1: NAME IT ─── -->
+    <div class="wb-page active" id="wp-0">
+      <h3 class="wb-h">Name Where You Actually Are</h3>
+      <p class="wb-intro">Nobody is grading this. Circle every word that is true right now.</p>
+
+      <div class="word-grid" id="wg1" role="group" aria-label="Select words that feel true">
+        <span class="word-chip" tabindex="0">Terrified</span>
+        <span class="word-chip" tabindex="0">Numb</span>
+        <span class="word-chip" tabindex="0">Angry</span>
+        <span class="word-chip" tabindex="0">Exhausted</span>
+        <span class="word-chip" tabindex="0">Lost</span>
+        <span class="word-chip" tabindex="0">Sad</span>
+        <span class="word-chip" tabindex="0">Guilty</span>
+        <span class="word-chip" tabindex="0">Helpless</span>
+        <span class="word-chip" tabindex="0">Hopeful</span>
+        <span class="word-chip pink" tabindex="0">Tender</span>
+        <span class="word-chip" tabindex="0">Frozen</span>
+        <span class="word-chip" tabindex="0">Overwhelmed</span>
+        <span class="word-chip pink" tabindex="0">Present</span>
+        <span class="word-chip" tabindex="0">Aching</span>
+        <span class="word-chip pink" tabindex="0">Grateful</span>
+        <span class="word-chip" tabindex="0">Floating</span>
+        <span class="word-chip" tabindex="0">Desperate</span>
+        <span class="word-chip pink" tabindex="0">Loving</span>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q1a">The thought that keeps finding you, even when you push it away</label>
+        <span class="fill-hint">Write it down. It has less power once it is named.</span>
+        <textarea class="fill-ta" id="q1a" placeholder="The thought I keep having is..."></textarea>
+      </div>
+      <div class="fill-group">
+        <label class="fill-label" for="q1b">If you could feel one thing differently after this, what would it be?</label>
+        <textarea class="fill-ta" id="q1b" placeholder="I want to feel..."></textarea>
+      </div>
+
+      <div class="wb-nav">
+        <div></div>
+        <button class="btn-next" onclick="nextPage(0)">Next: Fear vs. Fact &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ─── WB PAGE 2: FEAR vs FACT ─── -->
+    <div class="wb-page" id="wp-1">
+      <h3 class="wb-h">Fear vs. Fact</h3>
+      <p class="wb-intro">Fear is not a reliable narrator. Write what it says on the left. Write what is actually true on the right. Do all three rows.</p>
+
+      <div id="fvf-rows">
+        <div class="fvf-row">
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-f">Fear says</div>
+            <input type="text" class="fill-in pink" placeholder="Fear says...">
           </div>
-          <div class="col">
-            <div class="ch ch-p">What fear says</div>
-            <ul>
-              <li>He is not going to survive this</li>
-              <li>I need to know the timeline right now</li>
-              <li>Every search confirms the worst thought</li>
-              <li>I can not stop crying in the car</li>
-              <li>I feel like I am floating above my body</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What is true</div>
-            <ul>
-              <li>Fear is not a reliable narrator</li>
-              <li><strong>The diagnosis is one data point.</strong> Not the whole chapter</li>
-              <li>Someone else's story is writing your fear. Not his</li>
-              <li>Cancer showed up. The ending is not written</li>
-            </ul>
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-t">The fact is</div>
+            <input type="text" class="fill-in" placeholder="The fact is...">
           </div>
         </div>
-        <p class="anchor an-t">Fear pretends to narrate the future. It jumps to the worst outcome and stays there. It is not the author. <strong>You are.</strong></p>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- ══ STEP 2 ══ -->
-<article class="pg" aria-label="Step 2">
-  <div class="stripe s-pink"></div>
-  <div class="acc-hdr pink" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 2: You Lose Sight of Him">
-    <div class="sbadge b-pink">2</div>
-    <div class="smeta">
-      <span class="spillar pp">Live Well</span>
-      <h2 class="stitle">You Lose Sight of Him</h2>
-      <span class="sfeel">You feel: Dread and guilt</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-p">What is happening</div>
-            <p>All you can see is the cancer. The pain. The physical signs. <strong>You forget who he was before this.</strong> Scared to take his picture. Acting like the window has already closed.</p>
+        <div class="fvf-row">
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-f">Fear says</div>
+            <input type="text" class="fill-in pink" placeholder="Fear says...">
           </div>
-          <div class="col">
-            <div class="ch ch-p">What fear says</div>
-            <ul>
-              <li>It is too late. The good parts are over</li>
-              <li>Taking his picture means I have given up</li>
-              <li>I am running out of time</li>
-              <li>I am grieving him while he is still here</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What is true</div>
-            <ul>
-              <li><strong>The window is open RIGHT NOW</strong></li>
-              <li>He is still the same character he has always been</li>
-              <li>Taking his picture is an act of love</li>
-              <li>Grieving him now is love being honest</li>
-            </ul>
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-t">The fact is</div>
+            <input type="text" class="fill-in" placeholder="The fact is...">
           </div>
         </div>
-        <p class="anchor an-p">He is still funny. He still says the thing only he says. <strong>He is still in the room.</strong> That is where you go next.</p>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- ══ STEP 3 ══ -->
-<article class="pg" aria-label="Step 3">
-  <div class="stripe s-teal"></div>
-  <div class="acc-hdr" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 3: You Return to the Room">
-    <div class="sbadge b-teal">3</div>
-    <div class="smeta">
-      <span class="spillar pt">Love Well</span>
-      <h2 class="stitle">You Return to the Room</h2>
-      <span class="sfeel">You feel: Present and open</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-t">What is happening</div>
-            <p><strong>Not as a caretaker managing a situation.</strong> As a daughter loving her dad. You see the whole version of him again. The laugh. The thing he always says. The way he is still specifically, irreplaceably him.</p>
+        <div class="fvf-row">
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-f">Fear says</div>
+            <input type="text" class="fill-in pink" placeholder="Fear says...">
           </div>
-          <div class="col">
-            <div class="ch ch-t">What shifts</div>
-            <ul>
-              <li>You see the character, not just the diagnosis</li>
-              <li>You let him be funny without it feeling wrong</li>
-              <li>You stop floating above the moment</li>
-              <li>You start being real with him</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-t">What becomes possible</div>
-            <ul>
-              <li>Real conversation without perfect words</li>
-              <li>Making memories <strong>with a smile</strong></li>
-              <li>Letting him be the hero of his own chapter</li>
-              <li>Showing up as yourself</li>
-            </ul>
+          <div class="fvf-side">
+            <div class="fvf-lbl fvf-t">The fact is</div>
+            <input type="text" class="fill-in" placeholder="The fact is...">
           </div>
         </div>
-        <p class="anchor an-t">Joy and grief live in the same space. <strong>Both are love. Both are allowed.</strong></p>
       </div>
-    </div>
-  </div>
-</article>
 
-<!-- ══ STEP 4 ══ -->
-<article class="pg" aria-label="Step 4">
-  <div class="stripe s-gold"></div>
-  <div class="acc-hdr gold" onclick="acc(this)" role="button" tabindex="0" aria-expanded="false" aria-label="Step 4: You write this chapter with him">
-    <div class="sbadge b-gold">4</div>
-    <div class="smeta">
-      <span class="spillar pg-c">Love Well</span>
-      <h2 class="stitle">You write this chapter with him</h2>
-      <span class="sfeel">You feel: Grounded and present</span>
-    </div>
-    <div class="acc-toggle" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-  <div class="acc-body">
-    <div class="acc-inner">
-      <div class="acc-pad">
-        <div class="cols">
-          <div class="col">
-            <div class="ch ch-g">What is happening</div>
-            <p><strong>You stop acting like he is already gone.</strong> You can fall apart on the drive home and still show up the next morning. You are writing this chapter WITH him. On purpose. While he is still living.</p>
-          </div>
-          <div class="col">
-            <div class="ch ch-g">What you can do now</div>
-            <ul>
-              <li>Hear "terminal" without shutting down</li>
-              <li>Capture his voice and humor while he is here</li>
-              <li>Ask the questions without waiting for permission</li>
-              <li>Show up as his daughter</li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="ch ch-g">What you carry now</div>
-            <ul>
-              <li><strong>The diagnosis does not get to write this.</strong> You do</li>
-              <li>Dad is still in the room. The window is open</li>
-              <li>Cancer is the alarm clock, not the villain</li>
-              <li>The light in you proves the legacy lives in you</li>
-            </ul>
-          </div>
+      <div style="margin-top:var(--s6)">
+        <div class="fill-group">
+          <label class="fill-label" for="q2a">After writing all three, what do you notice?</label>
+          <span class="fill-hint">Are fear's stories smaller on the right? Bigger? What shifted?</span>
+          <textarea class="fill-ta" id="q2a" placeholder="What I notice is..."></textarea>
         </div>
-        <p class="anchor an-g">This is the added chapter, not the ending. <strong>You get to write it WITH him.</strong></p>
       </div>
-    </div>
-  </div>
-</article>
 
-<!-- ══ THE SHIFT ══ -->
-<section class="pg" aria-label="The shift">
-  <div class="shift-in pg-in">
-    <h2 class="sh2">From <span class="sp">cancer stole the plot</span><br>to <span class="st">you write the story anyway.</span></h2>
-    <div class="sh-grid">
-      <div class="sh-box sh-from">
-        <div class="sh-lbl">Where you are right now</div>
-        <p>Floating above the moment. Fear has the pen. Living at the ending while he is still here.</p>
-      </div>
-      <div class="sh-arr" aria-hidden="true">&#8594;</div>
-      <div class="sh-box sh-to">
-        <div class="sh-lbl">Where you are going</div>
-        <p>In the room with him. You hold the pen. The window is wide open <strong>RIGHT NOW.</strong></p>
+      <div class="wb-nav">
+        <button class="btn-prev" onclick="prevPage(1)">&#8592; Back</button>
+        <button class="btn-next" onclick="nextPage(1)">Next: See the Character &#8594;</button>
       </div>
     </div>
-    <p class="sh-foot">The diagnosis is one fact. It is not the author. There is still time. The light in you is proof the living legacy lives in you.</p>
+
+    <!-- ─── WB PAGE 3: SEE THE CHARACTER ─── -->
+    <div class="wb-page" id="wp-2">
+      <h3 class="wb-h">See the Whole Character</h3>
+      <p class="wb-intro">The diagnosis is one chapter. He played many levels before this one. Remember the whole player.</p>
+
+      <div class="fill-group">
+        <label class="fill-label">Add words that describe him. The real him, before and through all of this.</label>
+        <span class="fill-hint">Type a word and press Add. Build his character portrait.</span>
+        <div class="tag-input-wrap">
+          <input type="text" class="fill-in" id="tag-input" placeholder="Funny, stubborn, generous..." onkeydown="if(event.key==='Enter'){addTag()}">
+          <button class="tag-add" onclick="addTag()">Add</button>
+        </div>
+        <div class="tag-cloud" id="tag-cloud"><span class="tag-empty" id="tag-empty">His qualities will appear here...</span></div>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q3a">One memory that is so specifically him it almost makes you laugh</label>
+        <span class="fill-hint">A moment. A phrase. Something only he would do.</span>
+        <textarea class="fill-ta" id="q3a" placeholder="The memory I keep coming back to is..."></textarea>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q3b">What level did he reach before cancer ever showed up?</label>
+        <span class="fill-hint">His wins. His grit. What he built. Who he became.</span>
+        <textarea class="fill-ta" id="q3b" placeholder="Before this, he was someone who..."></textarea>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label">How present do you feel with him right now?</label>
+        <div class="slider-wrap">
+          <div class="slider-labels"><span>Floating above it all</span><span>Fully in the room</span></div>
+          <input type="range" min="1" max="10" value="5" id="presence-slider" oninput="updateSlider(this)">
+          <div class="slider-val" id="slider-val">5 — Finding my way back</div>
+        </div>
+      </div>
+
+      <div class="wb-nav">
+        <button class="btn-prev" onclick="prevPage(2)">&#8592; Back</button>
+        <button class="btn-next" onclick="nextPage(2)">Next: The Window &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ─── WB PAGE 4: THE WINDOW ─── -->
+    <div class="wb-page" id="wp-3">
+      <h3 class="wb-h">The Window Is Open RIGHT NOW</h3>
+      <p class="wb-intro">Not when you are ready. Not when you have the right words. Right now. What does that mean for today?</p>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q4a">Three things that are still true right now</label>
+        <span class="fill-hint">Not the hard things. Three things that are real and present today.</span>
+        <textarea class="fill-ta" id="q4a" placeholder="1. He still...&#10;2. We still...&#10;3. I still..."></textarea>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q4b">One question you want to ask him this week</label>
+        <span class="fill-hint">Not the big goodbye question. A real one. Something that brings you closer to who he is.</span>
+        <textarea class="fill-ta" id="q4b" placeholder="I want to ask him..."></textarea>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q4c">Write him a short note. What do you want him to know?</label>
+        <span class="fill-hint">Not a speech. Not a goodbye. One true thing. You can share it or keep it just for you.</span>
+        <textarea class="fill-ta" id="q4c" style="min-height:120px" placeholder="Dad, what I want you to know is..."></textarea>
+      </div>
+
+      <div class="wb-nav">
+        <button class="btn-prev" onclick="prevPage(3)">&#8592; Back</button>
+        <button class="btn-next" onclick="nextPage(3)">Next: What You Carry &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ─── WB PAGE 5: WHAT YOU CARRY + QUIZ ─── -->
+    <div class="wb-page" id="wp-4">
+      <h3 class="wb-h">What You Carry Forward</h3>
+      <p class="wb-intro">This is where the chapter starts to take shape. Not what cancer wrote. What you wrote WITH him.</p>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q5a">What do you want to capture while he is still here?</label>
+        <span class="fill-hint">His voice? His favourite stories? His advice? What he wants to leave behind?</span>
+        <textarea class="fill-ta" id="q5a" placeholder="I want to capture his..."></textarea>
+      </div>
+
+      <div class="fill-group">
+        <label class="fill-label" for="q5b">What do you want him to know you will carry forward?</label>
+        <span class="fill-hint">The specific thing. Not "your memory." The real thing only you know.</span>
+        <textarea class="fill-ta" id="q5b" placeholder="I will carry forward..."></textarea>
+      </div>
+
+      <!-- MINI QUIZ -->
+      <div style="background:var(--teal-bg);border-radius:var(--rx);padding:var(--s6) var(--s8);margin-top:var(--s6)">
+        <p class="quiz-mini-lbl">Quick check-in · Where is fear writing your story right now?</p>
+        <p class="quiz-q" style="margin-bottom:var(--s4)">Which of these feels most true today?</p>
+        <div class="quiz-opts" role="radiogroup" aria-label="Which feels most true">
+          <label class="quiz-opt"><input type="radio" name="qz" value="0"> <span>I can not stop Googling. Every search confirms the worst thought.</span></label>
+          <label class="quiz-opt"><input type="radio" name="qz" value="1"> <span>I keep forgetting who he was before the diagnosis. All I see is cancer.</span></label>
+          <label class="quiz-opt"><input type="radio" name="qz" value="2"> <span>I feel like the good parts are already over. Like I have missed my chance.</span></label>
+          <label class="quiz-opt"><input type="radio" name="qz" value="3"> <span>I want to be in the room with him but I do not know what to say.</span></label>
+          <label class="quiz-opt"><input type="radio" name="qz" value="4"> <span>I am starting to come back. I just need to know how to go deeper.</span></label>
+        </div>
+        <button class="quiz-btn" onclick="showResult()">See where you are &#8594;</button>
+        <div class="quiz-result" id="quiz-result">
+          <div class="qr-label">Your stage right now</div>
+          <div class="qr-stage" id="qr-stage"></div>
+          <div class="qr-body" id="qr-body"></div>
+        </div>
+      </div>
+
+      <div class="wb-nav">
+        <button class="btn-prev" onclick="prevPage(4)">&#8592; Back</button>
+        <button class="btn-next celebrate" onclick="complete()">See my presence card &#10024;</button>
+      </div>
+    </div>
+
+    <!-- ─── DONE CARD ─── -->
+    <div class="done-card" id="done-card">
+      <div class="done-icon">&#10024;</div>
+      <h3 class="done-h">You came back to the room.<br><em>The window is still open.</em></h3>
+      <p class="done-body">You showed up. You wrote the chapter instead of letting fear write it. That is the whole work. The light in you is proof the living legacy lives in you.</p>
+      <div class="done-summary" id="done-summary"></div>
+      <div style="display:flex;gap:var(--s3);justify-content:center;flex-wrap:wrap">
+        <a href="/make-this-mean-more/" class="btn-cta">Make This Mean More &#8594;</a>
+        <button class="btn-prev" onclick="restartWb()">Start again</button>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══ INTERACTIVE PRESENCE WORKBOOK ══ -->
-<section class="pg" aria-label="Open the interactive Presence Workbook">
-  <div class="stripe s-pink"></div>
-  <div class="pg-in" style="text-align:center;max-width:42rem;margin:0 auto">
-    <h2 class="sec-h" style="text-align:center">Your <em>Presence Workbook</em></h2>
-    <p class="sec-sub" style="text-align:center;margin-left:auto;margin-right:auto;margin-bottom:var(--s5)">Open the full five pages in your browser. Circle the words that feel true, rewrite fear’s narrative, write him a note, and track your presence level.</p>
-    <a href="/interactive-presence-workbook/" class="cta-btn" style="display:inline-flex;justify-content:center">Open the interactive workbook →</a>
-  </div>
-</section>
 
 <!-- ══ CTA ══ -->
 <section class="pg cta-pg" aria-label="Make This Mean More">
@@ -518,6 +551,7 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
   </div>
 </section>
 
+
 </main>
 
 <footer class="ftr" role="contentinfo">
@@ -532,18 +566,126 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 </footer>
 
 <script>
-// ── ACCORDION ──
-function acc(h){
-  const a=h.closest('article');
-  const open=a.classList.toggle('acc-open');
-  h.setAttribute('aria-expanded',open);
-}
-document.querySelectorAll('.acc-hdr').forEach(h=>{
-  h.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();acc(h)}});
+// ── WORD CHIPS ──
+document.querySelectorAll('.word-chip').forEach(c=>{
+  c.addEventListener('click',()=>c.classList.toggle('picked'));
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.classList.toggle('picked')}});
 });
-// open first step
-document.querySelector('.acc-hdr').closest('article').classList.add('acc-open');
-document.querySelector('.acc-hdr').setAttribute('aria-expanded','true');
+
+// ── WORKBOOK PROGRESS ──
+const STEPS=['1. Name It','2. Fear vs. Fact','3. See the Character','4. The Window','5. What You Carry'];
+const NAMES=['Name Where You Are','Fear vs. Fact','See the Character','The Window Is Open','What You Carry Forward'];
+let current=0;
+
+function updateProgress(n){
+  const pct=Math.round((n/5)*100);
+  document.getElementById('prog-text').textContent='Page '+(n+1)+' of 5 · '+NAMES[n];
+  document.getElementById('prog-pct').textContent=pct+'% complete';
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.querySelectorAll('.prog-step').forEach((s,i)=>{
+    s.classList.remove('active','done');
+    if(i<n) s.classList.add('done');
+    if(i===n) s.classList.add('active');
+  });
+}
+
+function nextPage(from){
+  document.getElementById('wp-'+from).classList.remove('active');
+  current=from+1;
+  document.getElementById('wp-'+current).classList.add('active');
+  updateProgress(current);
+  document.getElementById('workbook').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function prevPage(from){
+  document.getElementById('wp-'+from).classList.remove('active');
+  current=from-1;
+  document.getElementById('wp-'+current).classList.add('active');
+  updateProgress(current);
+  document.getElementById('workbook').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── TAG BUILDER ──
+function addTag(){
+  const inp=document.getElementById('tag-input');
+  const val=inp.value.trim();
+  if(!val) return;
+  const empty=document.getElementById('tag-empty');
+  if(empty) empty.remove();
+  const cloud=document.getElementById('tag-cloud');
+  const t=document.createElement('span');
+  t.className='tag-item';
+  t.innerHTML=val+' <span class="tag-remove" title="Remove" onclick="this.parentElement.remove()">&#215;</span>';
+  cloud.appendChild(t);
+  inp.value='';
+  inp.focus();
+}
+
+// ── SLIDER ──
+const labels=['','Barely here','Hard to focus','Pulled in two directions','Trying to be present','Finding my way back','Starting to land','Mostly here','Present and real','Almost fully here','Fully in the room WITH him'];
+function updateSlider(s){
+  document.getElementById('slider-val').textContent=s.value+' — '+labels[s.value];
+}
+
+// ── QUIZ ──
+const stages=[
+  {s:'Stage 1 · Fear Has the Pen',b:'You are in the spiral. Every Google search confirms the worst thought. This is exactly where we start in Week 1 of Make This Mean More. Fear is not a reliable narrator. The diagnosis is one data point, not the whole chapter.'},
+  {s:'Stage 2 · You Have Lost Sight of Him',b:'All you can see is the cancer. The diagnosis has replaced the whole character. Week 3 of Make This Mean More is built for exactly this. He played many levels before cancer ever showed up. That same character gets him through this one.'},
+  {s:'Stage 3 · You Are Acting Like It Is Already Over',b:'You are treating this as the ending before it has been written. The window is open RIGHT NOW. Week 2 of Make This Mean More teaches you to stop acting like he is already gone and start writing this chapter with him.'},
+  {s:'Stage 4 · You Are in the Room, Searching for Words',b:'You are present. You want to be with him. You just do not know what to say. This is exactly where Make This Mean More lives. You learn to read what he is not saying, show up without making it about you, and stay in the room even when it is hard.'},
+  {s:'Stage 5 · You Are Coming Back',b:'You are finding your way in. Make This Mean More takes you all the way through. We go from fear and spiraling to capturing his living legacy while he is still here to be part of it. The window is open. Let us make it mean something.'}
+];
+function showResult(){
+  const sel=document.querySelector('input[name=qz]:checked');
+  if(!sel) return;
+  const r=stages[+sel.value];
+  document.getElementById('qr-stage').textContent=r.s;
+  document.getElementById('qr-body').textContent=r.b;
+  const res=document.getElementById('quiz-result');
+  res.classList.add('show','celebrate');
+}
+
+// ── QUIZ OPT STYLE ──
+document.querySelectorAll('input[name=qz]').forEach(r=>{
+  r.addEventListener('change',()=>{
+    document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('selected'));
+    r.closest('.quiz-opt').classList.add('selected');
+  });
+});
+
+// ── COMPLETE ──
+function complete(){
+  const words=[...document.querySelectorAll('.word-chip.picked')].map(c=>c.textContent).join(', ');
+  const q1a=document.getElementById('q1a').value.trim();
+  const q4c=document.getElementById('q4c').value.trim();
+  const q5b=document.getElementById('q5b').value.trim();
+  let html='';
+  if(words) html+='<p><strong>You are feeling:</strong> '+words+'</p>';
+  if(q1a) html+='<p><strong>The thought you named:</strong> '+q1a+'</p>';
+  if(q4c) html+='<p><strong>What you want him to know:</strong> '+q4c+'</p>';
+  if(q5b) html+='<p><strong>What you will carry forward:</strong> '+q5b+'</p>';
+  if(!html) html='<p>Your answers live in this moment. The window is open. That is enough.</p>';
+  document.getElementById('done-summary').innerHTML=html;
+
+  // hide all pages, show done
+  document.querySelectorAll('.wb-page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('prog-text').textContent='Complete · 5 of 5 done';
+  document.getElementById('prog-pct').textContent='100% complete';
+  document.getElementById('prog-fill').style.width='100%';
+  document.querySelectorAll('.prog-step').forEach(s=>{s.classList.remove('active');s.classList.add('done')});
+
+  const d=document.getElementById('done-card');
+  d.classList.add('show','celebrate');
+  d.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function restartWb(){
+  document.getElementById('done-card').classList.remove('show');
+  current=0;
+  document.querySelectorAll('.wb-page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('wp-0').classList.add('active');
+  updateProgress(0);
+  document.getElementById('workbook').scrollIntoView({behavior:'smooth',block:'start'});
+}
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
