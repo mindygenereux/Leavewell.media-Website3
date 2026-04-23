@@ -308,7 +308,10 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 .cta-mtm .cta-locs a:hover{opacity:.85}
 
 /* Make This Mean More block: hero image; inner text 4× page base (parent font-size: 4em, children in em) */
-.cta-mtm-visual{display:block;width:100%;max-width:min(100%,52rem);height:auto;margin:0 auto var(--s8);border-radius:var(--rx);box-shadow:var(--sh)}
+.cta-mtm-visual-link{display:block;max-width:min(100%,52rem);margin:0 auto var(--s8);border-radius:var(--rx);box-shadow:var(--sh);text-decoration:none;overflow:hidden;transition:transform var(--ease),box-shadow var(--ease)}
+.cta-mtm-visual-link:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(22,40,40,0.12)}
+.cta-mtm-visual-link:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.cta-mtm-visual{display:block;width:100%;height:auto;vertical-align:middle}
 .cta-mtm-scale{font-size:4em;text-align:center;line-height:1.5;max-width:36em;margin:0 auto;word-wrap:break-word}
 /* Within 4em parent, 1em = 4× default body; hierarchy via em multipliers on that */
 .cta-mtm-scale .eyebrow{font-size:0.45em!important;margin-bottom:0.5em;letter-spacing:.2em;max-width:28em;margin-left:auto;margin-right:auto}
@@ -471,7 +474,9 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 <!-- ══ MAKE THIS MEAN MORE ══ -->
 <section class="pg cta-pg cta-mtm" aria-label="Make This Mean More" id="ready-write-story">
   <div class="pg-in" style="max-width:min(100%,56rem)">
-    <img class="cta-mtm-visual" src="/images/mtm-clarity-cta-hero.png" alt="Make This Mean More: for dads with terminal cancer, move from fear to the story you write together" width="755" height="546" loading="lazy" decoding="async">
+    <a href="https://leavewell.media/make-this-mean-more" class="cta-mtm-visual-link">
+      <img class="cta-mtm-visual" src="/images/mtm-clarity-cta-hero.png" alt="Make This Mean More: for dads with terminal cancer, move from fear to the story you write together" width="755" height="546" loading="lazy" decoding="async">
+    </a>
     <div class="cta-mtm-scale">
       <span class="eyebrow">Ready to write the story with him?</span>
       <h2 class="cta-h cta-mtm-h">Make This Mean More is the <em>8-week 1:1</em> coaching program for daughters whose dad has a terminal diagnosis.</h2>
