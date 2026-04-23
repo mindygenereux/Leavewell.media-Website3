@@ -306,6 +306,20 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 .cta-mtm .cta-locs{font-size:var(--sm);margin-top:var(--s2);line-height:1.6;opacity:.9}
 .cta-mtm .cta-locs a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
 .cta-mtm .cta-locs a:hover{opacity:.85}
+
+/* Make This Mean More block: hero image; inner text 4× page base (parent font-size: 4em, children in em) */
+.cta-mtm-visual{display:block;width:100%;max-width:min(100%,52rem);height:auto;margin:0 auto var(--s8);border-radius:var(--rx);box-shadow:var(--sh)}
+.cta-mtm-scale{font-size:4em;text-align:center;line-height:1.5;max-width:36em;margin:0 auto;word-wrap:break-word}
+/* Within 4em parent, 1em = 4× default body; hierarchy via em multipliers on that */
+.cta-mtm-scale .eyebrow{font-size:0.45em!important;margin-bottom:0.5em;letter-spacing:.2em;max-width:28em;margin-left:auto;margin-right:auto}
+.cta-mtm-scale .cta-mtm-h,.cta-mtm-scale h2.cta-h{font-size:1.2em!important;font-weight:400;line-height:1.2;max-width:15em;margin:0 auto 0.5em}
+.cta-mtm-scale .cta-mtm-h em,.cta-mtm-scale h2 em{font-style:italic}
+.cta-mtm-scale .cta-body{font-size:1em!important;text-align:left;max-width:20em;margin-left:auto;margin-right:auto;line-height:1.65;opacity:1}
+.cta-mtm-scale .cta-mtm-ctarow{margin-top:0.45em}
+.cta-mtm-scale .cta-btn{font-size:0.4em!important;padding:0.55em 1.1em;letter-spacing:.04em;gap:0.35em;max-width:95%}
+.cta-mtm-scale .cta-locs,.cta-mtm-scale .cta-note{font-size:0.38em!important;margin-top:0.5em;opacity:1;max-width:30em}
+@media (max-width:1024px){.cta-mtm-scale{font-size:2.5em}}
+@media (max-width:600px){.cta-mtm-scale{font-size:1.85em}}
 </style>
 </head>
 <body>
@@ -455,18 +469,23 @@ input[type=range]{width:100%;accent-color:var(--teal);height:6px;border-radius:v
 </section>
 
 <!-- ══ MAKE THIS MEAN MORE ══ -->
-<section class="pg cta-pg cta-mtm" aria-label="Make This Mean More">
-  <div class="pg-in">
-    <span class="eyebrow">Ready to write the story with him?</span>
-    <h2 class="cta-h">Make This Mean More is the <em>8-week 1:1</em> coaching program for daughters whose dad has a terminal diagnosis.</h2>
-    <p class="cta-body">You go from <strong>cancer stole the plot</strong> to <strong>you write the story anyway</strong>. You stop Googling timelines and get back in the room where he still is. You learn to read what he&rsquo;s not saying so you can show him you have it covered. You give yourself permission to witness without fixing, to let him buy the muffin, the car, the dream. You capture his voice, his humor, his values, the whole character he built before cancer ever showed up. You make memories with a smile and make this year count. And when it&rsquo;s over, you walk away knowing you showed up, you were calm and present, and you didn&rsquo;t miss a single moment of this chapter.</p>
-    <p class="cta-body" style="margin-top:var(--s4)">That&rsquo;s what eight weeks looks like when fear stops writing and you pick up the pen. The window is open right now. Only three spots are available each month.</p>
-    <a href="/make-this-mean-more/" class="cta-btn">
-      Start Make This Mean More
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <p class="cta-locs" style="margin-top:var(--s2);font-size:var(--sm)"><a href="https://leavewell.media/make-this-mean-more">leavewell.media/make-this-mean-more</a></p>
-    <p class="cta-note cta-locs">Mindy Genereux &nbsp;·&nbsp; Certified Death Doula &nbsp;·&nbsp; Leave Well Media &nbsp;·&nbsp; <a href="https://leavewell.media/">leavewell.media</a> &nbsp;·&nbsp; <a href="mailto:mindy@leavewell.media">mindy@leavewell.media</a></p>
+<section class="pg cta-pg cta-mtm" aria-label="Make This Mean More" id="ready-write-story">
+  <div class="pg-in" style="max-width:min(100%,56rem)">
+    <img class="cta-mtm-visual" src="/images/mtm-clarity-cta-hero.png" alt="Make This Mean More: for dads with terminal cancer, move from fear to the story you write together" width="755" height="546" loading="lazy" decoding="async">
+    <div class="cta-mtm-scale">
+      <span class="eyebrow">Ready to write the story with him?</span>
+      <h2 class="cta-h cta-mtm-h">Make This Mean More is the <em>8-week 1:1</em> coaching program for daughters whose dad has a terminal diagnosis.</h2>
+      <p class="cta-body">You go from <strong>cancer stole the plot</strong> to <strong>you write the story anyway</strong>. You stop Googling timelines and get back in the room where he still is. You learn to read what he&rsquo;s not saying so you can show him you have it covered. You give yourself permission to witness without fixing, to let him buy the muffin, the car, the dream. You capture his voice, his humor, his values, the whole character he built before cancer ever showed up. You make memories with a smile and make this year count. And when it&rsquo;s over, you walk away knowing you showed up, you were calm and present, and you didn&rsquo;t miss a single moment of this chapter.</p>
+      <p class="cta-body" style="margin-top:0.5em">That&rsquo;s what eight weeks looks like when fear stops writing and you pick up the pen. The window is open right now. Only three spots are available each month.</p>
+      <div class="cta-mtm-ctarow">
+        <a href="/make-this-mean-more/" class="cta-btn">
+          Start Make This Mean More
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <p class="cta-locs"><a href="https://leavewell.media/make-this-mean-more">leavewell.media/make-this-mean-more</a></p>
+      <p class="cta-note cta-locs">Mindy Genereux &nbsp;·&nbsp; Certified Death Doula &nbsp;·&nbsp; Leave Well Media &nbsp;·&nbsp; <a href="https://leavewell.media/">leavewell.media</a> &nbsp;·&nbsp; <a href="mailto:mindy@leavewell.media">mindy@leavewell.media</a></p>
+    </div>
   </div>
 </section>
 
